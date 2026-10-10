@@ -1,0 +1,5288 @@
+{
+  "map": {
+    "schema": 1,
+    "id": "article-map-db",
+    "name": "零号大坝",
+    "config": {
+      "width": 81086.304688,
+      "height": 80988.5,
+      "boundsW": -250,
+      "boundsH": 250,
+      "centerX": 358155.6875,
+      "centerY": 750191.75,
+      "minZoom": 3,
+      "initZoom": 3,
+      "initX": -85,
+      "initY": 110,
+      "tileDir": "map_db",
+      "metersPerUnit": 0.01
+    },
+    "difficulties": [
+      {
+        "key": "normal",
+        "label": "普通"
+      },
+      {
+        "key": "secret",
+        "label": "机密"
+      },
+      {
+        "key": "topsecret",
+        "label": "绝密"
+      }
+    ],
+    "groups": [
+      {
+        "id": "all",
+        "title": "全部"
+      },
+      {
+        "id": "loot",
+        "title": "物资点"
+      },
+      {
+        "id": "spawn",
+        "title": "出生点"
+      },
+      {
+        "id": "extract",
+        "title": "撤离点"
+      },
+      {
+        "id": "boss",
+        "title": "首领"
+      },
+      {
+        "id": "contract",
+        "title": "行动接取站"
+      },
+      {
+        "id": "utility",
+        "title": "设施"
+      }
+    ],
+    "types": [
+      {
+        "id": "safe-box",
+        "name": "保险箱",
+        "icon": "bxx",
+        "group": "loot"
+      },
+      {
+        "id": "small-safe",
+        "name": "小保险箱",
+        "icon": "xbxx",
+        "group": "loot"
+      },
+      {
+        "id": "server",
+        "name": "服务器",
+        "icon": "fwq",
+        "group": "loot"
+      },
+      {
+        "id": "computer",
+        "name": "电脑",
+        "icon": "dn",
+        "group": "loot"
+      },
+      {
+        "id": "pc-case",
+        "name": "电脑机箱",
+        "icon": "dnjx",
+        "group": "loot"
+      },
+      {
+        "id": "weapon-crate",
+        "name": "武器箱",
+        "icon": "wqx",
+        "group": "loot"
+      },
+      {
+        "id": "large-weapon-crate",
+        "name": "大武器箱",
+        "icon": "dwqx",
+        "group": "loot"
+      },
+      {
+        "id": "ammo-crate",
+        "name": "弹药箱",
+        "icon": "dyx",
+        "group": "loot"
+      },
+      {
+        "id": "tool-cabinet",
+        "name": "工具柜",
+        "icon": "gjg",
+        "group": "loot"
+      },
+      {
+        "id": "storage-box",
+        "name": "收纳盒",
+        "icon": "dgjx",
+        "group": "loot"
+      },
+      {
+        "id": "clothing",
+        "name": "一件衣服",
+        "icon": "yf",
+        "group": "loot"
+      },
+      {
+        "id": "military-med",
+        "name": "军用医疗包",
+        "icon": "ylb",
+        "group": "loot"
+      },
+      {
+        "id": "medical-pile",
+        "name": "医疗物资堆",
+        "icon": "ylwzd",
+        "group": "loot"
+      },
+      {
+        "id": "travel-bag",
+        "name": "旅行包",
+        "icon": "lxd",
+        "group": "loot"
+      },
+      {
+        "id": "suitcase",
+        "name": "手提箱",
+        "icon": "stx",
+        "group": "loot"
+      },
+      {
+        "id": "locker",
+        "name": "储物柜",
+        "icon": "cwg",
+        "group": "loot"
+      },
+      {
+        "id": "high-storage",
+        "name": "高级储物箱",
+        "icon": "gjcwx",
+        "group": "loot"
+      },
+      {
+        "id": "drawer",
+        "name": "抽屉柜",
+        "icon": "ctg",
+        "group": "loot"
+      },
+      {
+        "id": "hiking-bag",
+        "name": "登山包",
+        "icon": "dsb",
+        "group": "loot"
+      },
+      {
+        "id": "parcel",
+        "name": "快递箱",
+        "icon": "kdx",
+        "group": "loot"
+      },
+      {
+        "id": "air-crate",
+        "name": "航空储物箱",
+        "icon": "hkcwx",
+        "group": "loot"
+      },
+      {
+        "id": "trash",
+        "name": "垃圾桶",
+        "icon": "ljx",
+        "group": "loot"
+      },
+      {
+        "id": "mixer",
+        "name": "搅拌车",
+        "icon": "snc",
+        "group": "loot"
+      },
+      {
+        "id": "field-crate",
+        "name": "野外物资箱",
+        "icon": "ywwzx",
+        "group": "loot"
+      },
+      {
+        "id": "bird-nest",
+        "name": "鸟窝",
+        "icon": "nw",
+        "group": "loot"
+      },
+      {
+        "id": "stash",
+        "name": "藏匿物",
+        "icon": "cnw",
+        "group": "loot"
+      },
+      {
+        "id": "high-luggage",
+        "name": "高级旅行箱",
+        "icon": "xlx",
+        "group": "loot"
+      },
+      {
+        "id": "spawn",
+        "name": "出生点",
+        "icon": "csd",
+        "group": "spawn"
+      },
+      {
+        "id": "extract-paid",
+        "name": "付费撤离点",
+        "icon": "ffcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-normal",
+        "name": "常规撤离点",
+        "icon": "cgcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-random",
+        "name": "概率撤离点",
+        "icon": "sjcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-condition",
+        "name": "条件撤离点",
+        "icon": "tjcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-elevator",
+        "name": "电梯撤离点",
+        "icon": "dtcld",
+        "group": "extract"
+      },
+      {
+        "id": "boss",
+        "name": "首领",
+        "icon": "boss",
+        "group": "boss"
+      },
+      {
+        "id": "contract",
+        "name": "行动接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      },
+      {
+        "id": "contract-high",
+        "name": "高价值接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      },
+      {
+        "id": "recon-radio",
+        "name": "侦察电台",
+        "icon": "/assets/maps/icons/shushu/zcdt.png",
+        "group": "utility"
+      }
+    ],
+    "regions": [
+      {
+        "name": "行政辖区",
+        "x": 364598.8125,
+        "y": -787795
+      },
+      {
+        "name": "军营",
+        "x": 336667.78125,
+        "y": -793117.8125
+      },
+      {
+        "name": "水泥厂",
+        "x": 336179.1875,
+        "y": -776354.5625
+      },
+      {
+        "name": "主变电站",
+        "x": 371413.0625,
+        "y": -768131.25
+      },
+      {
+        "name": "游客中心",
+        "x": 392334.90625,
+        "y": -750165.75
+      },
+      {
+        "name": "管道区域",
+        "x": 325340.71875,
+        "y": -795599.5
+      },
+      {
+        "name": "大坝内部",
+        "x": 369558.230007,
+        "y": -799807.84941
+      },
+      {
+        "name": "小变电站",
+        "x": 361741.338618,
+        "y": -758205.485048
+      },
+      {
+        "name": "小军营",
+        "x": 374736.374816,
+        "y": -752885.572862
+      },
+      {
+        "name": "检查站",
+        "x": 385296.250885,
+        "y": -764741.497439
+      },
+      {
+        "name": "停车场",
+        "x": 377316.250892,
+        "y": -783760.918223
+      },
+      {
+        "name": "运输区",
+        "x": 348567.273613,
+        "y": -772288.499244,
+        "floor": 0
+      },
+      {
+        "name": "挖掘区",
+        "x": 358650.961714,
+        "y": -769396.763661,
+        "floor": 0
+      },
+      {
+        "name": "管道区",
+        "x": 361368.642187,
+        "y": -780136.298893,
+        "floor": 0
+      },
+      {
+        "name": "行政楼地下",
+        "x": 363788.305478,
+        "y": -787390.732187,
+        "floor": 0
+      },
+      {
+        "name": "行政西楼",
+        "x": 362500.622763,
+        "y": -789779.781513,
+        "floor": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "行政东楼",
+        "x": 368609.988519,
+        "y": -787053.003669,
+        "floor": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "大坝河滩",
+        "x": 345901.678,
+        "y": -768916.3859999999
+      }
+    ],
+    "floorInfo": {
+      "bj": 64,
+      "maxNativeZoom": 6,
+      "buildings": [
+        {
+          "id": "admin",
+          "name": "行政辖区",
+          "x": 364598.8125,
+          "y": -787795
+        }
+      ],
+      "floors": [
+        {
+          "name": "B1 地下通道",
+          "building": "admin",
+          "tileDir": "daba_0f",
+          "boundsW": -120,
+          "boundsH": 140,
+          "minZoom": 3.0,
+          "initZoom": 4.0,
+          "initX": -41.0,
+          "initY": 66.0,
+          "latLngX": -22,
+          "latLngY": 30,
+          "pixelToLatLngRatio": -0.85
+        },
+        {
+          "name": "1F 行政辖区",
+          "building": "admin",
+          "tileDir": "daba_1f",
+          "boundsW": -100,
+          "boundsH": 120,
+          "minZoom": 6,
+          "initZoom": 6,
+          "initX": -33,
+          "initY": 68,
+          "latLngX": -25,
+          "latLngY": 55,
+          "pixelToLatLngRatio": -0.85
+        },
+        {
+          "name": "2F 行政辖区",
+          "building": "admin",
+          "tileDir": "daba_2f",
+          "boundsW": -100,
+          "boundsH": 120,
+          "minZoom": 6,
+          "initZoom": 6,
+          "initX": -33,
+          "initY": 68,
+          "latLngX": -25,
+          "latLngY": 55,
+          "pixelToLatLngRatio": -0.85
+        }
+      ]
+    },
+    "waters": [
+      {
+        "id": "water-1",
+        "name": "大坝河滩",
+        "points": [
+          {
+            "x": 340497.244,
+            "y": -755925.799
+          },
+          {
+            "x": 341447.474,
+            "y": -756558.522
+          },
+          {
+            "x": 341130.731,
+            "y": -758456.69
+          },
+          {
+            "x": 342714.448,
+            "y": -760671.219
+          },
+          {
+            "x": 343664.678,
+            "y": -761620.303
+          },
+          {
+            "x": 343347.935,
+            "y": -764151.194
+          },
+          {
+            "x": 343031.191,
+            "y": -766365.723
+          },
+          {
+            "x": 343031.191,
+            "y": -768896.614
+          },
+          {
+            "x": 343031.191,
+            "y": -771150.688
+          },
+          {
+            "x": 343981.421,
+            "y": -773048.856
+          },
+          {
+            "x": 344298.165,
+            "y": -774630.663
+          },
+          {
+            "x": 344298.165,
+            "y": -776528.831
+          },
+          {
+            "x": 344298.165,
+            "y": -778743.36
+          },
+          {
+            "x": 344931.651,
+            "y": -780008.805
+          },
+          {
+            "x": 345565.138,
+            "y": -781274.25
+          },
+          {
+            "x": 345881.882,
+            "y": -782539.696
+          },
+          {
+            "x": 345248.395,
+            "y": -783488.78
+          },
+          {
+            "x": 344298.165,
+            "y": -783805.141
+          },
+          {
+            "x": 343664.678,
+            "y": -784754.225
+          },
+          {
+            "x": 344298.165,
+            "y": -785070.586
+          },
+          {
+            "x": 344614.908,
+            "y": -785703.309
+          },
+          {
+            "x": 345248.395,
+            "y": -786336.032
+          },
+          {
+            "x": 345881.882,
+            "y": -786336.032
+          },
+          {
+            "x": 346515.368,
+            "y": -786336.032
+          },
+          {
+            "x": 347465.599,
+            "y": -786336.032
+          },
+          {
+            "x": 348099.085,
+            "y": -785070.586
+          },
+          {
+            "x": 349049.315,
+            "y": -784754.225
+          },
+          {
+            "x": 348732.572,
+            "y": -783805.141
+          },
+          {
+            "x": 348415.829,
+            "y": -783172.418
+          },
+          {
+            "x": 347782.342,
+            "y": -781590.612
+          },
+          {
+            "x": 347782.342,
+            "y": -780008.805
+          },
+          {
+            "x": 347148.855,
+            "y": -778743.36
+          },
+          {
+            "x": 347148.855,
+            "y": -777477.915
+          },
+          {
+            "x": 346832.112,
+            "y": -775896.108
+          },
+          {
+            "x": 346515.368,
+            "y": -774314.301
+          },
+          {
+            "x": 345565.138,
+            "y": -772099.772
+          },
+          {
+            "x": 344931.651,
+            "y": -769885.243
+          },
+          {
+            "x": 344931.651,
+            "y": -767947.53
+          },
+          {
+            "x": 344931.651,
+            "y": -766049.362
+          },
+          {
+            "x": 344931.651,
+            "y": -764151.194
+          },
+          {
+            "x": 345248.395,
+            "y": -762253.026
+          },
+          {
+            "x": 345565.138,
+            "y": -760671.219
+          },
+          {
+            "x": 346198.625,
+            "y": -759405.774
+          },
+          {
+            "x": 345881.882,
+            "y": -756558.522
+          },
+          {
+            "x": 347148.855,
+            "y": -754976.715
+          },
+          {
+            "x": 348732.572,
+            "y": -755293.076
+          },
+          {
+            "x": 350316.289,
+            "y": -754976.715
+          },
+          {
+            "x": 351306.112,
+            "y": -754660.354
+          },
+          {
+            "x": 350633.032,
+            "y": -753711.27
+          },
+          {
+            "x": 349682.802,
+            "y": -752445.824
+          },
+          {
+            "x": 348732.572,
+            "y": -751813.102
+          },
+          {
+            "x": 346832.112,
+            "y": -751496.74
+          },
+          {
+            "x": 344298.165,
+            "y": -752129.463
+          },
+          {
+            "x": 342397.704,
+            "y": -753711.27
+          }
+        ],
+        "style": {
+          "color": "#8FC7F2",
+          "weight": 1,
+          "dashArray": "1, 3",
+          "fillOpacity": 0.15
+        }
+      }
+    ]
+  },
+  "markers": [
+    {
+      "id": "db-computer-g-336908-795202",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 336907.8125,
+      "y": -795202.125,
+      "z": -15448.37598,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-368626-763271",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 368626.3125,
+      "y": -763271.1875,
+      "z": -16853.91992,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-392255-745112",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 392254.6875,
+      "y": -745112.1875,
+      "z": -13680.54199,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-396171-751856",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 396170.8438,
+      "y": -751855.8125,
+      "z": -13166.27637,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-368926-763738",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 368925.9063,
+      "y": -763738.0625,
+      "z": -16326.00293,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-341233-780834",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 341232.875,
+      "y": -780834.25,
+      "z": -16975.52539,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-336382-791073",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 336381.7813,
+      "y": -791072.6875,
+      "z": -15839.90332,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-369631-763657",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 369631.375,
+      "y": -763656.8125,
+      "z": -16422,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-371314-762825",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 371313.8438,
+      "y": -762824.75,
+      "z": -16965.91016,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-393701-749709",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 393701.3125,
+      "y": -749708.8125,
+      "z": -12938.35156,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-390949-745316",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 390949.4375,
+      "y": -745316.0625,
+      "z": -13770.22852,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-335000-774580",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 335000.1875,
+      "y": -774579.5625,
+      "z": -16010.94727,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-336496-777011",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 336495.9063,
+      "y": -777011.375,
+      "z": -17054.94727,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-368993-789249",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 368992.875,
+      "y": -789249,
+      "z": -16103,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-368772-786078",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 368771.9375,
+      "y": -786078,
+      "z": -16202,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-361204-787862",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 361203.6563,
+      "y": -787861.875,
+      "z": -16201.99902,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-366121-790849",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 366121.0625,
+      "y": -790848.9375,
+      "z": -16201.74121,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-334916-794561",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 334916.0625,
+      "y": -794561.125,
+      "z": -15193.74023,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-339025-793178",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 339024.625,
+      "y": -793177.75,
+      "z": -15935.78027,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-362091-788992",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 362091.2188,
+      "y": -788991.6875,
+      "z": -16112,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-365763-790763",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 365762.6563,
+      "y": -790763.3125,
+      "z": -16118,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-369040-789231",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 369039.8125,
+      "y": -789231.1875,
+      "z": -16103,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-367856-786723",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 367856.25,
+      "y": -786723,
+      "z": -16113.28418,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-339618-771493",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 339617.5313,
+      "y": -771493.3125,
+      "z": -16456.07617,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-368873-788522",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 368872.6875,
+      "y": -788522.4375,
+      "z": -16202,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-363323-756204",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 363323.3,
+      "y": -756204,
+      "z": -16955.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-338398-768968",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 338397.9,
+      "y": -768968,
+      "z": -16998.5,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-346997-789614",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 346997,
+      "y": -789614,
+      "z": -16676.4,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-376448-773109",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 376447.6,
+      "y": -773109,
+      "z": -16855,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-397440-784787",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 397439.9,
+      "y": -784787,
+      "z": -9987,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-341565-780282",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 341565.3,
+      "y": -780282,
+      "z": -16985.3,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-341969-780415",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 341969.3,
+      "y": -780415,
+      "z": -16982.7,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-363735-791005",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 363735.3,
+      "y": -791005,
+      "z": -16612.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-363765-791085",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 363765.1,
+      "y": -791085,
+      "z": -16614.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-2-362205-791132",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 362204.5,
+      "y": -791132,
+      "z": -16119,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-1-369944-788121",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 369943.8,
+      "y": -788121,
+      "z": -16643,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-369281-762684",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 369281.3,
+      "y": -762684,
+      "z": -16862.8,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-370160-762846",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 370160.1,
+      "y": -762846,
+      "z": -16317,
+      "location": "大变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-370098-762669",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 370098.2,
+      "y": -762669,
+      "z": -16317,
+      "location": "大变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-1-363523-787992",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 363523.2,
+      "y": -787992,
+      "z": -16666,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-1-369464-785770",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 369463.7,
+      "y": -785770,
+      "z": -16611,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-368252-784837",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 368252.3,
+      "y": -784837,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-2-368524-785547",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 368523.9,
+      "y": -785547,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-safe-box-g-370219-764339",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 370219.3,
+      "y": -764339,
+      "z": -16422,
+      "location": "大变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-330303-773301",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 330302.9,
+      "y": -773301,
+      "z": -16579.9,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-337358-769364",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 337358.2,
+      "y": -769364,
+      "z": -17032.7,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-364585-795800",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 364584.8,
+      "y": -795800,
+      "z": -16732.7,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-372149-792368",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 372149.1,
+      "y": -792368,
+      "z": -16485,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-367653-794597",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 367653,
+      "y": -794597,
+      "z": -16485,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-390579-770492",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 390579,
+      "y": -770492,
+      "z": -12457.8,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-g-336909-794938",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 336908.9,
+      "y": -794938,
+      "z": -15104.1,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-g-363872-756556",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 363871.9,
+      "y": -756556,
+      "z": -16917.1,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-1-367914-784415",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 367914.4,
+      "y": -784415,
+      "z": -16642.6,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-hiking-bag-g-341631-780512",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 341630.7,
+      "y": -780512,
+      "z": -16993.7,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-337433-781759",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 337433,
+      "y": -781759,
+      "z": -17072.5,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-355400-787712",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 355400,
+      "y": -787712,
+      "z": -16759.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-353749-794579",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 353749,
+      "y": -794579,
+      "z": -16758.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-357514-797055",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 357513.5,
+      "y": -797055,
+      "z": -16758.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-372062-784420",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 372062.3,
+      "y": -784420,
+      "z": -16759.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-368003-792144",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 368002.6,
+      "y": -792144,
+      "z": -16758.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-388411-743307",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 388411,
+      "y": -743307,
+      "z": -13856.1,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-387532-749907",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 387532,
+      "y": -749907,
+      "z": -13836.5,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-394758-757601",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 394757.5,
+      "y": -757601,
+      "z": -13851.9,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-stash-g-380322-782211",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 380322,
+      "y": -782211,
+      "z": -16759.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-330628-773061",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 330627.8,
+      "y": -773061,
+      "z": -16652.4,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-337686-769526",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 337686,
+      "y": -769526,
+      "z": -17029.4,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-337418-795272",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 337418.4,
+      "y": -795272,
+      "z": -15177.3,
+      "location": "军营",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-373953-801000",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 373952.6,
+      "y": -801000,
+      "z": -16493.9,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-364192-790645",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 364192.2,
+      "y": -790645,
+      "z": -16625.6,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-364312-790605",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 364312.2,
+      "y": -790605,
+      "z": -16725.6,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-363922-790771",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 363921.9,
+      "y": -790771,
+      "z": -16201.6,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-363326-788450",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 363326,
+      "y": -788450,
+      "z": -16196.2,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-363364-787936",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 363363.5,
+      "y": -787936,
+      "z": -16201,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-362999-788202",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 362999.3,
+      "y": -788202,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-1-370311-786860",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 370310.5,
+      "y": -786860,
+      "z": -16745.9,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-1-371099-788774",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 371098.6,
+      "y": -788774,
+      "z": -16745.9,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-390067-747443",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 390066.6,
+      "y": -747443,
+      "z": -13656.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-389998-747475",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 389997.9,
+      "y": -747475,
+      "z": -13748.4,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-337969-768938",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 337968.8,
+      "y": -768938,
+      "z": -17034.3,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-363822-756705",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 363822.3,
+      "y": -756705,
+      "z": -17016.9,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-362193-788145",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 362193,
+      "y": -788145,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-g-391899-745229",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 391899.1,
+      "y": -745229,
+      "z": -13770.7,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-328083-765839",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 328082.7,
+      "y": -765839,
+      "z": -17684.1,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-326868-764832",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 326868,
+      "y": -764832,
+      "z": -16738.3,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-321753-776827",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 321753.3,
+      "y": -776827,
+      "z": -16413.5,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-323838-771165",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 323838,
+      "y": -771165,
+      "z": -16559.5,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-338750-762412",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 338749.6,
+      "y": -762412,
+      "z": -17875.6,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-329369-767534",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 329368.5,
+      "y": -767534,
+      "z": -17154.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-335315-771828",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 335314.6,
+      "y": -771828,
+      "z": -16575,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-351449-764725",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 351449,
+      "y": -764725,
+      "z": -17194.7,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-355469-759328",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 355469,
+      "y": -759328,
+      "z": -17565.7,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-357649-760448",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 357648.5,
+      "y": -760448,
+      "z": -17546.2,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-358347-793780",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 358347,
+      "y": -793780,
+      "z": -16742.7,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-353584-791883",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 353584.1,
+      "y": -791883,
+      "z": -16755.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-357980-783521",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 357980,
+      "y": -783521,
+      "z": -17195,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-371365-788399",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 371364.8,
+      "y": -788399,
+      "z": -16749.4,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-372583-792068",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 372583.3,
+      "y": -792068,
+      "z": -16483,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-365620-795083",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 365620,
+      "y": -795083,
+      "z": -16486.8,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-391034-755672",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 391033.8,
+      "y": -755672,
+      "z": -14914.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-384463-762937",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 384462.8,
+      "y": -762937,
+      "z": -15550,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-390095-769839",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 390095.3,
+      "y": -769839,
+      "z": -12535,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-382360-785309",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 382360,
+      "y": -785309,
+      "z": -16688.7,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-387661-787760",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 387660.7,
+      "y": -787760,
+      "z": -12163.7,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-bird-nest-g-385717-790671",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 385716.7,
+      "y": -790671,
+      "z": -15854.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-g-364014-791564",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 364014,
+      "y": -791564,
+      "z": -16620.2,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-2-368204-786583",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 368204.4,
+      "y": -786583,
+      "z": -16132.3,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-2-368268-785085",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 368267.5,
+      "y": -785085,
+      "z": -16130.4,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-2-367623-785566",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 367623,
+      "y": -785566,
+      "z": -16145,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-g-393563-745864",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 393563.1,
+      "y": -745864,
+      "z": -13720.8,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-g-394665-749129",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 394665,
+      "y": -749129,
+      "z": -12880.7,
+      "location": "游客中心",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-2-368374-785835",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 368374.2,
+      "y": -785835,
+      "z": -16127.3,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-g-394727-751539",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 394726.5,
+      "y": -751539,
+      "z": -13708.6,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-325843-773876",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 325842.6,
+      "y": -773876,
+      "z": -16870,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-348236-765608",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 348236.4,
+      "y": -765608,
+      "z": -17718.8,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-362478-778698",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 362478.3,
+      "y": -778698,
+      "z": -17426.8,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-353752-792891",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 353751.5,
+      "y": -792891,
+      "z": -16745.6,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-373260-792252",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 373260,
+      "y": -792252,
+      "z": -16489.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-378483-767363",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 378482.5,
+      "y": -767363,
+      "z": -17219.5,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-small-safe-g-363695-756691",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 363695.2,
+      "y": -756691,
+      "z": -16571.1,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-small-safe-2-368621-786393",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 368621.3,
+      "y": -786393,
+      "z": -16120.5,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-small-safe-g-393387-744863",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 393386.7,
+      "y": -744863,
+      "z": -13660.5,
+      "location": "游客中心",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-364102-790789",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 364101.8,
+      "y": -790789,
+      "z": -16745.4,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-2-367224-785253",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 367224.2,
+      "y": -785253,
+      "z": -16197,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-389764-747334",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 389763.6,
+      "y": -747334,
+      "z": -13765.6,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-336141-776684",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 336140.8,
+      "y": -776684,
+      "z": -16232.9,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-335066-771770",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 335066,
+      "y": -771770,
+      "z": -16073,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-1-362957-791924",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 362956.5,
+      "y": -791924,
+      "z": -16742.2,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-363722-803014",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 363721.5,
+      "y": -803014,
+      "z": -16208,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-362302-796397",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 362302.1,
+      "y": -796397,
+      "z": -16474.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-2-365779-784900",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 365778.9,
+      "y": -784900,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-376046-786178",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 376045.6,
+      "y": -786178,
+      "z": -16240.6,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-large-weapon-crate-g-371852-793547",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 371851.5,
+      "y": -793547,
+      "z": -16470.2,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-336791-778074",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 336790.5,
+      "y": -778074,
+      "z": -17053.9,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-376268-773466",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 376268,
+      "y": -773466,
+      "z": -16830.7,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-317819-790074",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 317819.4,
+      "y": -790074,
+      "z": -15372.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-335356-764129",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 335356.3,
+      "y": -764129,
+      "z": -17284.9,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-335210-761311",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 335210,
+      "y": -761311,
+      "z": -17308.9,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-338669-760848",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 338669.1,
+      "y": -760848,
+      "z": -17514.6,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-338360-762630",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 338360,
+      "y": -762630,
+      "z": -17623,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-339432-772761",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 339432,
+      "y": -772761,
+      "z": -16415.3,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-327821-772653",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 327821.1,
+      "y": -772653,
+      "z": -16637.8,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-332086-798404",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 332085.5,
+      "y": -798404,
+      "z": -15373,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-369591-774744",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 369590.5,
+      "y": -774744,
+      "z": -16560.2,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-357002-792708",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 357001.9,
+      "y": -792708,
+      "z": -17334.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-354785-792288",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 354784.7,
+      "y": -792288,
+      "z": -16755.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-368998-793834",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 368998.3,
+      "y": -793834,
+      "z": -16744,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-386660-765963",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 386660,
+      "y": -765963,
+      "z": -15599.8,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-386056-783760",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 386056.3,
+      "y": -783760,
+      "z": -16733.2,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-378656-784386",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 378656,
+      "y": -784386,
+      "z": -16638,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-g-398852-785467",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 398852.2,
+      "y": -785467,
+      "z": -10031.4,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-storage-2-368920-784665",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 368919.6,
+      "y": -784665,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-g-369110-793781",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 369110.2,
+      "y": -793781,
+      "z": -16474.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-g-379919-768366",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 379918.7,
+      "y": -768366,
+      "z": -17217.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-329766-772961",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 329766.4,
+      "y": -772961,
+      "z": -16647.4,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-394196-749227",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 394195.6,
+      "y": -749227,
+      "z": -12938.4,
+      "location": "游客中心",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-393343-745199",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 393342.6,
+      "y": -745199,
+      "z": -13770.6,
+      "location": "游客中心",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-1-369252-785224",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 369252,
+      "y": -785224,
+      "z": -16746,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-391002-747987",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 391001.7,
+      "y": -747987,
+      "z": -13770.7,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-392947-747115",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 392947.2,
+      "y": -747115,
+      "z": -13770.2,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-1-363708-787242",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 363707.8,
+      "y": -787242,
+      "z": -16651.2,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-1-363567-787831",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 363567.2,
+      "y": -787831,
+      "z": -16654.1,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-323452-768420",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 323452,
+      "y": -768420,
+      "z": -16867,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-339673-792947",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 339673.2,
+      "y": -792947,
+      "z": -15912.1,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-376086-754043",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 376086,
+      "y": -754043,
+      "z": -16052.8,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-1-368741-788764",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 368740.8,
+      "y": -788764,
+      "z": -16688,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-395356-749833",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 395356,
+      "y": -749833,
+      "z": -13676.5,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-396682-758118",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 396681.9,
+      "y": -758118,
+      "z": -13769.1,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-military-med-g-390717-771110",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 390717,
+      "y": -771110,
+      "z": -12457.8,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-315625-778258",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 315624.9,
+      "y": -778258,
+      "z": -15615.5,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-349245-790833",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 349245.1,
+      "y": -790833,
+      "z": -16607.5,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-373412-773307",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 373411.8,
+      "y": -773307,
+      "z": -16701.6,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-373428-793189",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 373428.4,
+      "y": -793189,
+      "z": -16485.2,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-366204-795310",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 366204.3,
+      "y": -795310,
+      "z": -16741,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-trash-g-347395-791160",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 347395,
+      "y": -791160,
+      "z": -16745.1,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-trash-g-359662-759083",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 359662.1,
+      "y": -759083,
+      "z": -17032.7,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-trash-g-359893-799638",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 359893,
+      "y": -799638,
+      "z": -16749.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-trash-g-387259-764982",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 387258.6,
+      "y": -764982,
+      "z": -15620.6,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-trash-g-380917-790407",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 380917,
+      "y": -790407,
+      "z": -16746,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-g-337055-795696",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 337054.8,
+      "y": -795696,
+      "z": -15193.7,
+      "location": "军营",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-g-364475-791236",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 364475.4,
+      "y": -791236,
+      "z": -16745.4,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-2-362393-790908",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 362393.4,
+      "y": -790908,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-2-362441-791038",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 362440.9,
+      "y": -791038,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-1-365561-788507",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 365560.9,
+      "y": -788507,
+      "z": -16746,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-g-369605-763363",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 369604.7,
+      "y": -763363,
+      "z": -16420.4,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-g-370418-763609",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 370417.6,
+      "y": -763609,
+      "z": -16421.9,
+      "location": "大变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-g-369739-763332",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 369739.2,
+      "y": -763332,
+      "z": -16421.9,
+      "location": "大变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-server-2-362479-790759",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 362479.2,
+      "y": -790759,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-325316-768013",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 325316.1,
+      "y": -768013,
+      "z": -17635.9,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-372160-801556",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 372160.1,
+      "y": -801556,
+      "z": -16401.1,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-2-361881-792365",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 361881.1,
+      "y": -792365,
+      "z": -16086.4,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-318730-788490",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 318729.8,
+      "y": -788490,
+      "z": -15648.4,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-322909-792298",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 322909.1,
+      "y": -792298,
+      "z": -15372.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-327066-795403",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 327065.8,
+      "y": -795403,
+      "z": -15372.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-342968-763223",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 342967.8,
+      "y": -763223,
+      "z": -18032.2,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-328054-795237",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 328053.8,
+      "y": -795237,
+      "z": -15529.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-373804-752472",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 373803.7,
+      "y": -752472,
+      "z": -16010.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-361806-756340",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 361806,
+      "y": -756340,
+      "z": -16900.6,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-362387-759497",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 362387.2,
+      "y": -759497,
+      "z": -17021.4,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-369522-764000",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 369522.3,
+      "y": -764000,
+      "z": -16849,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-376184-772582",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 376183.8,
+      "y": -772582,
+      "z": -16853.7,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-1-361420-789223",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 361420.1,
+      "y": -789223,
+      "z": -16746,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-375562-785203",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375562.3,
+      "y": -785203,
+      "z": -16637.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-370424-800498",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 370423.8,
+      "y": -800498,
+      "z": -16207.2,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-367718-794806",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 367718,
+      "y": -794806,
+      "z": -16488,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-379465-765902",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 379464.8,
+      "y": -765902,
+      "z": -17217.1,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-383686-783962",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 383686.3,
+      "y": -783962,
+      "z": -16627.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-378264-786081",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 378264.1,
+      "y": -786081,
+      "z": -16764.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-378857-794273",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 378857.1,
+      "y": -794273,
+      "z": -15408.6,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-382716-756162",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 382715.7,
+      "y": -756162,
+      "z": -15863.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-350606-761081",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 350605.8,
+      "y": -761081,
+      "z": -17687.2,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-347666-756101",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 347665.5,
+      "y": -756101,
+      "z": -18198.6,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-344820-767042",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 344819.9,
+      "y": -767042,
+      "z": -17770.1,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-375356-784959",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 375356.4,
+      "y": -784959,
+      "z": -16764.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-g-377614-792105",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 377614.4,
+      "y": -792105,
+      "z": -16487.8,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-2-360098-792848",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 360098.4,
+      "y": -792848,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-382350-757817",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 382350.3,
+      "y": -757817,
+      "z": -15864.2,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-321325-790199",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 321324.9,
+      "y": -790199,
+      "z": -15215.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-339703-771671",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 339703.4,
+      "y": -771671,
+      "z": -16541.3,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-337141-780345",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 337140.9,
+      "y": -780345,
+      "z": -17075,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-336181-776679",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 336180.7,
+      "y": -776679,
+      "z": -17053.9,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-335606-778588",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 335606,
+      "y": -778588,
+      "z": -16532.2,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-373352-764618",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 373351.8,
+      "y": -764618,
+      "z": -16959.2,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-373088-762563",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 373088.1,
+      "y": -762563,
+      "z": -16965.9,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-367640-765582",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 367639.8,
+      "y": -765582,
+      "z": -16819,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-1-361137-792317",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 361137.3,
+      "y": -792317,
+      "z": -16745.4,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-1-359721-789047",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 359721.2,
+      "y": -789047,
+      "z": -16746,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-362452-793071",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 362451.7,
+      "y": -793071,
+      "z": -16759.6,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-363461-792448",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 363460.6,
+      "y": -792448,
+      "z": -16755.1,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-2-365932-790243",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 365932,
+      "y": -790243,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-366950-803449",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 366949.7,
+      "y": -803449,
+      "z": -16490.3,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-379139-785041",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 379138.8,
+      "y": -785041,
+      "z": -16240.6,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-322842-769266",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 322842,
+      "y": -769266,
+      "z": -17244.7,
+      "location": "河道",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-336518-791062",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 336517.7,
+      "y": -791062,
+      "z": -15840.1,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-340894-791332",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 340893.6,
+      "y": -791332,
+      "z": -15931.7,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-343411-797078",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 343411.3,
+      "y": -797078,
+      "z": -16340,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-373519-750521",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 373519.1,
+      "y": -750521,
+      "z": -16079.2,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-369579-764569",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 369579,
+      "y": -764569,
+      "z": -16839.4,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-1-358997-788032",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 358997.4,
+      "y": -788032,
+      "z": -16732.9,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-1-359936-792700",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 359935.8,
+      "y": -792700,
+      "z": -16618.7,
+      "floor": 1,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-357498-791350",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 357497.9,
+      "y": -791350,
+      "z": -16689.6,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-371657-790655",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 371656.9,
+      "y": -790655,
+      "z": -16611,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-390022-757035",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 390022,
+      "y": -757035,
+      "z": -13842.3,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-384099-763628",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 384098.7,
+      "y": -763628,
+      "z": -15124.7,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-ammo-crate-g-378382-781523",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 378381.9,
+      "y": -781523,
+      "z": -16625.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-334651-772830",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 334650.5,
+      "y": -772830,
+      "z": -17019.5,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-335677-774769",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 335676.7,
+      "y": -774769,
+      "z": -16006.5,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-362010-758966",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 362010.2,
+      "y": -758966,
+      "z": -17025.4,
+      "location": "小变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-364975-795408",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 364974.6,
+      "y": -795408,
+      "z": -16746.4,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-377345-785069",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 377345.4,
+      "y": -785069,
+      "z": -16764,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-air-crate-g-369059-794315",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 369059.1,
+      "y": -794315,
+      "z": -16744.4,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-2-367740-784992",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 367739.5,
+      "y": -784992,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-g-329832-776354",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 329831.6,
+      "y": -776354,
+      "z": -17049.1,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-2-370316-787928",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 370316.4,
+      "y": -787928,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-g-389951-747953",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 389951.3,
+      "y": -747953,
+      "z": -13770.7,
+      "location": "游客中心",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-336326-795616",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 336326.3,
+      "y": -795616,
+      "z": -15112.8,
+      "location": "军营",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-g-364151-791534",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 364151,
+      "y": -791534,
+      "z": -16620.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-362053-790567",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 362052.5,
+      "y": -790567,
+      "z": -16104.5,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-368240-785338",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 368240.4,
+      "y": -785338,
+      "z": -16111.3,
+      "floor": 2,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-0-364036-787809",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 364036,
+      "y": -787809,
+      "z": -17270.5,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-363412-756622",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 363412.2,
+      "y": -756622,
+      "z": -16632,
+      "location": "小变电站",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-371632-801001",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 371632.3,
+      "y": -801001,
+      "z": -16492,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-371662-801085",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 371662.3,
+      "y": -801085,
+      "z": -16492,
+      "location": "大坝内部",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-1-367670-785532",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 367670.3,
+      "y": -785532,
+      "z": -16745.9,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-1-366868-785516",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 366868,
+      "y": -785516,
+      "z": -16745.9,
+      "floor": 1,
+      "location": "行政楼",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-337729-769106",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 337729.1,
+      "y": -769106,
+      "z": -17034,
+      "location": "水泥厂",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-363446-756614",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 363445.5,
+      "y": -756614,
+      "z": -17017,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-354010-794231",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 354009.6,
+      "y": -794231,
+      "z": -16745.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-354045-794330",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 354044.9,
+      "y": -794330,
+      "z": -16745.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-weapon-crate-g-335243-775124",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 335242.7,
+      "y": -775124,
+      "z": -16013.6,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-weapon-crate-g-335463-774060",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 335462.5,
+      "y": -774060,
+      "z": -16013.6,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-weapon-crate-g-370446-793014",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 370445.5,
+      "y": -793014,
+      "z": -16494.3,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-341831-780244",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 341830.9,
+      "y": -780244,
+      "z": -17055.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-341946-780653",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 341946.3,
+      "y": -780653,
+      "z": -17055.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-370626-764261",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 370626.2,
+      "y": -764261,
+      "z": -16965.1,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-locker-g-368750-764607",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 368750,
+      "y": -764607,
+      "z": -16422,
+      "location": "大变电站",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-331661-779118",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 331660.8,
+      "y": -779118,
+      "z": -17075.8,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-335884-775455",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 335884.3,
+      "y": -775455,
+      "z": -16948.1,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-338759-777997",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 338759,
+      "y": -777997,
+      "z": -17076.3,
+      "location": "水泥厂",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-338720-786117",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 338720,
+      "y": -786117,
+      "z": -16984.2,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-365831-767228",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 365831.1,
+      "y": -767228,
+      "z": -17011.9,
+      "location": "野外",
+      "source": "imported"
+    },
+    {
+      "id": "db-mixer-g-382639-779320",
+      "typeId": "mixer",
+      "icon": "snc",
+      "x": 382638.7,
+      "y": -779320,
+      "z": -16765.9,
+      "location": "行政楼外围",
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-0-368943-787602",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 368943,
+      "y": -787602,
+      "z": -17231,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-0-360044-777557",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 360044.1,
+      "y": -777557,
+      "z": -18376,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-0-361821-787339",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 361821,
+      "y": -787339,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-0-348080-771570",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 348080,
+      "y": -771570,
+      "z": -18660,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-0-361343-776169",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 361343,
+      "y": -776169,
+      "z": -19401,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-0-357895-770271",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 357895,
+      "y": -770271,
+      "z": -18881.2,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-0-362560-789684",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 362560,
+      "y": -789684,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-travel-bag-0-363086-783140",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 363086,
+      "y": -783140,
+      "z": -17863.8,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-high-storage-0-368992-788406",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 368992,
+      "y": -788406,
+      "z": -17437.4,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-0-347450-770650",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 347450,
+      "y": -770650,
+      "z": -18660,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-0-362435-782470",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 362435,
+      "y": -782470,
+      "z": -17864,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-parcel-0-360765-791549",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 360765,
+      "y": -791549,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-0-347910-770820",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 347910,
+      "y": -770820,
+      "z": -18660.9,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-0-358942-776906",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 358942,
+      "y": -776906,
+      "z": -19401,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-0-360779-789109",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 360779,
+      "y": -789109,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-field-crate-0-356040-768520",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 356040,
+      "y": -768520,
+      "z": -19180,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-0-344890-771150",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 344890,
+      "y": -771150,
+      "z": -19294.5,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-0-354220-771860",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 354220,
+      "y": -771860,
+      "z": -19454.4,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-0-359966-777362",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 359966,
+      "y": -777362,
+      "z": -18884.6,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-0-364832-785910",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 364832,
+      "y": -785910,
+      "z": -17277.1,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-0-361246-788629",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 361246,
+      "y": -788629,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-drawer-0-360911-787086",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 360911,
+      "y": -787086,
+      "z": -17353.2,
+      "floor": 0,
+      "location": "地下",
+      "source": "imported"
+    },
+    {
+      "id": "db-computer-2-370459-788895",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 370459.4375,
+      "y": -788895.375,
+      "z": -16102,
+      "floor": 2,
+      "location": "行政楼",
+      "appear": [
+        {
+          "difficulty": "normal"
+        },
+        {
+          "difficulty": "secret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-spawn-g-318664-764370",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 318664.375,
+      "y": -764369.5,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-320631-785836",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 320630.8125,
+      "y": -785836.3125,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-322628-793099",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 322628.46875,
+      "y": -793098.9375,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-343810-797209",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 343810.40625,
+      "y": -797209.3125,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-342271-789283",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 342270.71875,
+      "y": -789283.0625,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-330783-774146",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 330782.875,
+      "y": -774146.375,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-337914-761203",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 337913.9375,
+      "y": -761203.3125,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-368743-776432",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 368743.21875,
+      "y": -776432.0625,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-369619-748163",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 369618.84375,
+      "y": -748162.9375,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-383443-752651",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 383443.40625,
+      "y": -752650.5625,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-383133-770406",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 383133.09375,
+      "y": -770405.6875,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-393578-775423",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 393578.1875,
+      "y": -775423.25,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-399501-753072",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 399500.9375,
+      "y": -753072,
+      "source": "manual"
+    },
+    {
+      "id": "db-spawn-g-392301-731488",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 392300.78125,
+      "y": -731487.6875,
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-paid-g-353097-755643",
+      "typeId": "extract-paid",
+      "icon": "ffcld",
+      "x": 353096.90625,
+      "y": -755643.125,
+      "location": "河滩",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-normal-g-402175-754590",
+      "typeId": "extract-normal",
+      "icon": "cgcld",
+      "x": 402174.78125,
+      "y": -754589.5625,
+      "location": "东区隧道",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-random-g-388701-728566",
+      "typeId": "extract-random",
+      "icon": "sjcld",
+      "x": 388700.59375,
+      "y": -728565.9375,
+      "location": "东区公路口",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-condition-g-399820-783016",
+      "typeId": "extract-condition",
+      "icon": "tjcld",
+      "x": 399820.40625,
+      "y": -783016.4375,
+      "location": "坝顶",
+      "extractNote": "负重限制",
+      "appear": [
+        {
+          "difficulty": "normal"
+        },
+        {
+          "difficulty": "secret"
+        }
+      ],
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-normal-g-319398-763825",
+      "typeId": "extract-normal",
+      "icon": "cgcld",
+      "x": 319398.28125,
+      "y": -763825.125,
+      "location": "西区公路口",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-random-g-327685-764018",
+      "typeId": "extract-random",
+      "icon": "sjcld",
+      "x": 327684.84375,
+      "y": -764017.5,
+      "location": "公路捷径",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-condition-g-330475-800413",
+      "typeId": "extract-condition",
+      "icon": "tjcld",
+      "x": 330474.84375,
+      "y": -800413.375,
+      "location": "维修通道",
+      "extractNote": "丢弃背包",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-elevator-2-377435-799207",
+      "typeId": "extract-elevator",
+      "icon": "dtcld",
+      "x": 377434.625,
+      "y": -799207.0625,
+      "floor": 2,
+      "location": "工业电梯撤离点",
+      "links": [
+        {
+          "x": 376781.78125,
+          "y": -772948.25
+        },
+        {
+          "x": 362532.78125,
+          "y": -790963.3125
+        }
+      ],
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-elevator-g-376782-772948",
+      "typeId": "extract-elevator",
+      "icon": "dtwz",
+      "x": 376781.78125,
+      "y": -772948.25,
+      "title": "开启工业电梯",
+      "location": "主变电站",
+      "source": "manual"
+    },
+    {
+      "id": "db-extract-elevator-2-362533-790963",
+      "typeId": "extract-elevator",
+      "icon": "dtwz",
+      "x": 362532.78125,
+      "y": -790963.3125,
+      "z": -16144.710938,
+      "floor": 2,
+      "title": "开启工业电梯",
+      "location": "行政西楼",
+      "source": "manual"
+    },
+    {
+      "id": "db-clothing-2-370029-787682",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 370028.7,
+      "y": -787682,
+      "z": -16151,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-2-370223-788226",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 370223.3,
+      "y": -788226,
+      "z": -16134,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-374111-805240",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 374110.9,
+      "y": -805240,
+      "z": -16945.7,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-374089-805574",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 374089,
+      "y": -805574,
+      "z": -16945.4,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-363157-790313",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 363156.6,
+      "y": -790313,
+      "z": -16202,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-368058-787953",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 368058,
+      "y": -787953,
+      "z": -16746,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-suitcase-2-369739-788499",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 369739,
+      "y": -788499,
+      "z": -16102.1,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-small-safe-2-362615-788217",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 362615.1,
+      "y": -788217,
+      "z": -16111.9,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-small-safe-g-374403-805740",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 374402.5,
+      "y": -805740,
+      "z": -17002.9,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-369238-793798",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 369238.1,
+      "y": -793798,
+      "z": -16738,
+      "location": "行政楼外围",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-medical-pile-g-366423-796839",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 366423,
+      "y": -796839,
+      "z": -16472.5,
+      "location": "行政楼外围",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-weapon-crate-g-365334-795047",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 365334,
+      "y": -795047,
+      "z": -16475,
+      "location": "行政楼外围",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "secret"
+        },
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-hiking-bag-2-363872-791564",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 363872,
+      "y": 791564,
+      "z": -16746,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-high-storage-1-362344-791816",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 362344,
+      "y": -791816,
+      "z": -16744,
+      "floor": 1,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-365149-789527",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 365149,
+      "y": -789527,
+      "z": -16746,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-1-364457-786966",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 364457,
+      "y": -786966,
+      "z": -16744.4,
+      "floor": 1,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-1-367931-786107",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 367931,
+      "y": -786107,
+      "z": -16598,
+      "floor": 1,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-2-369477-789641",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 369477,
+      "y": -789641,
+      "z": -16745.9,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-pc-case-2-368178-789173",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 368178,
+      "y": -789173,
+      "z": -16201.9,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-hiking-bag-2-370217-789135",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 370217,
+      "y": -789135,
+      "z": -16745.9,
+      "floor": 2,
+      "location": "行政楼",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-server-0-360775-789108",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 360775.1,
+      "y": -789108,
+      "z": -17354,
+      "floor": 0,
+      "location": "地下",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-high-storage-0-361101-791112",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 361101,
+      "y": -791112,
+      "z": -17351,
+      "floor": 0,
+      "location": "地下",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-high-storage-0-364088-787800",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 364088,
+      "y": -787800,
+      "z": -17270.5,
+      "floor": 0,
+      "location": "地下",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-hiking-bag-0-367186-788121",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 367186,
+      "y": -788121,
+      "z": -17353,
+      "floor": 0,
+      "location": "地下",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-high-luggage-g-372447-800548",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 372447,
+      "y": -800548,
+      "z": -16492.5,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-376087-800318",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 376087,
+      "y": -800318,
+      "z": -16494,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-375685-798325",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375685,
+      "y": -798325,
+      "z": -16623.9,
+      "location": "大坝内部",
+      "appearNote": "破壁行动",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-tool-cabinet-g-370258-770165",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 370258,
+      "y": -770165,
+      "z": -16961.4,
+      "location": "大变电站",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-storage-box-g-370081-768688",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 370081,
+      "y": -768688,
+      "z": -16961.4,
+      "location": "大变电站",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-clothing-g-369542-763270",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 369542,
+      "y": -763270,
+      "z": -16905.3,
+      "location": "大变电站",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "db-boss-g-367549-785405",
+      "typeId": "boss",
+      "icon": "boss",
+      "x": 367549.0625,
+      "y": -785405.4375,
+      "title": "[卫队长官]赛伊德",
+      "location": "可能出现在行政辖区内",
+      "source": "manual"
+    },
+    {
+      "id": "db-recon-radio-g-335882-775247",
+      "typeId": "recon-radio",
+      "icon": "/assets/maps/icons/shushu/zcdt.png",
+      "x": 335881.6,
+      "y": -775247.1,
+      "z": -15909.1,
+      "title": "侦察电台",
+      "location": "水泥厂",
+      "source": "manual"
+    },
+    {
+      "id": "db-recon-radio-2-362628-788296",
+      "typeId": "recon-radio",
+      "icon": "/assets/maps/icons/shushu/zcdt.png",
+      "x": 362628,
+      "y": -788296,
+      "z": -16101,
+      "floor": 2,
+      "title": "侦察电台",
+      "location": "行政楼",
+      "source": "manual"
+    },
+    {
+      "id": "db-recon-radio-g-395697-752496",
+      "typeId": "recon-radio",
+      "icon": "/assets/maps/icons/shushu/zcdt.png",
+      "x": 395697,
+      "y": -752496,
+      "z": -13157.2,
+      "title": "侦察电台",
+      "location": "游客中心",
+      "source": "manual"
+    },
+    {
+      "id": "db-contract-high-g-351620-774273",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 351620.4,
+      "y": -774272.6,
+      "z": -17135.7,
+      "source": "manual",
+      "title": "夜莺行动",
+      "location": "野外：导弹发射台",
+      "appearNote": "开局后 12 分钟"
+    },
+    {
+      "id": "db-contract-high-g-383881-750311",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 383881.4,
+      "y": -750310.7,
+      "z": -14722.4,
+      "source": "manual",
+      "title": "拆弹行动-E",
+      "location": "野外：游客中心外围"
+    },
+    {
+      "id": "db-contract-high-g-374263-805649",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 374262.6,
+      "y": -805649,
+      "z": -16936.1,
+      "source": "manual",
+      "title": "拆弹行动-N",
+      "location": "坝体内部"
+    },
+    {
+      "id": "db-contract-high-g-322863-775305",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 322863.2,
+      "y": -775304.6,
+      "z": -16321.3,
+      "source": "manual",
+      "title": "拆弹行动-W",
+      "location": "在建工地"
+    },
+    {
+      "id": "db-contract-high-g-354700-780512",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 354700.1,
+      "y": -780511.9,
+      "z": -16581.4,
+      "source": "manual",
+      "title": "破壁者行动（行政区域大门）",
+      "location": "野外：导弹发射台"
+    },
+    {
+      "id": "db-contract-high-g-354223-782701",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 354223,
+      "y": -782701,
+      "z": -16949,
+      "source": "manual",
+      "title": "硬通货",
+      "location": "野外：行政楼外围"
+    },
+    {
+      "id": "db-contract-high-g-364366-794160",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 364365.8,
+      "y": -794160.1,
+      "z": -16611.8,
+      "source": "manual",
+      "title": "破坏物资室铁门",
+      "location": "野外：行政楼外围",
+      "random": true
+    },
+    {
+      "id": "db-contract-g-316846-769470",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 316845.6,
+      "y": -769470.2,
+      "z": -15844.3,
+      "source": "manual",
+      "location": "野外：工地外",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-322396-775205",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 322395.5,
+      "y": -775205.3,
+      "z": -16303.9,
+      "source": "manual",
+      "location": "在建工地",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-325494-793736",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 325494.1,
+      "y": -793736.1,
+      "z": -15518.2,
+      "source": "manual",
+      "location": "管道区域",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-332334-764220",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 332333.7,
+      "y": -764220.1,
+      "z": -17201,
+      "source": "manual",
+      "location": "水管铺设工地",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-332512-779257",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 332511.9,
+      "y": -779256.8,
+      "z": -16939.2,
+      "source": "manual",
+      "location": "水泥厂",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-334618-788680",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 334618.1,
+      "y": -788680.2,
+      "z": -15991.5,
+      "source": "manual",
+      "location": "军营",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-340723-783826",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 340722.8,
+      "y": -783825.5,
+      "z": -16991.9,
+      "source": "manual",
+      "location": "野外：水泥厂外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-343041-762405",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 343041.3,
+      "y": -762405.1,
+      "z": -18100.2,
+      "source": "manual",
+      "location": "野外：管道工地到河滩",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-343086-792983",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 343086.3,
+      "y": -792983.1,
+      "z": -15976.1,
+      "source": "manual",
+      "location": "野外：军营到行政楼",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-348603-788997",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 348602.6,
+      "y": -788997.3,
+      "z": -16617.8,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-0-350224-771706",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 350224.1,
+      "y": -771706.3,
+      "z": -18806.1,
+      "source": "manual",
+      "floor": 0,
+      "location": "材料运输通道",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-350792-760921",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 350791.9,
+      "y": -760920.8,
+      "z": -17555.4,
+      "source": "manual",
+      "location": "野外：河滩外",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-351252-767964",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 351251.9,
+      "y": -767964.4,
+      "z": -17291.2,
+      "source": "manual",
+      "location": "野外：导弹发射台",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-352246-796215",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 352245.5,
+      "y": -796215.2,
+      "z": -16617.6,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-0-353136-771086",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 353136.4,
+      "y": -771086.1,
+      "z": -18832.8,
+      "source": "manual",
+      "floor": 0,
+      "location": "地下挖掘区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-0-355362-770346",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 355362.4,
+      "y": -770346,
+      "z": -19267.1,
+      "source": "manual",
+      "floor": 0,
+      "location": "地下挖掘区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-0-357877-768907",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 357877.1,
+      "y": -768907.1,
+      "z": -19086.6,
+      "source": "manual",
+      "floor": 0,
+      "location": "地下挖掘区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-1-362217-788220",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 362217,
+      "y": -788220.4,
+      "z": -16101.9,
+      "source": "manual",
+      "floor": 1,
+      "location": "行政西楼，外层 行政辖区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-362693-764759",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 362693.4,
+      "y": -764759.1,
+      "z": -16991.7,
+      "source": "manual",
+      "location": "野外：主变电站到备用电站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-364385-779550",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 364385.2,
+      "y": -779550.1,
+      "z": -17249.1,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-365373-760081",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 365372.9,
+      "y": -760081.2,
+      "z": -16844.4,
+      "source": "manual",
+      "location": "野外：主变电站到备用电站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-366677-773072",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 366677,
+      "y": -773072.3,
+      "z": -16871.7,
+      "source": "manual",
+      "location": "野外：主变电站外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-368487-787957",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 368486.8,
+      "y": -787957.2,
+      "z": -16102.3,
+      "source": "manual",
+      "location": "行政东楼，外层 行政辖区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-370189-754994",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 370188.6,
+      "y": -754994.2,
+      "z": -16370.3,
+      "source": "manual",
+      "location": "野外：山顶到维修站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-371287-768059",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 371287.2,
+      "y": -768059.1,
+      "z": -16828.8,
+      "source": "manual",
+      "location": "外部设备区，外层 主变电站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-371941-773737",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 371941.3,
+      "y": -773737.4,
+      "z": -16827.5,
+      "source": "manual",
+      "location": "主变电站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-375830-783205",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 375829.9,
+      "y": -783205.4,
+      "z": -16631.4,
+      "source": "manual",
+      "location": "停车场，外层 野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-376141-789656",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 376141.1,
+      "y": -789655.9,
+      "z": -16671.1,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-377253-791895",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 377253.2,
+      "y": -791894.7,
+      "z": -16373,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-378385-759293",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 378385.2,
+      "y": -759293,
+      "z": -15842.7,
+      "source": "manual",
+      "location": "野外：主变电站外围与养护站之间",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-379557-769633",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 379556.9,
+      "y": -769632.8,
+      "z": -16701.6,
+      "source": "manual",
+      "location": "野外：主变电站外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-384914-782215",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 384914.2,
+      "y": -782215.3,
+      "z": -16617,
+      "source": "manual",
+      "location": "野外：行政楼外围",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-386381-765808",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 386381,
+      "y": -765808.1,
+      "z": -15512.8,
+      "source": "manual",
+      "location": "养护站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-388050-758276",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 388049.6,
+      "y": -758276.1,
+      "z": -14923.2,
+      "source": "manual",
+      "location": "野外：养护站到游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-388137-749814",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 388136.9,
+      "y": -749814,
+      "z": -13751.4,
+      "source": "manual",
+      "location": "游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-391439-769400",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 391438.8,
+      "y": -769399.9,
+      "z": -12413.1,
+      "source": "manual",
+      "location": "山腰维修站",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-392066-756213",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 392066.4,
+      "y": -756213.1,
+      "z": -13778,
+      "source": "manual",
+      "location": "游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-394951-751568",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 394950.7,
+      "y": -751567.9,
+      "z": -13144.5,
+      "source": "manual",
+      "location": "游客主楼，外层 游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-395753-745796",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 395753.2,
+      "y": -745796.2,
+      "z": -13738.2,
+      "source": "manual",
+      "location": "游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "db-contract-g-397260-758860",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 397259.8,
+      "y": -758860,
+      "z": -13706.1,
+      "source": "manual",
+      "location": "游客中心",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    }
+  ]
+}

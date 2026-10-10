@@ -1,0 +1,5026 @@
+{
+  "map": {
+    "schema": 1,
+    "id": "article-map-htjd",
+    "name": "航天基地",
+    "config": {
+      "width": 65442.871094,
+      "height": 65442.871094,
+      "boundsW": -250,
+      "boundsH": 320,
+      "centerX": 669337,
+      "centerY": 446449.75,
+      "minZoom": 3,
+      "initZoom": 3,
+      "initX": -115,
+      "initY": 110,
+      "tileDir": "map_htjd",
+      "metersPerUnit": 0.01
+    },
+    "difficulties": [
+      {
+        "key": "secret",
+        "label": "机密"
+      },
+      {
+        "key": "topsecret",
+        "label": "绝密"
+      }
+    ],
+    "groups": [
+      {
+        "id": "all",
+        "title": "全部"
+      },
+      {
+        "id": "loot",
+        "title": "物资点"
+      },
+      {
+        "id": "spawn",
+        "title": "出生点"
+      },
+      {
+        "id": "extract",
+        "title": "撤离点"
+      },
+      {
+        "id": "boss",
+        "title": "首领"
+      },
+      {
+        "id": "contract",
+        "title": "行动接取站"
+      },
+      {
+        "id": "utility",
+        "title": "设施"
+      }
+    ],
+    "types": [
+      {
+        "id": "safe-box",
+        "name": "保险箱",
+        "icon": "bxx",
+        "group": "loot"
+      },
+      {
+        "id": "small-safe",
+        "name": "小保险箱",
+        "icon": "xbxx",
+        "group": "loot"
+      },
+      {
+        "id": "server",
+        "name": "服务器",
+        "icon": "fwq",
+        "group": "loot"
+      },
+      {
+        "id": "computer",
+        "name": "电脑",
+        "icon": "dn",
+        "group": "loot"
+      },
+      {
+        "id": "pc-case",
+        "name": "电脑机箱",
+        "icon": "dnjx",
+        "group": "loot"
+      },
+      {
+        "id": "laptop-bag",
+        "name": "电脑包",
+        "icon": "dsb",
+        "group": "loot"
+      },
+      {
+        "id": "weapon-crate",
+        "name": "武器箱",
+        "icon": "wqx",
+        "group": "loot"
+      },
+      {
+        "id": "large-weapon-crate",
+        "name": "大武器箱",
+        "icon": "dwqx",
+        "group": "loot"
+      },
+      {
+        "id": "ammo-crate",
+        "name": "弹药箱",
+        "icon": "dyx",
+        "group": "loot"
+      },
+      {
+        "id": "tool-cabinet",
+        "name": "工具柜",
+        "icon": "gjg",
+        "group": "loot"
+      },
+      {
+        "id": "storage-box",
+        "name": "收纳盒",
+        "icon": "dgjx",
+        "group": "loot"
+      },
+      {
+        "id": "clothing",
+        "name": "一件衣服",
+        "icon": "yf",
+        "group": "loot"
+      },
+      {
+        "id": "military-med",
+        "name": "军用医疗包",
+        "icon": "ylb",
+        "group": "loot"
+      },
+      {
+        "id": "medical-pile",
+        "name": "医疗物资堆",
+        "icon": "ylwzd",
+        "group": "loot"
+      },
+      {
+        "id": "travel-bag",
+        "name": "旅行包",
+        "icon": "lxd",
+        "group": "loot"
+      },
+      {
+        "id": "suitcase",
+        "name": "手提箱",
+        "icon": "stx",
+        "group": "loot"
+      },
+      {
+        "id": "locker",
+        "name": "储物柜",
+        "icon": "cwg",
+        "group": "loot"
+      },
+      {
+        "id": "high-storage",
+        "name": "高级储物箱",
+        "icon": "gjcwx",
+        "group": "loot"
+      },
+      {
+        "id": "drawer",
+        "name": "抽屉柜",
+        "icon": "ctg",
+        "group": "loot"
+      },
+      {
+        "id": "hiking-bag",
+        "name": "登山包",
+        "icon": "dsb",
+        "group": "loot"
+      },
+      {
+        "id": "parcel",
+        "name": "快递箱",
+        "icon": "kdx",
+        "group": "loot"
+      },
+      {
+        "id": "air-crate",
+        "name": "航空储物箱",
+        "icon": "hkcwx",
+        "group": "loot"
+      },
+      {
+        "id": "trash",
+        "name": "垃圾桶",
+        "icon": "ljx",
+        "group": "loot"
+      },
+      {
+        "id": "mixer",
+        "name": "搅拌车",
+        "icon": "snc",
+        "group": "loot"
+      },
+      {
+        "id": "field-crate",
+        "name": "野外物资箱",
+        "icon": "ywwzx",
+        "group": "loot"
+      },
+      {
+        "id": "bird-nest",
+        "name": "鸟窝",
+        "icon": "nw",
+        "group": "loot"
+      },
+      {
+        "id": "stash",
+        "name": "藏匿物",
+        "icon": "cnw",
+        "group": "loot"
+      },
+      {
+        "id": "high-luggage",
+        "name": "高级旅行箱",
+        "icon": "xlx",
+        "group": "loot"
+      },
+      {
+        "id": "spawn",
+        "name": "出生点",
+        "icon": "csd",
+        "group": "spawn"
+      },
+      {
+        "id": "extract-switch",
+        "name": "拉闸撤离点",
+        "icon": "dtcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-drop-bag",
+        "name": "丢包撤离点",
+        "icon": "tjcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-mission",
+        "name": "行动撤离点",
+        "icon": "hjcld",
+        "group": "extract"
+      },
+      {
+        "id": "hafuk-pod",
+        "name": "哈夫克返回舱",
+        "icon": "hfkfhc",
+        "group": "loot"
+      },
+      {
+        "id": "boss",
+        "name": "首领",
+        "icon": "boss",
+        "group": "boss"
+      },
+      {
+        "id": "contract",
+        "name": "行动接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      },
+      {
+        "id": "contract-high",
+        "name": "高价值接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      },
+      {
+        "id": "recon-radio",
+        "name": "侦察电台",
+        "icon": "/assets/maps/icons/shushu/zcdt.png",
+        "group": "utility"
+      }
+    ],
+    "regions": [
+      {
+        "name": "宿舍区",
+        "x": 645867.5625,
+        "y": -466951.3125
+      },
+      {
+        "name": "中控区",
+        "x": 668165.3125,
+        "y": -476720.125
+      },
+      {
+        "name": "中控桥",
+        "x": 669290.0625,
+        "y": -467892.8125
+      },
+      {
+        "name": "工业区",
+        "x": 693125.125,
+        "y": -465743.40625
+      },
+      {
+        "name": "罐装区",
+        "x": 695899,
+        "y": -449906
+      },
+      {
+        "name": "离心机室",
+        "x": 663031.5625,
+        "y": -450335
+      },
+      {
+        "name": "浮力室",
+        "x": 664288.5,
+        "y": -456228
+      },
+      {
+        "name": "蓝室",
+        "x": 675051.875,
+        "y": -458452.15625
+      },
+      {
+        "name": "黑室",
+        "x": 672668.4375,
+        "y": -451858.3125
+      },
+      {
+        "name": "总裁室",
+        "x": 668804.5,
+        "y": -451270.4375
+      },
+      {
+        "name": "中心花园",
+        "x": 668846.0625,
+        "y": -443144.625
+      },
+      {
+        "name": "水平试车场",
+        "x": 684612.5625,
+        "y": -430689
+      },
+      {
+        "name": "发射区",
+        "x": 658622.875,
+        "y": -418851.59375
+      }
+    ],
+    "event": {
+      "key": "bridge",
+      "label": "断桥事件",
+      "tileDir": "map_htjd2"
+    }
+  },
+  "markers": [
+    {
+      "id": "htjd-clothing-g-661854-451773",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 661854,
+      "y": -451773,
+      "z": -20926.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-672929-459886",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 672929,
+      "y": -459886,
+      "z": -21955.2,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-696034-472179",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 696034,
+      "y": -472179,
+      "z": -22619,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-696587-472179",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 696587,
+      "y": -472179,
+      "z": -22620,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-696181-464094",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 696181.4,
+      "y": -464094,
+      "z": -22033.6,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-643787-470335",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 643787.1,
+      "y": -470335,
+      "z": -21672.4,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-663905-459187",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 663905.3,
+      "y": -459187,
+      "z": -19886.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-663905-459077",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 663905.3,
+      "y": -459077,
+      "z": -19886.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-664132-476221",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 664132,
+      "y": -476221,
+      "z": -20695.8,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-664132-476830",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 664132,
+      "y": -476830,
+      "z": -20695.8,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-664706-475291",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 664706.2,
+      "y": -475291,
+      "z": -20695.8,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-696353-470084",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 696353,
+      "y": -470084,
+      "z": -22635,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-670524-453166",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 670524,
+      "y": -453166,
+      "z": -19670,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-670524-453047",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 670524,
+      "y": -453047,
+      "z": -19670,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-675585-450255",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 675585,
+      "y": -450255,
+      "z": -21199.4,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-662753-449237",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 662753,
+      "y": -449237,
+      "z": -20870,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-696448-471024",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 696448,
+      "y": -471024,
+      "z": -22572,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-643247-467106",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 643247,
+      "y": -467106,
+      "z": -21785,
+      "location": "西区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-646665-468270",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 646665,
+      "y": -468270,
+      "z": -22040,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-665922-450765",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 665922,
+      "y": -450765,
+      "z": -20865,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-657940-448830",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 657940,
+      "y": -448830,
+      "z": -22735.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-674273-457630",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 674273,
+      "y": -457630,
+      "z": -20319.6,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-667846-478836",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 667846,
+      "y": -478836,
+      "z": -20240.7,
+      "location": "中控室",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-694421-462587",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 694421,
+      "y": -462587,
+      "z": -22005.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-695360-466067",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 695360,
+      "y": -466067,
+      "z": -22003,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-676387-450543",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 676387,
+      "y": -450543,
+      "z": -21716,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-676445-450088",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 676445,
+      "y": -450088,
+      "z": -21712,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-663838-454865",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 663838,
+      "y": -454865,
+      "z": -21171,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-670121-451748",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 670121.2,
+      "y": -451748,
+      "z": -19796.2,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-670266-451751",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 670266.2,
+      "y": -451751,
+      "z": -19796.2,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-663012-450593",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 663012.4,
+      "y": -450593,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-662052-456572",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 662051.9,
+      "y": -456572,
+      "z": -27889.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-676015-457350",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 676014.6,
+      "y": -457350,
+      "z": -20500.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-675685-459474",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 675685,
+      "y": -459474,
+      "z": -22485.4,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-668854-455667",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 668854,
+      "y": -455667,
+      "z": -19957.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-668754-479098",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 668753.6,
+      "y": -479098,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-667703-453517",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 667703,
+      "y": -453517,
+      "z": -19839.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-643767-467333",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 643767,
+      "y": -467333,
+      "z": -21916,
+      "location": "西区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-667665-455530",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 667665,
+      "y": -455530,
+      "z": -19896.1,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-665046-476764",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 665046,
+      "y": -476764,
+      "z": -21920,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-675297-454476",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 675297,
+      "y": -454476,
+      "z": -22030.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-663146-449179",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 663146,
+      "y": -449179,
+      "z": -21011.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-672380-459295",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 672380,
+      "y": -459295,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-665169-450563",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 665169,
+      "y": -450563,
+      "z": -20913,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-672035-475501",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 672035,
+      "y": -475501,
+      "z": -21903.9,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-669195-478667",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 669195.3,
+      "y": -478667,
+      "z": -20668.2,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-669256-478290",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 669256.3,
+      "y": -478290,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-665851-478849",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 665851,
+      "y": -478849,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-695260-464229",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 695260.3,
+      "y": -464229,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-694805-464475",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 694805,
+      "y": -464475,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-694884-463559",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 694884,
+      "y": -463559,
+      "z": -22066,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-695198-465099",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 695198,
+      "y": -465099,
+      "z": -22141.3,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-674040-448615",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 674040,
+      "y": -448615,
+      "z": -22035,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-663590-460295",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 663590,
+      "y": -460295,
+      "z": -21978.5,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-663660-460375",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 663660,
+      "y": -460375,
+      "z": -22036.8,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-668480-476670",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 668480,
+      "y": -476670,
+      "z": -21920,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-652353-470414",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 652353,
+      "y": -470414,
+      "z": -22352,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-671435-437321",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 671435,
+      "y": -437321,
+      "z": -22367.2,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-666964-469405",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 666964,
+      "y": -469405,
+      "z": -22353.4,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-679382-472393",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 679382,
+      "y": -472393,
+      "z": -22353,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-694776-451613",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 694776,
+      "y": -451613,
+      "z": -22949.1,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-676373-450522",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 676372.5,
+      "y": -450522,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-676898-450401",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 676898.1,
+      "y": -450401,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-685170-430970",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 685170,
+      "y": -430970,
+      "z": -22055.2,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-663391-448536",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 663391,
+      "y": -448536,
+      "z": -21012.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-664586-449511",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 664586,
+      "y": -449511,
+      "z": -21780.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-668919-451097",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 668919.3,
+      "y": -451097,
+      "z": -19802.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-663345-458445",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 663345,
+      "y": -458445,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-672386-458972",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 672386,
+      "y": -458972,
+      "z": -21013,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-668859-475585",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 668859,
+      "y": -475585,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-694736-464989",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 694736,
+      "y": -464989,
+      "z": -22142.3,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-655275-446412",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 655275,
+      "y": -446412,
+      "z": -22189.1,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-675568-437623",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 675568,
+      "y": -437623,
+      "z": -21925.3,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-686553-457151",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 686553,
+      "y": -457151,
+      "z": -22950.7,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-686243-467092",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 686243,
+      "y": -467092,
+      "z": -22932,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-684432-475050",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 684432,
+      "y": -475050,
+      "z": -22665.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-681733-479003",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 681733,
+      "y": -479003,
+      "z": -22097.8,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-643456-467901",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 643456,
+      "y": -467901,
+      "z": -22225.2,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-647184-468979",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 647184,
+      "y": -468979,
+      "z": -22097.5,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-675972-449853",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 675972,
+      "y": -449853,
+      "z": -21924.1,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-669304-451914",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 669304,
+      "y": -451914,
+      "z": -19716,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-661738-459085",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 661738,
+      "y": -459085,
+      "z": -22013,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-672445-473668",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 672445,
+      "y": -473668,
+      "z": -20615,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-672890-473713",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 672890,
+      "y": -473713,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-655184-422585",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 655184,
+      "y": -422585,
+      "z": -20702.5,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-663400-420080",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 663400,
+      "y": -420080,
+      "z": -21756,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-674177-448634",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 674176.9,
+      "y": -448634,
+      "z": -22037.6,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-663440-460300",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 663440,
+      "y": -460300,
+      "z": -21860.3,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-662097-457531",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 662096.9,
+      "y": -457531,
+      "z": -22372.2,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-672278-454264",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 672277.9,
+      "y": -454264,
+      "z": -21856.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-670315-453482",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 670314.8,
+      "y": -453482,
+      "z": -19839.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-673578-456626",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 673578,
+      "y": -456626,
+      "z": -21012.3,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-648115-469573",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 648115,
+      "y": -469573,
+      "z": -21788.4,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-661338-449479",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 661338,
+      "y": -449479,
+      "z": -21778,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-679311-429125",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 679311,
+      "y": -429125,
+      "z": -22344.3,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-676633-452212",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 676633,
+      "y": -452212,
+      "z": -21908.9,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-669794-452240",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 669794,
+      "y": -452240,
+      "z": -19770.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-663969-459463",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 663969,
+      "y": -459463,
+      "z": -19956.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-673592-456131",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 673592.1,
+      "y": -456131,
+      "z": -22040,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-680735-458327",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 680735,
+      "y": -458327,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-695845-461866",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 695845,
+      "y": -461866,
+      "z": -22140.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-694588-469186",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 694588,
+      "y": -469186,
+      "z": -22712.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-693925-471663",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 693925,
+      "y": -471663,
+      "z": -22713,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-667337-452530",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 667337,
+      "y": -452530,
+      "z": -19807.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-647048-465044",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 647048,
+      "y": -465044,
+      "z": -22334.1,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-648957-467177",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 648957,
+      "y": -467177,
+      "z": -22056,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-658688-453638",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 658688,
+      "y": -453638,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-665163-475387",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 665163,
+      "y": -475387,
+      "z": -21920,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-675412-456374",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 675412,
+      "y": -456374,
+      "z": -22031.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-672033-457399",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 672033,
+      "y": -457399,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-672846-477730",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 672846,
+      "y": -477730,
+      "z": -20695.2,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-689429-463706",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 689429,
+      "y": -463706,
+      "z": -22704,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-682014-455757",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 682014,
+      "y": -455757,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-676625-450110",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 676625,
+      "y": -450110,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-674241-448316",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 674241,
+      "y": -448316,
+      "z": -22034.8,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-674280-448630",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 674280,
+      "y": -448630,
+      "z": -22037.6,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-663605-460563",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 663605,
+      "y": -460563,
+      "z": -22036.8,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-672412-452421",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 672412,
+      "y": -452421,
+      "z": -21772,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-666663-469660",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 666663,
+      "y": -469660,
+      "z": -22353.4,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-675511-459935",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 675511,
+      "y": -459935,
+      "z": -22036.4,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-673105-473870",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 673105,
+      "y": -473870,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-694558-466020",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 694557.5,
+      "y": -466020,
+      "z": -22141.3,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-644038-469103",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 644038,
+      "y": -469103,
+      "z": -21789,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-663607-452850",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 663607,
+      "y": -452850,
+      "z": -21980.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-661694-459134",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 661694,
+      "y": -459134,
+      "z": -21927,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-672087-457926",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 672087,
+      "y": -457926,
+      "z": -21952.6,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-672731-476174",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 672731,
+      "y": -476174,
+      "z": -20655.5,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-695541-463792",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 695541,
+      "y": -463792,
+      "z": -22845.8,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-644041-467030",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 644041,
+      "y": -467030,
+      "z": -21916,
+      "location": "西区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-647484-468846",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 647484,
+      "y": -468846,
+      "z": -21783.1,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-662663-455301",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 662663,
+      "y": -455301,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-653952-470157",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 653951.8,
+      "y": -470157,
+      "z": -22383,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-646985-468932",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 646985,
+      "y": -468932,
+      "z": -22086.3,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-664442-452415",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 664442,
+      "y": -452415,
+      "z": -21990.5,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-664942-457472",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 664942,
+      "y": -457472,
+      "z": -21778.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-662167-454915",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 662167,
+      "y": -454915,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-661679-455302",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 661678.8,
+      "y": -455302,
+      "z": -21364.7,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-664314-455291",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 664314.3,
+      "y": -455291,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-662399-454900",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 662399,
+      "y": -454900,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-644858-460457",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 644857.9,
+      "y": -460457,
+      "z": -22470.2,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-663897-451402",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 663897,
+      "y": -451402,
+      "z": -22037,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-662264-454192",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 662264,
+      "y": -454192,
+      "z": -22030.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-662814-458716",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 662814,
+      "y": -458716,
+      "z": -21908.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-661798-457040",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 661798,
+      "y": -457040,
+      "z": -23085,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-665427-474974",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 665427,
+      "y": -474974,
+      "z": -21903.9,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-680935-469578",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 680935,
+      "y": -469578,
+      "z": -22353.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-trash-g-646040-465780",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 646040,
+      "y": -465780,
+      "z": -22329.1,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-trash-g-662060-426430",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 662060,
+      "y": -426430,
+      "z": -21512.4,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-trash-g-679665-429210",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 679665,
+      "y": -429210,
+      "z": -22344.2,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-trash-g-670131-473064",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 670131,
+      "y": -473064,
+      "z": -21925.6,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-trash-g-691105-478797",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 691105,
+      "y": -478797,
+      "z": -22960.1,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-677269-450274",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 677268.9,
+      "y": -450274,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-676997-450995",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 676996.9,
+      "y": -450995,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-662316-451829",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 662316,
+      "y": -451829,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-675499-457064",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 675499.2,
+      "y": -457064,
+      "z": -21012.3,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-675893-456579",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 675892.8,
+      "y": -456579,
+      "z": -21012.3,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-673509-474125",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 673509,
+      "y": -474125,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-676599-450979",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 676599,
+      "y": -450979,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-676822-456839",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 676822,
+      "y": -456839,
+      "z": -21012.3,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-673695-459563",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 673695,
+      "y": -459563,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-696068-461971",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 696068,
+      "y": -461971,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-696770-463565",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 696770,
+      "y": -463565,
+      "z": -22141.1,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-661800-417680",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 661800,
+      "y": -417680,
+      "z": -21404,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-657946-452599",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 657946,
+      "y": -452599,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-674296-451835",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 674296,
+      "y": -451835,
+      "z": -21908.9,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-674923-450554",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 674923,
+      "y": -450554,
+      "z": -21255.2,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-661023-456423",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 661023,
+      "y": -456423,
+      "z": -21909.6,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-661023-456550",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 661023,
+      "y": -456550,
+      "z": -21909.6,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-665159-477634",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 665159,
+      "y": -477634,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-672604-458472",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 672604,
+      "y": -458472,
+      "z": -20908.9,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-674605-458782",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 674605.2,
+      "y": -458782,
+      "z": -22352.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-680394-475652",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 680394,
+      "y": -475652,
+      "z": -22040,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-672198-473719",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 672198,
+      "y": -473719,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-691675-464235",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 691675,
+      "y": -464235,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-694372-460994",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 694371.6,
+      "y": -460994,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-663260-424480",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 663260,
+      "y": -424480,
+      "z": -21523.1,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-656687-420595",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 656687,
+      "y": -420595,
+      "z": -20707,
+      "location": "发射区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-664834-452655",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 664834,
+      "y": -452655,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-676920-432860",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 676920,
+      "y": -432860,
+      "z": -22200,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-672828-456239",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 672828,
+      "y": -456239,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-field-crate-g-692483-452249",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 692483,
+      "y": -452249,
+      "z": -22141,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-657429-451603",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 657429,
+      "y": -451603,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-665217-476172",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 665217.3,
+      "y": -476172,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-691635-468647",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 691635,
+      "y": -468647,
+      "z": -22717.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-695716-469595",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 695716,
+      "y": -469595,
+      "z": -22718,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-649620-465177",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 649620,
+      "y": -465177,
+      "z": -22056,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-649636-457794",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 649635.9,
+      "y": -457794,
+      "z": -22620,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-665686-452899",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 665686,
+      "y": -452899,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-665558-459128",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 665558,
+      "y": -459128,
+      "z": -19956.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-663862-455298",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 663862,
+      "y": -455298,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-666150-475668",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 666150,
+      "y": -475668,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-668652-454846",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 668652,
+      "y": -454846,
+      "z": -19957.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-669872-454246",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 669871.9,
+      "y": -454246,
+      "z": -19954.7,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-672356-474157",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 672355.7,
+      "y": -474157,
+      "z": -20640.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-672817-474149",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 672816.6,
+      "y": -474149,
+      "z": -20640.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-680728-458075",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 680728,
+      "y": -458075,
+      "z": -22844,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-694100-465981",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 694100.1,
+      "y": -465981,
+      "z": -22719.5,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-693810-468516",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 693810,
+      "y": -468516,
+      "z": -22717.9,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-647665-470030",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 647665,
+      "y": -470030,
+      "z": -22205,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-662500-449700",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 662500,
+      "y": -449700,
+      "z": -22034.2,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-675242-451220",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 675242.3,
+      "y": -451220,
+      "z": -21905.2,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-663229-455209",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 663229,
+      "y": -455209,
+      "z": -23109.1,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-676731-458550",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 676731,
+      "y": -458550,
+      "z": -22033.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-673915-454119",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 673915.1,
+      "y": -454119,
+      "z": -21980.3,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-680034-463950",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 680034.2,
+      "y": -463950,
+      "z": -22341,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-673383-474770",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 673382.8,
+      "y": -474770,
+      "z": -20631.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-671851-459464",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 671851,
+      "y": -459464,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-684510-431500",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 684510,
+      "y": -431500,
+      "z": -22050.2,
+      "location": "水平试车场",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-665874-450118",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 665874,
+      "y": -450118,
+      "z": -21009.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-673870-450766",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 673870,
+      "y": -450766,
+      "z": -21364.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-668074-450920",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 668073.6,
+      "y": -450920,
+      "z": -19770.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-661073-459559",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 661073,
+      "y": -459559,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-664499-474868",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 664499,
+      "y": -474868,
+      "z": -21921,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-664198-477877",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 664197.8,
+      "y": -477877,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-672665-473690",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 672665,
+      "y": -473690,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-672750-473690",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 672750,
+      "y": -473690,
+      "z": -20639.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-664683-479119",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 664682.8,
+      "y": -479119,
+      "z": -20768,
+      "location": "中控室",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-694627-462665",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 694627,
+      "y": -462665,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-694555-463929",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 694555,
+      "y": -463929,
+      "z": -22141.3,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-694458-464772",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 694458,
+      "y": -464772,
+      "z": -22141.3,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-663830-452275",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 663830,
+      "y": -452275,
+      "z": -21012.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-695605-461989",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 695605,
+      "y": -461989,
+      "z": -22926,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-669765-478725",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 669765,
+      "y": -478725,
+      "z": -20352,
+      "location": "中控室",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-643435-469885",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 643435,
+      "y": -469885,
+      "z": -22098,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-674724-450142",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 674724,
+      "y": -450142,
+      "z": -21848.6,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-661000-458780",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 661000,
+      "y": -458780,
+      "z": -21861.4,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-670024-455529",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 670024,
+      "y": -455529,
+      "z": -19895.9,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-665009-450030",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 665009,
+      "y": -450030,
+      "z": -20899,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-laptop-bag-g-671758-473775",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 671758,
+      "y": -473775,
+      "z": -20469,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-computer-g-643661-467539",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 643661,
+      "y": -467539,
+      "z": -21816.6,
+      "location": "西区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-computer-g-668639-451136",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 668639,
+      "y": -451136,
+      "z": -19711.4,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-computer-g-694747-463562",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 694747,
+      "y": -463562,
+      "z": -22066.3,
+      "location": "东区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-664680-448479",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 664680,
+      "y": -448479,
+      "z": -21004.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-664680-448569",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 664680,
+      "y": -448569,
+      "z": -21004.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-664680-448658",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 664680,
+      "y": -448658,
+      "z": -21004.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-664680-448747",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 664680,
+      "y": -448747,
+      "z": -21004.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-673741-459785",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 673741,
+      "y": -459785,
+      "z": -22037,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-673741-459873",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 673741,
+      "y": -459873,
+      "z": -22037,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-663262-452892",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 663262,
+      "y": -452892,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-locker-g-663351-452892",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 663351,
+      "y": -452892,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-weapon-crate-g-662091-452645",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 662091,
+      "y": -452645,
+      "z": -22036.8,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-weapon-crate-g-661287-449357",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 661287,
+      "y": -449357,
+      "z": -21013,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-weapon-crate-g-675045-456004",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 675045,
+      "y": -456004,
+      "z": -22037,
+      "location": "中心区",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-weapon-crate-g-673214-456129",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 673214,
+      "y": -456129,
+      "z": -22037,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-computer-g-657158-418684",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 657158.3125,
+      "y": -418684,
+      "z": -21421.09766,
+      "location": "发射区",
+      "appearNote": "飞升者行动",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-664558-440413",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 664558,
+      "y": -440413,
+      "z": -21364,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-658115-440439",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 658115,
+      "y": -440439,
+      "z": -22350.2,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-665443-439261",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 665443,
+      "y": -439261,
+      "z": -21859,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-658014-439952",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 658014,
+      "y": -439952,
+      "z": -21857,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-664569-437844",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 664569,
+      "y": -437844,
+      "z": -21857,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-657992-441014",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 657992,
+      "y": -441014,
+      "z": -21857,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-666484-437321",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 666484,
+      "y": -437321,
+      "z": -21361,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-659859-440958",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 659859,
+      "y": -440958,
+      "z": -22346,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-685906-438732",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 685906,
+      "y": -438732,
+      "z": -24325,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-688930-443480",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 688930,
+      "y": -443480,
+      "z": -24265.1,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-663586-440363",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 663586,
+      "y": -440363,
+      "z": -21859,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-662768-440946",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 662768,
+      "y": -440946,
+      "z": -21802.5,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-658951-440637",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 658951,
+      "y": -440637,
+      "z": -21855,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-travel-bag-g-686171-445918",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 686171,
+      "y": -445918,
+      "z": -24657,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-664454-436127",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 664454,
+      "y": -436127,
+      "z": -21847,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-665749-437577",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 665749,
+      "y": -437577,
+      "z": -21847,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-658833-439725",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 658833,
+      "y": -439725,
+      "z": -22350,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-parcel-g-659362-439406",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 659362,
+      "y": -439406,
+      "z": -21764,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-685214-443542",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 685214,
+      "y": -443542,
+      "z": -25185.3,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-652834-442731",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 652834,
+      "y": -442731,
+      "z": -22351,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-656073-440185",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 656073,
+      "y": -440185,
+      "z": -22370,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-653835-453637",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 653835,
+      "y": -453637,
+      "z": -24963,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-664778-439962",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 664778,
+      "y": -439962,
+      "z": -21859,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-665026-436431",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 665026,
+      "y": -436431,
+      "z": -21847,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-665110-439364",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 665110,
+      "y": -439364,
+      "z": -21836,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-664039-436414",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 664039.2,
+      "y": -436414,
+      "z": -21821,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-658900-440294",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 658900,
+      "y": -440294,
+      "z": -22249,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-663622-439047",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 663622,
+      "y": -439047,
+      "z": -21857.3,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-659496-439705",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 659496,
+      "y": -439705,
+      "z": -21338,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-computer-g-663871-439853",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 663871,
+      "y": -439853,
+      "z": -21270,
+      "location": "码头",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-663861-440870",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 663861,
+      "y": -440870,
+      "z": -21364,
+      "location": "码头",
+      "appearNote": "效能部长出现",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-663604-441103",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 663604,
+      "y": -441103,
+      "z": 21364,
+      "location": "码头",
+      "appearNote": "效能部长出现",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-663127-440212",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 663127,
+      "y": -440212,
+      "z": -21364,
+      "location": "码头",
+      "appearNote": "效能部长出现",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-664060-440627",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 664060,
+      "y": -440627,
+      "z": -21364,
+      "location": "码头",
+      "appearNote": "效能部长出现",
+      "source": "imported"
+    },
+    {
+      "id": "htjd-spawn-g-642031-454289",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 642030.5625,
+      "y": -454288.5625,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-641868-472454",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 641868,
+      "y": -472453.8125,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-352349-576832",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 352348.5625,
+      "y": -576832.375,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-665390-479539",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 665390.3125,
+      "y": -479538.90625,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-697247-464869",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 697247.125,
+      "y": -464868.59375,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-679689-467400",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 679688.5,
+      "y": -467399.6875,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-689176-480479",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 689175.5625,
+      "y": -480478.71875,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-691724-445028",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 691724.3125,
+      "y": -445028.25,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-spawn-g-657533-419005",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 657532.8125,
+      "y": -419005.40625,
+      "source": "manual"
+    },
+    {
+      "id": "htjd-extract-switch-g-672076-440851",
+      "typeId": "extract-switch",
+      "icon": "dtcld",
+      "x": 672075.9375,
+      "y": -440850.6875,
+      "location": "直升机撤离点",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-extract-drop-bag-g-687505-427414",
+      "typeId": "extract-drop-bag",
+      "icon": "tjcld",
+      "x": 687504.6875,
+      "y": -427413.84375,
+      "location": "试车场撤离点",
+      "extractNote": "丢弃背包",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-extract-mission-g-660050-416315",
+      "typeId": "extract-mission",
+      "icon": "hjcld",
+      "x": 660050.0625,
+      "y": -416314.53125,
+      "location": "火箭撤离点",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-clothing-g-643957-470335",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 643956.9,
+      "y": -470335,
+      "z": -21674.1,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-clothing-g-667137-453391",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 667137,
+      "y": -453391,
+      "z": -19712,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-643398-467416",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 643398,
+      "y": -467416,
+      "z": -21916,
+      "location": "西区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-665720-450490",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 665720,
+      "y": -450490,
+      "z": -22036.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hiking-bag-g-670094-453531",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 670094,
+      "y": -453531,
+      "z": -19840.7,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-683115-437248",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 683115,
+      "y": -437248,
+      "z": -22340.9,
+      "location": "水平试车场",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-stash-g-689993-467209",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 689993,
+      "y": -467209,
+      "z": -22950.1,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-663673-449005",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 663673,
+      "y": -449005,
+      "z": -21780.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-675810-449784",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 675810,
+      "y": -449784,
+      "z": -22037,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-676688-450622",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 676688.1,
+      "y": -450622,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-675026-459883",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 675026,
+      "y": -459883,
+      "z": -20927,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-695363-464559",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 695363,
+      "y": -464559,
+      "z": -22925.8,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-pc-case-g-694709-464121",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 694709,
+      "y": -464121,
+      "z": -22141,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-bird-nest-g-676468-434356",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 676468,
+      "y": -434356,
+      "z": -22203,
+      "location": "水平试车场",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-664626-459770",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 664626.2,
+      "y": -459770,
+      "z": -19871.3,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-suitcase-g-669393-477572",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 669392.6,
+      "y": -477572,
+      "z": -20740,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-669933-452906",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 669933,
+      "y": -452906,
+      "z": -19827.4,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-674763-457310",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 674763,
+      "y": -457310,
+      "z": -20501,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-646008-464957",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 646008,
+      "y": -464957,
+      "z": -22053.3,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-large-weapon-crate-g-665187-476031",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 665187,
+      "y": -476031,
+      "z": -21920,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-669649-450926",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 669649,
+      "y": -450926,
+      "z": -19770.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-storage-g-669201-478341",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 669201,
+      "y": -478341,
+      "z": -20349,
+      "location": "中控室",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-643271-468913",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 643271,
+      "y": -468913,
+      "z": -21789,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-643775-468011",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 643775.2,
+      "y": -468011,
+      "z": -22332,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-646519-468463",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 646519,
+      "y": -468463,
+      "z": -22204.4,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-675407-450140",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 675407,
+      "y": -450140,
+      "z": -21908.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-677266-448808",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 677266,
+      "y": -448808,
+      "z": -22036.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-662117-455291",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 662117,
+      "y": -455291,
+      "z": -21365,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-high-luggage-g-669016-477215",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 669016.3,
+      "y": -477215,
+      "z": -22095.2,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-644759-459843",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 644759.1,
+      "y": -459843,
+      "z": -22477,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-667787-454020",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 667787.2,
+      "y": -454020,
+      "z": -19967.3,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-673027-460210",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 673027,
+      "y": -460210,
+      "z": -20956.1,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-669948-475076",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 669947.6,
+      "y": -475076,
+      "z": -21845.7,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-military-med-g-667811-479051",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 667811.2,
+      "y": -479051,
+      "z": -20768,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-medical-pile-g-657023-467795",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 657022.9,
+      "y": -467795,
+      "z": -22348.3,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-676268-450118",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 676267.9,
+      "y": -450118,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-server-g-674003-457064",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 674003.2,
+      "y": -457064,
+      "z": -21012.3,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-647687-468911",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 647687,
+      "y": -468911,
+      "z": -21788.4,
+      "location": "西区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-657421-451410",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 657421,
+      "y": -451410,
+      "z": -22748.6,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-676130-450595",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 676130,
+      "y": -450595,
+      "z": -21364.8,
+      "location": "中心区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-681988-457496",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 681988,
+      "y": -457496,
+      "z": -22844,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-691990-475575",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 691990,
+      "y": -475575,
+      "z": -22841,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-694921-464091",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 694921,
+      "y": -464091,
+      "z": -22926,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-storage-box-g-696201-471626",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 696201,
+      "y": -471626,
+      "z": -22265.5,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-663563-454668",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 663563,
+      "y": -454668,
+      "z": -21908.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-693119-452037",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 693118.7,
+      "y": -452037,
+      "z": -22141.2,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-662572-453119",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 662572,
+      "y": -453119,
+      "z": -22025.3,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-675486-455799",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 675486,
+      "y": -455799,
+      "z": -22030.3,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-air-crate-g-672780-454224",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 672780.1,
+      "y": -454224,
+      "z": -21856.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-665843-449443",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 665843,
+      "y": -449443,
+      "z": -21012.8,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-667921-478136",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 667921,
+      "y": -478136,
+      "z": -21920,
+      "location": "中控室",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-695527-464716",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 695527,
+      "y": -464716,
+      "z": -22141.3,
+      "location": "东区",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-drawer-g-696119-469274",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 696119,
+      "y": -469274,
+      "z": -22141.8,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-663210-449620",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 663210,
+      "y": -449620,
+      "z": -22034.2,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-tool-cabinet-g-674251-459041",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 674251,
+      "y": -459041,
+      "z": -22485.4,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-hafuk-pod-g-668465-433862",
+      "typeId": "hafuk-pod",
+      "icon": "hfkfhc",
+      "x": 668464.8,
+      "y": -433862,
+      "z": -22362.6,
+      "location": "发射区",
+      "appearNote": "断桥事件",
+      "pickupNote": "断桥事件",
+      "appear": [
+        {
+          "difficulty": "secret",
+          "event": "bridge"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-669094-450932",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 669094,
+      "y": -450932,
+      "z": -19802,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-692366-473090",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 692366,
+      "y": -473090,
+      "z": -22718,
+      "location": "东区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-663631-460427",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 663631,
+      "y": -460427,
+      "z": -22033,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-safe-box-g-674061-448417",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 674061,
+      "y": -448417,
+      "z": -22030,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-675514-459866",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 675514,
+      "y": -459866,
+      "z": -21013,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-small-safe-g-665285-449953",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 665285,
+      "y": -449953,
+      "z": -20918,
+      "location": "中心区",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-ammo-crate-g-664497-439174",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 664497,
+      "y": -439174,
+      "z": -21859,
+      "location": "码头",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        },
+        {
+          "difficulty": "topsecret",
+          "event": "bridge"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "htjd-boss-g-668840-453423",
+      "typeId": "boss",
+      "icon": "boss",
+      "x": 668839.999601,
+      "y": -453422.528155,
+      "title": "[安全总监]德穆兰",
+      "location": "可能出现在核心区一层",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-boss-g-656896-417712",
+      "typeId": "boss",
+      "icon": "boss",
+      "x": 656896.085855,
+      "y": -417711.70393,
+      "title": "[安全总监]德穆兰",
+      "location": "可能出现在发射区",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-boss-g-664448-439616",
+      "typeId": "boss",
+      "icon": "boss",
+      "x": 664448.006522,
+      "y": -439615.573572,
+      "title": "[效能部长]哈德森",
+      "location": "码头区域",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-recon-radio-g-667815-455110",
+      "typeId": "recon-radio",
+      "icon": "/assets/maps/icons/shushu/zcdt.png",
+      "x": 667815,
+      "y": -455110,
+      "z": -19915.5,
+      "title": "侦察电台",
+      "location": "总裁室",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-recon-radio-g-668319-477669",
+      "typeId": "recon-radio",
+      "icon": "/assets/maps/icons/shushu/zcdt.png",
+      "x": 668318.9,
+      "y": -477668.8,
+      "z": -20678,
+      "title": "侦察电台",
+      "location": "中控楼",
+      "source": "manual"
+    },
+    {
+      "id": "htjd-contract-high-g-666566-447716",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 666565.9,
+      "y": -447715.7,
+      "z": -21942.9,
+      "source": "manual",
+      "title": "焰火行动（中控花园）",
+      "location": "中心广场"
+    },
+    {
+      "id": "htjd-contract-high-g-679372-443642",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 679371.9,
+      "y": -443641.6,
+      "z": -21375.6,
+      "source": "manual",
+      "title": "飞升者行动（发射区）",
+      "location": "运输大桥野区东",
+      "appearNote": "开局后 15 分钟"
+    },
+    {
+      "id": "htjd-contract-high-g-667981-455357",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 667980.6,
+      "y": -455356.7,
+      "z": -19886.4,
+      "source": "manual",
+      "title": "获取保险柜物资（总裁室）",
+      "location": "总裁室"
+    },
+    {
+      "id": "htjd-contract-g-644096-461484",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 644096.2,
+      "y": -461483.5,
+      "z": -22512.9,
+      "source": "manual",
+      "location": "宿舍区停车场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-648528-466395",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 648528.2,
+      "y": -466394.7,
+      "z": -21954.1,
+      "source": "manual",
+      "location": "宿舍楼",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-650382-472882",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 650381.6,
+      "y": -472882,
+      "z": -22066.8,
+      "source": "manual",
+      "location": "宿舍区东出生点",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-654903-459165",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 654902.6,
+      "y": -459164.8,
+      "z": -22216,
+      "source": "manual",
+      "location": "西侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-655293-452698",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 655293.4,
+      "y": -452698,
+      "z": -22163,
+      "source": "manual",
+      "location": "西侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-656247-446919",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 656247,
+      "y": -446918.7,
+      "z": -22217.4,
+      "source": "manual",
+      "location": "西侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-657871-464343",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 657870.9,
+      "y": -464342.6,
+      "z": -22076.3,
+      "source": "manual",
+      "location": "西侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-658976-463543",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 658976.2,
+      "y": -463543,
+      "z": -22268.8,
+      "source": "manual",
+      "location": "西侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-661370-471691",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 661369.9,
+      "y": -471691.2,
+      "z": -22259,
+      "source": "manual",
+      "location": "大马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-664238-472953",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 664238.1,
+      "y": -472952.9,
+      "z": -21821.6,
+      "source": "manual",
+      "location": "中控楼",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-665113-444798",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 665113.1,
+      "y": -444797.5,
+      "z": -22231.6,
+      "source": "manual",
+      "location": "中心广场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-665557-463391",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 665556.9,
+      "y": -463390.6,
+      "z": -22229.4,
+      "source": "manual",
+      "location": "中控西河岸",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-667476-472946",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 667475.9,
+      "y": -472946.2,
+      "z": -21821.7,
+      "source": "manual",
+      "location": "中控楼",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-669787-469869",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 669787.3,
+      "y": -469868.6,
+      "z": -22248.3,
+      "source": "manual",
+      "location": "中控桥",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-673511-461332",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 673510.8,
+      "y": -461331.5,
+      "z": -22078.1,
+      "source": "manual",
+      "location": "蓝室",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-674491-445433",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 674490.9,
+      "y": -445432.8,
+      "z": -22239.9,
+      "source": "manual",
+      "location": "中心广场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-674590-444251",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 674590.4,
+      "y": -444251.3,
+      "z": -22206.8,
+      "source": "manual",
+      "location": "中心广场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-675251-471172",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 675250.6,
+      "y": -471171.5,
+      "z": -22258.3,
+      "source": "manual",
+      "location": "大马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-678011-445582",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 678011.2,
+      "y": -445582.1,
+      "z": -22217.5,
+      "source": "manual",
+      "location": "中心广场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-678500-460627",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 678500.4,
+      "y": -460626.6,
+      "z": -22145,
+      "source": "manual",
+      "location": "东侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-678830-464269",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 678829.5,
+      "y": -464269.1,
+      "z": -22253.5,
+      "source": "manual",
+      "location": "二号员工通道",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-679448-452767",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 679448.4,
+      "y": -452767,
+      "z": -22249.2,
+      "source": "manual",
+      "location": "东侧马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-679456-429845",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 679455.5,
+      "y": -429844.6,
+      "z": -22205.8,
+      "source": "manual",
+      "location": "水平试车间",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-685981-432328",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 685981.2,
+      "y": -432328,
+      "z": -22188.4,
+      "source": "manual",
+      "location": "水平试车间",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-686051-469499",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 686051.1,
+      "y": -469499.4,
+      "z": -22808.2,
+      "source": "manual",
+      "location": "工业区大马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-690123-463352",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 690123.2,
+      "y": -463352.1,
+      "z": -22855.3,
+      "source": "manual",
+      "location": "吊装室",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-690553-458850",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 690552.8,
+      "y": -458849.6,
+      "z": -22823.9,
+      "source": "manual",
+      "location": "罐装区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-690949-468601",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 690949.1,
+      "y": -468600.7,
+      "z": -22809.4,
+      "source": "manual",
+      "location": "工业区大马路",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-693279-475408",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 693279.3,
+      "y": -475407.7,
+      "z": -22878.5,
+      "source": "manual",
+      "location": "打印室外野地",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "htjd-contract-g-696738-458445",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 696738.2,
+      "y": -458444.5,
+      "z": -22835.7,
+      "source": "manual",
+      "location": "罐装区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    }
+  ]
+}

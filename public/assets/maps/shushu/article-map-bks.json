@@ -1,0 +1,5809 @@
+{
+  "map": {
+    "schema": 1,
+    "id": "article-map-bks",
+    "name": "巴克什",
+    "config": {
+      "width": 60000,
+      "height": 60000,
+      "boundsW": -250,
+      "boundsH": 300,
+      "centerX": 380000,
+      "centerY": 456000,
+      "minZoom": 3,
+      "initZoom": 3,
+      "initX": -110,
+      "initY": 110,
+      "tileDir": "map_bks2",
+      "metersPerUnit": 0.01
+    },
+    "difficulties": [
+      {
+        "key": "secret",
+        "label": "机密"
+      },
+      {
+        "key": "topsecret",
+        "label": "绝密"
+      }
+    ],
+    "groups": [
+      {
+        "id": "all",
+        "title": "全部"
+      },
+      {
+        "id": "loot",
+        "title": "物资点"
+      },
+      {
+        "id": "spawn",
+        "title": "出生点"
+      },
+      {
+        "id": "extract",
+        "title": "撤离点"
+      },
+      {
+        "id": "contract",
+        "title": "行动接取站"
+      }
+    ],
+    "types": [
+      {
+        "id": "safe-box",
+        "name": "保险箱",
+        "icon": "bxx",
+        "group": "loot"
+      },
+      {
+        "id": "small-safe",
+        "name": "小保险箱",
+        "icon": "xbxx",
+        "group": "loot"
+      },
+      {
+        "id": "server",
+        "name": "服务器",
+        "icon": "fwq",
+        "group": "loot"
+      },
+      {
+        "id": "computer",
+        "name": "电脑",
+        "icon": "dn",
+        "group": "loot"
+      },
+      {
+        "id": "pc-case",
+        "name": "电脑机箱",
+        "icon": "dnjx",
+        "group": "loot"
+      },
+      {
+        "id": "weapon-crate",
+        "name": "武器箱",
+        "icon": "wqx",
+        "group": "loot"
+      },
+      {
+        "id": "large-weapon-crate",
+        "name": "大武器箱",
+        "icon": "dwqx",
+        "group": "loot"
+      },
+      {
+        "id": "ammo-crate",
+        "name": "弹药箱",
+        "icon": "dyx",
+        "group": "loot"
+      },
+      {
+        "id": "tool-cabinet",
+        "name": "工具柜",
+        "icon": "gjg",
+        "group": "loot"
+      },
+      {
+        "id": "storage-box",
+        "name": "收纳盒",
+        "icon": "dgjx",
+        "group": "loot"
+      },
+      {
+        "id": "clothing",
+        "name": "一件衣服",
+        "icon": "yf",
+        "group": "loot"
+      },
+      {
+        "id": "military-med",
+        "name": "军用医疗包",
+        "icon": "ylb",
+        "group": "loot"
+      },
+      {
+        "id": "medical-pile",
+        "name": "医疗物资堆",
+        "icon": "ylwzd",
+        "group": "loot"
+      },
+      {
+        "id": "travel-bag",
+        "name": "旅行包",
+        "icon": "lxd",
+        "group": "loot"
+      },
+      {
+        "id": "suitcase",
+        "name": "手提箱",
+        "icon": "stx",
+        "group": "loot"
+      },
+      {
+        "id": "locker",
+        "name": "储物柜",
+        "icon": "cwg",
+        "group": "loot"
+      },
+      {
+        "id": "high-storage",
+        "name": "高级储物箱",
+        "icon": "gjcwx",
+        "group": "loot"
+      },
+      {
+        "id": "drawer",
+        "name": "抽屉柜",
+        "icon": "ctg",
+        "group": "loot"
+      },
+      {
+        "id": "hiking-bag",
+        "name": "登山包",
+        "icon": "dsb",
+        "group": "loot"
+      },
+      {
+        "id": "parcel",
+        "name": "快递箱",
+        "icon": "kdx",
+        "group": "loot"
+      },
+      {
+        "id": "air-crate",
+        "name": "航空储物箱",
+        "icon": "hkcwx",
+        "group": "loot"
+      },
+      {
+        "id": "trash",
+        "name": "垃圾桶",
+        "icon": "ljx",
+        "group": "loot"
+      },
+      {
+        "id": "field-crate",
+        "name": "野外物资箱",
+        "icon": "ywwzx",
+        "group": "loot"
+      },
+      {
+        "id": "bird-nest",
+        "name": "鸟窝",
+        "icon": "nw",
+        "group": "loot"
+      },
+      {
+        "id": "stash",
+        "name": "藏匿物",
+        "icon": "cnw",
+        "group": "loot"
+      },
+      {
+        "id": "high-luggage",
+        "name": "高级旅行箱",
+        "icon": "xlx",
+        "group": "loot"
+      },
+      {
+        "id": "spawn",
+        "name": "出生点",
+        "icon": "csd",
+        "group": "spawn"
+      },
+      {
+        "id": "extract-switch",
+        "name": "拉闸撤离点",
+        "icon": "dtcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-condition",
+        "name": "条件撤离点",
+        "icon": "tjcld",
+        "group": "extract"
+      },
+      {
+        "id": "extract-mission",
+        "name": "行动撤离点",
+        "icon": "tjcld",
+        "group": "extract"
+      },
+      {
+        "id": "laptop-bag",
+        "name": "电脑包",
+        "icon": "dsb",
+        "group": "loot"
+      },
+      {
+        "id": "contract",
+        "name": "行动接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      },
+      {
+        "id": "contract-high",
+        "name": "高价值接取站",
+        "icon": "/assets/maps/icons/shushu/xdjqz.png",
+        "group": "contract"
+      }
+    ],
+    "regions": [
+      {
+        "name": "皇家博物馆",
+        "x": 378916.15625,
+        "y": -459727.375
+      },
+      {
+        "name": "阿萨拉营地",
+        "x": 396219.34375,
+        "y": -467645.53125
+      },
+      {
+        "name": "樱桃小镇",
+        "x": 360747.1875,
+        "y": -479303.78125
+      },
+      {
+        "name": "巴克什集市",
+        "x": 382193.09375,
+        "y": -471524.8125
+      },
+      {
+        "name": "蓝调山城",
+        "x": 397693.1875,
+        "y": -481304
+      },
+      {
+        "name": "巴克什大浴场",
+        "x": 380123.46875,
+        "y": -480585.6875
+      },
+      {
+        "name": "蓝汀旅馆",
+        "x": 366486.875,
+        "y": -469968.25
+      },
+      {
+        "name": "停车场",
+        "x": 374720,
+        "y": -471518.6875
+      },
+      {
+        "name": "阿坦亚遗址",
+        "x": 365633.09375,
+        "y": -460216.125
+      },
+      {
+        "name": "停机坪区",
+        "x": 361031.962234,
+        "y": -443820.865039
+      },
+      {
+        "name": "巴别塔",
+        "x": 381952.384393,
+        "y": -434332.526999
+      },
+      {
+        "name": "装卸区",
+        "x": 372576.284826,
+        "y": -444055.144991
+      },
+      {
+        "name": "蓄水区",
+        "x": 393084.667726,
+        "y": -444582.274882
+      }
+    ],
+    "floorInfo": {
+      "bj": 64,
+      "maxNativeZoom": 6,
+      "buildings": [
+        {
+          "id": "museum",
+          "name": "皇家博物馆",
+          "x": 378916.15625,
+          "y": -459727.375
+        }
+      ],
+      "floors": [
+        {
+          "name": "B1 皇家博物馆",
+          "building": "museum",
+          "tileDir": "bks_1f",
+          "boundsW": -85,
+          "boundsH": 140,
+          "minZoom": 5.5,
+          "initZoom": 5.5,
+          "initX": -58,
+          "initY": 62,
+          "latLngX": -47,
+          "latLngY": 38,
+          "pixelToLatLngRatio": -1
+        },
+        {
+          "name": "1F 皇家博物馆",
+          "building": "museum",
+          "tileDir": "bks_2f",
+          "boundsW": -85,
+          "boundsH": 140,
+          "minZoom": 5.5,
+          "initZoom": 5.5,
+          "initX": -58,
+          "initY": 62,
+          "latLngX": -47,
+          "latLngY": 38,
+          "pixelToLatLngRatio": -1
+        },
+        {
+          "name": "2F 皇家博物馆",
+          "building": "museum",
+          "tileDir": "bks_3f",
+          "boundsW": -85,
+          "boundsH": 140,
+          "minZoom": 5.5,
+          "initZoom": 5.5,
+          "initX": -58,
+          "initY": 62,
+          "latLngX": -47,
+          "latLngY": 38,
+          "pixelToLatLngRatio": -1
+        }
+      ]
+    }
+  },
+  "markers": [
+    {
+      "id": "bks-safe-box-2-377602-461802",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 377601.5625,
+      "y": -461802.0938,
+      "z": -24790.11328,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-2-377602-459970",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 377601.5625,
+      "y": -459969.8125,
+      "z": -24790.11328,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-366254-471285",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 366254.375,
+      "y": -471284.5,
+      "z": -24495.18164,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-365646-468348",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 365646.3438,
+      "y": -468347.9375,
+      "z": -25156.67383,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-392795-483065",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 392794.5625,
+      "y": -483065.1875,
+      "z": -24233.72656,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-378742-481426",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 378741.5625,
+      "y": -481425.75,
+      "z": -23962.06445,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-377454-476318",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 377454.4688,
+      "y": -476318.375,
+      "z": -24538.78125,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-384213-469785",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 384212.75,
+      "y": -469785.3438,
+      "z": -25474.02734,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-2-374368-461425",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 374367.9375,
+      "y": -461424.8125,
+      "z": -24641.42773,
+      "floor": 2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-385599-429219",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 385598.6,
+      "y": -429219,
+      "z": -23112.6,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-385451-437110",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 385450.6,
+      "y": -437110,
+      "z": -23116.2,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-376994-429023",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 376994.2,
+      "y": -429023,
+      "z": -22665.1,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-373523-429495",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 373522.6,
+      "y": -429495,
+      "z": -22652.6,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-376767-435840",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 376766.7,
+      "y": -435840,
+      "z": -23116.3,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-386197-429658",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 386197.3,
+      "y": -429658,
+      "z": -22560,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-373712-460545",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 373712,
+      "y": -460545,
+      "z": -24671,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-373762-460595",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 373762,
+      "y": -460595,
+      "z": -24671,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-373274-457465",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 373274,
+      "y": -457465,
+      "z": -25011,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-376527-474335",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 376527,
+      "y": -474335,
+      "z": -24880,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-380624-457230",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 380624,
+      "y": -457230,
+      "z": -24640,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-379264-462429",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 379264,
+      "y": -462429,
+      "z": -24690,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-379354-462429",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 379354,
+      "y": -462429,
+      "z": -24690,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-391144-481311",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 391144,
+      "y": -481311,
+      "z": -24430,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-376502-437102",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 376502,
+      "y": -437102,
+      "z": -22960,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-377928-460610",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 377928,
+      "y": -460610,
+      "z": -24680,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-377996-460610",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 377996,
+      "y": -460610,
+      "z": -24680,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-366819-470695",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 366819,
+      "y": -470695,
+      "z": -24495,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-366830-470765",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 366830,
+      "y": -470765,
+      "z": -24495,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-387699-430461",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 387699,
+      "y": -430461,
+      "z": -22955,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-382285-434241",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 382285,
+      "y": -434241,
+      "z": -22438,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-2-381564-458967",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 381564,
+      "y": -458967,
+      "z": -24640,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-380917-481370",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 380917,
+      "y": -481370,
+      "z": -24475,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-380486-482225",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 380486.4,
+      "y": -482225,
+      "z": -23930,
+      "location": "巴克什大浴场",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-361590-478484",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 361590,
+      "y": -478484,
+      "z": -24212,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-382838-457785",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 382838,
+      "y": -457785,
+      "z": -25070,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-380754-469034",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 380754,
+      "y": -469034,
+      "z": -25300,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-390444-482998",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 390444,
+      "y": -482998,
+      "z": -24250,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-376834-436149",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 376834,
+      "y": -436149,
+      "z": -23116,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-2-373259-461130",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 373259,
+      "y": -461130,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-1-375391-462149",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 375391,
+      "y": -462149,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-366304-470945",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 366304,
+      "y": -470945,
+      "z": -24607.6,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-387925-429617",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 387925,
+      "y": -429617,
+      "z": -23113,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-385728-429385",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 385728,
+      "y": -429385,
+      "z": -22560,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-382671-436088",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 382671,
+      "y": -436088,
+      "z": -18026.9,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-383011-432027",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 383011,
+      "y": -432027,
+      "z": -18031,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-380831-481627",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 380831.1,
+      "y": -481627,
+      "z": -24074.1,
+      "location": "巴克什大浴场",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-361464-477445",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 361464,
+      "y": -477445,
+      "z": -24303.7,
+      "location": "樱桃小镇",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-387607-451711",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 387606.8,
+      "y": -451711,
+      "z": -24836.8,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-g-389894-478990",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 389893.7,
+      "y": -478990,
+      "z": -24633,
+      "location": "蓝调山城",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-376554-427439",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 376554,
+      "y": -427439,
+      "z": -23112,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-377369-426667",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 377369,
+      "y": -426667,
+      "z": -23113,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-374581-431126",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 374581,
+      "y": -431126,
+      "z": -22582,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-377075-430818",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 377075,
+      "y": -430818,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-388249-431552",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 388249,
+      "y": -431552,
+      "z": -22998.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-385879-431393",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 385879,
+      "y": -431393,
+      "z": -22459.1,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-386266-430897",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 386266,
+      "y": -430897,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-381619-434679",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 381619,
+      "y": -434679,
+      "z": -23114,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380923-432617",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380923,
+      "y": -432617,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-379991-435141",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 379991,
+      "y": -435141,
+      "z": -22614,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380659-431167",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380659,
+      "y": -431167,
+      "z": -18640,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-383867-433145",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 383867,
+      "y": -433145,
+      "z": -17981,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-362074-471705",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 362074,
+      "y": -471705,
+      "z": -24949.9,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-360914-477492",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 360914,
+      "y": -477492,
+      "z": -24375.1,
+      "location": "樱桃小镇",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-376319-473535",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 376318.8,
+      "y": -473535,
+      "z": -24988.4,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-365686-468617",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 365686,
+      "y": -468617,
+      "z": -25156.7,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-365491-477438",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 365490.6,
+      "y": -477438,
+      "z": -24527.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-375680-476584",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 375680,
+      "y": -476584,
+      "z": -24622,
+      "location": "巴克什大浴场",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-377456-479841",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 377456,
+      "y": -479841,
+      "z": -24528.9,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-377621-481121",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 377621,
+      "y": -481121,
+      "z": -24619,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-384182-426134",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 384182,
+      "y": -426134,
+      "z": -23339.8,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-378615-437838",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 378615,
+      "y": -437838,
+      "z": -23114,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-381875-435130",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 381875,
+      "y": -435130,
+      "z": -24382,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-380172-435650",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 380172,
+      "y": -435650,
+      "z": -18790.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-381716-437827",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 381716,
+      "y": -437827,
+      "z": -18845.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-384024-469955",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 384024,
+      "y": -469955,
+      "z": -25566.8,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-381374-473585",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 381374,
+      "y": -473585,
+      "z": -24688.8,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-379556-481795",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 379556,
+      "y": -481795,
+      "z": -24621,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-389793-483543",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 389793.1,
+      "y": -483543,
+      "z": -24441.8,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-hiking-bag-g-392829-483350",
+      "typeId": "hiking-bag",
+      "icon": "dsb",
+      "x": 392829,
+      "y": -483350,
+      "z": -23887.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-376450-452195",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 376450,
+      "y": -452195,
+      "z": -25119.8,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-363749-468025",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 363749,
+      "y": -468025,
+      "z": -25302.7,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-364814-472550",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 364814,
+      "y": -472550,
+      "z": -25145,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-368664-457840",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 368664,
+      "y": -457840,
+      "z": -25061.3,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-369973-471473",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 369972.6,
+      "y": -471473,
+      "z": -25207.4,
+      "location": "城西大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-361108-481661",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 361108,
+      "y": -481661,
+      "z": -24260.5,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-373034-481937",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 373033.8,
+      "y": -481937,
+      "z": -24152,
+      "location": "城西大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-389937-442481",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 389937,
+      "y": -442481,
+      "z": -24833,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-394722-440972",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 394722,
+      "y": -440972,
+      "z": -24824,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-390254-459350",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 390254,
+      "y": -459350,
+      "z": -25374.1,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-385494-477495",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 385494,
+      "y": -477495,
+      "z": -25012.9,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-stash-g-385941-480915",
+      "typeId": "stash",
+      "icon": "cnw",
+      "x": 385941,
+      "y": -480915,
+      "z": -24678.4,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-376664-430573",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 376664,
+      "y": -430573,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-387290-430550",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 387290,
+      "y": -430550,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-386167-431437",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 386167,
+      "y": -431437,
+      "z": -23112.5,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-385339-437645",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 385339,
+      "y": -437645,
+      "z": -23110.8,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-385684-437539",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 385684,
+      "y": -437539,
+      "z": -23114.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-381413-435310",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 381413,
+      "y": -435310,
+      "z": -22614,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-380754-436092",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 380754,
+      "y": -436092,
+      "z": -22976,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-383660-431189",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 383660,
+      "y": -431189,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-381903-440495",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 381903,
+      "y": -440495,
+      "z": -22750,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-383344-432021",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 383344,
+      "y": -432021,
+      "z": -18032,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-363772-472016",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 363772.1,
+      "y": -472016,
+      "z": -24908,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-365735-462047",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 365734.9,
+      "y": -462047,
+      "z": -24453.9,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-375804-467551",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 375804.2,
+      "y": -467551,
+      "z": -25079.4,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-375797-472433",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 375796.7,
+      "y": -472433,
+      "z": -24928.5,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-368448-480584",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 368448.3,
+      "y": -480584,
+      "z": -24146.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-389904-453150",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 389903.6,
+      "y": -453150,
+      "z": -24868.9,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-381496-471502",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 381496.4,
+      "y": -471502,
+      "z": -25178.9,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-399181-468673",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 399180.7,
+      "y": -468673,
+      "z": -24197.9,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-385857-480259",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 385856.7,
+      "y": -480259,
+      "z": -24549.3,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-378135-481908",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 378134.9,
+      "y": -481908,
+      "z": -24454.3,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-383274-481890",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 383274,
+      "y": -481890,
+      "z": -24482.9,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-bird-nest-g-392234-481180",
+      "typeId": "bird-nest",
+      "icon": "nw",
+      "x": 392234,
+      "y": -481180,
+      "z": -24130.1,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-372404-466015",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 372404,
+      "y": -466015,
+      "z": -25320,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-374430-468056",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 374430,
+      "y": -468056,
+      "z": -25375.3,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-376056-472573",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 376056.4,
+      "y": -472573,
+      "z": -24941.1,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-366412-469895",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 366412,
+      "y": -469895,
+      "z": -25096.3,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-376526-476035",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 376526,
+      "y": -476035,
+      "z": -24594,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-384329-427941",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 384329,
+      "y": -427941,
+      "z": -23339.4,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-387937-430842",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 387937,
+      "y": -430842,
+      "z": -23084,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-388083-428460",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 388083,
+      "y": -428460,
+      "z": -23046.4,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-380564-433196",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380564,
+      "y": -433196,
+      "z": -22884,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-380773-434437",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380773,
+      "y": -434437,
+      "z": -22587,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-383227-436961",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 383227,
+      "y": -436961,
+      "z": -24417.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-380278-436615",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380278,
+      "y": -436615,
+      "z": -24388,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-383064-429547",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 383064,
+      "y": -429547,
+      "z": -18736,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-380075-432186",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380075,
+      "y": -432186,
+      "z": -17980.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-383963-433918",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 383963,
+      "y": -433918,
+      "z": -18733,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-381994-436019",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 381994,
+      "y": -436019,
+      "z": -17932.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-381174-457545",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 381174,
+      "y": -457545,
+      "z": -25076.7,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-1-381215-460886",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 381215,
+      "y": -460886,
+      "z": -25295.4,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-1-379046-461035",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 379046,
+      "y": -461035,
+      "z": -25329,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-1-380784-463049",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380784,
+      "y": -463049,
+      "z": -25293.5,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-2-381946-461316",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 381945.9,
+      "y": -461316,
+      "z": -24770.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-380099-468745",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 380099,
+      "y": -468745,
+      "z": -25399.3,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-379224-480623",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 379224,
+      "y": -480623,
+      "z": -24539.3,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-suitcase-g-392851-482925",
+      "typeId": "suitcase",
+      "icon": "stx",
+      "x": 392851,
+      "y": -482925,
+      "z": -24212.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-394699-466115",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 394699,
+      "y": -466115,
+      "z": -24705,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-398140-466432",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 398140,
+      "y": -466432,
+      "z": -24950,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-378000-425714",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 378000,
+      "y": -425714,
+      "z": -23021,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-362451-472307",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 362451,
+      "y": -472307,
+      "z": -24603.9,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-366056-471408",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 366056,
+      "y": -471408,
+      "z": -25054.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-366044-470305",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 366044,
+      "y": -470305,
+      "z": -24498.8,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-375636-476999",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 375636,
+      "y": -476999,
+      "z": -24495.3,
+      "location": "巴克什大浴场",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-379991-432006",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 379991,
+      "y": -432006,
+      "z": -18668.5,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-396540-476340",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 396540,
+      "y": -476340,
+      "z": -24780,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-396641-476282",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 396641,
+      "y": -476282,
+      "z": -24707,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-394604-470320",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 394603.7,
+      "y": -470320,
+      "z": -24832.9,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-390464-478900",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 390464,
+      "y": -478900,
+      "z": -24707.6,
+      "location": "蓝调山城",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-390279-480850",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 390279,
+      "y": -480850,
+      "z": -24613.3,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-377316-431243",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 377316,
+      "y": -431243,
+      "z": -23402,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-363813-471430",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 363812.8,
+      "y": -471430,
+      "z": -25204.4,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-362764-472079",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 362764,
+      "y": -472079,
+      "z": -25019.9,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-2-374604-460805",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 374604,
+      "y": -460805,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-383961-429327",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 383961,
+      "y": -429327,
+      "z": -23115,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-386525-431544",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 386525,
+      "y": -431544,
+      "z": -22559,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-388095-428993",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 388095,
+      "y": -428993,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-389558-431318",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 389558,
+      "y": -431318,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-380408-429334",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 380408,
+      "y": -429334,
+      "z": -23115,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-381321-431664",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 381321,
+      "y": -431664,
+      "z": -18768,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-383360-436647",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 383360,
+      "y": -436647,
+      "z": -18790,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-1-381014-463225",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 381014,
+      "y": -463225,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-383965-469587",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 383965,
+      "y": -469587,
+      "z": -25022.9,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-380384-472167",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 380384,
+      "y": -472167,
+      "z": -25119.5,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-398031-467985",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 398030.8,
+      "y": -467985,
+      "z": -24953.5,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-397877-466917",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 397877.2,
+      "y": -466917,
+      "z": -24954.1,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-378304-480145",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 378304,
+      "y": -480145,
+      "z": -24073.3,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-large-weapon-crate-g-389571-479860",
+      "typeId": "large-weapon-crate",
+      "icon": "dwqx",
+      "x": 389571.3,
+      "y": -479860,
+      "z": -24291.4,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-373581-427704",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 373581,
+      "y": -427704,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-373709-432571",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 373709,
+      "y": -432571,
+      "z": -22664.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-376417-446510",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 376417,
+      "y": -446510,
+      "z": -24815,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-375964-447220",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 375964,
+      "y": -447220,
+      "z": -24815,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-364474-477355",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 364474,
+      "y": -477355,
+      "z": -24527.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-361016-476768",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 361015.9,
+      "y": -476768,
+      "z": -24290.1,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-372104-465655",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 372104,
+      "y": -465655,
+      "z": -25316.1,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-2-375378-459995",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 375378,
+      "y": -459995,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-2-375714-459835",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 375714,
+      "y": -459835,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-374961-467988",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 374961,
+      "y": -467988,
+      "z": -25028.6,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-366056-477553",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 366056,
+      "y": -477553,
+      "z": -24478.4,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-375624-477225",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 375624,
+      "y": -477225,
+      "z": -25035.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-377856-476135",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 377856,
+      "y": -476135,
+      "z": -24618.8,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-377459-479127",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 377459,
+      "y": -479127,
+      "z": -24619.5,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-385595-427354",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 385595,
+      "y": -427354,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-390050-427957",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 390050,
+      "y": -427957,
+      "z": -23112.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-388101-430556",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 388101,
+      "y": -430556,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-387652-429285",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 387652,
+      "y": -429285,
+      "z": -23047,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-387118-432738",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 387118,
+      "y": -432738,
+      "z": -23047,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-379472-438451",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 379472,
+      "y": -438451,
+      "z": -23112.4,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-381593-434356",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 381593,
+      "y": -434356,
+      "z": -22559.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-383015-439540",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 383015,
+      "y": -439540,
+      "z": -22755,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-380141-438907",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380141,
+      "y": -438907,
+      "z": -22814,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-380014-431760",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380014,
+      "y": -431760,
+      "z": -18030.1,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-383212-429731",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 383212,
+      "y": -429731,
+      "z": -18784.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-384039-435269",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 384039,
+      "y": -435269,
+      "z": -17977,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-384053-432782",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 384053,
+      "y": -432782,
+      "z": -17977,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-383698-435974",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 383698,
+      "y": -435974,
+      "z": -18790.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-383902-434985",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 383902,
+      "y": -434985,
+      "z": -18030,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-391855-449708",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 391855,
+      "y": -449708,
+      "z": -25313,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-381064-457345",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 381064,
+      "y": -457345,
+      "z": -24642.4,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-385454-457775",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 385454,
+      "y": -457775,
+      "z": -25473.8,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-383662-457767",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 383662,
+      "y": -457767,
+      "z": -24859.5,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-1-380704-459555",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380704,
+      "y": -459555,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-1-378734-459487",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 378734,
+      "y": -459487,
+      "z": -25354.7,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-1-380794-460515",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380794,
+      "y": -460515,
+      "z": -25355.6,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-2-378865-460621",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 378865,
+      "y": -460621,
+      "z": -24730,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-384984-469218",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 384984,
+      "y": -469218,
+      "z": -25567.5,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-380634-472015",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380634,
+      "y": -472015,
+      "z": -25535.5,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-380171-473803",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 380171,
+      "y": -473803,
+      "z": -25105.1,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-381794-473945",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 381794,
+      "y": -473945,
+      "z": -25034.8,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-399417-467754",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 399417.4,
+      "y": -467754,
+      "z": -24952.2,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-378314-481965",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 378314,
+      "y": -481965,
+      "z": -24075.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-379385-479785",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 379385,
+      "y": -479785,
+      "z": -24013,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-390179-481750",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 390179,
+      "y": -481750,
+      "z": -24236.2,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-g-391290-481726",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 391290,
+      "y": -481726,
+      "z": -24546.4,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-375192-425846",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 375192,
+      "y": -425846,
+      "z": -23111.5,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-364189-478258",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 364188.5,
+      "y": -478258,
+      "z": -24527.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-1-375548-462102",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 375547.8,
+      "y": -462102,
+      "z": -25354.5,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-1-376884-461673",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 376884,
+      "y": -461673,
+      "z": -25351.5,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-373969-467746",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 373969,
+      "y": -467746,
+      "z": -25028.6,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-376474-473275",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 376474,
+      "y": -473275,
+      "z": -24983.4,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-366024-471908",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 366024,
+      "y": -471908,
+      "z": -25156.7,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-366272-471862",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 366272,
+      "y": -471862,
+      "z": -25156.7,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-377404-476087",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 377403.7,
+      "y": -476087,
+      "z": -25035.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-377557-476087",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 377556.7,
+      "y": -476087,
+      "z": -25035.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-365972-470990",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 365972,
+      "y": -470990,
+      "z": -25156.7,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-366067-469393",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 366067,
+      "y": -469393,
+      "z": -24607.6,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-377714-476595",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 377714,
+      "y": -476595,
+      "z": -24618.8,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-2-381554-459325",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 381554,
+      "y": -459325,
+      "z": -24790,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-380079-469144",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 380079,
+      "y": -469144,
+      "z": -25049.3,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-380686-482157",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 380686,
+      "y": -482157,
+      "z": -24074.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-376833-430758",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 376833,
+      "y": -430758,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-361914-472155",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 361914,
+      "y": -472155,
+      "z": -25019.9,
+      "location": "蓝汀旅馆",
+      "appearNote": "庇护者行动",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-360818-477800",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 360818.1,
+      "y": -477800,
+      "z": -23962.6,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-372825-466108",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 372825,
+      "y": -466108,
+      "z": -24964,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-1-377563-460519",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 377562.9,
+      "y": -460519,
+      "z": -25355,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-1-374754-460295",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 374754,
+      "y": -460295,
+      "z": -25240.6,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-377024-468175",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 377024,
+      "y": -468175,
+      "z": -25443.8,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-373984-467685",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 373984,
+      "y": -467685,
+      "z": -25444.6,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-375732-474085",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 375732,
+      "y": -474085,
+      "z": -24884.2,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-366308-471278",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 366308,
+      "y": -471278,
+      "z": -24495.2,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-365644-478205",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 365644,
+      "y": -478205,
+      "z": -24527.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-385446-426615",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 385446,
+      "y": -426615,
+      "z": -23402.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-385605-430238",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 385605,
+      "y": -430238,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-388241-433426",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 388241,
+      "y": -433426,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-379899-438444",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 379899,
+      "y": -438444,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380110-435035",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380110,
+      "y": -435035,
+      "z": -18790.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380114-431995",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380114,
+      "y": -431995,
+      "z": -17976,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-381124-429739",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 381124,
+      "y": -429739,
+      "z": -18785,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-383202-436269",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 383202,
+      "y": -436269,
+      "z": -18029,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380326-431346",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380326,
+      "y": -431346,
+      "z": -18031,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-383787-434929",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 383787,
+      "y": -434929,
+      "z": -18790,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-382724-457606",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 382724,
+      "y": -457606,
+      "z": -25176.9,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-2-379504-462335",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 379504,
+      "y": -462335,
+      "z": -24767,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-381384-471775",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 381384,
+      "y": -471775,
+      "z": -25535.5,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-381544-473485",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 381544,
+      "y": -473485,
+      "z": -25104.8,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-396601-477004",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 396601.3,
+      "y": -477004,
+      "z": -24265.2,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-396609-471019",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 396608.8,
+      "y": -471019,
+      "z": -24455.1,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-380154-482300",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 380154,
+      "y": -482300,
+      "z": -24678.6,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-381474-481505",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 381474,
+      "y": -481505,
+      "z": -24619,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-392259-481306",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 392259,
+      "y": -481306,
+      "z": -24546.4,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-parcel-g-390852-482905",
+      "typeId": "parcel",
+      "icon": "kdx",
+      "x": 390851.6,
+      "y": -482905,
+      "z": -24337,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-377770-432402",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 377770,
+      "y": -432402,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-377126-438373",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 377126,
+      "y": -438373,
+      "z": -23116,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-372503-441540",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 372503,
+      "y": -441540,
+      "z": -24818,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-365344-468840",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 365344,
+      "y": -468840,
+      "z": -25156,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-364914-468775",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 364914,
+      "y": -468775,
+      "z": -24607.6,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-361983-471862",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 361983.4,
+      "y": -471862,
+      "z": -24603.9,
+      "location": "蓝汀旅馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-361315-477157",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 361315,
+      "y": -477157,
+      "z": -24378.6,
+      "location": "樱桃小镇",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-375905-468265",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 375905,
+      "y": -468265,
+      "z": -25443.8,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-376478-476421",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 376478,
+      "y": -476421,
+      "z": -24617.8,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-386904-427210",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 386904,
+      "y": -427210,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-386818-431489",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 386818,
+      "y": -431489,
+      "z": -23112,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-379957-436423",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 379957,
+      "y": -436423,
+      "z": -24390.1,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-379897-433625",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 379897,
+      "y": -433625,
+      "z": -18786,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-383915-431854",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 383915,
+      "y": -431854,
+      "z": -18790,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-383944-432359",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 383944,
+      "y": -432359,
+      "z": -18032,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-379976-432980",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 379976,
+      "y": -432980,
+      "z": -18030,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-381663-456947",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 381663,
+      "y": -456947,
+      "z": -24730.7,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-382767-457608",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 382767,
+      "y": -457608,
+      "z": -24859.5,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-1-381904-462315",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 381904,
+      "y": -462315,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-385384-470995",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 385384,
+      "y": -470995,
+      "z": -25569,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-396818-476325",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 396818,
+      "y": -476325,
+      "z": -24780,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-378373-480382",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 378373,
+      "y": -480382,
+      "z": -24618.6,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-379872-480398",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 379871.8,
+      "y": -480398,
+      "z": -24074.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-390049-479390",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 390049,
+      "y": -479390,
+      "z": -24707.6,
+      "location": "蓝调山城",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-g-389114-481130",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 389114,
+      "y": -481130,
+      "z": -24290.5,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-364929-468248",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 364928.9,
+      "y": -468248,
+      "z": -25093.7,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-2-377114-459005",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 377114,
+      "y": -459005,
+      "z": -24790,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-375014-467685",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 375014,
+      "y": -467685,
+      "z": -25028.6,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-377149-476394",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 377149,
+      "y": -476394,
+      "z": -24983.9,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-375688-477310",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 375688,
+      "y": -477310,
+      "z": -24620,
+      "location": "巴克什大浴场",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-384172-427095",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 384172,
+      "y": -427095,
+      "z": -23339.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-386854-430580",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 386854,
+      "y": -430580,
+      "z": -23046.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-385714-429292",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 385714,
+      "y": -429292,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-384384-436322",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 384384,
+      "y": -436322,
+      "z": -24357.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-383606-458275",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 383606,
+      "y": -458275,
+      "z": -25275.5,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-385554-469775",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 385554,
+      "y": -469775,
+      "z": -25566.4,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-399766-468037",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 399766.3,
+      "y": -468037,
+      "z": -24444.1,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-398289-478995",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 398289,
+      "y": -478995,
+      "z": -24640.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-g-391274-482605",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 391274,
+      "y": -482605,
+      "z": -24303.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-1-375339-461355",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 375339,
+      "y": -461355,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-386527-427616",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 386527,
+      "y": -427616,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-388295-432037",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 388295,
+      "y": -432037,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-385662-428803",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 385662,
+      "y": -428803,
+      "z": -22560,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-380683-431783",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 380683,
+      "y": -431783,
+      "z": -18768,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-388330-452351",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 388330,
+      "y": -452351,
+      "z": -25110,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-381760-452179",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 381759.5,
+      "y": -452179,
+      "z": -25120.8,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-381604-471550",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 381604,
+      "y": -471550,
+      "z": -25565.3,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-398607-469142",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 398607,
+      "y": -469142,
+      "z": -24949.9,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-medical-pile-g-395705-470384",
+      "typeId": "medical-pile",
+      "icon": "ylwzd",
+      "x": 395705,
+      "y": -470384,
+      "z": -24950,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-377651-433820",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 377651,
+      "y": -433820,
+      "z": -24414,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-371220-467136",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 371220.1,
+      "y": -467136,
+      "z": -25384.2,
+      "location": "城西大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-389238-434596",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 389238,
+      "y": -434596,
+      "z": -24414,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-386235-472732",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 386234.6,
+      "y": -472732,
+      "z": -25382.9,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-388561-466894",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 388561.2,
+      "y": -466894,
+      "z": -25585.5,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-trash-g-393795-468041",
+      "typeId": "trash",
+      "icon": "ljx",
+      "x": 393794.6,
+      "y": -468041,
+      "z": -25111,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-375105-433441",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 375105,
+      "y": -433441,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-386912-435297",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 386912,
+      "y": -435297,
+      "z": -23090,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-383890-431923",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 383890,
+      "y": -431923,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-383960-434071",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 383960,
+      "y": -434071,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-377753-432126",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 377753,
+      "y": -432126,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-374635-430410",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 374635,
+      "y": -430410,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-375791-429924",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375791,
+      "y": -429924,
+      "z": -22807.4,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-375506-433452",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375506,
+      "y": -433452,
+      "z": -23112.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-375542-432967",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375542,
+      "y": -432967,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-377243-430124",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 377243,
+      "y": -430124,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-376198-447791",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 376198,
+      "y": -447791,
+      "z": -24815,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-365100-470434",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 365100.2,
+      "y": -470434,
+      "z": -24607.6,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-361014-478075",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 361014,
+      "y": -478075,
+      "z": -24378.6,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-1-375084-462255",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375084,
+      "y": -462255,
+      "z": -25355.2,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-1-373946-459809",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 373946,
+      "y": -459809,
+      "z": -25353.2,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-366623-461877",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 366623.1,
+      "y": -461877,
+      "z": -24713.5,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-365859-464285",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 365859,
+      "y": -464285,
+      "z": -24713.9,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-376449-468737",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 376449,
+      "y": -468737,
+      "z": -25443.8,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-375464-473135",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 375464,
+      "y": -473135,
+      "z": -24988.4,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-377464-481275",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 377464,
+      "y": -481275,
+      "z": -24533.8,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-387081-429818",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 387081,
+      "y": -429818,
+      "z": -23113,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-386891-431538",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 386891,
+      "y": -431538,
+      "z": -22559,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-385621-438346",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 385621,
+      "y": -438346,
+      "z": -22816.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-381353-436104",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 381353,
+      "y": -436104,
+      "z": -22976,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-379989-433473",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 379989,
+      "y": -433473,
+      "z": -22986,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-383732-432372",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 383732,
+      "y": -432372,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-384011-436351",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 384011,
+      "y": -436351,
+      "z": -18032.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-2-379639-459031",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 379638.7,
+      "y": -459031,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-2-379504-462215",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 379504,
+      "y": -462215,
+      "z": -24666.9,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-390484-478580",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 390484,
+      "y": -478580,
+      "z": -24291.6,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-381904-469085",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 381904,
+      "y": -469085,
+      "z": -25053,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-391643-453963",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 391643.4,
+      "y": -453963,
+      "z": -25096.6,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-394644-470520",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 394644,
+      "y": -470520,
+      "z": -24873.2,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-380814-482505",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 380814,
+      "y": -482505,
+      "z": -24678.6,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-388440-480703",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 388440,
+      "y": -480703,
+      "z": -24706.5,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-388920-481310",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 388920,
+      "y": -481310,
+      "z": -24626.2,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-392058-483365",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 392058,
+      "y": -483365,
+      "z": -24303.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-374892-430903",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 374892,
+      "y": -430903,
+      "z": -22887,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-375697-450419",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 375697,
+      "y": -450419,
+      "z": -25109,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-368123-458815",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 368123,
+      "y": -458815,
+      "z": -25052.8,
+      "location": "阿坦亚遗址",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-374923-476356",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 374922.9,
+      "y": -476356,
+      "z": -24928.2,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-371598-473987",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 371597.9,
+      "y": -473987,
+      "z": -24842,
+      "location": "城西大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-380944-439891",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 380944,
+      "y": -439891,
+      "z": -22814,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-388973-452226",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 388973,
+      "y": -452226,
+      "z": -25105.2,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-387984-451988",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 387983.7,
+      "y": -451988,
+      "z": -25101.1,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-391786-435342",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 391785.5,
+      "y": -435342,
+      "z": -24403.4,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-392763-453312",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 392762.6,
+      "y": -453312,
+      "z": -25099.5,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-398719-451267",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 398719.2,
+      "y": -451267,
+      "z": -24832.8,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-387094-470169",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 387093.5,
+      "y": -470169,
+      "z": -25388.8,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-380646-478162",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 380646.3,
+      "y": -478162,
+      "z": -25057,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-field-crate-g-396683-463692",
+      "typeId": "field-crate",
+      "icon": "ywwzx",
+      "x": 396683,
+      "y": -463692,
+      "z": -24956,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-376874-427256",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 376874,
+      "y": -427256,
+      "z": -23402,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-376001-432083",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 376001,
+      "y": -432083,
+      "z": -22664.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-376134-436116",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 376134,
+      "y": -436116,
+      "z": -23116,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-2-373078-460778",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 373078,
+      "y": -460778,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-365454-478167",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 365454,
+      "y": -478167,
+      "z": -24527.2,
+      "location": "樱桃小镇",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-378825-425961",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 378825,
+      "y": -425961,
+      "z": -23403.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-392131-448464",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 392131,
+      "y": -448464,
+      "z": -25313,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-389792-461284",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 389792,
+      "y": -461284,
+      "z": -25354,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-380873-457559",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 380873,
+      "y": -457559,
+      "z": -24730.7,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-384653-457775",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 384653,
+      "y": -457775,
+      "z": -25480,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-384988-458095",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 384988,
+      "y": -458095,
+      "z": -25478.6,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-379900-475482",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 379900,
+      "y": -475482,
+      "z": -25007.6,
+      "location": "城东大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-381564-474545",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 381564,
+      "y": -474545,
+      "z": -24688.8,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-399064-478305",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 399064,
+      "y": -478305,
+      "z": -24640.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-tool-cabinet-g-389026-482495",
+      "typeId": "tool-cabinet",
+      "icon": "gjg",
+      "x": 389026,
+      "y": -482495,
+      "z": -24441.8,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-377035-435968",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 377035,
+      "y": -435968,
+      "z": -23117.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-365064-469785",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 365064,
+      "y": -469785,
+      "z": -24609.1,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-371796-465665",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 371796,
+      "y": -465665,
+      "z": -24964,
+      "location": "停车场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-2-377610-460218",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 377609.5,
+      "y": -460218,
+      "z": -24789,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-2-377279-459795",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 377279,
+      "y": -459795,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-376824-477165",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 376824,
+      "y": -477165,
+      "z": -25035.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-377587-481652",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 377587,
+      "y": -481652,
+      "z": -24617.5,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-386484-427263",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 386484,
+      "y": -427263,
+      "z": -22560,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-389146-427477",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 389146,
+      "y": -427477,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-381370-435353",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 381370,
+      "y": -435353,
+      "z": -23114,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-382690-440044",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 382690,
+      "y": -440044,
+      "z": -22814.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-380571-436583",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 380571,
+      "y": -436583,
+      "z": -18790,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-379978-435355",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 379978,
+      "y": -435355,
+      "z": -18031,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-1-379604-459671",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 379604.2,
+      "y": -459671,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-1-379486-463265",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 379486,
+      "y": -463265,
+      "z": -25355.1,
+      "floor": 1,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-392654-453906",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 392654,
+      "y": -453906,
+      "z": -25001,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-399100-468836",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 399099.5,
+      "y": -468836,
+      "z": -24446.6,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-ammo-crate-g-395972-470102",
+      "typeId": "ammo-crate",
+      "icon": "dyx",
+      "x": 395971.8,
+      "y": -470102,
+      "z": -24950.8,
+      "location": "阿萨拉营地",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-375332-436142",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 375332,
+      "y": -436142,
+      "z": -23116,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-384346-437359",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 384346,
+      "y": -437359,
+      "z": -23116.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-382256-431726",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 382256,
+      "y": -431726,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-379926-432211",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 379925.5,
+      "y": -432211,
+      "z": -18790.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-383981-436447",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 383981,
+      "y": -436447,
+      "z": -18790,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-385551-451928",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 385551,
+      "y": -451928,
+      "z": -25114,
+      "location": "哈夫克第一大道",
+      "source": "imported"
+    },
+    {
+      "id": "bks-air-crate-g-378346-481561",
+      "typeId": "air-crate",
+      "icon": "hkcwx",
+      "x": 378345.6,
+      "y": -481561,
+      "z": -24074.1,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-376113-427481",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 376113,
+      "y": -427481,
+      "z": -23112,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-376496-425689",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 376496,
+      "y": -425689,
+      "z": -23112,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-373946-428405",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 373946,
+      "y": -428405,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-376334-435858",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 376334,
+      "y": -435858,
+      "z": -23116.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-371691-442949",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 371691,
+      "y": -442949,
+      "z": -24818,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-373174-457375",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 373174,
+      "y": -457375,
+      "z": -24697.8,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-373067-457785",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 373067,
+      "y": -457785,
+      "z": -24697.8,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-385445-427507",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 385445,
+      "y": -427507,
+      "z": -23402.6,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-386274-430666",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 386274,
+      "y": -430666,
+      "z": -22559.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-385576-431321",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 385576,
+      "y": -431321,
+      "z": -22559.2,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-387520-431678",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 387520,
+      "y": -431678,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-380966-435360",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 380966,
+      "y": -435360,
+      "z": -23113.7,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-382947-431400",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 382947,
+      "y": -431400,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-2-381554-459475",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 381554,
+      "y": -459475,
+      "z": -24790,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-drawer-g-399049-477900",
+      "typeId": "drawer",
+      "icon": "ctg",
+      "x": 399049,
+      "y": -477900,
+      "z": -24224.7,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-laptop-bag-g-365141-470528",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 365141,
+      "y": -470528,
+      "z": -25096,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-laptop-bag-g-381647-436036",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 381647,
+      "y": -436036,
+      "z": -22898.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-laptop-bag-g-378920-479750",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 378920,
+      "y": -479750,
+      "z": -24016.3,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-laptop-bag-g-376925-435635",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 376925,
+      "y": -435635,
+      "z": -22958,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-laptop-bag-g-386666-430962",
+      "typeId": "laptop-bag",
+      "icon": "dsb",
+      "x": 386666,
+      "y": -430962,
+      "z": -22946,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-373612-429893",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 373612,
+      "y": -429893,
+      "z": -22582,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-376020-435401",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 376020,
+      "y": -435401,
+      "z": -23026,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-362874-471375",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 362874,
+      "y": -471375,
+      "z": -24506.6,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-386383-429139",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 386383,
+      "y": -429139,
+      "z": -22560,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-382287-433338",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 382287,
+      "y": -433338,
+      "z": -22512,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-384394-469195",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 384394,
+      "y": -469195,
+      "z": -25440.2,
+      "location": "巴克什集市",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-g-399159-479391",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 399159,
+      "y": -479391,
+      "z": -24174.5,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-374692-425967",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 374692,
+      "y": -425967,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-374747-425894",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 374747,
+      "y": -425894,
+      "z": -22665,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-377742-476078",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 377742,
+      "y": -476078,
+      "z": -25035.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-2-379157-462062",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 379157,
+      "y": -462062,
+      "z": -24789.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-2-376514-462125",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 376514,
+      "y": -462125,
+      "z": -24790.1,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-g-366226-469276",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 366226,
+      "y": -469276,
+      "z": -24607.8,
+      "location": "蓝汀旅馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-g-382959-432759",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 382959,
+      "y": -432759,
+      "z": -23115,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-g-390270-478545",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 390270,
+      "y": -478545,
+      "z": -24707.6,
+      "location": "蓝调山城",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-g-380154-479759",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 380154,
+      "y": -479759,
+      "z": -24615.5,
+      "location": "巴克什大浴场",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-376999-428409",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 376999,
+      "y": -428409,
+      "z": -23113,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-2-373465-460946",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 373465,
+      "y": -460946,
+      "z": -24790,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-2-372874-460841",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 372874,
+      "y": -460841,
+      "z": -24790,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-377748-476528",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 377748,
+      "y": -476528,
+      "z": -25035.1,
+      "location": "行动奖励",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-379269-438470",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 379269,
+      "y": -438470,
+      "z": -23116.3,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-380337-431853",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 380337,
+      "y": -431853,
+      "z": -18768,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-g-383490-435964",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 383490,
+      "y": -435964,
+      "z": -18032,
+      "location": "巴别塔",
+      "source": "imported"
+    },
+    {
+      "id": "bks-weapon-crate-g-383032-431834",
+      "typeId": "weapon-crate",
+      "icon": "wqx",
+      "x": 383032,
+      "y": -431834,
+      "z": -18031.4,
+      "location": "巴别塔",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-365617-442313",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 365617,
+      "y": -442313,
+      "z": -24820.3,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-g-365617-442512",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 365617,
+      "y": -442512,
+      "z": -24820.3,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-365176-441367",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 365176,
+      "y": -441367,
+      "z": -24820.3,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-365030-441367",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 365030,
+      "y": -441367,
+      "z": -24820.3,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-g-364791-442300",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 364791,
+      "y": -442300,
+      "z": -24818.4,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-g-365205-443175",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 365205,
+      "y": -443175,
+      "z": -24820,
+      "location": "行动奖励",
+      "appearNote": "庇护者行动",
+      "pickupNote": "需要完成局内行动才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-computer-2-378001-460080",
+      "typeId": "computer",
+      "icon": "dn",
+      "x": 378000.5313,
+      "y": -460080.2188,
+      "z": -24701.25195,
+      "floor": 2,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-spawn-g-369330-452128",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 369330.46875,
+      "y": -452127.78125,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-366255-463040",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 366255.28125,
+      "y": -463039.625,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-359012-480096",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 359011.5625,
+      "y": -480096.03125,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-384382-445566",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 384382.25,
+      "y": -445565.59375,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-377006-432767",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 377005.71875,
+      "y": -432766.9375,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-396112-455788",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 396112.4375,
+      "y": -455788.40625,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-393502-466908",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 393502.0625,
+      "y": -466908.4375,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-384067-470655",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 384066.84375,
+      "y": -470655.28125,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-393665-480204",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 393664.6875,
+      "y": -480204.4375,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-378092-483225",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 378091.59375,
+      "y": -483225.0625,
+      "source": "manual"
+    },
+    {
+      "id": "bks-spawn-g-387111-432201",
+      "typeId": "spawn",
+      "icon": "csd",
+      "x": 387110.53125,
+      "y": -432201,
+      "source": "manual"
+    },
+    {
+      "id": "bks-extract-switch-g-383738-482929",
+      "typeId": "extract-switch",
+      "icon": "dtcld",
+      "x": 383738.375,
+      "y": -482929.15625,
+      "location": "浴场",
+      "appear": [
+        {
+          "difficulty": "secret"
+        }
+      ],
+      "source": "manual"
+    },
+    {
+      "id": "bks-extract-switch-g-381552-451162",
+      "typeId": "extract-switch",
+      "icon": "dtcld",
+      "x": 381552.46875,
+      "y": -451161.875,
+      "location": "巴别塔前",
+      "source": "manual"
+    },
+    {
+      "id": "bks-extract-condition-g-373063-483793",
+      "typeId": "extract-condition",
+      "icon": "tjcld",
+      "x": 373063.125,
+      "y": -483793.4375,
+      "location": "通向溪谷的路",
+      "extractNote": "丢弃背包",
+      "source": "manual"
+    },
+    {
+      "id": "bks-extract-condition-g-382731-427116",
+      "typeId": "extract-condition",
+      "icon": "tjcld",
+      "x": 382731.3125,
+      "y": -427115.96875,
+      "location": "巴别塔",
+      "extractNote": "上交2个身份牌",
+      "source": "manual"
+    },
+    {
+      "id": "bks-extract-mission-g-358326-439873",
+      "typeId": "extract-mission",
+      "icon": "tjcld",
+      "x": 358325.75,
+      "y": -439873.375,
+      "location": "巴别塔",
+      "extractNote": "护送博士",
+      "source": "manual"
+    },
+    {
+      "id": "bks-pc-case-g-373537-429915",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 373537,
+      "y": -429915,
+      "z": -22665,
+      "location": "巴别塔",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-g-374631-428803",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 374631,
+      "y": -428803,
+      "z": -22665.1,
+      "location": "巴别塔",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-g-377839-438466",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 377839,
+      "y": -438466,
+      "z": -23040.5,
+      "location": "巴别塔",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-375903-433441",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 375903,
+      "y": -433441,
+      "z": -23112.6,
+      "location": "巴别塔",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "bks-server-g-382038-432784",
+      "typeId": "server",
+      "icon": "fwq",
+      "x": 382038,
+      "y": -432784,
+      "z": -23112,
+      "location": "巴别塔",
+      "modeNote": "第二难度倍场以上才刷新",
+      "appear": [
+        {
+          "difficulty": "topsecret"
+        }
+      ],
+      "source": "imported"
+    },
+    {
+      "id": "bks-military-med-0-376524-460167",
+      "typeId": "military-med",
+      "icon": "ylb",
+      "x": 376524,
+      "y": -460167,
+      "z": -25982.8,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-storage-box-0-381040-457842",
+      "typeId": "storage-box",
+      "icon": "dgjx",
+      "x": 381040,
+      "y": -457842,
+      "z": -26081.9,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-clothing-0-382987-458937",
+      "typeId": "clothing",
+      "icon": "yf",
+      "x": 382987,
+      "y": -458937,
+      "z": -25920,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-travel-bag-0-382065-461610",
+      "typeId": "travel-bag",
+      "icon": "lxd",
+      "x": 382065,
+      "y": -461610,
+      "z": -26083.1,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-luggage-0-380812-459880",
+      "typeId": "high-luggage",
+      "icon": "xlx",
+      "x": 380811.873716,
+      "y": -459880.304583,
+      "z": -26082.8,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-0-379735-457410",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 379735.261217,
+      "y": -457410.295911,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-safe-box-0-383695-459109",
+      "typeId": "safe-box",
+      "icon": "bxx",
+      "x": 383695.068359,
+      "y": -459109.130859,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-0-381332-459455",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 381331.556887,
+      "y": -459454.595284,
+      "z": -26081.92383,
+      "floor": 0,
+      "location": "每局游戏随机刷新，可能出现在图示位置",
+      "random": true,
+      "appearNote": "随机刷新",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-0-381428-457150",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 381428.222656,
+      "y": -457149.902344,
+      "z": -25944.3,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-0-383549-457154",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 383548.583984,
+      "y": -457153.564453,
+      "z": -25996,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-small-safe-0-383721-457619",
+      "typeId": "small-safe",
+      "icon": "xbxx",
+      "x": 383720.703125,
+      "y": -457618.652344,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-0-376975-459428",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 376975.097656,
+      "y": -459427.734375,
+      "z": -26083,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-pc-case-0-379630-460537",
+      "typeId": "pc-case",
+      "icon": "dnjx",
+      "x": 379630.126953,
+      "y": -460537.353516,
+      "z": -26083,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-0-380159-457669",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 380159.319118,
+      "y": -457668.869557,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-0-378792-460750",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 378792.061865,
+      "y": -460750.37738,
+      "z": -26083,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-0-379004-459538",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 379003.90625,
+      "y": -459537.597656,
+      "z": -26083,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-locker-0-383113-457216",
+      "typeId": "locker",
+      "icon": "cwg",
+      "x": 383112.792969,
+      "y": -457215.820313,
+      "z": -26082,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-0-381729-458439",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 381728.515625,
+      "y": -458438.964844,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-0-383003-457648",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 383002.929688,
+      "y": -457647.949219,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "pickupNote": "需要使用钥匙卡才能开启",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-0-380348-457669",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 380347.900391,
+      "y": -457668.869557,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-high-storage-0-383721-458783",
+      "typeId": "high-storage",
+      "icon": "gjcwx",
+      "x": 383720.703125,
+      "y": -458783.203125,
+      "z": -26081.7,
+      "floor": 0,
+      "location": "皇家博物馆",
+      "source": "imported"
+    },
+    {
+      "id": "bks-contract-high-g-363443-471043",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 363442.7,
+      "y": -471043.4,
+      "z": -24969.2,
+      "source": "manual",
+      "title": "庇护者行动（停机坪区）",
+      "location": "樱桃小镇",
+      "appearNote": "开局后 10 分钟"
+    },
+    {
+      "id": "bks-contract-high-g-370327-451572",
+      "typeId": "contract-high",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 370326.7,
+      "y": -451572.2,
+      "z": -24987.2,
+      "source": "manual",
+      "title": "折翼行动",
+      "location": "哈夫克第一大道",
+      "appearNote": "开局后 5 分钟"
+    },
+    {
+      "id": "bks-contract-g-378715-464245",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 378714.5,
+      "y": -464245.1,
+      "z": -25444.6,
+      "source": "manual",
+      "title": "获取保险柜物资",
+      "location": "巨人广场"
+    },
+    {
+      "id": "bks-contract-g-365976-465981",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 365976.1,
+      "y": -465980.7,
+      "z": -25237.6,
+      "source": "manual",
+      "location": "蓝汀旅馆",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-367788-472287",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 367788.3,
+      "y": -472286.8,
+      "z": -24871.1,
+      "source": "manual",
+      "location": "蓝汀旅馆",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-372576-445821",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 372576.2,
+      "y": -445820.5,
+      "z": -24687,
+      "source": "manual",
+      "location": "装卸区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-374662-460440",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 374662.1,
+      "y": -460440.2,
+      "z": -25234.8,
+      "source": "manual",
+      "location": "皇家博物馆",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-375471-472978",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 375470.5,
+      "y": -472977.5,
+      "z": -24892,
+      "source": "manual",
+      "location": "停车场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-376092-457253",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 376091.9,
+      "y": -457252.6,
+      "z": -25055.6,
+      "source": "manual",
+      "location": "皇家博物馆",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-376479-467978",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 376478.5,
+      "y": -467978.1,
+      "z": -25382,
+      "source": "manual",
+      "location": "停车场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-377550-480612",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 377549.5,
+      "y": -480612.1,
+      "z": -24497.9,
+      "source": "manual",
+      "location": "巴克什大浴场",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-377552-440976",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 377552,
+      "y": -440975.6,
+      "z": -24686.7,
+      "source": "manual",
+      "location": "巴别塔",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-381161-469300",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 381160.6,
+      "y": -469299.5,
+      "z": -25373.2,
+      "source": "manual",
+      "location": "巴克什集市",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-381458-473983",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 381458.1,
+      "y": -473982.9,
+      "z": -25026.2,
+      "source": "manual",
+      "location": "巴克什集市",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-383862-432791",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 383862.1,
+      "y": -432790.5,
+      "z": -17972.8,
+      "source": "manual",
+      "location": "巴别塔",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-390447-444994",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 390447.1,
+      "y": -444993.7,
+      "z": -24688.8,
+      "source": "manual",
+      "location": "蓄水区",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-390815-440730",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 390814.9,
+      "y": -440729.9,
+      "z": -24720.2,
+      "source": "manual",
+      "location": "巴别塔",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-393849-475485",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 393849.2,
+      "y": -475485.2,
+      "z": -24975.6,
+      "source": "manual",
+      "location": "蓝调山城",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-394327-473568",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 394327.2,
+      "y": -473567.5,
+      "z": -25235.2,
+      "source": "manual",
+      "location": "阿萨拉营地",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    },
+    {
+      "id": "bks-contract-g-394737-470426",
+      "typeId": "contract",
+      "icon": "/assets/maps/icons/shushu/xdjqz.png",
+      "x": 394737.1,
+      "y": -470425.5,
+      "z": -24865.7,
+      "source": "manual",
+      "location": "阿萨拉营地",
+      "random": true,
+      "appearNote": "随机候选，每局任务不固定"
+    }
+  ]
+}
