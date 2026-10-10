@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 860" role="img" aria-labelledby="title desc">
+  <title id="title">dfvn</title>
+  <desc id="desc">A crowned white kitten in a pastel blue cloud beside the dfvn wordmark.</desc>
+  <defs>
+    <linearGradient id="wordmark" x1="180" y1="690" x2="840" y2="805" gradientUnits="userSpaceOnUse"><stop stop-color="#aeeaff"/><stop offset=".52" stop-color="#d7caff"/><stop offset="1" stop-color="#ffbedc"/></linearGradient>
+  </defs>
+  <image href="dfvn-cloud-cat.png" x="78" y="0" width="868" height="690" preserveAspectRatio="xMidYMid meet"/>
+  <text x="512" y="814" fill="url(#wordmark)" stroke="#363064" stroke-width="10" paint-order="stroke" text-anchor="middle" font-family="Nunito, 'Arial Rounded MT Bold', Arial, sans-serif" font-size="142" font-weight="900" letter-spacing="1">dfvn</text>
+</svg>

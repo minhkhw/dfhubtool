@@ -1,0 +1,2168 @@
+{
+  "catalog": [
+    {
+      "name": "AKM Assault Rifle",
+      "type": "weapon",
+      "price": 78107,
+      "image": "https://static.deltaforcetools.gg/images/AKMAssaultRifle_a30d5e72.png",
+      "source": "/wiki/weapon/AKM%20Assault%20Rifle"
+    },
+    {
+      "name": "VSS Marksman Rifle",
+      "type": "weapon",
+      "price": 45138,
+      "image": "https://static.deltaforcetools.gg/images/VSSMarksmanRifle_8d7c2db9.png",
+      "source": "/wiki/weapon/VSS%20Marksman%20Rifle"
+    },
+    {
+      "name": "AWM Sniper Rifle",
+      "type": "weapon",
+      "price": 697439,
+      "image": "https://static.deltaforcetools.gg/images/AWMSniperRifle_b46d46e7.png",
+      "source": "/wiki/weapon/AWM%20Sniper%20Rifle"
+    },
+    {
+      "name": "SV-98 Sniper Rifle",
+      "type": "weapon",
+      "price": 82055,
+      "image": "https://static.deltaforcetools.gg/images/SV98SniperRifle_98943db2.png",
+      "source": "/wiki/weapon/SV-98%20Sniper%20Rifle"
+    },
+    {
+      "name": "CAR-15 Assault Rifle",
+      "type": "weapon",
+      "price": 12304,
+      "image": "https://static.deltaforcetools.gg/images/CAR15AssaultRifle_bd35e840.png",
+      "source": "/wiki/weapon/CAR-15%20Assault%20Rifle"
+    },
+    {
+      "name": "QSZ-92G",
+      "type": "weapon",
+      "price": 4600,
+      "image": "https://static.deltaforcetools.gg/images/QSZ92G_5a8ed58d.png",
+      "source": "/wiki/weapon/QSZ-92G"
+    },
+    {
+      "name": "AKS-74 Assault Rifle",
+      "type": "weapon",
+      "price": 12058,
+      "image": "https://static.deltaforcetools.gg/images/AKS74AssaultRifle_75e1e0e9.png",
+      "source": "/wiki/weapon/AKS-74%20Assault%20Rifle"
+    },
+    {
+      "name": "M700 Sniper Rifle",
+      "type": "weapon",
+      "price": 132000,
+      "image": "https://static.deltaforcetools.gg/images/M700SniperRifle_162f6288.png",
+      "source": "/wiki/weapon/M700%20Sniper%20Rifle"
+    },
+    {
+      "name": "K416 Assault Rifle",
+      "type": "weapon",
+      "price": 191064,
+      "image": "https://static.deltaforcetools.gg/images/K416AssaultRifle_51ee5e11.png",
+      "source": "/wiki/weapon/K416%20Assault%20Rifle"
+    },
+    {
+      "name": "SVD Sniper Rifle",
+      "type": "weapon",
+      "price": 132300,
+      "image": "https://static.deltaforcetools.gg/images/SVDSniperRifle_bdd0a464.png",
+      "source": "/wiki/weapon/SVD%20Sniper%20Rifle"
+    },
+    {
+      "name": "Bizon Submachine Gun",
+      "type": "weapon",
+      "price": 16144,
+      "image": "https://static.deltaforcetools.gg/images/BizonSubmachineGun_4ec97188.png",
+      "source": "/wiki/weapon/Bizon%20Submachine%20Gun"
+    },
+    {
+      "name": "M250 General Machine Gun",
+      "type": "weapon",
+      "price": 331294,
+      "image": "https://static.deltaforcetools.gg/images/M250GeneralMachineGu_d9596fb7.png",
+      "source": "/wiki/weapon/M250%20General%20Machine%20Gun"
+    },
+    {
+      "name": "M14 Marksman Rifle",
+      "type": "weapon",
+      "price": 258450,
+      "image": "https://static.deltaforcetools.gg/images/M14MarksmanRifle_6bbb4d7c.png",
+      "source": "/wiki/weapon/M14%20Marksman%20Rifle"
+    },
+    {
+      "name": "CI-19 Assault Rifle",
+      "type": "weapon",
+      "price": 105152,
+      "image": "https://static.deltaforcetools.gg/images/CI19AssaultRifle_da3978b8.png",
+      "source": "/wiki/weapon/CI-19%20Assault%20Rifle"
+    },
+    {
+      "name": "SMG-45 Submachine Gun",
+      "type": "weapon",
+      "price": 47231,
+      "image": "https://static.deltaforcetools.gg/images/SMG45SubmachineGun_859e339a.png",
+      "source": "/wiki/weapon/SMG-45%20Submachine%20Gun"
+    },
+    {
+      "name": "SR-3M Compact Assault Rifle",
+      "type": "weapon",
+      "price": 45393,
+      "image": "https://static.deltaforcetools.gg/images/SR3MCompactAssaultRi_d3e2d9b4.png",
+      "source": "/wiki/weapon/SR-3M%20Compact%20Assault%20Rifle"
+    },
+    {
+      "name": "M4A1 Assault Rifle",
+      "type": "weapon",
+      "price": 148523,
+      "image": "https://static.deltaforcetools.gg/images/M4A1AssaultRifle_f84d115f.png",
+      "source": "/wiki/weapon/M4A1%20Assault%20Rifle"
+    },
+    {
+      "name": "PTR-32 Assault Rifle",
+      "type": "weapon",
+      "price": 38228,
+      "image": "https://static.deltaforcetools.gg/images/PTR32AssaultRifle_1d555c2d.png",
+      "source": "/wiki/weapon/PTR-32%20Assault%20Rifle"
+    },
+    {
+      "name": "M16A4 Assault Rifle",
+      "type": "weapon",
+      "price": 9720,
+      "image": "https://static.deltaforcetools.gg/images/M16A4AssaultRifle_4f54d9f1.png",
+      "source": "/wiki/weapon/M16A4%20Assault%20Rifle"
+    },
+    {
+      "name": "AUG Assault Rifle",
+      "type": "weapon",
+      "price": 137614,
+      "image": "https://static.deltaforcetools.gg/images/AUGAssaultRifle_6b9b72e5.png",
+      "source": "/wiki/weapon/AUG%20Assault%20Rifle"
+    },
+    {
+      "name": "G3 Battle Rifle",
+      "type": "weapon",
+      "price": 56272,
+      "image": "https://static.deltaforcetools.gg/images/G3BattleRifle_ac20ae51.png",
+      "source": "/wiki/weapon/G3%20Battle%20Rifle"
+    },
+    {
+      "name": "SG552 Assault Rifle",
+      "type": "weapon",
+      "price": 46884,
+      "image": "https://static.deltaforcetools.gg/images/SG552AssaultRifle_6338885e.png",
+      "source": "/wiki/weapon/SG552%20Assault%20Rifle"
+    },
+    {
+      "name": "SCAR-H Battle Rifle",
+      "type": "weapon",
+      "price": 84270,
+      "image": "https://static.deltaforcetools.gg/images/SCARHBattleRifle_1ac06055.png",
+      "source": "/wiki/weapon/SCAR-H%20Battle%20Rifle"
+    },
+    {
+      "name": "QBZ95-1 Assault Rifle",
+      "type": "weapon",
+      "price": 38843,
+      "image": "https://static.deltaforcetools.gg/images/QBZ951AssaultRifle_2f24ada8.png",
+      "source": "/wiki/weapon/QBZ95-1%20Assault%20Rifle"
+    },
+    {
+      "name": "AK-12 Assault Rifle",
+      "type": "weapon",
+      "price": 57237,
+      "image": "https://static.deltaforcetools.gg/images/AK12AssaultRifle_7d6355dc.png",
+      "source": "/wiki/weapon/AK-12%20Assault%20Rifle"
+    },
+    {
+      "name": "AS Val Assault Rifle",
+      "type": "weapon",
+      "price": 256711,
+      "image": "https://static.deltaforcetools.gg/images/ASValAssaultRifle_40a875d9.png",
+      "source": "/wiki/weapon/AS%20Val%20Assault%20Rifle"
+    },
+    {
+      "name": "M7 Battle Rifle",
+      "type": "weapon",
+      "price": 224394,
+      "image": "https://static.deltaforcetools.gg/images/M7BattleRifle_4d20db8c.png",
+      "source": "/wiki/weapon/M7%20Battle%20Rifle"
+    },
+    {
+      "name": "MP5 Submachine Gun",
+      "type": "weapon",
+      "price": 36892,
+      "image": "https://static.deltaforcetools.gg/images/MP5SubmachineGun_d11ed5c0.png",
+      "source": "/wiki/weapon/MP5%20Submachine%20Gun"
+    },
+    {
+      "name": "Vityaz Submachine Gun",
+      "type": "weapon",
+      "price": 47185,
+      "image": "https://static.deltaforcetools.gg/images/VityazSubmachineGun_a42c789b.png",
+      "source": "/wiki/weapon/Vityaz%20Submachine%20Gun"
+    },
+    {
+      "name": "UZI Submachine Gun",
+      "type": "weapon",
+      "price": 10551,
+      "image": "https://static.deltaforcetools.gg/images/UZISubmachineGun_03f2c1f8.png",
+      "source": "/wiki/weapon/UZI%20Submachine%20Gun"
+    },
+    {
+      "name": "Vector Submachine Gun",
+      "type": "weapon",
+      "price": 192945,
+      "image": "https://static.deltaforcetools.gg/images/VectorSubmachineGun_79cfad62.png",
+      "source": "/wiki/weapon/Vector%20Submachine%20Gun"
+    },
+    {
+      "name": "P90 Submachine Gun",
+      "type": "weapon",
+      "price": 67055,
+      "image": "https://static.deltaforcetools.gg/images/P90SubmachineGun_61f409ce.png",
+      "source": "/wiki/weapon/P90%20Submachine%20Gun"
+    },
+    {
+      "name": "R93 Sniper Rifle",
+      "type": "weapon",
+      "price": 129000,
+      "image": "https://static.deltaforcetools.gg/images/R93SniperRifle_eb25084f.png",
+      "source": "/wiki/weapon/R93%20Sniper%20Rifle"
+    },
+    {
+      "name": "PKM General Machine Gun",
+      "type": "weapon",
+      "price": 57753,
+      "image": "https://static.deltaforcetools.gg/images/PKMGeneralMachineGun_c1ca4bed.png",
+      "source": "/wiki/weapon/PKM%20General%20Machine%20Gun"
+    },
+    {
+      "name": "M249 Light Machine Gun",
+      "type": "weapon",
+      "price": 45668,
+      "image": "https://static.deltaforcetools.gg/images/M249LightMachineGun_1b285ee6.png",
+      "source": "/wiki/weapon/M249%20Light%20Machine%20Gun"
+    },
+    {
+      "name": "SR-25 Marksman Rifle",
+      "type": "weapon",
+      "price": 202958,
+      "image": "https://static.deltaforcetools.gg/images/SR25MarksmanRifle_dce9fe19.png",
+      "source": "/wiki/weapon/SR-25%20Marksman%20Rifle"
+    },
+    {
+      "name": "PSG-1 Marksman Rifle",
+      "type": "weapon",
+      "price": 67500,
+      "image": "https://static.deltaforcetools.gg/images/PSG1MarksmanRifle_0dd94099.png",
+      "source": "/wiki/weapon/PSG-1%20Marksman%20Rifle"
+    },
+    {
+      "name": "SKS Marksman Rifle",
+      "type": "weapon",
+      "price": 46530,
+      "image": "https://static.deltaforcetools.gg/images/SKSMarksmanRifle_ed372c9c.png",
+      "source": "/wiki/weapon/SKS%20Marksman%20Rifle"
+    },
+    {
+      "name": "Mini-14 Marksman Rifle",
+      "type": "weapon",
+      "price": 49258,
+      "image": "https://static.deltaforcetools.gg/images/Mini14MarksmanRifle_e3bb80ef.png",
+      "source": "/wiki/weapon/Mini-14%20Marksman%20Rifle"
+    },
+    {
+      "name": "S12K Shotgun",
+      "type": "weapon",
+      "price": 31915,
+      "image": "https://static.deltaforcetools.gg/images/S12KShotgun_967ad3da.png",
+      "source": "/wiki/weapon/S12K%20Shotgun"
+    },
+    {
+      "name": "M1014 Shotgun",
+      "type": "weapon",
+      "price": 26588,
+      "image": "https://static.deltaforcetools.gg/images/M1014Shotgun_07866042.png",
+      "source": "/wiki/weapon/M1014%20Shotgun"
+    },
+    {
+      "name": "M870 Shotgun",
+      "type": "weapon",
+      "price": 3200,
+      "image": "https://static.deltaforcetools.gg/images/M870Shotgun_abb34151.png",
+      "source": "/wiki/weapon/M870%20Shotgun"
+    },
+    {
+      "name": "G18",
+      "type": "weapon",
+      "price": 19112,
+      "image": "https://static.deltaforcetools.gg/images/G18_1ea4acf0.png",
+      "source": "/wiki/weapon/G18"
+    },
+    {
+      "name": "${point}357 Revolver",
+      "type": "weapon",
+      "price": 13640,
+      "image": "https://static.deltaforcetools.gg/images/357Revolver_2cb99dde.png",
+      "source": "/wiki/weapon/${point}357%20Revolver"
+    },
+    {
+      "name": "Boonie Hat",
+      "type": "gear",
+      "price": 2167,
+      "image": "https://static.deltaforcetools.gg/images/BoonieHat_46423c7a.png",
+      "source": "/wiki/gear/Boonie%20Hat"
+    },
+    {
+      "name": "Retro Motorcycle Helmet (New)",
+      "type": "gear",
+      "price": 7089,
+      "image": "https://static.deltaforcetools.gg/images/RetroMotorcycleHelme_aa6e5bff.png",
+      "source": "/wiki/gear/Retro%20Motorcycle%20Helmet%20(New)"
+    },
+    {
+      "name": "DICH Training Helmet (New)",
+      "type": "gear",
+      "price": 197724,
+      "image": "https://static.deltaforcetools.gg/images/DICHTrainingHelmetNe_5a168889.png",
+      "source": "/wiki/gear/DICH%20Training%20Helmet%20(New)"
+    },
+    {
+      "name": "DRO Tactical Helmet (Damaged)",
+      "type": "gear",
+      "price": 5854,
+      "image": "https://static.deltaforcetools.gg/images/DROTacticalHelmetDam_9aa70175.png",
+      "source": "/wiki/gear/DRO%20Tactical%20Helmet%20(Damaged)"
+    },
+    {
+      "name": "DRO Tactical Helmet (Like New)",
+      "type": "gear",
+      "price": 4178,
+      "image": "https://static.deltaforcetools.gg/images/DROTacticalHelmetLik_19ebae9d.png",
+      "source": "/wiki/gear/DRO%20Tactical%20Helmet%20(Like%20New)"
+    },
+    {
+      "name": "H09 Anti-Riot Helmet (Like New)",
+      "type": "gear",
+      "price": 212081,
+      "image": "https://static.deltaforcetools.gg/images/H09AntiRiotHelmetLik_5b5127ba.png",
+      "source": "/wiki/gear/H09%20Anti-Riot%20Helmet%20(Like%20New)"
+    },
+    {
+      "name": "DRO Tactical Helmet (New)",
+      "type": "gear",
+      "price": 7592,
+      "image": "https://static.deltaforcetools.gg/images/DROTacticalHelmetNew_38d9611a.png",
+      "source": "/wiki/gear/DRO%20Tactical%20Helmet%20(New)"
+    },
+    {
+      "name": "DICH Training Helmet (Damaged)",
+      "type": "gear",
+      "price": 127316,
+      "image": "https://static.deltaforcetools.gg/images/DICHTrainingHelmetDa_eb753425.png",
+      "source": "/wiki/gear/DICH%20Training%20Helmet%20(Damaged)"
+    },
+    {
+      "name": "DICH Training Helmet (Like New)",
+      "type": "gear",
+      "price": 143612,
+      "image": "https://static.deltaforcetools.gg/images/DICHTrainingHelmetLi_7254df78.png",
+      "source": "/wiki/gear/DICH%20Training%20Helmet%20(Like%20New)"
+    },
+    {
+      "name": "DAS Helmet (Damaged)",
+      "type": "gear",
+      "price": 25695,
+      "image": "https://static.deltaforcetools.gg/images/DASHelmetDamaged_e07c7a8c.png",
+      "source": "/wiki/gear/DAS%20Helmet%20(Damaged)"
+    },
+    {
+      "name": "Outdoor Baseball Cap (Damaged)",
+      "type": "gear",
+      "price": 7083,
+      "image": "https://static.deltaforcetools.gg/images/OutdoorBaseballCapDa_d4789188.png",
+      "source": "/wiki/gear/Outdoor%20Baseball%20Cap%20(Damaged)"
+    },
+    {
+      "name": "MC201 Helmet (Damaged)",
+      "type": "gear",
+      "price": 29179,
+      "image": "https://static.deltaforcetools.gg/images/MC201HelmetDamaged_c01cd7ff.png",
+      "source": "/wiki/gear/MC201%20Helmet%20(Damaged)"
+    },
+    {
+      "name": "Outdoor Baseball Cap (New)",
+      "type": "gear",
+      "price": 10110,
+      "image": "https://static.deltaforcetools.gg/images/OutdoorBaseballCapNe_662694a1.png",
+      "source": "/wiki/gear/Outdoor%20Baseball%20Cap%20(New)"
+    },
+    {
+      "name": "GN Heavy Helmet (Like New)",
+      "type": "gear",
+      "price": 183276,
+      "image": "https://static.deltaforcetools.gg/images/GNHeavyHelmetLikeNew_674a5a13.png",
+      "source": "/wiki/gear/GN%20Heavy%20Helmet%20(Like%20New)"
+    },
+    {
+      "name": "GN Heavy Helmet (Damaged)",
+      "type": "gear",
+      "price": 146362,
+      "image": "https://static.deltaforcetools.gg/images/GNHeavyHelmetDamaged_b38870f4.png",
+      "source": "/wiki/gear/GN%20Heavy%20Helmet%20(Damaged)"
+    },
+    {
+      "name": "Outdoor Baseball Cap (Like New)",
+      "type": "gear",
+      "price": 8602,
+      "image": "https://static.deltaforcetools.gg/images/OutdoorBaseballCapLi_bf999c6e.png",
+      "source": "/wiki/gear/Outdoor%20Baseball%20Cap%20(Like%20New)"
+    },
+    {
+      "name": "Standard Issue Vest (Damaged)",
+      "type": "gear",
+      "price": 20375,
+      "image": "https://static.deltaforcetools.gg/images/StandardIssueVestDam_d3a3fb1c.png",
+      "source": "/wiki/gear/Standard%20Issue%20Vest%20(Damaged)"
+    },
+    {
+      "name": "DT-AVS Vest (Damaged)",
+      "type": "gear",
+      "price": 112519,
+      "image": "https://static.deltaforcetools.gg/images/DTAVSVestDamaged_885d603f.png",
+      "source": "/wiki/gear/DT-AVS%20Vest%20(Damaged)"
+    },
+    {
+      "name": "DT-AVS Vest (New)",
+      "type": "gear",
+      "price": 168551,
+      "image": "https://static.deltaforcetools.gg/images/DTAVSVestNew_92f36773.png",
+      "source": "/wiki/gear/DT-AVS%20Vest%20(New)"
+    },
+    {
+      "name": "Standard Issue Vest (Like New)",
+      "type": "gear",
+      "price": 17112,
+      "image": "https://static.deltaforcetools.gg/images/StandardIssueVestLik_46cdca5e.png",
+      "source": "/wiki/gear/Standard%20Issue%20Vest%20(Like%20New)"
+    },
+    {
+      "name": "Security Vest (New)",
+      "type": "gear",
+      "price": 2390,
+      "image": "https://static.deltaforcetools.gg/images/SecurityVestNew_3b52083b.png",
+      "source": "/wiki/gear/Security%20Vest%20(New)"
+    },
+    {
+      "name": "Security Vest (Like New)",
+      "type": "gear",
+      "price": 1940,
+      "image": "https://static.deltaforcetools.gg/images/SecurityVestLikeNew_01293038.png",
+      "source": "/wiki/gear/Security%20Vest%20(Like%20New)"
+    },
+    {
+      "name": "Hvk QR Vest (Damaged)",
+      "type": "gear",
+      "price": 22861,
+      "image": "https://static.deltaforcetools.gg/images/HvkQRVestDamaged_16021b6e.png",
+      "source": "/wiki/gear/Hvk%20QR%20Vest%20(Damaged)"
+    },
+    {
+      "name": "Standard Issue Vest (New)",
+      "type": "gear",
+      "price": 25739,
+      "image": "https://static.deltaforcetools.gg/images/StandardIssueVestNew_952506e4.png",
+      "source": "/wiki/gear/Standard%20Issue%20Vest%20(New)"
+    },
+    {
+      "name": "Security Vest (Damaged)",
+      "type": "gear",
+      "price": 1599,
+      "image": "https://static.deltaforcetools.gg/images/SecurityVestDamaged_d764501d.png",
+      "source": "/wiki/gear/Security%20Vest%20(Damaged)"
+    },
+    {
+      "name": "Warrior Vest (New)",
+      "type": "gear",
+      "price": 122617,
+      "image": "https://static.deltaforcetools.gg/images/WarriorVestNew_e48cc9ab.png",
+      "source": "/wiki/gear/Warrior%20Vest%20(New)"
+    },
+    {
+      "name": "Marksman TAC Vest (New)",
+      "type": "gear",
+      "price": 44012,
+      "image": "https://static.deltaforcetools.gg/images/MarksmanTACVestNew_e89fb7bf.png",
+      "source": "/wiki/gear/Marksman%20TAC%20Vest%20(New)"
+    },
+    {
+      "name": "Basic Stab Vest (New)",
+      "type": "gear",
+      "price": 6926,
+      "image": "https://static.deltaforcetools.gg/images/BasicStabVestNew_402f4e74.png",
+      "source": "/wiki/gear/Basic%20Stab%20Vest%20(New)"
+    },
+    {
+      "name": "Basic Stab Vest (Like New)",
+      "type": "gear",
+      "price": 5401,
+      "image": "https://static.deltaforcetools.gg/images/BasicStabVestLikeNew_f49e6ea5.png",
+      "source": "/wiki/gear/Basic%20Stab%20Vest%20(Like%20New)"
+    },
+    {
+      "name": "Marksman TAC Vest (Damaged)",
+      "type": "gear",
+      "price": 33487,
+      "image": "https://static.deltaforcetools.gg/images/MarksmanTACVestDamag_fe230fac.png",
+      "source": "/wiki/gear/Marksman%20TAC%20Vest%20(Damaged)"
+    },
+    {
+      "name": "Basic Stab Vest (Damaged)",
+      "type": "gear",
+      "price": 3011,
+      "image": "https://static.deltaforcetools.gg/images/BasicStabVestDamaged_992ca402.png",
+      "source": "/wiki/gear/Basic%20Stab%20Vest%20(Damaged)"
+    },
+    {
+      "name": "Marksman TAC Vest (Like New)",
+      "type": "gear",
+      "price": 27637,
+      "image": "https://static.deltaforcetools.gg/images/MarksmanTACVestLikeN_63fc61cb.png",
+      "source": "/wiki/gear/Marksman%20TAC%20Vest%20(Like%20New)"
+    },
+    {
+      "name": "Sports Backpack",
+      "type": "gear",
+      "price": 3796,
+      "image": "https://static.deltaforcetools.gg/images/SportsBackpack_d664e33c.png",
+      "source": "/wiki/gear/Sports%20Backpack"
+    },
+    {
+      "name": "DASH Tactical Backpack",
+      "type": "gear",
+      "price": 30336,
+      "image": "https://static.deltaforcetools.gg/images/DASHTacticalBackpack_0bfca929.png",
+      "source": "/wiki/gear/DASH%20Tactical%20Backpack"
+    },
+    {
+      "name": "Travel Backpack",
+      "type": "gear",
+      "price": 4962,
+      "image": "https://static.deltaforcetools.gg/images/TravelBackpack_dd4eed36.png",
+      "source": "/wiki/gear/Travel%20Backpack"
+    },
+    {
+      "name": "3H Tactical Backpack",
+      "type": "gear",
+      "price": 26220,
+      "image": "https://static.deltaforcetools.gg/images/3HTacticalBackpack_712f2c66.png",
+      "source": "/wiki/gear/3H%20Tactical%20Backpack"
+    },
+    {
+      "name": "MAP Recon Backpack",
+      "type": "gear",
+      "price": 84993,
+      "image": "https://static.deltaforcetools.gg/images/MAPReconBackpack_aebb9575.png",
+      "source": "/wiki/gear/MAP%20Recon%20Backpack"
+    },
+    {
+      "name": "Rainforest Hunter Backpack",
+      "type": "gear",
+      "price": 25650,
+      "image": "https://static.deltaforcetools.gg/images/RainforestHunterBack_ebdb1826.png",
+      "source": "/wiki/gear/Rainforest%20Hunter%20Backpack"
+    },
+    {
+      "name": "Light Outdoor Backpack",
+      "type": "gear",
+      "price": 7013,
+      "image": "https://static.deltaforcetools.gg/images/LightOutdoorBackpack_bd021a17.png",
+      "source": "/wiki/gear/Light%20Outdoor%20Backpack"
+    },
+    {
+      "name": "Large Climbing Bag",
+      "type": "gear",
+      "price": 10060,
+      "image": "https://static.deltaforcetools.gg/images/LargeClimbingBag_f7696fb9.png",
+      "source": "/wiki/gear/Large%20Climbing%20Bag"
+    },
+    {
+      "name": "Sling Bag",
+      "type": "gear",
+      "price": 2625,
+      "image": "https://static.deltaforcetools.gg/images/SlingBag_8486f7a3.png",
+      "source": "/wiki/gear/Sling%20Bag"
+    },
+    {
+      "name": "GA Field Backpack",
+      "type": "gear",
+      "price": 28500,
+      "image": "https://static.deltaforcetools.gg/images/GAFieldBackpack_a2ccb9bf.png",
+      "source": "/wiki/gear/GA%20Field%20Backpack"
+    },
+    {
+      "name": "D2 Tactical Climbing Bag",
+      "type": "gear",
+      "price": 66420,
+      "image": "https://static.deltaforcetools.gg/images/D2TacticalClimbingBa_fe4bd3ad.png",
+      "source": "/wiki/gear/D2%20Tactical%20Climbing%20Bag"
+    },
+    {
+      "name": "Tactical QR Backpack",
+      "type": "gear",
+      "price": 9750,
+      "image": "https://static.deltaforcetools.gg/images/TacticalQRBackpack_34455883.png",
+      "source": "/wiki/gear/Tactical%20QR%20Backpack"
+    },
+    {
+      "name": "GT5 Field Backpack",
+      "type": "gear",
+      "price": 191250,
+      "image": "https://static.deltaforcetools.gg/images/GT5FieldBackpack_8004b267.png",
+      "source": "/wiki/gear/GT5%20Field%20Backpack"
+    },
+    {
+      "name": "Field Hiking Backpack",
+      "type": "gear",
+      "price": 53940,
+      "image": "https://static.deltaforcetools.gg/images/FieldHikingBackpack_edf50a28.png",
+      "source": "/wiki/gear/Field%20Hiking%20Backpack"
+    },
+    {
+      "name": "Heavy Climbing Bag",
+      "type": "gear",
+      "price": 691412,
+      "image": "https://static.deltaforcetools.gg/images/HeavyClimbingBag_1c294cff.png",
+      "source": "/wiki/gear/Heavy%20Climbing%20Bag"
+    },
+    {
+      "name": "ALS Load System",
+      "type": "gear",
+      "price": 106530,
+      "image": "https://static.deltaforcetools.gg/images/ALSLoadSystem_75efbcf3.png",
+      "source": "/wiki/gear/ALS%20Load%20System"
+    },
+    {
+      "name": "Quick Recon Chest Rig",
+      "type": "gear",
+      "price": 2020,
+      "image": "https://static.deltaforcetools.gg/images/QuickReconChestRig_27f26799.png",
+      "source": "/wiki/gear/Quick%20Recon%20Chest%20Rig"
+    },
+    {
+      "name": "Raider Tactical Vest",
+      "type": "gear",
+      "price": 63486,
+      "image": "https://static.deltaforcetools.gg/images/RaiderTacticalVest_d2a577ef.png",
+      "source": "/wiki/gear/Raider%20Tactical%20Vest"
+    },
+    {
+      "name": "Portable Chest Rig",
+      "type": "gear",
+      "price": 1930,
+      "image": "https://static.deltaforcetools.gg/images/PortableChestRig_3a035999.png",
+      "source": "/wiki/gear/Portable%20Chest%20Rig"
+    },
+    {
+      "name": "Universal Tactical Chest Rig",
+      "type": "gear",
+      "price": 5080,
+      "image": "https://static.deltaforcetools.gg/images/UniversalTacticalChe_11303f55.png",
+      "source": "/wiki/gear/Universal%20Tactical%20Chest%20Rig"
+    },
+    {
+      "name": "G01 Tactical Chest Rig",
+      "type": "gear",
+      "price": 11857,
+      "image": "https://static.deltaforcetools.gg/images/G01TacticalChestRig_24db6a71.png",
+      "source": "/wiki/gear/G01%20Tactical%20Chest%20Rig"
+    },
+    {
+      "name": "Assault Tactical Vest",
+      "type": "gear",
+      "price": 31820,
+      "image": "https://static.deltaforcetools.gg/images/AssaultTacticalVest_c2407abb.png",
+      "source": "/wiki/gear/Assault%20Tactical%20Vest"
+    },
+    {
+      "name": "HK3 Portable Chest Rig",
+      "type": "gear",
+      "price": 3600,
+      "image": "https://static.deltaforcetools.gg/images/HK3PortableChestRig_4eede420.png",
+      "source": "/wiki/gear/HK3%20Portable%20Chest%20Rig"
+    },
+    {
+      "name": "Light Tactical Chest Rig",
+      "type": "gear",
+      "price": 1970,
+      "image": "https://static.deltaforcetools.gg/images/LightTacticalChestRi_f21a7541.png",
+      "source": "/wiki/gear/Light%20Tactical%20Chest%20Rig"
+    },
+    {
+      "name": "DRC Advanced Recon Chest Rig",
+      "type": "gear",
+      "price": 93670,
+      "image": "https://static.deltaforcetools.gg/images/DRCAdvancedReconChes_19a3a1ac.png",
+      "source": "/wiki/gear/DRC%20Advanced%20Recon%20Chest%20Rig"
+    },
+    {
+      "name": "Basic Chest Rig",
+      "type": "gear",
+      "price": 1970,
+      "image": "https://static.deltaforcetools.gg/images/BasicChestRig_50d5d307.png",
+      "source": "/wiki/gear/Basic%20Chest%20Rig"
+    },
+    {
+      "name": "GIR Field Chest Rig",
+      "type": "gear",
+      "price": 142383,
+      "image": "https://static.deltaforcetools.gg/images/GIRFieldChestRig_b5cebd1d.png",
+      "source": "/wiki/gear/GIR%20Field%20Chest%20Rig"
+    },
+    {
+      "name": "HD3 Tactical Chest Rig",
+      "type": "gear",
+      "price": 9329,
+      "image": "https://static.deltaforcetools.gg/images/HD3TacticalChestRig_52cede44.png",
+      "source": "/wiki/gear/HD3%20Tactical%20Chest%20Rig"
+    },
+    {
+      "name": "Basic Portable Chest Rig",
+      "type": "gear",
+      "price": 8115,
+      "image": "https://static.deltaforcetools.gg/images/BasicPortableChestRi_cfa8c625.png",
+      "source": "/wiki/gear/Basic%20Portable%20Chest%20Rig"
+    },
+    {
+      "name": "DSA Tactical Chest Rig",
+      "type": "gear",
+      "price": 9762,
+      "image": "https://static.deltaforcetools.gg/images/DSATacticalChestRig_b4560b30.png",
+      "source": "/wiki/gear/DSA%20Tactical%20Chest%20Rig"
+    },
+    {
+      "name": "D01 Light Chest Rig",
+      "type": "gear",
+      "price": 4085,
+      "image": "https://static.deltaforcetools.gg/images/D01LightChestRig_1ccb200d.png",
+      "source": "/wiki/gear/D01%20Light%20Chest%20Rig"
+    },
+    {
+      "name": "Box of Nails",
+      "type": "item",
+      "price": 2794,
+      "image": "https://static.deltaforcetools.gg/images/BoxofNails_02b80312.png",
+      "source": "/wiki/item/Box%20of%20Nails"
+    },
+    {
+      "name": "Architectural Drawing 4",
+      "type": "item",
+      "price": 3485,
+      "image": "https://static.deltaforcetools.gg/images/ArchitecturalDrawing_1c61f5c3.png",
+      "source": "/wiki/item/Architectural%20Drawing%204"
+    },
+    {
+      "name": "Power",
+      "type": "item",
+      "price": 4991,
+      "image": "https://static.deltaforcetools.gg/images/Power_dd4fe0cc.png",
+      "source": "/wiki/item/Power"
+    },
+    {
+      "name": "Lens",
+      "type": "item",
+      "price": 503311,
+      "image": "https://static.deltaforcetools.gg/images/Lens_443b8e62.png",
+      "source": "/wiki/item/Lens"
+    },
+    {
+      "name": "E-Type Canister",
+      "type": "item",
+      "price": 59271,
+      "image": "https://static.deltaforcetools.gg/images/ETypeCanister_28df19b6.png",
+      "source": "/wiki/item/E-Type%20Canister"
+    },
+    {
+      "name": "Local Newspaper",
+      "type": "item",
+      "price": 1855,
+      "image": "https://static.deltaforcetools.gg/images/LocalNewspaper_a587ed6b.png",
+      "source": "/wiki/item/Local%20Newspaper"
+    },
+    {
+      "name": "Socket Adapter",
+      "type": "item",
+      "price": 9697,
+      "image": "https://static.deltaforcetools.gg/images/SocketAdapter_0551e08d.png",
+      "source": "/wiki/item/Socket%20Adapter"
+    },
+    {
+      "name": "Stone Hammer",
+      "type": "item",
+      "price": 12384,
+      "image": "https://static.deltaforcetools.gg/images/StoneHammer_b8578d20.png",
+      "source": "/wiki/item/Stone%20Hammer"
+    },
+    {
+      "name": "High-Speed Disk Array",
+      "type": "item",
+      "price": 2884819,
+      "image": "https://static.deltaforcetools.gg/images/HighSpeedDiskArray_c2b677d0.png",
+      "source": "/wiki/item/High-Speed%20Disk%20Array"
+    },
+    {
+      "name": "Heart of Africa",
+      "type": "item",
+      "price": 15769594,
+      "image": "https://static.deltaforcetools.gg/images/HeartofAfrica_74a47530.png",
+      "source": "/wiki/item/Heart%20of%20Africa"
+    },
+    {
+      "name": "Antler Wall Decoration",
+      "type": "item",
+      "price": 17348,
+      "image": "https://static.deltaforcetools.gg/images/AntlerWallDecoration_c322b074.png",
+      "source": "/wiki/item/Antler%20Wall%20Decoration"
+    },
+    {
+      "name": "ASOS Motherboard",
+      "type": "item",
+      "price": 43051,
+      "image": "https://static.deltaforcetools.gg/images/ASOSMotherboard_be27a0ec.png",
+      "source": "/wiki/item/ASOS%20Motherboard"
+    },
+    {
+      "name": "Ahsarah Entertainment Monthly",
+      "type": "item",
+      "price": 4515,
+      "image": "https://static.deltaforcetools.gg/images/AhsarahEntertainment_332e9506.png",
+      "source": "/wiki/item/Ahsarah%20Entertainment%20Monthly"
+    },
+    {
+      "name": "Card - 8",
+      "type": "item",
+      "price": 908,
+      "image": "https://static.deltaforcetools.gg/images/Card8_00b082f7.png",
+      "source": "/wiki/item/Card%20-%208"
+    },
+    {
+      "name": "Injector",
+      "type": "item",
+      "price": 2479,
+      "image": "https://static.deltaforcetools.gg/images/Injector_072ef9c8.png",
+      "source": "/wiki/item/Injector"
+    },
+    {
+      "name": "Medical Alcohol",
+      "type": "item",
+      "price": 9128,
+      "image": "https://static.deltaforcetools.gg/images/MedicalAlcohol_9d02e738.png",
+      "source": "/wiki/item/Medical%20Alcohol"
+    },
+    {
+      "name": "Elastic Bandage",
+      "type": "item",
+      "price": 1100,
+      "image": "https://static.deltaforcetools.gg/images/ElasticBandage_6ff3a3fa.png",
+      "source": "/wiki/item/Elastic%20Bandage"
+    },
+    {
+      "name": "Precision Helmet Repair Kit",
+      "type": "item",
+      "price": 131575,
+      "image": "https://static.deltaforcetools.gg/images/PrecisionHelmetRepai_3d172fbe.png",
+      "source": "/wiki/item/Precision%20Helmet%20Repair%20Kit"
+    },
+    {
+      "name": "Standard Vest Repair Kit",
+      "type": "item",
+      "price": 40185,
+      "image": "https://static.deltaforcetools.gg/images/StandardVestRepairKi_fedc0d0e.png",
+      "source": "/wiki/item/Standard%20Vest%20Repair%20Kit"
+    },
+    {
+      "name": "DIY Vest Repair Kit",
+      "type": "item",
+      "price": 22163,
+      "image": "https://static.deltaforcetools.gg/images/DIYVestRepairKit_f4190058.png",
+      "source": "/wiki/item/DIY%20Vest%20Repair%20Kit"
+    },
+    {
+      "name": "Perception Booster",
+      "type": "item",
+      "price": 66000,
+      "image": "https://static.deltaforcetools.gg/images/PerceptionBooster_0a1a37cf.png",
+      "source": "/wiki/item/Perception%20Booster"
+    },
+    {
+      "name": "Stamina Activator",
+      "type": "item",
+      "price": 36110,
+      "image": "https://static.deltaforcetools.gg/images/StaminaActivator_3288187c.png",
+      "source": "/wiki/item/Stamina%20Activator"
+    },
+    {
+      "name": "Enhanced Injector",
+      "type": "item",
+      "price": 7185,
+      "image": "https://static.deltaforcetools.gg/images/EnhancedInjector_a0488c21.png",
+      "source": "/wiki/item/Enhanced%20Injector"
+    },
+    {
+      "name": "Vehicle First Aid Kit",
+      "type": "item",
+      "price": 3067,
+      "image": "https://static.deltaforcetools.gg/images/VehicleFirstAidKit_b39b76ae.png",
+      "source": "/wiki/item/Vehicle%20First%20Aid%20Kit"
+    },
+    {
+      "name": "M2 Muscle Injector",
+      "type": "item",
+      "price": 58125,
+      "image": "https://static.deltaforcetools.gg/images/M2MuscleInjector_02681d28.png",
+      "source": "/wiki/item/M2%20Muscle%20Injector"
+    },
+    {
+      "name": "Norepinephrine",
+      "type": "item",
+      "price": 16775,
+      "image": "https://static.deltaforcetools.gg/images/Norepinephrine_f7ac0c35.png",
+      "source": "/wiki/item/Norepinephrine"
+    },
+    {
+      "name": "Premium Helmet Repair Combo",
+      "type": "item",
+      "price": 583420,
+      "image": "https://static.deltaforcetools.gg/images/PremiumHelmetRepairC_0982b3ac.png",
+      "source": "/wiki/item/Premium%20Helmet%20Repair%20Combo"
+    },
+    {
+      "name": "Precision Vest Repair Kit",
+      "type": "item",
+      "price": 238050,
+      "image": "https://static.deltaforcetools.gg/images/PrecisionVestRepairK_cf28ade8.png",
+      "source": "/wiki/item/Precision%20Vest%20Repair%20Kit"
+    },
+    {
+      "name": "CAT Tourniquet",
+      "type": "item",
+      "price": 2640,
+      "image": "https://static.deltaforcetools.gg/images/CATTourniquet_03e25907.png",
+      "source": "/wiki/item/CAT%20Tourniquet"
+    },
+    {
+      "name": "Extended-Release Painkiller",
+      "type": "item",
+      "price": 2065,
+      "image": "https://static.deltaforcetools.gg/images/ExtendedReleasePaink_82c44aa7.png",
+      "source": "/wiki/item/Extended-Release%20Painkiller"
+    },
+    {
+      "name": "Simple Surgical Kit",
+      "type": "item",
+      "price": 2480,
+      "image": "https://static.deltaforcetools.gg/images/SimpleSurgicalKit_e0f83480.png",
+      "source": "/wiki/item/Simple%20Surgical%20Kit"
+    },
+    {
+      "name": "Bottled Antibiotics",
+      "type": "item",
+      "price": 7290,
+      "image": "https://static.deltaforcetools.gg/images/BottledAntibiotics_a4ceb2e2.png",
+      "source": "/wiki/item/Bottled%20Antibiotics"
+    },
+    {
+      "name": "Outpatient Room",
+      "type": "item",
+      "price": 289319,
+      "image": "https://static.deltaforcetools.gg/images/OutpatientRoom_9735e4a5.png",
+      "source": "/wiki/item/Outpatient%20Room"
+    },
+    {
+      "name": "Ticket Office",
+      "type": "item",
+      "price": 450927,
+      "image": "https://static.deltaforcetools.gg/images/TicketOffice_a8058557.png",
+      "source": "/wiki/item/Ticket%20Office"
+    },
+    {
+      "name": "Old Bath VIP Room",
+      "type": "item",
+      "price": 1318529,
+      "image": "https://static.deltaforcetools.gg/images/OldBathVIPRoom_6ffc88f2.png",
+      "source": "/wiki/item/Old%20Bath%20VIP%20Room"
+    },
+    {
+      "name": "No${point}3 Dormitory Back Room",
+      "type": "item",
+      "price": 723268,
+      "image": "https://static.deltaforcetools.gg/images/No3DormitoryBackRoom_4769f090.png",
+      "source": "/wiki/item/No${point}3%20Dormitory%20Back%20Room"
+    },
+    {
+      "name": "West Wing Control Room",
+      "type": "item",
+      "price": 587046,
+      "image": "https://static.deltaforcetools.gg/images/WestWingControlRoom_5f5e1679.png",
+      "source": "/wiki/item/West%20Wing%20Control%20Room"
+    },
+    {
+      "name": "Test Range Core",
+      "type": "item",
+      "price": 3571374,
+      "image": "https://static.deltaforcetools.gg/images/TestRangeCore_aa2d5f02.png",
+      "source": "/wiki/item/Test%20Range%20Core"
+    },
+    {
+      "name": "Cement Plant - Dormitory 201",
+      "type": "item",
+      "price": 340939,
+      "image": "https://static.deltaforcetools.gg/images/CementPlantDormitory_a9ac343d.png",
+      "source": "/wiki/item/Cement%20Plant%20-%20Dormitory%20201"
+    },
+    {
+      "name": "Employee Passage",
+      "type": "item",
+      "price": 925000,
+      "image": "https://static.deltaforcetools.gg/images/EmployeePassage_7bf548c0.png",
+      "source": "/wiki/item/Employee%20Passage"
+    },
+    {
+      "name": "Central Command Room 3F",
+      "type": "item",
+      "price": 610930,
+      "image": "https://static.deltaforcetools.gg/images/CentralCommandRoom3F_83286d0d.png",
+      "source": "/wiki/item/Central%20Command%20Room%203F"
+    },
+    {
+      "name": "Cement Plant Office",
+      "type": "item",
+      "price": 317924,
+      "image": "https://static.deltaforcetools.gg/images/CementPlantOffice_67caf3f0.png",
+      "source": "/wiki/item/Cement%20Plant%20Office"
+    },
+    {
+      "name": "CEO Conference Room",
+      "type": "item",
+      "price": 2129440,
+      "image": "https://static.deltaforcetools.gg/images/CEOConferenceRoom_66e457a5.png",
+      "source": "/wiki/item/CEO%20Conference%20Room"
+    },
+    {
+      "name": "Biological Data Server Room",
+      "type": "item",
+      "price": 479415,
+      "image": "https://static.deltaforcetools.gg/images/BiologicalDataServer_c4ea3ded.png",
+      "source": "/wiki/item/Biological%20Data%20Server%20Room"
+    },
+    {
+      "name": "Hotel Staff Break Room",
+      "type": "item",
+      "price": 299534,
+      "image": "https://static.deltaforcetools.gg/images/HotelStaffBreakRoom_8fcbd6ec.png",
+      "source": "/wiki/item/Hotel%20Staff%20Break%20Room"
+    },
+    {
+      "name": "Eastern Suspension Bridge",
+      "type": "item",
+      "price": 2650000,
+      "image": "https://static.deltaforcetools.gg/images/EasternSuspensionBri_94e71562.png",
+      "source": "/wiki/item/Eastern%20Suspension%20Bridge"
+    },
+    {
+      "name": "East Town Residential Bedroom",
+      "type": "item",
+      "price": 295988,
+      "image": "https://static.deltaforcetools.gg/images/EastTownResidentialB_d08c38f5.png",
+      "source": "/wiki/item/East%20Town%20Residential%20Bedroom"
+    },
+    {
+      "name": "New Tower of Babel Power Supply Access Card",
+      "type": "item",
+      "price": 480000,
+      "image": "https://static.deltaforcetools.gg/images/NewTowerofBabelPower_030003ef.png",
+      "source": "/wiki/item/New%20Tower%20of%20Babel%20Power%20Supply%20Access%20Card"
+    },
+    {
+      "name": "functional",
+      "type": "attachment",
+      "price": 6616,
+      "image": "",
+      "source": "/wiki/attachment/functional"
+    },
+    {
+      "name": "M14 30-Round Mag",
+      "type": "attachment",
+      "price": 49507,
+      "image": "https://static.deltaforcetools.gg/images/M1430RoundMag_cb15c96f.png",
+      "source": "/wiki/attachment/M14%2030-Round%20Mag"
+    },
+    {
+      "name": "M700 10-Round Mag",
+      "type": "attachment",
+      "price": 35967,
+      "image": "https://static.deltaforcetools.gg/images/M70010RoundMag_f8e44fa7.png",
+      "source": "/wiki/attachment/M700%2010-Round%20Mag"
+    },
+    {
+      "name": "M250 75-Round Belt",
+      "type": "attachment",
+      "price": 49747,
+      "image": "https://static.deltaforcetools.gg/images/M25075RoundBelt_07ebf95a.png",
+      "source": "/wiki/attachment/M250%2075-Round%20Belt"
+    },
+    {
+      "name": "5${point}56x45 30-Round Polymer Mag",
+      "type": "attachment",
+      "price": 5309,
+      "image": "https://static.deltaforcetools.gg/images/556x4530RoundPolymer_26a71369.png",
+      "source": "/wiki/attachment/5${point}56x45%2030-Round%20Polymer%20Mag"
+    },
+    {
+      "name": "G-Series Pistol 25-Round Mag",
+      "type": "attachment",
+      "price": 3750,
+      "image": "https://static.deltaforcetools.gg/images/GSeriesPistol25Round_54f5fe82.png",
+      "source": "/wiki/attachment/G-Series%20Pistol%2025-Round%20Mag"
+    },
+    {
+      "name": "G3 30-Round Mag",
+      "type": "attachment",
+      "price": 14195,
+      "image": "https://static.deltaforcetools.gg/images/G330RoundMag_ec5aff54.png",
+      "source": "/wiki/attachment/G3%2030-Round%20Mag"
+    },
+    {
+      "name": "PSG 20-Round Extended Mag",
+      "type": "attachment",
+      "price": 21672,
+      "image": "https://static.deltaforcetools.gg/images/PSG20RoundExtendedMa_aff84b0c.png",
+      "source": "/wiki/attachment/PSG%2020-Round%20Extended%20Mag"
+    },
+    {
+      "name": "SG552 45-Round Extended Mag",
+      "type": "attachment",
+      "price": 57750,
+      "image": "https://static.deltaforcetools.gg/images/SG55245RoundExtended_a965a219.png",
+      "source": "/wiki/attachment/SG552%2045-Round%20Extended%20Mag"
+    },
+    {
+      "name": "5${point}8 Newtype 60-Round Drum Mag",
+      "type": "attachment",
+      "price": 49499,
+      "image": "https://static.deltaforcetools.gg/images/58Newtype60RoundDrum_5ec0fb8d.png",
+      "source": "/wiki/attachment/5${point}8%20Newtype%2060-Round%20Drum%20Mag"
+    },
+    {
+      "name": "AKS-74 30-Round Mag",
+      "type": "attachment",
+      "price": 3522,
+      "image": "https://static.deltaforcetools.gg/images/AKS7430RoundMag_e5de76e7.png",
+      "source": "/wiki/attachment/AKS-74%2030-Round%20Mag"
+    },
+    {
+      "name": "AKS-74 45-Round Extended Mag",
+      "type": "attachment",
+      "price": 24913,
+      "image": "https://static.deltaforcetools.gg/images/AKS7445RoundExtended_c88e5b90.png",
+      "source": "/wiki/attachment/AKS-74%2045-Round%20Extended%20Mag"
+    },
+    {
+      "name": "AUG 60-Round Drum Mag",
+      "type": "attachment",
+      "price": 30654,
+      "image": "https://static.deltaforcetools.gg/images/AUG60RoundDrumMag_bebdeeb8.png",
+      "source": "/wiki/attachment/AUG%2060-Round%20Drum%20Mag"
+    },
+    {
+      "name": "SR-25 20-Round Mag",
+      "type": "attachment",
+      "price": 26938,
+      "image": "https://static.deltaforcetools.gg/images/SR2520RoundMag_257102e6.png",
+      "source": "/wiki/attachment/SR-25%2020-Round%20Mag"
+    },
+    {
+      "name": "M1911 11-Round Extended Mag",
+      "type": "attachment",
+      "price": 4332,
+      "image": "https://static.deltaforcetools.gg/images/M191111RoundExtended_69b0bbd6.png",
+      "source": "/wiki/attachment/M1911%2011-Round%20Extended%20Mag"
+    },
+    {
+      "name": "AKM 40-Round Extended Mag",
+      "type": "attachment",
+      "price": 24917,
+      "image": "https://static.deltaforcetools.gg/images/AKM40RoundExtendedMa_a2dc1fb4.png",
+      "source": "/wiki/attachment/AKM%2040-Round%20Extended%20Mag"
+    },
+    {
+      "name": "M7 6${point}8 30-Round Mag",
+      "type": "attachment",
+      "price": 26551,
+      "image": "https://static.deltaforcetools.gg/images/M76830RoundMag_cab4ddd9.png",
+      "source": "/wiki/attachment/M7%206${point}8%2030-Round%20Mag"
+    },
+    {
+      "name": "Offset Mini Red Dot Sight",
+      "type": "attachment",
+      "price": 22475,
+      "image": "https://static.deltaforcetools.gg/images/OffsetMiniRedDotSigh_79632b9a.png",
+      "source": "/wiki/attachment/Offset%20Mini%20Red%20Dot%20Sight"
+    },
+    {
+      "name": "Combat Red Dot Sight",
+      "type": "attachment",
+      "price": 13329,
+      "image": "https://static.deltaforcetools.gg/images/CombatRedDotSight_94533cd7.png",
+      "source": "/wiki/attachment/Combat%20Red%20Dot%20Sight"
+    },
+    {
+      "name": "Offset XRO Quick Response Sight",
+      "type": "attachment",
+      "price": 23259,
+      "image": "https://static.deltaforcetools.gg/images/OffsetXROQuickRespon_5b9c62b1.png",
+      "source": "/wiki/attachment/Offset%20XRO%20Quick%20Response%20Sight"
+    },
+    {
+      "name": "Holographic Sight Type II",
+      "type": "attachment",
+      "price": 5645,
+      "image": "https://static.deltaforcetools.gg/images/HolographicSightType_a46cc0b3.png",
+      "source": "/wiki/attachment/Holographic%20Sight%20Type%20II"
+    },
+    {
+      "name": "Offset OSIGHT Red Dot",
+      "type": "attachment",
+      "price": 29771,
+      "image": "https://static.deltaforcetools.gg/images/OffsetOSIGHTRedDot_00694e06.png",
+      "source": "/wiki/attachment/Offset%20OSIGHT%20Red%20Dot"
+    },
+    {
+      "name": "Offset Combat Red Dot Sight",
+      "type": "attachment",
+      "price": 23331,
+      "image": "https://static.deltaforcetools.gg/images/OffsetCombatRedDotSi_3ae9e602.png",
+      "source": "/wiki/attachment/Offset%20Combat%20Red%20Dot%20Sight"
+    },
+    {
+      "name": "OSIGHT Red Dot",
+      "type": "attachment",
+      "price": 27747,
+      "image": "https://static.deltaforcetools.gg/images/OSIGHTRedDot_da03ea63.png",
+      "source": "/wiki/attachment/OSIGHT%20Red%20Dot"
+    },
+    {
+      "name": "Cobra Accuracy Sight",
+      "type": "attachment",
+      "price": 13313,
+      "image": "https://static.deltaforcetools.gg/images/CobraAccuracySight_481a97ad.png",
+      "source": "/wiki/attachment/Cobra%20Accuracy%20Sight"
+    },
+    {
+      "name": "M3 Sniper Scope",
+      "type": "attachment",
+      "price": 84787,
+      "image": "https://static.deltaforcetools.gg/images/M3SniperScope_b8f6b374.png",
+      "source": "/wiki/attachment/M3%20Sniper%20Scope"
+    },
+    {
+      "name": "HAMR Combined Scope",
+      "type": "attachment",
+      "price": 38973,
+      "image": "https://static.deltaforcetools.gg/images/HAMRCombinedScope_233706a8.png",
+      "source": "/wiki/attachment/HAMR%20Combined%20Scope"
+    },
+    {
+      "name": "3/7 Adjustable Scope",
+      "type": "attachment",
+      "price": 71184,
+      "image": "https://static.deltaforcetools.gg/images/37AdjustableScope_c6d775a6.png",
+      "source": "/wiki/attachment/3%2F7%20Adjustable%20Scope"
+    },
+    {
+      "name": "Multi-Purpose Tactical Riser",
+      "type": "attachment",
+      "price": 24635,
+      "image": "https://static.deltaforcetools.gg/images/MultiPurposeTactical_64d1d734.png",
+      "source": "/wiki/attachment/Multi-Purpose%20Tactical%20Riser"
+    },
+    {
+      "name": "Offset Panoramic Red Dot Sight",
+      "type": "attachment",
+      "price": 23189,
+      "image": "https://static.deltaforcetools.gg/images/OffsetPanoramicRedDo_ea1f0fde.png",
+      "source": "/wiki/attachment/Offset%20Panoramic%20Red%20Dot%20Sight"
+    },
+    {
+      "name": "Panoramic Red Dot Sight",
+      "type": "attachment",
+      "price": 33414,
+      "image": "https://static.deltaforcetools.gg/images/PanoramicRedDotSight_9218066b.png",
+      "source": "/wiki/attachment/Panoramic%20Red%20Dot%20Sight"
+    },
+    {
+      "name": "XCOG Assault 3${point}5x Scope",
+      "type": "attachment",
+      "price": 61341,
+      "image": "https://static.deltaforcetools.gg/images/XCOGAssault35xScope_de594611.png",
+      "source": "/wiki/attachment/XCOG%20Assault%203${point}5x%20Scope"
+    },
+    {
+      "name": "Recon 1${point}5/5 Adjustable Scope",
+      "type": "attachment",
+      "price": 43451,
+      "image": "https://static.deltaforcetools.gg/images/Recon155AdjustableSc_febbe065.png",
+      "source": "/wiki/attachment/Recon%201${point}5%2F5%20Adjustable%20Scope"
+    },
+    {
+      "name": "OPS Suppressor",
+      "type": "attachment",
+      "price": 10056,
+      "image": "https://static.deltaforcetools.gg/images/OPSSuppressor_e1e334f1.png",
+      "source": "/wiki/attachment/OPS%20Suppressor"
+    },
+    {
+      "name": "SMG Echo Suppressor",
+      "type": "attachment",
+      "price": 58561,
+      "image": "https://static.deltaforcetools.gg/images/SMGEchoSuppressor_0e698a7a.png",
+      "source": "/wiki/attachment/SMG%20Echo%20Suppressor"
+    },
+    {
+      "name": "Purifica Pistol Suppressor",
+      "type": "attachment",
+      "price": 13576,
+      "image": "https://static.deltaforcetools.gg/images/PurificaPistolSuppre_a31749e0.png",
+      "source": "/wiki/attachment/Purifica%20Pistol%20Suppressor"
+    },
+    {
+      "name": "Birdcage Flash Hider",
+      "type": "attachment",
+      "price": 6032,
+      "image": "https://static.deltaforcetools.gg/images/BirdcageFlashHider_d0a4e398.png",
+      "source": "/wiki/attachment/Birdcage%20Flash%20Hider"
+    },
+    {
+      "name": "Ember Suppressor",
+      "type": "attachment",
+      "price": 24901,
+      "image": "https://static.deltaforcetools.gg/images/EmberSuppressor_fbbb01ee.png",
+      "source": "/wiki/attachment/Ember%20Suppressor"
+    },
+    {
+      "name": "Shotgun Precision Suppressor",
+      "type": "attachment",
+      "price": 13930,
+      "image": "https://static.deltaforcetools.gg/images/ShotgunPrecisionSupp_6d0d3d88.png",
+      "source": "/wiki/attachment/Shotgun%20Precision%20Suppressor"
+    },
+    {
+      "name": "PBS Russian Suppressor",
+      "type": "attachment",
+      "price": 42407,
+      "image": "https://static.deltaforcetools.gg/images/PBSRussianSuppressor_61892652.png",
+      "source": "/wiki/attachment/PBS%20Russian%20Suppressor"
+    },
+    {
+      "name": "Shotgun Vortex Choke",
+      "type": "attachment",
+      "price": 47396,
+      "image": "https://static.deltaforcetools.gg/images/ShotgunVortexChoke_3b7b999c.png",
+      "source": "/wiki/attachment/Shotgun%20Vortex%20Choke"
+    },
+    {
+      "name": "Whisper Tactical Suppressor",
+      "type": "attachment",
+      "price": 49978,
+      "image": "https://static.deltaforcetools.gg/images/WhisperTacticalSuppr_fdb82e7a.png",
+      "source": "/wiki/attachment/Whisper%20Tactical%20Suppressor"
+    },
+    {
+      "name": "Practical Pistol Flash Hider",
+      "type": "attachment",
+      "price": 3047,
+      "image": "https://static.deltaforcetools.gg/images/PracticalPistolFlash_e3e92abc.png",
+      "source": "/wiki/attachment/Practical%20Pistol%20Flash%20Hider"
+    },
+    {
+      "name": "Elite Pistol Muzzle Brake",
+      "type": "attachment",
+      "price": 11847,
+      "image": "https://static.deltaforcetools.gg/images/ElitePistolMuzzleBra_190dd1bc.png",
+      "source": "/wiki/attachment/Elite%20Pistol%20Muzzle%20Brake"
+    },
+    {
+      "name": "Advanced Multi-Caliber Suppressor",
+      "type": "attachment",
+      "price": 69211,
+      "image": "https://static.deltaforcetools.gg/images/AdvancedMultiCaliber_e40af4f0.png",
+      "source": "/wiki/attachment/Advanced%20Multi-Caliber%20Suppressor"
+    },
+    {
+      "name": "Shotgun Practical Choke",
+      "type": "attachment",
+      "price": 1409,
+      "image": "https://static.deltaforcetools.gg/images/ShotgunPracticalChok_33aef20c.png",
+      "source": "/wiki/attachment/Shotgun%20Practical%20Choke"
+    },
+    {
+      "name": "Practical Flash Hider",
+      "type": "attachment",
+      "price": 2875,
+      "image": "https://static.deltaforcetools.gg/images/PracticalFlashHider_0145af85.png",
+      "source": "/wiki/attachment/Practical%20Flash%20Hider"
+    },
+    {
+      "name": "Bell Mouth Flash Hider",
+      "type": "attachment",
+      "price": 5330,
+      "image": "https://static.deltaforcetools.gg/images/BellMouthFlashHider_1aa42619.png",
+      "source": "/wiki/attachment/Bell%20Mouth%20Flash%20Hider"
+    },
+    {
+      "name": "Silent Suppressor",
+      "type": "attachment",
+      "price": 26459,
+      "image": "https://static.deltaforcetools.gg/images/SilentSuppressor_0d09e135.png",
+      "source": "/wiki/attachment/Silent%20Suppressor"
+    },
+    {
+      "name": "X25U Angled Combat Grip",
+      "type": "attachment",
+      "price": 30874,
+      "image": "https://static.deltaforcetools.gg/images/X25UAngledCombatGrip_90715a43.png",
+      "source": "/wiki/attachment/X25U%20Angled%20Combat%20Grip"
+    },
+    {
+      "name": "Resonant Ergonomic Grip",
+      "type": "attachment",
+      "price": 73299,
+      "image": "https://static.deltaforcetools.gg/images/ResonantErgonomicGri_c63b3c4c.png",
+      "source": "/wiki/attachment/Resonant%20Ergonomic%20Grip"
+    },
+    {
+      "name": "Phase Combat Foregrip",
+      "type": "attachment",
+      "price": 49926,
+      "image": "https://static.deltaforcetools.gg/images/PhaseCombatForegrip_d142e4b9.png",
+      "source": "/wiki/attachment/Phase%20Combat%20Foregrip"
+    },
+    {
+      "name": "K1 Elite Bevel Foregrip",
+      "type": "attachment",
+      "price": 23097,
+      "image": "https://static.deltaforcetools.gg/images/K1EliteBevelForegrip_f0a3dc73.png",
+      "source": "/wiki/attachment/K1%20Elite%20Bevel%20Foregrip"
+    },
+    {
+      "name": "Angled Hand Stop",
+      "type": "attachment",
+      "price": 23938,
+      "image": "https://static.deltaforcetools.gg/images/AngledHandStop_64350e2a.png",
+      "source": "/wiki/attachment/Angled%20Hand%20Stop"
+    },
+    {
+      "name": "CR Prism Hand Stop",
+      "type": "attachment",
+      "price": 24155,
+      "image": "https://static.deltaforcetools.gg/images/CRPrismHandStop_3904ae0a.png",
+      "source": "/wiki/attachment/CR%20Prism%20Hand%20Stop"
+    },
+    {
+      "name": "Secret Order Bevel Foregrip",
+      "type": "attachment",
+      "price": 55461,
+      "image": "https://static.deltaforcetools.gg/images/SecretOrderBevelFore_fef58233.png",
+      "source": "/wiki/attachment/Secret%20Order%20Bevel%20Foregrip"
+    },
+    {
+      "name": "Folding Grip",
+      "type": "attachment",
+      "price": 8451,
+      "image": "https://static.deltaforcetools.gg/images/FoldingGrip_e73b37f9.png",
+      "source": "/wiki/attachment/Folding%20Grip"
+    },
+    {
+      "name": "Collapsible Bipod Grip",
+      "type": "attachment",
+      "price": 26980,
+      "image": "https://static.deltaforcetools.gg/images/CollapsibleBipodGrip_11b498db.png",
+      "source": "/wiki/attachment/Collapsible%20Bipod%20Grip"
+    },
+    {
+      "name": "Competition Hand Stop",
+      "type": "attachment",
+      "price": 25077,
+      "image": "https://static.deltaforcetools.gg/images/CompetitionHandStop_1a34264d.png",
+      "source": "/wiki/attachment/Competition%20Hand%20Stop"
+    },
+    {
+      "name": "Tactical Vertical Foregrip",
+      "type": "attachment",
+      "price": 24921,
+      "image": "https://static.deltaforcetools.gg/images/TacticalVerticalFore_60bbe6af.png",
+      "source": "/wiki/attachment/Tactical%20Vertical%20Foregrip"
+    },
+    {
+      "name": "RK-0 Foregrip",
+      "type": "attachment",
+      "price": 23937,
+      "image": "https://static.deltaforcetools.gg/images/RK0Foregrip_5f39024a.png",
+      "source": "/wiki/attachment/RK-0%20Foregrip"
+    },
+    {
+      "name": "Tactical Angled Foregrip",
+      "type": "attachment",
+      "price": 41436,
+      "image": "https://static.deltaforcetools.gg/images/TacticalAngledForegr_89477db0.png",
+      "source": "/wiki/attachment/Tactical%20Angled%20Foregrip"
+    },
+    {
+      "name": "ZFSG Tactical Grip",
+      "type": "attachment",
+      "price": 3884,
+      "image": "https://static.deltaforcetools.gg/images/ZFSGTacticalGrip_349555d8.png",
+      "source": "/wiki/attachment/ZFSG%20Tactical%20Grip"
+    },
+    {
+      "name": "Phantom Vertical Foregrip",
+      "type": "attachment",
+      "price": 53303,
+      "image": "https://static.deltaforcetools.gg/images/PhantomVerticalForeg_1c3d17c4.png",
+      "source": "/wiki/attachment/Phantom%20Vertical%20Foregrip"
+    },
+    {
+      "name": "Practical Vertical Foregrip",
+      "type": "attachment",
+      "price": 3546,
+      "image": "https://static.deltaforcetools.gg/images/PracticalVerticalFor_d086c301.png",
+      "source": "/wiki/attachment/Practical%20Vertical%20Foregrip"
+    },
+    {
+      "name": "AK Heavy Tower Grip",
+      "type": "attachment",
+      "price": 56925,
+      "image": "https://static.deltaforcetools.gg/images/AKHeavyTowerGrip_43c2d435.png",
+      "source": "/wiki/attachment/AK%20Heavy%20Tower%20Grip"
+    },
+    {
+      "name": "Phantom Rear Grip",
+      "type": "attachment",
+      "price": 110295,
+      "image": "https://static.deltaforcetools.gg/images/PhantomRearGrip_d34fdcbf.png",
+      "source": "/wiki/attachment/Phantom%20Rear%20Grip"
+    },
+    {
+      "name": "Hurricane D-1 Rear Grip",
+      "type": "attachment",
+      "price": 12309,
+      "image": "https://static.deltaforcetools.gg/images/HurricaneD1RearGrip_59688a1c.png",
+      "source": "/wiki/attachment/Hurricane%20D-1%20Rear%20Grip"
+    },
+    {
+      "name": "XK Anti-Slip Rear Grip",
+      "type": "attachment",
+      "price": 9572,
+      "image": "https://static.deltaforcetools.gg/images/XKAntiSlipRearGrip_00c6b0ab.png",
+      "source": "/wiki/attachment/XK%20Anti-Slip%20Rear%20Grip"
+    },
+    {
+      "name": "Stable Grip Base",
+      "type": "attachment",
+      "price": 24889,
+      "image": "https://static.deltaforcetools.gg/images/StableGripBase_e2e062ef.png",
+      "source": "/wiki/attachment/Stable%20Grip%20Base"
+    },
+    {
+      "name": "AK Marksman Rear Grip",
+      "type": "attachment",
+      "price": 10888,
+      "image": "https://static.deltaforcetools.gg/images/AKMarksmanRearGrip_a94c936a.png",
+      "source": "/wiki/attachment/AK%20Marksman%20Rear%20Grip"
+    },
+    {
+      "name": "M9 Carneose Stable Rear Grip",
+      "type": "attachment",
+      "price": 7819,
+      "image": "https://static.deltaforcetools.gg/images/M9CarneoseStableRear_a9a5404b.png",
+      "source": "/wiki/attachment/M9%20Carneose%20Stable%20Rear%20Grip"
+    },
+    {
+      "name": "XK Competition Rear Grip",
+      "type": "attachment",
+      "price": 26956,
+      "image": "https://static.deltaforcetools.gg/images/XKCompetitionRearGri_ea15698b.png",
+      "source": "/wiki/attachment/XK%20Competition%20Rear%20Grip"
+    },
+    {
+      "name": "Invasion Rear Grip",
+      "type": "attachment",
+      "price": 30868,
+      "image": "https://static.deltaforcetools.gg/images/InvasionRearGrip_790625cb.png",
+      "source": "/wiki/attachment/Invasion%20Rear%20Grip"
+    },
+    {
+      "name": "SVD Polymer Integral Stock",
+      "type": "attachment",
+      "price": 42077,
+      "image": "https://static.deltaforcetools.gg/images/SVDPolymerIntegralSt_de1bca9f.png",
+      "source": "/wiki/attachment/SVD%20Polymer%20Integral%20Stock"
+    },
+    {
+      "name": "SVD Grip Adapter",
+      "type": "attachment",
+      "price": 7915,
+      "image": "https://static.deltaforcetools.gg/images/SVDGripAdapter_d5555332.png",
+      "source": "/wiki/attachment/SVD%20Grip%20Adapter"
+    },
+    {
+      "name": "Scorpio Rear Grip",
+      "type": "attachment",
+      "price": 87383,
+      "image": "https://static.deltaforcetools.gg/images/ScorpioRearGrip_de786d4e.png",
+      "source": "/wiki/attachment/Scorpio%20Rear%20Grip"
+    },
+    {
+      "name": "AR Heavy Tower Grip",
+      "type": "attachment",
+      "price": 25808,
+      "image": "https://static.deltaforcetools.gg/images/ARHeavyTowerGrip_19e572de.png",
+      "source": "/wiki/attachment/AR%20Heavy%20Tower%20Grip"
+    },
+    {
+      "name": "Restricted Zone Integral Stock",
+      "type": "attachment",
+      "price": 110681,
+      "image": "https://static.deltaforcetools.gg/images/RestrictedZoneIntegr_3fd799a9.png",
+      "source": "/wiki/attachment/Restricted%20Zone%20Integral%20Stock"
+    },
+    {
+      "name": "M7 Stable Rear Grip",
+      "type": "attachment",
+      "price": 4209,
+      "image": "https://static.deltaforcetools.gg/images/M7StableRearGrip_3b7cceb2.png",
+      "source": "/wiki/attachment/M7%20Stable%20Rear%20Grip"
+    },
+    {
+      "name": "AK Practical Rear Grip",
+      "type": "attachment",
+      "price": 12267,
+      "image": "https://static.deltaforcetools.gg/images/AKPracticalRearGrip_0e1b7d0f.png",
+      "source": "/wiki/attachment/AK%20Practical%20Rear%20Grip"
+    },
+    {
+      "name": "AKS-74 Upper Rail Handguard",
+      "type": "attachment",
+      "price": 10478,
+      "image": "https://static.deltaforcetools.gg/images/AKS74UpperRailHandgu_0bd4ffb2.png",
+      "source": "/wiki/attachment/AKS-74%20Upper%20Rail%20Handguard"
+    },
+    {
+      "name": "M249 Bipod Handguard",
+      "type": "attachment",
+      "price": 16922,
+      "image": "https://static.deltaforcetools.gg/images/M249BipodHandguard_8de2be94.png",
+      "source": "/wiki/attachment/M249%20Bipod%20Handguard"
+    },
+    {
+      "name": "SR-25 Elite Handguard",
+      "type": "attachment",
+      "price": 47093,
+      "image": "https://static.deltaforcetools.gg/images/SR25EliteHandguard_4d176a82.png",
+      "source": "/wiki/attachment/SR-25%20Elite%20Handguard"
+    },
+    {
+      "name": "M700 Adv${point} Frame System",
+      "type": "attachment",
+      "price": 106578,
+      "image": "https://static.deltaforcetools.gg/images/M700AdvFrameSystem_d257cc0f.png",
+      "source": "/wiki/attachment/M700%20Adv${point}%20Frame%20System"
+    },
+    {
+      "name": "M249 Military Rail Handguard",
+      "type": "attachment",
+      "price": 33445,
+      "image": "https://static.deltaforcetools.gg/images/M249MilitaryRailHand_28401f63.png",
+      "source": "/wiki/attachment/M249%20Military%20Rail%20Handguard"
+    },
+    {
+      "name": "M249 Rail Handguard",
+      "type": "attachment",
+      "price": 30865,
+      "image": "https://static.deltaforcetools.gg/images/M249RailHandguard_6ce3c60b.png",
+      "source": "/wiki/attachment/M249%20Rail%20Handguard"
+    },
+    {
+      "name": "M700 Stable Integral Stock",
+      "type": "attachment",
+      "price": 34495,
+      "image": "https://static.deltaforcetools.gg/images/M700StableIntegralSt_6ce3f35a.png",
+      "source": "/wiki/attachment/M700%20Stable%20Integral%20Stock"
+    },
+    {
+      "name": "Bizon Carbon Fiber Handguard",
+      "type": "attachment",
+      "price": 31516,
+      "image": "https://static.deltaforcetools.gg/images/BizonCarbonFiberHand_901fc084.png",
+      "source": "/wiki/attachment/Bizon%20Carbon%20Fiber%20Handguard"
+    },
+    {
+      "name": "M870 Rail Handguard",
+      "type": "attachment",
+      "price": 1166,
+      "image": "https://static.deltaforcetools.gg/images/M870RailHandguard_76c94516.png",
+      "source": "/wiki/attachment/M870%20Rail%20Handguard"
+    },
+    {
+      "name": "M14 Rail Integral Stock",
+      "type": "attachment",
+      "price": 104518,
+      "image": "https://static.deltaforcetools.gg/images/M14RailIntegralStock_9388b93d.png",
+      "source": "/wiki/attachment/M14%20Rail%20Integral%20Stock"
+    },
+    {
+      "name": "UZI Rail Handguard",
+      "type": "attachment",
+      "price": 10469,
+      "image": "https://static.deltaforcetools.gg/images/UZIRailHandguard_e535ed5b.png",
+      "source": "/wiki/attachment/UZI%20Rail%20Handguard"
+    },
+    {
+      "name": "SVD Rail Handguard",
+      "type": "attachment",
+      "price": 55153,
+      "image": "https://static.deltaforcetools.gg/images/SVDRailHandguard_94958ca7.png",
+      "source": "/wiki/attachment/SVD%20Rail%20Handguard"
+    },
+    {
+      "name": "M700 Military Handguard",
+      "type": "attachment",
+      "price": 35198,
+      "image": "https://static.deltaforcetools.gg/images/M700MilitaryHandguar_dae0b7cd.png",
+      "source": "/wiki/attachment/M700%20Military%20Handguard"
+    },
+    {
+      "name": "UZI Performance Handguard",
+      "type": "attachment",
+      "price": 13636,
+      "image": "https://static.deltaforcetools.gg/images/UZIPerformanceHandgu_b6d60e61.png",
+      "source": "/wiki/attachment/UZI%20Performance%20Handguard"
+    },
+    {
+      "name": "SKS Advanced Handguard",
+      "type": "attachment",
+      "price": 54576,
+      "image": "https://static.deltaforcetools.gg/images/SKSAdvancedHandguard_8226a5ae.png",
+      "source": "/wiki/attachment/SKS%20Advanced%20Handguard"
+    },
+    {
+      "name": "Mini-14 Polymer Integral Stock",
+      "type": "attachment",
+      "price": 20358,
+      "image": "https://static.deltaforcetools.gg/images/Mini14PolymerIntegra_d7750869.png",
+      "source": "/wiki/attachment/Mini-14%20Polymer%20Integral%20Stock"
+    },
+    {
+      "name": "AUG Elite Bipod Long Barrel",
+      "type": "attachment",
+      "price": 69381,
+      "image": "https://static.deltaforcetools.gg/images/AUGEliteBipodLongBar_b4b0ba6e.png",
+      "source": "/wiki/attachment/AUG%20Elite%20Bipod%20Long%20Barrel"
+    },
+    {
+      "name": "SMG-45 Fission Long Barrel",
+      "type": "attachment",
+      "price": 57630,
+      "image": "https://static.deltaforcetools.gg/images/SMG45FissionLongBarr_e056be7a.png",
+      "source": "/wiki/attachment/SMG-45%20Fission%20Long%20Barrel"
+    },
+    {
+      "name": "AR Gabriel Long Barrel Combo",
+      "type": "attachment",
+      "price": 65743,
+      "image": "https://static.deltaforcetools.gg/images/ARGabrielLongBarrelC_9458c480.png",
+      "source": "/wiki/attachment/AR%20Gabriel%20Long%20Barrel%20Combo"
+    },
+    {
+      "name": "MP7 Wolf Fang Light Barrel",
+      "type": "attachment",
+      "price": 44375,
+      "image": "https://static.deltaforcetools.gg/images/MP7WolfFangLightBarr_3b7fb2ab.png",
+      "source": "/wiki/attachment/MP7%20Wolf%20Fang%20Light%20Barrel"
+    },
+    {
+      "name": "PKM Trench Short Barrel",
+      "type": "attachment",
+      "price": 62895,
+      "image": "https://static.deltaforcetools.gg/images/PKMTrenchShortBarrel_70c446c1.png",
+      "source": "/wiki/attachment/PKM%20Trench%20Short%20Barrel"
+    },
+    {
+      "name": "SG552 Knight Heavy Barrel",
+      "type": "attachment",
+      "price": 19034,
+      "image": "https://static.deltaforcetools.gg/images/SG552KnightHeavyBarr_12cbc175.png",
+      "source": "/wiki/attachment/SG552%20Knight%20Heavy%20Barrel"
+    },
+    {
+      "name": "SVD Black Thorn Ultra-Long Barrel",
+      "type": "attachment",
+      "price": 62320,
+      "image": "https://static.deltaforcetools.gg/images/SVDBlackThornUltraLo_b1a53380.png",
+      "source": "/wiki/attachment/SVD%20Black%20Thorn%20Ultra-Long%20Barrel"
+    },
+    {
+      "name": "P90 Cheetah Heavy Barrel",
+      "type": "attachment",
+      "price": 61594,
+      "image": "https://static.deltaforcetools.gg/images/P90CheetahHeavyBarre_3913d460.png",
+      "source": "/wiki/attachment/P90%20Cheetah%20Heavy%20Barrel"
+    },
+    {
+      "name": "M250 Sentinel Short Barrel",
+      "type": "attachment",
+      "price": 49898,
+      "image": "https://static.deltaforcetools.gg/images/M250SentinelShortBar_f93e5f8a.png",
+      "source": "/wiki/attachment/M250%20Sentinel%20Short%20Barrel"
+    },
+    {
+      "name": "QBZ95-1 Longbow Barrel Combo",
+      "type": "attachment",
+      "price": 28129,
+      "image": "https://static.deltaforcetools.gg/images/QBZ951LongbowBarrelC_88e9f388.png",
+      "source": "/wiki/attachment/QBZ95-1%20Longbow%20Barrel%20Combo"
+    },
+    {
+      "name": "MP5 Scout Long Barrel Combo",
+      "type": "attachment",
+      "price": 27365,
+      "image": "https://static.deltaforcetools.gg/images/MP5ScoutLongBarrelCo_392eaa1c.png",
+      "source": "/wiki/attachment/MP5%20Scout%20Long%20Barrel%20Combo"
+    },
+    {
+      "name": "MP5 Performance Barrel Combo",
+      "type": "attachment",
+      "price": 21734,
+      "image": "https://static.deltaforcetools.gg/images/MP5PerformanceBarrel_b137ba7c.png",
+      "source": "/wiki/attachment/MP5%20Performance%20Barrel%20Combo"
+    },
+    {
+      "name": "MP5 Tactical Barrel Combo",
+      "type": "attachment",
+      "price": 25563,
+      "image": "https://static.deltaforcetools.gg/images/MP5TacticalBarrelCom_a60e3881.png",
+      "source": "/wiki/attachment/MP5%20Tactical%20Barrel%20Combo"
+    },
+    {
+      "name": "M14 Whisper Short Barrel",
+      "type": "attachment",
+      "price": 176131,
+      "image": "https://static.deltaforcetools.gg/images/M14WhisperShortBarre_75258059.png",
+      "source": "/wiki/attachment/M14%20Whisper%20Short%20Barrel"
+    },
+    {
+      "name": "AWM Skyline Long Barrel",
+      "type": "attachment",
+      "price": 181527,
+      "image": "https://static.deltaforcetools.gg/images/AWMSkylineLongBarrel_e47136f7.png",
+      "source": "/wiki/attachment/AWM%20Skyline%20Long%20Barrel"
+    },
+    {
+      "name": "AKM Beaver Barrel Combo",
+      "type": "attachment",
+      "price": 37027,
+      "image": "https://static.deltaforcetools.gg/images/AKMBeaverBarrelCombo_9408dd69.png",
+      "source": "/wiki/attachment/AKM%20Beaver%20Barrel%20Combo"
+    },
+    {
+      "name": "AUG Stock Pad",
+      "type": "attachment",
+      "price": 72179,
+      "image": "https://static.deltaforcetools.gg/images/AUGStockPad_125f8035.png",
+      "source": "/wiki/attachment/AUG%20Stock%20Pad"
+    },
+    {
+      "name": "MP5K Folding Stock",
+      "type": "attachment",
+      "price": 13551,
+      "image": "https://static.deltaforcetools.gg/images/MP5KFoldingStock_961eb3e0.png",
+      "source": "/wiki/attachment/MP5K%20Folding%20Stock"
+    },
+    {
+      "name": "M16A4 Stable Stock",
+      "type": "attachment",
+      "price": 23968,
+      "image": "https://static.deltaforcetools.gg/images/M16A4StableStock_ebf8aff3.png",
+      "source": "/wiki/attachment/M16A4%20Stable%20Stock"
+    },
+    {
+      "name": "Vector Resonant Integral Stock",
+      "type": "attachment",
+      "price": 46206,
+      "image": "https://static.deltaforcetools.gg/images/VectorResonantIntegr_5a694044.png",
+      "source": "/wiki/attachment/Vector%20Resonant%20Integral%20Stock"
+    },
+    {
+      "name": "PT1 Spec Ops Stock",
+      "type": "attachment",
+      "price": 51745,
+      "image": "https://static.deltaforcetools.gg/images/PT1SpecOpsStock_3cb4d6a3.png",
+      "source": "/wiki/attachment/PT1%20Spec%20Ops%20Stock"
+    },
+    {
+      "name": "ASh-12 Sniper Stock",
+      "type": "attachment",
+      "price": 46463,
+      "image": "https://static.deltaforcetools.gg/images/ASh12SniperStock_09a18908.png",
+      "source": "/wiki/attachment/ASh-12%20Sniper%20Stock"
+    },
+    {
+      "name": "AK Skeleton Stock",
+      "type": "attachment",
+      "price": 2874,
+      "image": "https://static.deltaforcetools.gg/images/AKSkeletonStock_16c61ca5.png",
+      "source": "/wiki/attachment/AK%20Skeleton%20Stock"
+    },
+    {
+      "name": "PKM Bolt Cover",
+      "type": "attachment",
+      "price": 5658,
+      "image": "https://static.deltaforcetools.gg/images/PKMBoltCover_7a047232.png",
+      "source": "/wiki/attachment/PKM%20Bolt%20Cover"
+    },
+    {
+      "name": "SMG-45 Bolt Cover",
+      "type": "attachment",
+      "price": 3793,
+      "image": "https://static.deltaforcetools.gg/images/SMG45BoltCover_2ca79c6e.png",
+      "source": "/wiki/attachment/SMG-45%20Bolt%20Cover"
+    },
+    {
+      "name": "AK Stock Recoil Pad",
+      "type": "attachment",
+      "price": 2279,
+      "image": "https://static.deltaforcetools.gg/images/AKStockRecoilPad_af6a1a57.png",
+      "source": "/wiki/attachment/AK%20Stock%20Recoil%20Pad"
+    },
+    {
+      "name": "Invasion Core Stock",
+      "type": "attachment",
+      "price": 22432,
+      "image": "https://static.deltaforcetools.gg/images/InvasionCoreStock_bf634d68.png",
+      "source": "/wiki/attachment/Invasion%20Core%20Stock"
+    },
+    {
+      "name": "M700 Cheek Pad",
+      "type": "attachment",
+      "price": 16780,
+      "image": "https://static.deltaforcetools.gg/images/M700CheekPad_f5f2049e.png",
+      "source": "/wiki/attachment/M700%20Cheek%20Pad"
+    },
+    {
+      "name": "G3 Stock",
+      "type": "attachment",
+      "price": 15160,
+      "image": "https://static.deltaforcetools.gg/images/G3Stock_56dec151.png",
+      "source": "/wiki/attachment/G3%20Stock"
+    },
+    {
+      "name": "MRGS Skeleton Stock",
+      "type": "attachment",
+      "price": 47914,
+      "image": "https://static.deltaforcetools.gg/images/MRGSSkeletonStock_9cabae84.png",
+      "source": "/wiki/attachment/MRGS%20Skeleton%20Stock"
+    },
+    {
+      "name": "M4 Recoil Buffer Tube",
+      "type": "attachment",
+      "price": 5631,
+      "image": "https://static.deltaforcetools.gg/images/M4RecoilBufferTube_52f6bb21.png",
+      "source": "/wiki/attachment/M4%20Recoil%20Buffer%20Tube"
+    },
+    {
+      "name": "UR Spec Ops Tactical Stock",
+      "type": "attachment",
+      "price": 46345,
+      "image": "https://static.deltaforcetools.gg/images/URSpecOpsTacticalSto_4a88323c.png",
+      "source": "/wiki/attachment/UR%20Spec%20Ops%20Tactical%20Stock"
+    }
+  ],
+  "crafting": [
+    {
+      "name": "Secret Order Bevel Foregrip",
+      "category": "tech",
+      "level": "3",
+      "hours": 1.5,
+      "profit": 18500,
+      "hourProfit": 12330,
+      "image": "https://static.deltaforcetools.gg/images/SecretOrderBevelFore_fef58233.png",
+      "source": "/wiki/attachment/Secret%20Order%20Bevel%20Foregrip"
+    },
+    {
+      "name": "Invasion Rear Grip",
+      "category": "tech",
+      "level": "3",
+      "hours": 1.5,
+      "profit": 18500,
+      "hourProfit": 12330,
+      "image": "",
+      "source": "/wiki/attachment/Invasion%20Rear%20Grip"
+    },
+    {
+      "name": "416 Stable Stock",
+      "category": "tech",
+      "level": "3",
+      "hours": 1.5,
+      "profit": 18500,
+      "hourProfit": 12330,
+      "image": "https://static.deltaforcetools.gg/images/416StableStock_4bf3f318.png",
+      "source": "/wiki/attachment/416%20Stable%20Stock"
+    },
+    {
+      "name": "MRGS Skeleton Stock",
+      "category": "tech",
+      "level": "3",
+      "hours": 1.5,
+      "profit": 18500,
+      "hourProfit": 12330,
+      "image": "",
+      "source": "/wiki/attachment/MRGS%20Skeleton%20Stock"
+    },
+    {
+      "name": "Russian Accuracy 2x Scope",
+      "category": "tech",
+      "level": "3",
+      "hours": 1.5,
+      "profit": 18500,
+      "hourProfit": 12330,
+      "image": "",
+      "source": "/wiki/attachment/Russian%20Accuracy%202x%20Scope"
+    },
+    {
+      "name": "Field Med Crate",
+      "category": "pharmacy",
+      "level": "2",
+      "hours": 0.8,
+      "profit": 9200,
+      "hourProfit": 11500,
+      "image": "",
+      "source": "/wiki/item/Field%20Med%20Crate"
+    },
+    {
+      "name": "Precision Vest Repair Kit",
+      "category": "pharmacy",
+      "level": "2",
+      "hours": 0.8,
+      "profit": 9200,
+      "hourProfit": 11500,
+      "image": "https://static.deltaforcetools.gg/images/PrecisionVestRepairK_cf28ade8.png",
+      "source": "/wiki/item/Precision%20Vest%20Repair%20Kit"
+    },
+    {
+      "name": "OE2 Combat Stimulant",
+      "category": "pharmacy",
+      "level": "2",
+      "hours": 0.8,
+      "profit": 9200,
+      "hourProfit": 11500,
+      "image": "https://static.deltaforcetools.gg/images/OE2CombatStimulant_68807cd8.png",
+      "source": "/wiki/item/OE2%20Combat%20Stimulant"
+    },
+    {
+      "name": "Stamina Activator",
+      "category": "pharmacy",
+      "level": "2",
+      "hours": 0.8,
+      "profit": 9200,
+      "hourProfit": 11500,
+      "image": "https://static.deltaforcetools.gg/images/StaminaActivator_3288187c.png",
+      "source": "/wiki/item/Stamina%20Activator"
+    },
+    {
+      "name": "Perception Activator",
+      "category": "pharmacy",
+      "level": "2",
+      "hours": 0.8,
+      "profit": 9200,
+      "hourProfit": 11500,
+      "image": "https://static.deltaforcetools.gg/images/PerceptionActivator_b46c5164.png",
+      "source": "/wiki/item/Perception%20Activator"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Delta Force Door Codes Guide",
+      "titleVi": "Delta Force Door Codes Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/9byPPdyY.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-door-codes-guide"
+    },
+    {
+      "title": "Delta Force Space City Dorm 2 Early Rush Guide",
+      "titleVi": "Delta Force Space City Dorm 2 Early Rush Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/3eMI6bIw.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-space-city-dorm-2-early-rush-guide"
+    },
+    {
+      "title": "Delta Force Az03 Nuclear Plant East Spawns Keycards Loot",
+      "titleVi": "Delta Force Az03 Nuclear Plant East Spawns Keycards Loot",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/uMBAVC20.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-az03-nuclear-plant-east-spawns-keycards-loot"
+    },
+    {
+      "title": "Delta Force S11 Fishing Unlock Guide Joe Reed Rod",
+      "titleVi": "Delta Force S11 Fishing Unlock Guide Joe Reed Rod",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/EmkBXHNj.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-s11-fishing-unlock-guide-joe-reed-rod"
+    },
+    {
+      "title": "Delta Force Season 11 Reorientation Live First Day Guide",
+      "titleVi": "Delta Force Season 11 Reorientation Live First Day Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/0dsZMYB1.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-season-11-reorientation-live-first-day-guide"
+    },
+    {
+      "title": "Delta Force Season 11 Weapons Mdr Thompson Attachments Ammo Guide",
+      "titleVi": "Delta Force Season 11 Weapons Mdr Thompson Attachments Ammo Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/29vKBo0F.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-season-11-weapons-mdr-thompson-attachments-ammo-guide"
+    },
+    {
+      "title": "Delta Force Polaris Patrol Desmoulins Ruin Space City Boss Mode Guide",
+      "titleVi": "Delta Force Polaris Patrol Desmoulins Ruin Space City Boss Mode Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/AHbJXjLl.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-polaris-patrol-desmoulins-ruin-space-city-boss-mode-guide"
+    },
+    {
+      "title": "Delta Force Layali Grove 2 Map Update Fishing Jet Ski Assault Boat Guide",
+      "titleVi": "Delta Force Layali Grove 2 Map Update Fishing Jet Ski Assault Boat Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/4lH3EpsH.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-layali-grove-2-map-update-fishing-jet-ski-assault-boat-guide"
+    },
+    {
+      "title": "Delta Force Rover Guide Season 11 Support Operator Clover Abilities",
+      "titleVi": "Delta Force Rover Guide Season 11 Support Operator Clover Abilities",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/I1dyNbnZ.png",
+      "url": "https://deltaforcetools.gg/blog/delta-force-rover-guide-season-11-support-operator-clover-abilities"
+    },
+    {
+      "title": "Delta Force Season 11 Reorientation New Operator Maps Modes Operations Guide",
+      "titleVi": "Delta Force Season 11 Reorientation New Operator Maps Modes Operations Guide",
+      "date": "10/10/2026",
+      "image": "https://static.deltaforcetools.gg/images/0XCkk8WK.jpg",
+      "url": "https://deltaforcetools.gg/blog/delta-force-season-11-reorientation-new-operator-maps-modes-operations-guide"
+    }
+  ],
+  "fetchedAt": "2026-10-10T18:59:35.452233+00:00",
+  "source": "https://deltaforcetools.gg/wiki"
+}

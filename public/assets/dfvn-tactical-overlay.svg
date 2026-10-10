@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="#83ddf5" stroke-opacity=".055" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="#a8ecff" fill-opacity=".22"/>
+    </pattern>
+    <pattern id="micro" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".65" fill="#a8ecff" fill-opacity=".11"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#micro)"/>
+
+  <!-- Elevation contours like a subdued tactical map -->
+  <g stroke="#6cc9ec" stroke-opacity=".13" stroke-width="1.35">
+    <path d="M-90 182C44 81 170 74 267 126c99 54 153 49 232-7 91-65 200-61 290-5 103 64 166 37 263-31 102-72 217-75 321-17 86 47 159 37 284-42"/>
+    <path d="M-78 211C49 117 164 109 255 156c96 50 158 54 257-12 88-59 185-54 274-2 103 60 172 48 281-31 95-70 202-67 299-13 85 47 167 44 273-22"/>
+    <path d="M-55 243C63 154 158 150 245 190c100 46 165 61 279-18 88-61 179-49 263 1 104 62 183 52 300-33 93-67 185-57 274-7 78 44 168 52 263-5"/>
+    <path d="M-82 742c120-99 246-108 352-56 96 47 156 42 249-24 98-70 192-71 295-12 92 53 178 54 278-13 92-62 187-66 287-14 86 45 167 34 274-34"/>
+    <path d="M-76 778c121-91 235-96 332-49 102 50 167 54 270-19 92-66 180-61 279-7 98 54 182 61 296-15 89-59 178-53 270-7 87 44 170 42 272-20"/>
+    <path d="M-50 817c118-82 219-83 313-41 109 50 180 67 293-14 92-66 172-54 269-2 104 56 193 68 315-18 84-58 168-44 256-2 87 42 171 50 263-8"/>
+    <path d="M151 380c55-69 124-96 188-75 59 20 88 59 148 51 62-9 91-78 164-83 77-5 110 54 175 48 61-7 89-69 155-72 65-3 102 38 164 27"/>
+    <path d="M173 408c52-62 112-81 165-63 61 21 91 62 153 54 69-9 97-80 164-84 71-4 107 57 176 50 64-7 92-68 151-70 63-2 99 37 153 28"/>
+    <path d="M199 437c48-53 99-68 145-52 62 22 95 63 160 55 71-9 101-79 162-82 67-3 105 56 177 50 66-6 93-66 148-68 57-2 91 32 139 27"/>
+  </g>
+
+  <!-- Quiet radar and heading marks -->
+  <g stroke="#82e0f7" stroke-opacity=".17" stroke-width="1.3">
+    <circle cx="1374" cy="257" r="124" stroke-dasharray="3 9"/>
+    <circle cx="1374" cy="257" r="91" stroke-dasharray="1 8"/>
+    <circle cx="1374" cy="257" r="56"/>
+    <path d="M1374 108v298M1225 257h298M1269 152l210 210m0-210L1269 362" stroke-opacity=".1"/>
+    <path d="M1354 257h40m-20-20v40" stroke="#b6efff" stroke-opacity=".38"/>
+    <path d="M1364 119h20m-10-10v20M1240 247h20m-10-10v20M1488 247h20m-10-10v20"/>
+  </g>
+  <g fill="#a4e9ff" fill-opacity=".48">
+    <circle cx="1431" cy="209" r="3"/><circle cx="1313" cy="302" r="2.5"/><circle cx="1407" cy="330" r="2"/>
+  </g>
+  <g stroke="#9ce8ff" stroke-opacity=".26" stroke-width="1.4">
+    <path d="M82 506h50m-50 8h28M1435 634h74m-74 8h42M1110 110h56m-56 8h31"/>
+    <path d="M95 482v18m8-18v10m1318 120v18m8-18v10M1154 86v18m8-18v10"/>
+  </g>
+</svg>

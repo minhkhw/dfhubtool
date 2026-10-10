@@ -1,0 +1,1721 @@
+{
+  "version": "2026.10.10-v5",
+  "totalItems": 103,
+  "items": [
+    {
+      "name": "Heart of Africa",
+      "nameVi": "Trái tim châu Phi",
+      "type": "COLLECTIBLES",
+      "price": 14455454,
+      "image": "https://static.deltaforcetools.gg/images/HeartofAfrica_74a47530.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "valuable",
+        "bird",
+        "contraband"
+      ]
+    },
+    {
+      "name": "MandelBrick Supercomputing Unit",
+      "nameVi": "Siêu máy tính MandelBrick",
+      "type": "COLLECTIBLES",
+      "price": 12500000,
+      "image": "https://static.deltaforcetools.gg/images/MandelBrickSupercomp_796d630e.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "tech",
+        "valuable",
+        "contraband"
+      ]
+    },
+    {
+      "name": "Flight Recorder",
+      "nameVi": "Hộp đen máy bay",
+      "type": "COLLECTIBLES",
+      "price": 5825115,
+      "image": "https://static.deltaforcetools.gg/images/FlightRecorder_f737cc78.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "tech",
+        "valuable",
+        "uld"
+      ]
+    },
+    {
+      "name": "Power Battery Pack",
+      "nameVi": "Khối pin năng lượng cao",
+      "type": "COLLECTIBLES",
+      "price": 4583791,
+      "image": "https://static.deltaforcetools.gg/images/PowerBatteryPack_b64dd41c.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "tech",
+        "uld",
+        "storage",
+        "safe"
+      ]
+    },
+    {
+      "name": "King's Suite",
+      "nameVi": "Thẻ Phòng Tổng Thống",
+      "type": "KEYCARDS",
+      "price": 4253556,
+      "image": "https://static.deltaforcetools.gg/images/KingsSuite_05a63015.png",
+      "grade": 6,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "valuable",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Radar Station UAV Platform",
+      "nameVi": "Thẻ UAV Trạm Radar",
+      "type": "KEYCARDS",
+      "price": 3633514,
+      "image": "https://static.deltaforcetools.gg/images/RadarStationUAVPlatf_89d93390.png",
+      "grade": 6,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "valuable",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Top Secret Server",
+      "nameVi": "Máy chủ tuyệt mật",
+      "type": "COLLECTIBLES",
+      "price": 3613309,
+      "image": "https://static.deltaforcetools.gg/images/TopSecretServer_bb080ef8.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "server",
+        "tech",
+        "valuable",
+        "uld"
+      ]
+    },
+    {
+      "name": "Bust of Claudius",
+      "nameVi": "Tượng bán thân Claudius",
+      "type": "COLLECTIBLES",
+      "price": 3515438,
+      "image": "https://static.deltaforcetools.gg/images/BustofClaudius_234b530d.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "art",
+        "valuable"
+      ]
+    },
+    {
+      "name": "Test Range Core",
+      "nameVi": "Lõi bãi thử nghiệm",
+      "type": "COLLECTIBLES",
+      "price": 3469334,
+      "image": "https://static.deltaforcetools.gg/images/TestRangeCore_aa2d5f02.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "tech",
+        "valuable",
+        "lab"
+      ]
+    },
+    {
+      "name": "Portable Military Radar",
+      "nameVi": "Radar quân sự cầm tay",
+      "type": "COLLECTIBLES",
+      "price": 3339905,
+      "image": "https://static.deltaforcetools.gg/images/PortableMilitaryRada_1e65e81a.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "tech",
+        "server",
+        "contraband"
+      ]
+    },
+    {
+      "name": "Automated External Defibrillator",
+      "nameVi": "Máy khử rung tim tự động",
+      "type": "COLLECTIBLES",
+      "price": 3293706,
+      "image": "https://static.deltaforcetools.gg/images/AutomatedExternalDef_158c6010.png",
+      "grade": 6,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "medical",
+        "tech",
+        "contraband"
+      ]
+    },
+    {
+      "name": "High-Speed Disk Array",
+      "nameVi": "Mảng đĩa tốc độ cao",
+      "type": "COLLECTIBLES",
+      "price": 2884819,
+      "image": "https://static.deltaforcetools.gg/images/HighSpeedDiskArray_c2b677d0.png",
+      "grade": 5,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "server",
+        "pc",
+        "tech"
+      ]
+    },
+    {
+      "name": "Smoothbore Gun Exhibit",
+      "nameVi": "Súng nòng trơn trưng bày",
+      "type": "COLLECTIBLES",
+      "price": 2375590,
+      "image": "https://static.deltaforcetools.gg/images/SmoothboreGunExhibit_412ba099.png",
+      "grade": 5,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "valuable",
+        "contraband"
+      ]
+    },
+    {
+      "name": "Eastern Suspension Bridge",
+      "nameVi": "Thẻ Cầu Treo Phía Đông",
+      "type": "item",
+      "price": 2332000,
+      "image": "https://static.deltaforcetools.gg/images/EasternSuspensionBri_94e71562.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "CEO Conference Room",
+      "nameVi": "Thẻ Phòng Họp CEO",
+      "type": "item",
+      "price": 2306900,
+      "image": "https://static.deltaforcetools.gg/images/CEOConferenceRoom_66e457a5.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Blade Server",
+      "nameVi": "Máy chủ phiến Blade",
+      "type": "COLLECTIBLES",
+      "price": 1516045,
+      "image": "https://static.deltaforcetools.gg/images/BladeServer_a6eb0a85.png",
+      "grade": 5,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "server",
+        "pc",
+        "tech"
+      ]
+    },
+    {
+      "name": "Old Bath VIP Room",
+      "nameVi": "Thẻ VIP Nhà Tắm Cũ",
+      "type": "item",
+      "price": 1513869,
+      "image": "https://static.deltaforcetools.gg/images/OldBathVIPRoom_6ffc88f2.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Spades Room",
+      "nameVi": "Thẻ Phòng Bích",
+      "type": "KEYCARDS",
+      "price": 1133293,
+      "image": "https://static.deltaforcetools.gg/images/SpadesRoom_47603ed4.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Radar Station Data Center",
+      "nameVi": "Thẻ Trung Tâm Dữ Liệu Radar",
+      "type": "KEYCARDS",
+      "price": 1129413,
+      "image": "https://static.deltaforcetools.gg/images/RadarStationDataCent_1605cee7.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Array Server",
+      "nameVi": "Máy chủ mảng",
+      "type": "COLLECTIBLES",
+      "price": 1119975,
+      "image": "https://static.deltaforcetools.gg/images/ArrayServer_72946b20.png",
+      "grade": 5,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "safe",
+        "server",
+        "tech"
+      ]
+    },
+    {
+      "name": "Lab Building Archive Room",
+      "nameVi": "Thẻ Phòng Lưu Trữ Khu Thí Nghiệm",
+      "type": "KEYCARDS",
+      "price": 1101808,
+      "image": "https://static.deltaforcetools.gg/images/LabBuildingArchiveRo_b11554cb.png",
+      "grade": 5,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "General's Room",
+      "nameVi": "Thẻ Phòng Đại tướng",
+      "type": "KEYCARDS",
+      "price": 981626,
+      "image": "https://static.deltaforcetools.gg/images/GeneralsRoom_bc3e4ef6.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Test Range Data Center",
+      "nameVi": "Thẻ Trung Tâm Dữ Liệu Bãi Thử",
+      "type": "KEYCARDS",
+      "price": 932401,
+      "image": "https://static.deltaforcetools.gg/images/TestRangeDataCenter_caef7744.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "AWM Sniper Rifle",
+      "nameVi": "Súng bắn tỉa AWM",
+      "type": "weapon",
+      "price": 823579,
+      "image": "https://static.deltaforcetools.gg/images/AWMSniperRifle_b46d46e7.png",
+      "grade": 4,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon",
+        "sniper"
+      ]
+    },
+    {
+      "name": "No.3 Dormitory Back Room",
+      "nameVi": "Thẻ Phòng Sau KTX Số 3",
+      "type": "KEYCARDS",
+      "price": 688823,
+      "image": "https://static.deltaforcetools.gg/images/No3DormitoryBackRoom_4769f090.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Video Camera",
+      "nameVi": "Máy quay phim quân sự",
+      "type": "COLLECTIBLES",
+      "price": 685228,
+      "image": "https://static.deltaforcetools.gg/images/VideoCamera_cc98f4ca.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "valuable",
+        "tech",
+        "backpack"
+      ]
+    },
+    {
+      "name": "Heavy Climbing Bag",
+      "nameVi": "Túi leo núi hạng nặng",
+      "type": "gear",
+      "price": 682822,
+      "image": "https://static.deltaforcetools.gg/images/HeavyClimbingBag_1c294cff.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "backpack",
+        "storage"
+      ]
+    },
+    {
+      "name": "West Wing Control Room",
+      "nameVi": "Thẻ Phòng Điều Khiển Cánh Tây",
+      "type": "item",
+      "price": 632206,
+      "image": "https://static.deltaforcetools.gg/images/WestWingControlRoom_5f5e1679.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Central Command Room 3F",
+      "nameVi": "Thẻ Chỉ Huy Trung Tâm Tầng 3",
+      "type": "item",
+      "price": 610930,
+      "image": "https://static.deltaforcetools.gg/images/CentralCommandRoom3F_83286d0d.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Heavy Assault Vest (New)",
+      "nameVi": "Áo giáp đột kích hạng nặng",
+      "type": "GEAR",
+      "price": 579331,
+      "image": "https://static.deltaforcetools.gg/images/HeavyAssaultVestNew_33590302.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "armor",
+        "uld"
+      ]
+    },
+    {
+      "name": "Town Diner",
+      "nameVi": "Thẻ Quán Ăn Thị Trấn",
+      "type": "KEYCARDS",
+      "price": 528046,
+      "image": "https://static.deltaforcetools.gg/images/TownDiner_e5c10a43.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Lens",
+      "nameVi": "Thấu kính quang học",
+      "type": "COLLECTIBLES",
+      "price": 492601,
+      "image": "https://static.deltaforcetools.gg/images/Lens_443b8e62.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "bird",
+        "valuable"
+      ]
+    },
+    {
+      "name": "Biological Data Server Room",
+      "nameVi": "Thẻ Phòng Dữ Liệu Sinh Học",
+      "type": "item",
+      "price": 479415,
+      "image": "https://static.deltaforcetools.gg/images/BiologicalDataServer_c4ea3ded.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Radar Station Conference Room",
+      "nameVi": "Thẻ Phòng Họp Trạm Radar",
+      "type": "KEYCARDS",
+      "price": 466783,
+      "image": "https://static.deltaforcetools.gg/images/RadarStationConferen_04f79880.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "key",
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "GN Heavy Helmet (New)",
+      "nameVi": "Mũ hạng nặng GN",
+      "type": "GEAR",
+      "price": 424735,
+      "image": "https://static.deltaforcetools.gg/images/GNHeavyHelmetNew_5c67a91d.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "helmet",
+        "uld"
+      ]
+    },
+    {
+      "name": "H09 Anti-Riot Helmet (New)",
+      "nameVi": "Mũ chống bạo động H09",
+      "type": "GEAR",
+      "price": 404161,
+      "image": "https://static.deltaforcetools.gg/images/H09AntiRiotHelmetNew_861fcc15.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "helmet",
+        "uld"
+      ]
+    },
+    {
+      "name": "DICH-1 Tactical Helmet (New)",
+      "nameVi": "Mũ chiến thuật DICH-1",
+      "type": "GEAR",
+      "price": 399216,
+      "image": "https://static.deltaforcetools.gg/images/DICH1TacticalHelmetN_8fdc7380.png",
+      "grade": 4,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "helmet",
+        "uld"
+      ]
+    },
+    {
+      "name": "Fuel Cell",
+      "nameVi": "Pin nhiên liệu",
+      "type": "COLLECTIBLES",
+      "price": 389546,
+      "image": "https://static.deltaforcetools.gg/images/FuelCell_3a7ec350.png",
+      "grade": 4,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "tech",
+        "uld"
+      ]
+    },
+    {
+      "name": "AS Val Assault Rifle",
+      "nameVi": "Súng trường AS Val",
+      "type": "weapon",
+      "price": 361511,
+      "image": "https://static.deltaforcetools.gg/images/ASValAssaultRifle_40a875d9.png",
+      "grade": 4,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "M250 General Machine Gun",
+      "nameVi": "Súng máy M250",
+      "type": "weapon",
+      "price": 341984,
+      "image": "https://static.deltaforcetools.gg/images/M250GeneralMachineGu_d9596fb7.png",
+      "grade": 4,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "M14 Marksman Rifle",
+      "nameVi": "Súng trường thiện xạ M14",
+      "type": "weapon",
+      "price": 337575,
+      "image": "https://static.deltaforcetools.gg/images/M14MarksmanRifle_6bbb4d7c.png",
+      "grade": 4,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "M7 Battle Rifle",
+      "nameVi": "Súng trường chiến đấu M7",
+      "type": "weapon",
+      "price": 267154,
+      "image": "https://static.deltaforcetools.gg/images/M7BattleRifle_4d20db8c.png",
+      "grade": 4,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "Mask-1 Iron Helmet (New)",
+      "nameVi": "Mũ sắt Mask-1",
+      "type": "GEAR",
+      "price": 240709,
+      "image": "https://static.deltaforcetools.gg/images/Mask1IronHelmetNew_b8e460ff.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "helmet"
+      ]
+    },
+    {
+      "name": "Precision Vest Repair Kit",
+      "nameVi": "Bộ sửa chữa giáp chính xác",
+      "type": "item",
+      "price": 225520,
+      "image": "https://static.deltaforcetools.gg/images/PrecisionVestRepairK_cf28ade8.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "medical"
+      ]
+    },
+    {
+      "name": "M4A1 Assault Rifle",
+      "nameVi": "Súng trường M4A1",
+      "type": "weapon",
+      "price": 213518,
+      "image": "https://static.deltaforcetools.gg/images/M4A1AssaultRifle_f84d115f.png",
+      "grade": 3,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "Programmable Processor",
+      "nameVi": "Bộ xử lý lập trình được",
+      "type": "COLLECTIBLES",
+      "price": 213204,
+      "image": "https://static.deltaforcetools.gg/images/ProgrammableProcesso_b38acc77.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "tech",
+        "pc",
+        "server"
+      ]
+    },
+    {
+      "name": "K416 Assault Rifle",
+      "nameVi": "Súng trường K416",
+      "type": "weapon",
+      "price": 206994,
+      "image": "https://static.deltaforcetools.gg/images/K416AssaultRifle_51ee5e11.png",
+      "grade": 3,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "Vector Submachine Gun",
+      "nameVi": "Súng tiểu liên Vector",
+      "type": "weapon",
+      "price": 187730,
+      "image": "https://static.deltaforcetools.gg/images/VectorSubmachineGun_79cfad62.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "SR-25 Marksman Rifle",
+      "nameVi": "Súng thiện xạ SR-25",
+      "type": "weapon",
+      "price": 182138,
+      "image": "https://static.deltaforcetools.gg/images/SR25MarksmanRifle_dce9fe19.png",
+      "grade": 3,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "GT5 Field Backpack",
+      "nameVi": "Balo dã chiến GT5",
+      "type": "gear",
+      "price": 177750,
+      "image": "https://static.deltaforcetools.gg/images/GT5FieldBackpack_8004b267.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "backpack",
+        "storage"
+      ]
+    },
+    {
+      "name": "Reis's Music Scorebook",
+      "nameVi": "Bản thảo âm nhạc của Reis",
+      "type": "COLLECTIBLES",
+      "price": 177655,
+      "image": "https://static.deltaforcetools.gg/images/ReissMusicScorebook_97441527.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "art",
+        "valuable"
+      ]
+    },
+    {
+      "name": "SLR Camera",
+      "nameVi": "Máy ảnh cơ chuyên nghiệp",
+      "type": "COLLECTIBLES",
+      "price": 138975,
+      "image": "https://static.deltaforcetools.gg/images/SLRCamera_1aaea27b.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "valuable",
+        "travel"
+      ]
+    },
+    {
+      "name": "R93 Sniper Rifle",
+      "nameVi": "Súng bắn tỉa R93",
+      "type": "weapon",
+      "price": 123000,
+      "image": "https://static.deltaforcetools.gg/images/R93SniperRifle_eb25084f.png",
+      "grade": 3,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon",
+        "sniper"
+      ]
+    },
+    {
+      "name": "M700 Sniper Rifle",
+      "nameVi": "Súng bắn tỉa M700",
+      "type": "weapon",
+      "price": 114000,
+      "image": "https://static.deltaforcetools.gg/images/M700SniperRifle_162f6288.png",
+      "grade": 3,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon",
+        "sniper"
+      ]
+    },
+    {
+      "name": "Saeed's Crossbow",
+      "nameVi": "Nỏ săn của Saeed",
+      "type": "COLLECTIBLES",
+      "price": 110454,
+      "image": "https://static.deltaforcetools.gg/images/SaeedsCrossbow_33b81db5.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "valuable",
+        "contraband"
+      ]
+    },
+    {
+      "name": "Military Binoculars",
+      "nameVi": "Ống nhòm quân sự",
+      "type": "COLLECTIBLES",
+      "price": 99546,
+      "image": "https://static.deltaforcetools.gg/images/MilitaryBinoculars_ea90a9fe.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "travel",
+        "backpack"
+      ]
+    },
+    {
+      "name": "Neural Interface Terminal",
+      "nameVi": "Thiết bị giao diện thần kinh",
+      "type": "COLLECTIBLES",
+      "price": 98954,
+      "image": "https://static.deltaforcetools.gg/images/NeuralInterfaceTermi_fb47c04c.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "tech",
+        "server",
+        "lab"
+      ]
+    },
+    {
+      "name": "Wide-Angle Lens",
+      "nameVi": "Ống kính góc rộng",
+      "type": "COLLECTIBLES",
+      "price": 97062,
+      "image": "https://static.deltaforcetools.gg/images/WideAngleLens_9e534cf6.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "bird",
+        "valuable"
+      ]
+    },
+    {
+      "name": "VSS 45-Round Mag",
+      "nameVi": "Băng đạn 45 viên VSS",
+      "type": "ATTACHMENTS",
+      "price": 96031,
+      "image": "https://static.deltaforcetools.gg/images/VSS45RoundMag_8236d7cc.png",
+      "grade": 3,
+      "itemWidth": 1,
+      "itemHeight": 2,
+      "tags": [
+        "mag"
+      ]
+    },
+    {
+      "name": "SCAR-H 50-Round Drum Mag",
+      "nameVi": "Hộp tiếp đạn tròn SCAR-H 50 viên",
+      "type": "ATTACHMENTS",
+      "price": 37066,
+      "image": "https://static.deltaforcetools.gg/images/SCARH50RoundDrumMag_67a38409.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    },
+    {
+      "name": "Military Thermal Imaging Device",
+      "nameVi": "Thiết bị ảnh nhiệt quân sự",
+      "type": "COLLECTIBLES",
+      "price": 76141,
+      "image": "https://static.deltaforcetools.gg/images/MilitaryThermalImagi_114d9f3a.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "safe",
+        "tech",
+        "travel"
+      ]
+    },
+    {
+      "name": "Polyethylene Fiber",
+      "nameVi": "Sợi tổng hợp Polyethylene",
+      "type": "COLLECTIBLES",
+      "price": 75612,
+      "image": "https://static.deltaforcetools.gg/images/PolyethyleneFiber_b33595d0.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "lab",
+        "tech"
+      ]
+    },
+    {
+      "name": "E-Type Canister",
+      "nameVi": "Bình khí loại E",
+      "type": "item",
+      "price": 74096,
+      "image": "https://static.deltaforcetools.gg/images/ETypeCanister_28df19b6.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "lab"
+      ]
+    },
+    {
+      "name": "Cutlass",
+      "nameVi": "Đoản kiếm hải quân",
+      "type": "COLLECTIBLES",
+      "price": 59602,
+      "image": "https://static.deltaforcetools.gg/images/Cutlass_00b6b70a.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "bird",
+        "valuable"
+      ]
+    },
+    {
+      "name": "Perception Booster",
+      "nameVi": "Chất tăng cường tri giác",
+      "type": "item",
+      "price": 61500,
+      "image": "https://static.deltaforcetools.gg/images/PerceptionBooster_0a1a37cf.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical"
+      ]
+    },
+    {
+      "name": "Ahsarah Glamour Hookah",
+      "nameVi": "Bình shisha Ahsarah",
+      "type": "COLLECTIBLES",
+      "price": 52112,
+      "image": "https://static.deltaforcetools.gg/images/AhsarahGlamourHookah_2432fcdf.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "bird",
+        "valuable",
+        "travel"
+      ]
+    },
+    {
+      "name": "Military Camping Light",
+      "nameVi": "Đèn dã ngoại quân sự",
+      "type": "COLLECTIBLES",
+      "price": 51778,
+      "image": "https://static.deltaforcetools.gg/images/MilitaryCampingLight_0ecae5f1.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "travel",
+        "backpack"
+      ]
+    },
+    {
+      "name": "Encrypted Router",
+      "nameVi": "Router quân sự mã hóa",
+      "type": "COLLECTIBLES",
+      "price": 50808,
+      "image": "https://static.deltaforcetools.gg/images/EncryptedRouter_a52d09b7.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "tech",
+        "pc",
+        "server"
+      ]
+    },
+    {
+      "name": "AKM Assault Rifle",
+      "nameVi": "Súng trường AKM",
+      "type": "weapon",
+      "price": 51062,
+      "image": "https://static.deltaforcetools.gg/images/AKMAssaultRifle_a30d5e72.png",
+      "grade": 2,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "AK-12 Assault Rifle",
+      "nameVi": "Súng trường AK-12",
+      "type": "weapon",
+      "price": 51207,
+      "image": "https://static.deltaforcetools.gg/images/AK12AssaultRifle_7d6355dc.png",
+      "grade": 2,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "P90 Submachine Gun",
+      "nameVi": "Súng tiểu liên P90",
+      "type": "weapon",
+      "price": 57905,
+      "image": "https://static.deltaforcetools.gg/images/P90SubmachineGun_61f409ce.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "Field Hiking Backpack",
+      "nameVi": "Balo dã ngoại",
+      "type": "gear",
+      "price": 46065,
+      "image": "https://static.deltaforcetools.gg/images/FieldHikingBackpack_edf50a28.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "ASOS Motherboard",
+      "nameVi": "Bo mạch chủ ASOS",
+      "type": "item",
+      "price": 43051,
+      "image": "https://static.deltaforcetools.gg/images/ASOSMotherboard_be27a0ec.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "tech",
+        "pc"
+      ]
+    },
+    {
+      "name": "Stamina Activator",
+      "nameVi": "Chất kích hoạt thể lực",
+      "type": "item",
+      "price": 31590,
+      "image": "https://static.deltaforcetools.gg/images/StaminaActivator_3288187c.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical"
+      ]
+    },
+    {
+      "name": "Medical UAV",
+      "nameVi": "UAV y tế hỗ trợ",
+      "type": "COLLECTIBLES",
+      "price": 28680,
+      "image": "https://static.deltaforcetools.gg/images/MedicalUAV_014e67a9.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "tech"
+      ]
+    },
+    {
+      "name": "Cordless Portable Drill",
+      "nameVi": "Máy khoan cầm tay không dây",
+      "type": "COLLECTIBLES",
+      "price": 28185,
+      "image": "https://static.deltaforcetools.gg/images/CordlessPortableDril_d073f6e0.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "name": "Extended-Release Painkiller",
+      "nameVi": "Thuốc giảm đau tác dụng kéo dài",
+      "type": "CONSUMABLES",
+      "price": 1970,
+      "image": "https://static.deltaforcetools.gg/images/ExtendedReleasePaink_82c44aa7.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "HiFi Sound Card",
+      "nameVi": "Card âm thanh HiFi",
+      "type": "COLLECTIBLES",
+      "price": 27120,
+      "image": "https://static.deltaforcetools.gg/images/HiFiSoundCard_519ce05d.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "tech",
+        "pc"
+      ]
+    },
+    {
+      "name": "Intel Recorder",
+      "nameVi": "Máy ghi âm tình báo",
+      "type": "COLLECTIBLES",
+      "price": 25340,
+      "image": "https://static.deltaforcetools.gg/images/IntelRecorder_8e11329b.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Ahsarah Guard Confidential Files",
+      "nameVi": "Tài liệu mật Đội Vệ Binh",
+      "type": "COLLECTIBLES",
+      "price": 24327,
+      "image": "https://static.deltaforcetools.gg/images/AhsarahGuardConfiden_2e6b23bc.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "travel",
+        "backpack"
+      ]
+    },
+    {
+      "name": "MP7 60-Round Drum Mag",
+      "nameVi": "Hộp tiếp đạn tròn MP7 60 viên",
+      "type": "ATTACHMENTS",
+      "price": 49763,
+      "image": "https://static.deltaforcetools.gg/images/MP760RoundDrumMag_ff27c077.png",
+      "grade": 3,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    },
+    {
+      "name": "Aramid Fiber",
+      "nameVi": "Sợi chống đạn Aramid",
+      "type": "COLLECTIBLES",
+      "price": 22045,
+      "image": "https://static.deltaforcetools.gg/images/AramidFiber_16d6e7c2.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "lab"
+      ]
+    },
+    {
+      "name": "Gunpowder",
+      "nameVi": "Hộp thuốc súng chiến đấu",
+      "type": "COLLECTIBLES",
+      "price": 21135,
+      "image": "https://static.deltaforcetools.gg/images/Gunpowder_9f04933b.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "name": "Antler Wall Decoration",
+      "nameVi": "Gạc hươu trang trí",
+      "type": "item",
+      "price": 18508,
+      "image": "https://static.deltaforcetools.gg/images/AntlerWallDecoration_c322b074.png",
+      "grade": 1,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "name": "English Tea Bag",
+      "nameVi": "Túi trà Anh Quốc",
+      "type": "COLLECTIBLES",
+      "price": 15923,
+      "image": "https://static.deltaforcetools.gg/images/EnglishTeaBag_a033f751.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "bird",
+        "travel"
+      ]
+    },
+    {
+      "name": "Wooden Carved Pipe",
+      "nameVi": "Tẩu thuốc gỗ chạm khắc",
+      "type": "COLLECTIBLES",
+      "price": 15792,
+      "image": "https://static.deltaforcetools.gg/images/WoodenCarvedPipe_6449a7a4.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "bird",
+        "travel"
+      ]
+    },
+    {
+      "name": "Firearm Parts",
+      "nameVi": "Linh kiện súng trường",
+      "type": "COLLECTIBLES",
+      "price": 15034,
+      "image": "https://static.deltaforcetools.gg/images/FirearmParts_528d4bcf.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "name": "Intel Document",
+      "nameVi": "Tài liệu tình báo",
+      "type": "COLLECTIBLES",
+      "price": 13745,
+      "image": "https://static.deltaforcetools.gg/images/IntelDocument_7b844de2.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "backpack",
+        "travel"
+      ]
+    },
+    {
+      "name": "Camera",
+      "nameVi": "Máy ảnh du lịch",
+      "type": "COLLECTIBLES",
+      "price": 12408,
+      "image": "https://static.deltaforcetools.gg/images/Camera_967d35e4.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "bird",
+        "travel"
+      ]
+    },
+    {
+      "name": "Lithium Battery",
+      "nameVi": "Pin Lithium tiêu chuẩn",
+      "type": "COLLECTIBLES",
+      "price": 11197,
+      "image": "https://static.deltaforcetools.gg/images/LithiumBattery_5f2d3458.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "tech",
+        "pc"
+      ]
+    },
+    {
+      "name": "CAR-15 Assault Rifle",
+      "nameVi": "Súng trường CAR-15",
+      "type": "weapon",
+      "price": 11798,
+      "image": "https://static.deltaforcetools.gg/images/CAR15AssaultRifle_bd35e840.png",
+      "grade": 1,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "AKS-74 Assault Rifle",
+      "nameVi": "Súng trường AKS-74",
+      "type": "weapon",
+      "price": 8028,
+      "image": "https://static.deltaforcetools.gg/images/AKS74AssaultRifle_75e1e0e9.png",
+      "grade": 1,
+      "itemWidth": 3,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "QSZ-92G Pistol",
+      "nameVi": "Súng lục QSZ-92G",
+      "type": "FIREARMS",
+      "price": 3800,
+      "image": "https://static.deltaforcetools.gg/images/QSZ92G_5a8ed58d.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "weapon"
+      ]
+    },
+    {
+      "name": "M4 60-Round Drum Mag",
+      "nameVi": "Hộp tiếp đạn tròn M4 60 viên",
+      "type": "ATTACHMENTS",
+      "price": 19130,
+      "image": "https://static.deltaforcetools.gg/images/M460RoundDrumMag_c9a6ed07.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    },
+    {
+      "name": "5.56x45 30-Round Polymer Mag",
+      "nameVi": "Băng đạn Polymer 5.56x45 30 viên",
+      "type": "ATTACHMENTS",
+      "price": 5309,
+      "image": "https://static.deltaforcetools.gg/images/556x4530RoundPolymer_26a71369.png",
+      "grade": 1,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    },
+    {
+      "name": "Elastic Bandage",
+      "nameVi": "Băng thun co giãn y tế",
+      "type": "CONSUMABLES",
+      "price": 1100,
+      "image": "https://static.deltaforcetools.gg/images/ElasticBandage_6ff3a3fa.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "Simple Surgical Kit",
+      "nameVi": "Bộ phẫu thuật dã chiến đơn giản",
+      "type": "CONSUMABLES",
+      "price": 2365,
+      "image": "https://static.deltaforcetools.gg/images/SimpleSurgicalKit_e0f83480.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "CAT Tourniquet",
+      "nameVi": "Gạc garô cầm máu CAT",
+      "type": "CONSUMABLES",
+      "price": 2640,
+      "image": "https://static.deltaforcetools.gg/images/CATTourniquet_03e25907.png",
+      "grade": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "Bottled Antibiotics",
+      "nameVi": "Thuốc kháng sinh đóng chai",
+      "type": "CONSUMABLES",
+      "price": 7290,
+      "image": "https://static.deltaforcetools.gg/images/BottledAntibiotics_a4ceb2e2.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "Medical Alcohol",
+      "nameVi": "Cồn y tế sát trùng",
+      "type": "CONSUMABLES",
+      "price": 9128,
+      "image": "https://static.deltaforcetools.gg/images/MedicalAlcohol_9d02e738.png",
+      "grade": 2,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "Vehicle First Aid Kit",
+      "nameVi": "Hộp cứu thương gắn xe",
+      "type": "CONSUMABLES",
+      "price": 3067,
+      "image": "https://static.deltaforcetools.gg/images/VehicleFirstAidKit_b39b76ae.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "medical",
+        "med"
+      ]
+    },
+    {
+      "name": "AKS-74 75-Round Polymer Drum Mag",
+      "nameVi": "Hộp tiếp đạn tròn Polymer AKS-74 75 viên",
+      "type": "ATTACHMENTS",
+      "price": 20476,
+      "image": "https://static.deltaforcetools.gg/images/AKS7475RoundPolymerD_52a0afb7.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 2,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    },
+    {
+      "name": "AKM 40-Round Extended Mag",
+      "nameVi": "Băng đạn mở rộng AKM 40 viên",
+      "type": "ATTACHMENTS",
+      "price": 24917,
+      "image": "https://static.deltaforcetools.gg/images/AKM40RoundExtendedMa_a2dc1fb4.png",
+      "grade": 2,
+      "itemWidth": 2,
+      "itemHeight": 1,
+      "tags": [
+        "ammo",
+        "mag"
+      ]
+    }
+  ],
+  "crates": {
+    "safe": {
+      "name": "Két sắt lớn",
+      "cols": 4,
+      "rows": 4,
+      "minGrade": 3,
+      "targetCount": [
+        1,
+        3
+      ],
+      "gradeWeights": {
+        "6": 3,
+        "5": 18,
+        "4": 47,
+        "3": 32
+      }
+    },
+    "minisafe": {
+      "name": "Két mini",
+      "cols": 3,
+      "rows": 2,
+      "minGrade": 4,
+      "targetCount": [
+        1,
+        1
+      ],
+      "isMiniSafe": true,
+      "gradeWeights": {
+        "6": 4,
+        "5": 31,
+        "4": 65
+      }
+    },
+    "ULD": {
+      "name": "Thùng ULD",
+      "cols": 5,
+      "rows": 6,
+      "targetCount": [
+        3,
+        5
+      ],
+      "gradeWeights": {
+        "6": 2,
+        "5": 12,
+        "4": 48,
+        "3": 38
+      }
+    },
+    "serverCrate": {
+      "name": "Hòm máy chủ",
+      "cols": 4,
+      "rows": 4,
+      "targetCount": [
+        1,
+        3
+      ],
+      "gradeWeights": {
+        "6": 2,
+        "5": 16,
+        "4": 47,
+        "3": 35
+      }
+    },
+    "mcomputerCase": {
+      "name": "Vỏ case máy tính",
+      "cols": 3,
+      "rows": 3,
+      "targetCount": [
+        1,
+        2
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 10,
+        "4": 35,
+        "3": 40,
+        "2": 15
+      }
+    },
+    "backpack": {
+      "name": "Balo",
+      "cols": 4,
+      "rows": 6,
+      "targetCount": [
+        2,
+        4
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 5,
+        "4": 25,
+        "3": 40,
+        "2": 20,
+        "1": 10
+      }
+    },
+    "medicalCrate": {
+      "name": "Đống vật tư y tế",
+      "cols": 4,
+      "rows": 4,
+      "targetCount": [
+        2,
+        4
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 0,
+        "4": 15,
+        "3": 45,
+        "2": 30,
+        "1": 10
+      }
+    },
+    "advancedStorageCrate": {
+      "name": "Hộp lưu trữ cao cấp",
+      "cols": 5,
+      "rows": 5,
+      "targetCount": [
+        2,
+        4
+      ],
+      "gradeWeights": {
+        "6": 1,
+        "5": 14,
+        "4": 45,
+        "3": 40
+      }
+    },
+    "ammoCrate": {
+      "name": "Hòm đạn",
+      "cols": 3,
+      "rows": 3,
+      "targetCount": [
+        2,
+        4
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 0,
+        "4": 10,
+        "3": 35,
+        "2": 40,
+        "1": 15
+      }
+    },
+    "medicalBag": {
+      "name": "Túi sơ cứu",
+      "cols": 3,
+      "rows": 2,
+      "targetCount": [
+        1,
+        3
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 0,
+        "4": 10,
+        "3": 40,
+        "2": 35,
+        "1": 15
+      }
+    },
+    "weaponCrate": {
+      "name": "Hòm vũ khí lớn",
+      "cols": 6,
+      "rows": 4,
+      "targetCount": [
+        2,
+        3
+      ],
+      "mustHaveWeapon": true,
+      "gradeWeights": {
+        "6": 0,
+        "5": 5,
+        "4": 35,
+        "3": 45,
+        "2": 15
+      }
+    },
+    "experimentCrate": {
+      "name": "Áo thí nghiệm",
+      "cols": 3,
+      "rows": 2,
+      "targetCount": [
+        1,
+        3
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 5,
+        "4": 25,
+        "3": 45,
+        "2": 25
+      }
+    },
+    "birdCrate": {
+      "name": "Tổ chim",
+      "cols": 2,
+      "rows": 2,
+      "targetCount": [
+        1,
+        2
+      ],
+      "gradeWeights": {
+        "6": 1,
+        "5": 9,
+        "4": 40,
+        "3": 50
+      }
+    },
+    "travelBag": {
+      "name": "Túi du lịch",
+      "cols": 4,
+      "rows": 3,
+      "targetCount": [
+        1,
+        3
+      ],
+      "gradeWeights": {
+        "6": 0,
+        "5": 5,
+        "4": 25,
+        "3": 45,
+        "2": 25
+      }
+    },
+    "hiddenCrate": {
+      "name": "Vật phẩm cất giấu",
+      "cols": 4,
+      "rows": 4,
+      "targetCount": [
+        2,
+        4
+      ],
+      "gradeWeights": {
+        "6": 2,
+        "5": 15,
+        "4": 48,
+        "3": 35
+      }
+    }
+  }
+}
