@@ -1,0 +1,165 @@
+{
+  "id": "ops-00_1F",
+  "name": "Đập Zero",
+  "mode": "ops",
+  "level": "Nhà máy điện · Tầng 1F",
+  "layer": "cgxg_ldz_1f",
+  "isFloor": true,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 64,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -64,
+    "initY": 64,
+    "initZoom": 2.5,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Sảnh Tuabin Số 1",
+      "x": -40,
+      "y": 30
+    },
+    {
+      "name": "Sảnh Tuabin Số 2",
+      "x": 40,
+      "y": 30
+    },
+    {
+      "name": "Hành Lang Kỹ Thuật",
+      "x": 0,
+      "y": -40
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "zd_1f_1",
+      "name": "Két Sắt Phòng Kỹ Thuật Viên 1F",
+      "nameZh": "技术员办公室保险箱",
+      "x": -60,
+      "y": 50,
+      "icon": "bxx",
+      "area": "Phòng Kỹ Thuật",
+      "spawn": "100%",
+      "random": "Tiền vàng & tài liệu tuabin"
+    },
+    {
+      "id": "zd_1f_2",
+      "name": "Phòng Thẻ Đỏ Kiểm Soát Tuabin",
+      "nameZh": "水轮机控制红卡房",
+      "x": 70,
+      "y": 40,
+      "icon": "door_red",
+      "area": "Tuabin 2",
+      "pickup": "Thẻ đỏ Tuabin",
+      "random": "Hòm trang bị cấp cao"
+    },
+    {
+      "id": "zd_1f_3",
+      "name": "Hòm Đạn Dược Quân Sự",
+      "nameZh": "军用弹药箱",
+      "x": 0,
+      "y": -30,
+      "icon": "wqx",
+      "area": "Hành Lang",
+      "spawn": "100%",
+      "random": "Hộp đạn xuyên giáp 5.56x45mm"
+    },
+    {
+      "id": "zd_1f_4",
+      "name": "Tủ Cứu Thương Sơ Cứu 1F",
+      "nameZh": "1F急救箱",
+      "x": -50,
+      "y": -20,
+      "icon": "ylb",
+      "area": "Cầu Thang Tây",
+      "spawn": "100%",
+      "random": "Băng gạc & Thuốc tiêm"
+    },
+    {
+      "id": "zd_1f_5",
+      "name": "Cầu Thang Lên Tầng 2F",
+      "nameZh": "通往2F楼梯",
+      "x": -80,
+      "y": 10,
+      "icon": "csd",
+      "area": "Hành Lang Tây",
+      "spawn": "Lối đi",
+      "random": "Kết nối thẳng lên Văn phòng Giám Đốc 2F"
+    },
+    {
+      "id": "zd_1f_6",
+      "name": "Cửa Hầm Xuống Tầng B1",
+      "nameZh": "通往B1通道",
+      "x": 80,
+      "y": -50,
+      "icon": "csd",
+      "area": "Hành Lang Đông",
+      "spawn": "Lối đi",
+      "random": "Dẫn xuống hầm thoát hiểm B1"
+    }
+  ]
+}

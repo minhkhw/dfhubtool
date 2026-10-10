@@ -1,0 +1,197 @@
+{
+  "id": "ops-02",
+  "name": "Thành phố Không Gian",
+  "mode": "ops",
+  "level": "Tiêu chuẩn (Khu phức hợp)",
+  "layer": "map_space",
+  "isFloor": false,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 128,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -128,
+    "initY": 128,
+    "initZoom": 2,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Bệ Phóng Tên Lửa Trung Tâm",
+      "x": 0,
+      "y": 250
+    },
+    {
+      "name": "Trung Tâm Dữ Liệu Lượng Tử",
+      "x": 400,
+      "y": -100
+    },
+    {
+      "name": "Khu Nghiên Cứu Công Nghệ Cao",
+      "x": -450,
+      "y": -150
+    },
+    {
+      "name": "Kho Nhiên Liệu Lỏng",
+      "x": -250,
+      "y": 650
+    },
+    {
+      "name": "Đài Quan Sát Không Gian",
+      "x": 550,
+      "y": 500
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "sc_1",
+      "name": "Hầm Thoát Hiểm Bệ Phóng",
+      "nameZh": "发射台地下紧急通道",
+      "x": 50,
+      "y": 220,
+      "icon": "exfil",
+      "area": "Bệ Phóng",
+      "spawn": "Cố định",
+      "exit": "Kích hoạt bảng điều khiển phòng thí nghiệm"
+    },
+    {
+      "id": "sc_2",
+      "name": "Cổng Rút Quân Cửa Tây",
+      "nameZh": "西侧主干道撤离门",
+      "x": -750,
+      "y": -100,
+      "icon": "exfil",
+      "area": "Cổng Tây",
+      "spawn": "Cố định",
+      "exit": "Mở tự do sau 15 phút"
+    },
+    {
+      "id": "sc_3",
+      "name": "Phòng Thẻ Vàng · Trung Tâm Lượng Tử",
+      "nameZh": "量子数据中心金卡房",
+      "x": 430,
+      "y": -80,
+      "icon": "door_gold",
+      "area": "Dữ Liệu Lượng Tử",
+      "pickup": "Thẻ vàng Lượng Tử",
+      "random": "Siêu chip lượng tử Delta, Ổ cứng không gian triệu đô"
+    },
+    {
+      "id": "sc_4",
+      "name": "Phòng Thẻ Tím · Viện Nghiên Cứu",
+      "nameZh": "空间研究所紫卡房",
+      "x": -420,
+      "y": -130,
+      "icon": "door_purple",
+      "area": "Khu Nghiên Cứu",
+      "pickup": "Thẻ tím Nghiên Cứu",
+      "random": "Kính ngắm ảnh nhiệt cao cấp, vũ khí tương lai"
+    },
+    {
+      "id": "sc_5",
+      "name": "Két Sắt Điện Tử Lượng Tử",
+      "nameZh": "量子主控保险箱",
+      "x": 380,
+      "y": -120,
+      "icon": "bxx",
+      "area": "Dữ Liệu Lượng Tử",
+      "spawn": "100%",
+      "random": "Bộ mã khóa vệ tinh"
+    },
+    {
+      "id": "sc_6",
+      "name": "Két Sắt Bệ Phóng",
+      "nameZh": "发射台调度保险箱",
+      "x": -30,
+      "y": 270,
+      "icon": "bxx",
+      "area": "Bệ Phóng",
+      "spawn": "100%",
+      "random": "Tiền vàng số lượng lớn"
+    },
+    {
+      "id": "sc_7",
+      "name": "Đội Trưởng An Ninh Cyborg",
+      "nameZh": "机械化安保指挥官",
+      "x": 20,
+      "y": 300,
+      "icon": "boss",
+      "area": "Bệ Phóng",
+      "spawn": "Ngẫu nhiên",
+      "random": "Súng máy Minigun hạng nặng, khiên năng lượng"
+    },
+    {
+      "id": "sc_8",
+      "name": "Trạm Sơ Cứu Không Gian",
+      "nameZh": "航天医疗舱",
+      "x": -400,
+      "y": -190,
+      "icon": "ylb",
+      "area": "Khu Nghiên Cứu",
+      "spawn": "100%",
+      "random": "Thuốc hồi sinh lực thần tốc"
+    }
+  ]
+}

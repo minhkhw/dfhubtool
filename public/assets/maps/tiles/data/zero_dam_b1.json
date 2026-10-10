@@ -1,0 +1,116 @@
+{
+  "id": "ops-00_B1",
+  "name": "Đập Zero",
+  "mode": "ops",
+  "level": "Đường hầm thoát hiểm · Tầng B1",
+  "layer": "cgxg_ldz_b1",
+  "isFloor": true,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 64,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -64,
+    "initY": 64,
+    "initZoom": 2.5,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Đường Ống Xả Áp Lực",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "Lối Rút Quân Khẩn Cấp B1",
+      "x": 60,
+      "y": -60
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "zd_b1_1",
+      "name": "Cổng Rút Quân Đường Ngầm B1",
+      "nameZh": "B1地下紧急撤离门",
+      "x": 65,
+      "y": -65,
+      "icon": "exfil",
+      "area": "Cổng Hầm Nam",
+      "spawn": "Cố định",
+      "exit": "Yêu cầu kích hoạt cầu dao điện từ trước"
+    },
+    {
+      "id": "zd_b1_2",
+      "name": "Hòm Dụng Cụ Kỹ Thuật Ngầm",
+      "nameZh": "地下应急工具箱",
+      "x": -20,
+      "y": 20,
+      "icon": "wqx",
+      "area": "Ống Xả",
+      "spawn": "100%",
+      "random": "Linh kiện vi mạch quý hiếm"
+    }
+  ]
+}
