@@ -1,0 +1,344 @@
+{
+  "id": "ops-00",
+  "name": "Đập Zero",
+  "mode": "ops",
+  "level": "Tiêu chuẩn (Mặt đất)",
+  "layer": "cgxg_ldz",
+  "isFloor": false,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 128,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -128,
+    "initY": 128,
+    "initZoom": 2,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Thân Đập Chính (Main Dam)",
+      "x": 0,
+      "y": 300
+    },
+    {
+      "name": "Nhà Máy Điện Trung Tâm",
+      "x": -50,
+      "y": -50
+    },
+    {
+      "name": "Khu Điều Hành & Văn Phòng",
+      "x": -450,
+      "y": 200
+    },
+    {
+      "name": "Trạm Biến Áp Phụ Phía Nam",
+      "x": -250,
+      "y": -550
+    },
+    {
+      "name": "Cửa Xả Nước Bờ Đông",
+      "x": 450,
+      "y": 200
+    },
+    {
+      "name": "Hồ Nước Thượng Nguồn",
+      "x": 100,
+      "y": 700
+    },
+    {
+      "name": "Cổng Rút Quân Phía Tây",
+      "x": -850,
+      "y": 250
+    },
+    {
+      "name": "Bãi Trực Thăng Ven Đông",
+      "x": 800,
+      "y": 400
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "zd_1",
+      "name": "Điểm Rút Quân Cổng Tây",
+      "nameZh": "西门撤离点",
+      "x": -850,
+      "y": 250,
+      "icon": "exfil",
+      "area": "Cổng Tây",
+      "spawn": "Cố định",
+      "exit": "Mở sau 10 phút, không yêu cầu thẻ"
+    },
+    {
+      "id": "zd_2",
+      "name": "Rút Quân Trực Thăng Bờ Đông",
+      "nameZh": "东岸停机坪撤离点",
+      "x": 800,
+      "y": 400,
+      "icon": "exfil",
+      "area": "Bờ Đông",
+      "spawn": "Ngẫu nhiên",
+      "exit": "Kích hoạt pháo sáng, phòng thủ 60s"
+    },
+    {
+      "id": "zd_3",
+      "name": "Đường Hầm Thoát Hiểm Phía Nam",
+      "nameZh": "南侧地下撤离通道",
+      "x": 50,
+      "y": -800,
+      "icon": "exfil",
+      "area": "Phía Nam",
+      "spawn": "Cố định",
+      "exit": "Cần gạt cầu dao tại Trạm biến áp"
+    },
+    {
+      "id": "zd_4",
+      "name": "Thang Dây Chân Đập",
+      "nameZh": "大坝悬梯撤离点",
+      "x": 300,
+      "y": -150,
+      "icon": "exfil",
+      "area": "Chân Đập",
+      "spawn": "Cố định",
+      "exit": "Không mang ba lô kích thước lớn"
+    },
+    {
+      "id": "zd_5",
+      "name": "Phòng Thẻ Vàng · Giám Đốc Nhà Máy",
+      "nameZh": "厂长金卡房",
+      "x": -40,
+      "y": 200,
+      "icon": "door_gold",
+      "area": "Nhà Máy Điện",
+      "pickup": "Thẻ khóa vàng Giám Đốc",
+      "random": "Chứa Thỏi Vàng 9999 & Chip AI Delta"
+    },
+    {
+      "id": "zd_6",
+      "name": "Phòng Thẻ Tím · Văn Phòng Điều Hành",
+      "nameZh": "中控室紫卡房",
+      "x": -460,
+      "y": 220,
+      "icon": "door_purple",
+      "area": "Khu Điều Hành",
+      "pickup": "Thẻ tím Điều Hành",
+      "random": "Trang bị giáp cấp 5, Kính nhìn đêm"
+    },
+    {
+      "id": "zd_7",
+      "name": "Phòng Thẻ Đỏ · Kiểm Soát Xả Lũ",
+      "nameZh": "泄洪控制红卡房",
+      "x": 460,
+      "y": 220,
+      "icon": "door_red",
+      "area": "Cửa Xả Nước",
+      "pickup": "Thẻ đỏ Xả Lũ",
+      "random": "Vũ khí đặc vụ bắn tỉa AWM mod sẵn"
+    },
+    {
+      "id": "zd_8",
+      "name": "Phòng Thẻ Tím · Trạm Biến Áp",
+      "nameZh": "变电站配电房紫卡",
+      "x": -260,
+      "y": -540,
+      "icon": "door_purple",
+      "area": "Trạm Biến Áp",
+      "pickup": "Thẻ tím Biến Áp",
+      "random": "Pin lithium công nghệ cao, IC lượng tử"
+    },
+    {
+      "id": "zd_9",
+      "name": "Két Sắt Điện Tử · Trung Tâm Nhà Máy",
+      "nameZh": "主厂房电子保险箱",
+      "x": -60,
+      "y": 20,
+      "icon": "bxx",
+      "area": "Nhà Máy Điện",
+      "spawn": "100%",
+      "random": "Thời gian giải mã 25 giây, chứa tiền mặt & vàng"
+    },
+    {
+      "id": "zd_10",
+      "name": "Két Sắt Đỉnh Thân Đập",
+      "nameZh": "坝顶保密保险箱",
+      "x": 20,
+      "y": 320,
+      "icon": "bxx",
+      "area": "Thân Đập Chính",
+      "spawn": "Ngẫu nhiên",
+      "random": "Vị trí trống trải dễ bị bắn tỉa, chứa tài liệu mật"
+    },
+    {
+      "id": "zd_11",
+      "name": "Két Sắt Trạm Biến Áp",
+      "nameZh": "变电站调度保险箱",
+      "x": -320,
+      "y": -580,
+      "icon": "bxx",
+      "area": "Trạm Biến Áp",
+      "spawn": "100%",
+      "random": "Chứa thẻ khóa và tiền vàng"
+    },
+    {
+      "id": "zd_12",
+      "name": "Két Sắt Văn Phòng Phó Giám Đốc",
+      "nameZh": "副官办公室保险箱",
+      "x": -420,
+      "y": 140,
+      "icon": "bxx",
+      "area": "Khu Điều Hành",
+      "spawn": "100%",
+      "random": "Laptop mã hóa dữ liệu & USB mật mã"
+    },
+    {
+      "id": "zd_13",
+      "name": "Trùm Khu Vực: Chỉ Huy Viktor",
+      "nameZh": "首领维克托",
+      "x": -50,
+      "y": 50,
+      "icon": "boss",
+      "area": "Nhà Máy Điện",
+      "spawn": "Ngẫu nhiên",
+      "random": "Giáp cấp 6, súng M7 đạn xuyên giáp, 3 lính hộ vệ"
+    },
+    {
+      "id": "zd_14",
+      "name": "Xạ Thủ Bắn Tỉa Tháp Bắc",
+      "nameZh": "北塔楼狙击小队",
+      "x": 380,
+      "y": 320,
+      "icon": "boss",
+      "area": "Thân Đập",
+      "spawn": "Cố định",
+      "random": "Lính tinh nhuệ cầm súng bắn tỉa AWM"
+    },
+    {
+      "id": "zd_15",
+      "name": "Hòm Tiếp Tế Cấp 4 · Cửa Xả Nước",
+      "nameZh": "泄洪道四级物资箱",
+      "x": 420,
+      "y": 120,
+      "icon": "wqx",
+      "area": "Cửa Xả Nước",
+      "spawn": "100%",
+      "random": "Áo giáp chống đạn cấp 4 và mũ sắt"
+    },
+    {
+      "id": "zd_16",
+      "name": "Hòm Vũ Khí Quân Sự · Trạm Biến Áp",
+      "nameZh": "变电站军用武器箱",
+      "x": -220,
+      "y": -500,
+      "icon": "wqx",
+      "area": "Trạm Biến Áp",
+      "spawn": "100%",
+      "random": "Nòng giảm thanh cao cấp, kính ngắm 4x"
+    },
+    {
+      "id": "zd_17",
+      "name": "Trạm Cứu Thương Khẩn Cấp",
+      "nameZh": "医疗急救站",
+      "x": -440,
+      "y": 280,
+      "icon": "ylb",
+      "area": "Khu Điều Hành",
+      "spawn": "100%",
+      "random": "Túi quân y, morphine giảm đau, nẹp xương"
+    },
+    {
+      "id": "zd_18",
+      "name": "Trạm Cứu Thương Công Nhân",
+      "nameZh": "主厂房医务柜",
+      "x": 20,
+      "y": -60,
+      "icon": "ylb",
+      "area": "Nhà Máy Điện",
+      "spawn": "100%",
+      "random": "Băng ép cầm máu, thuốc kháng sinh"
+    },
+    {
+      "id": "zd_19",
+      "name": "Điểm Xuất Phát Bờ Tây",
+      "nameZh": "西侧出生点",
+      "x": -880,
+      "y": 150,
+      "icon": "csd",
+      "area": "Cổng Tây",
+      "spawn": "Đầu trận",
+      "random": "Khu vực xuất phát phe Alpha"
+    },
+    {
+      "id": "zd_20",
+      "name": "Điểm Xuất Phát Bờ Đông",
+      "nameZh": "东侧出生点",
+      "x": 860,
+      "y": 300,
+      "icon": "csd",
+      "area": "Bờ Đông",
+      "spawn": "Đầu trận",
+      "random": "Khu vực xuất phát phe Bravo"
+    }
+  ]
+}

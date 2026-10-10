@@ -1,0 +1,181 @@
+{
+  "id": "ops-03",
+  "name": "Trạm Radar Brakkesh",
+  "mode": "ops",
+  "level": "Tiêu chuẩn (Hẻm núi Sa mạc)",
+  "layer": "map_bks2",
+  "isFloor": false,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 128,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -128,
+    "initY": 128,
+    "initZoom": 2,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Đỉnh Mái Vòm Radar Tầng 3",
+      "x": 0,
+      "y": 200
+    },
+    {
+      "name": "Hẻm Núi Đá Vôi Sa Mạc",
+      "x": -400,
+      "y": -300
+    },
+    {
+      "name": "Doanh Trại Tuần Tra Quân Sự",
+      "x": 350,
+      "y": -250
+    },
+    {
+      "name": "Kho Đạn & Vũ Khí Hạng Nặng",
+      "x": -300,
+      "y": 450
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "bk_1",
+      "name": "Điểm Thoát Hiểm Khe Nứt Sa Mạc",
+      "nameZh": "荒漠裂谷撤离点",
+      "x": -450,
+      "y": -350,
+      "icon": "exfil",
+      "area": "Hẻm Núi",
+      "spawn": "Cố định",
+      "exit": "Rút lui đường bộ không mang ba lô"
+    },
+    {
+      "id": "bk_2",
+      "name": "Cổng Rút Quân Trạm Gác Đông",
+      "nameZh": "东前哨站撤离门",
+      "x": 650,
+      "y": -200,
+      "icon": "exfil",
+      "area": "Trạm Gác Đông",
+      "spawn": "Cố định",
+      "exit": "Mở tự do sau phút 10"
+    },
+    {
+      "id": "bk_3",
+      "name": "Phòng Thẻ Vàng · Mái Vòm Radar",
+      "nameZh": "雷达穹顶金卡房",
+      "x": 20,
+      "y": 220,
+      "icon": "door_gold",
+      "area": "Đỉnh Radar",
+      "pickup": "Thẻ vàng Radar",
+      "random": "Bộ thu phát sóng vệ tinh mã hóa, Kính bắn tỉa đêm"
+    },
+    {
+      "id": "bk_4",
+      "name": "Phòng Thẻ Đỏ · Kho Vũ Khí Hạng Nặng",
+      "nameZh": "重武器库红卡房",
+      "x": -280,
+      "y": 470,
+      "icon": "door_red",
+      "area": "Kho Đạn",
+      "pickup": "Thẻ đỏ Kho Đạn",
+      "random": "Súng phóng lựu, giáp chống nổ cấp 5"
+    },
+    {
+      "id": "bk_5",
+      "name": "Két Sắt Bộ Chỉ Huy Brakkesh",
+      "nameZh": "指挥所核心保险箱",
+      "x": -20,
+      "y": 180,
+      "icon": "bxx",
+      "area": "Đỉnh Radar",
+      "spawn": "100%",
+      "random": "Bản đồ quân sự tác chiến sa mạc"
+    },
+    {
+      "id": "bk_6",
+      "name": "Xạ Thủ Tinh Nhuệ Sa Mạc",
+      "nameZh": "荒漠特等神射手",
+      "x": 50,
+      "y": 250,
+      "icon": "boss",
+      "area": "Đỉnh Radar",
+      "spawn": "Cố định",
+      "random": "Cầm súng bắn tỉa M98B tầm xa"
+    },
+    {
+      "id": "bk_7",
+      "name": "Trạm Cứu Thương Doanh Trại",
+      "nameZh": "营区急救箱",
+      "x": 330,
+      "y": -230,
+      "icon": "ylb",
+      "area": "Doanh Trại",
+      "spawn": "100%",
+      "random": "Huyết thanh chống độc sa mạc"
+    }
+  ]
+}

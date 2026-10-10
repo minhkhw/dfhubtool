@@ -1,0 +1,208 @@
+{
+  "id": "ops-01",
+  "name": "Rừng Layali",
+  "mode": "ops",
+  "level": "Tiêu chuẩn (Toàn cảnh)",
+  "layer": "map_yc",
+  "isFloor": false,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 128,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -128,
+    "initY": 128,
+    "initZoom": 2,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Khu Biệt Thự Nghỉ Dưỡng VIP",
+      "x": 100,
+      "y": 300
+    },
+    {
+      "name": "Xưởng Khai Thác Gỗ Phía Bắc",
+      "x": -450,
+      "y": 550
+    },
+    {
+      "name": "Trang Trại Ven Sông",
+      "x": -200,
+      "y": -200
+    },
+    {
+      "name": "Bến Cano Cao Tốc Phía Nam",
+      "x": 400,
+      "y": -650
+    },
+    {
+      "name": "Tháp Canh Rừng Tây Nam",
+      "x": -700,
+      "y": -400
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "lg_1",
+      "name": "Bến Thuyền Cano Thoát Hiểm",
+      "nameZh": "快艇撤离点",
+      "x": 420,
+      "y": -660,
+      "icon": "exfil",
+      "area": "Bến Cano",
+      "spawn": "Cố định",
+      "exit": "Cần 20,000 Coin chi phí thuê cano"
+    },
+    {
+      "id": "lg_2",
+      "name": "Đường Mòn Bìa Rừng Phía Tây",
+      "nameZh": "西侧林间小道撤离点",
+      "x": -850,
+      "y": 100,
+      "icon": "exfil",
+      "area": "Bìa Rừng Tây",
+      "spawn": "Cố định",
+      "exit": "Mở tự do sau phút 12"
+    },
+    {
+      "id": "lg_3",
+      "name": "Phòng Thẻ Vàng · Dinh Thự Tổng Thống",
+      "nameZh": "总统庄园金卡房",
+      "x": 120,
+      "y": 320,
+      "icon": "door_gold",
+      "area": "Khu Biệt Thự",
+      "pickup": "Thẻ vàng Dinh Thự",
+      "random": "Bộ sưu tập đồng hồ Thụy Sĩ, tranh nghệ thuật đắt giá"
+    },
+    {
+      "id": "lg_4",
+      "name": "Phòng Thẻ Tím · Nhà Kho Xưởng Gỗ",
+      "nameZh": "伐木场仓库紫卡房",
+      "x": -440,
+      "y": 570,
+      "icon": "door_purple",
+      "area": "Xưởng Gỗ",
+      "pickup": "Thẻ tím Xưởng Gỗ",
+      "random": "Hòm vũ khí đặc nhiệm, súng săn cao cấp"
+    },
+    {
+      "id": "lg_5",
+      "name": "Két Sắt Biệt Thự Hoàng Gia",
+      "nameZh": "皇家庄园保险箱",
+      "x": 80,
+      "y": 280,
+      "icon": "bxx",
+      "area": "Khu Biệt Thự",
+      "spawn": "100%",
+      "random": "Chứa 400,000 Coin và thỏi vàng"
+    },
+    {
+      "id": "lg_6",
+      "name": "Két Sắt Văn Phòng Xưởng Gỗ",
+      "nameZh": "伐木场经理保险箱",
+      "x": -460,
+      "y": 520,
+      "icon": "bxx",
+      "area": "Xưởng Gỗ",
+      "spawn": "100%",
+      "random": "Hợp đồng chuyển nhượng triệu đô"
+    },
+    {
+      "id": "lg_7",
+      "name": "Thủ Lĩnh Phiến Quân Rừng Sâu",
+      "nameZh": "密林游击首领",
+      "x": 150,
+      "y": 250,
+      "icon": "boss",
+      "area": "Khu Biệt Thự",
+      "spawn": "Ngẫu nhiên",
+      "random": "Trang bị Shotgun tự động gắn đạn lửa, ném lựu cay"
+    },
+    {
+      "id": "lg_8",
+      "name": "Hòm Tiếp Tế Trang Trại",
+      "nameZh": "农场高阶军需箱",
+      "x": -180,
+      "y": -180,
+      "icon": "wqx",
+      "area": "Trang Trại",
+      "spawn": "100%",
+      "random": "Bộ giáp ngực cấp 4"
+    },
+    {
+      "id": "lg_9",
+      "name": "Trạm Y Tế Bìa Rừng",
+      "nameZh": "林区急救所",
+      "x": -720,
+      "y": -380,
+      "icon": "ylb",
+      "area": "Tháp Canh",
+      "spawn": "100%",
+      "random": "Balo cứu thương quân y"
+    }
+  ]
+}

@@ -1,0 +1,1813 @@
+{
+  "source": "Delta Force / Tencent",
+  "sourceUrl": "https://df.qq.com/cp/a20240729directory/",
+  "tileBase": "https://game.gtimg.cn/images/dfm/cp/a20240729directory/img/",
+  "maps": [
+    {
+      "id": "ops-10",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "map_yc",
+      "isFloor": false,
+      "count": 539,
+      "file": "/assets/maps/data/ops-10.json"
+    },
+    {
+      "id": "ops-11",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "map_yc",
+      "isFloor": false,
+      "count": 481,
+      "file": "/assets/maps/data/ops-11.json"
+    },
+    {
+      "id": "ops-21",
+      "name": "Căn cứ Không gian",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "map_htjd",
+      "isFloor": false,
+      "count": 291,
+      "file": "/assets/maps/data/ops-21.json"
+    },
+    {
+      "id": "ops-22",
+      "name": "Căn cứ Không gian",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "map_htjd",
+      "isFloor": false,
+      "count": 316,
+      "file": "/assets/maps/data/ops-22.json"
+    },
+    {
+      "id": "ops-30",
+      "name": "Brakkesh",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "map_bks2",
+      "isFloor": false,
+      "count": 518,
+      "file": "/assets/maps/data/ops-30.json"
+    },
+    {
+      "id": "ops-31",
+      "name": "Brakkesh",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "map_bks2",
+      "isFloor": false,
+      "count": 518,
+      "file": "/assets/maps/data/ops-31.json"
+    },
+    {
+      "id": "ops-32",
+      "name": "Brakkesh",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "map_bks2",
+      "isFloor": false,
+      "count": 522,
+      "file": "/assets/maps/data/ops-32.json"
+    },
+    {
+      "id": "ops-42",
+      "name": "Nhà tù Thủy Triều",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "map_cxjy",
+      "isFloor": false,
+      "count": 523,
+      "file": "/assets/maps/data/ops-42.json"
+    },
+    {
+      "id": "ops-50",
+      "name": "Khu AZ3",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "map_az3",
+      "isFloor": false,
+      "count": 1230,
+      "file": "/assets/maps/data/ops-50.json"
+    },
+    {
+      "id": "ops-51",
+      "name": "Khu AZ3",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "map_az3",
+      "isFloor": false,
+      "count": 1215,
+      "file": "/assets/maps/data/ops-51.json"
+    },
+    {
+      "id": "ops-00",
+      "name": "Đập Zero",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "map_db",
+      "isFloor": false,
+      "count": 417,
+      "file": "/assets/maps/data/ops-00.json"
+    },
+    {
+      "id": "ops-00_B1",
+      "name": "Đập Zero",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "daba_0f",
+      "isFloor": true,
+      "count": 23,
+      "file": "/assets/maps/data/ops-00_B1.json"
+    },
+    {
+      "id": "ops-00_1F",
+      "name": "Đập Zero",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "daba_1f",
+      "isFloor": true,
+      "count": 19,
+      "file": "/assets/maps/data/ops-00_1F.json"
+    },
+    {
+      "id": "ops-00_2F",
+      "name": "Đập Zero",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "daba_2f",
+      "isFloor": true,
+      "count": 36,
+      "file": "/assets/maps/data/ops-00_2F.json"
+    },
+    {
+      "id": "ops-01",
+      "name": "Đập Zero",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "map_db",
+      "isFloor": false,
+      "count": 413,
+      "file": "/assets/maps/data/ops-01.json"
+    },
+    {
+      "id": "ops-01_B1",
+      "name": "Đập Zero",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "daba_0f",
+      "isFloor": true,
+      "count": 23,
+      "file": "/assets/maps/data/ops-01_B1.json"
+    },
+    {
+      "id": "ops-01_1F",
+      "name": "Đập Zero",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "daba_1f",
+      "isFloor": true,
+      "count": 20,
+      "file": "/assets/maps/data/ops-01_1F.json"
+    },
+    {
+      "id": "ops-01_2F",
+      "name": "Đập Zero",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "daba_2f",
+      "isFloor": true,
+      "count": 41,
+      "file": "/assets/maps/data/ops-01_2F.json"
+    },
+    {
+      "id": "ops-02",
+      "name": "Đập Zero",
+      "level": "Đêm cuối",
+      "mode": "ops",
+      "layer": "map_db",
+      "isFloor": false,
+      "count": 429,
+      "file": "/assets/maps/data/ops-02.json"
+    },
+    {
+      "id": "ops-02_B1",
+      "name": "Đập Zero",
+      "level": "Đêm cuối",
+      "mode": "ops",
+      "layer": "daba_0f",
+      "isFloor": true,
+      "count": 27,
+      "file": "/assets/maps/data/ops-02_B1.json"
+    },
+    {
+      "id": "ops-02_1F",
+      "name": "Đập Zero",
+      "level": "Đêm cuối",
+      "mode": "ops",
+      "layer": "daba_1f",
+      "isFloor": true,
+      "count": 27,
+      "file": "/assets/maps/data/ops-02_1F.json"
+    },
+    {
+      "id": "ops-02_2F",
+      "name": "Đập Zero",
+      "level": "Đêm cuối",
+      "mode": "ops",
+      "layer": "daba_2f",
+      "isFloor": true,
+      "count": 41,
+      "file": "/assets/maps/data/ops-02_2F.json"
+    },
+    {
+      "id": "ops-03",
+      "name": "Đập Zero",
+      "level": "Đêm vĩnh cửu",
+      "mode": "ops",
+      "layer": "map_db",
+      "isFloor": false,
+      "count": 367,
+      "file": "/assets/maps/data/ops-03.json"
+    },
+    {
+      "id": "ops-03_B1",
+      "name": "Đập Zero",
+      "level": "Đêm vĩnh cửu",
+      "mode": "ops",
+      "layer": "daba_0f",
+      "isFloor": true,
+      "count": 23,
+      "file": "/assets/maps/data/ops-03_B1.json"
+    },
+    {
+      "id": "ops-03_1F",
+      "name": "Đập Zero",
+      "level": "Đêm vĩnh cửu",
+      "mode": "ops",
+      "layer": "daba_1f",
+      "isFloor": true,
+      "count": 19,
+      "file": "/assets/maps/data/ops-03_1F.json"
+    },
+    {
+      "id": "ops-03_2F",
+      "name": "Đập Zero",
+      "level": "Đêm vĩnh cửu",
+      "mode": "ops",
+      "layer": "daba_2f",
+      "isFloor": true,
+      "count": 36,
+      "file": "/assets/maps/data/ops-03_2F.json"
+    },
+    {
+      "id": "ops-10_1F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_1f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-10_1F.json"
+    },
+    {
+      "id": "ops-10_2F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_2f",
+      "isFloor": true,
+      "count": 17,
+      "file": "/assets/maps/data/ops-10_2F.json"
+    },
+    {
+      "id": "ops-10_s",
+      "name": "Thung lũng Layali",
+      "level": "Tổng quát｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "map_yc2",
+      "isFloor": false,
+      "count": 471,
+      "file": "/assets/maps/data/ops-10_s.json"
+    },
+    {
+      "id": "ops-10_s_1F",
+      "name": "Thung lũng Layali",
+      "level": "Tổng quát｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "cgxg_1f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-10_s_1F.json"
+    },
+    {
+      "id": "ops-10_s_2F",
+      "name": "Thung lũng Layali",
+      "level": "Tổng quát｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "cgxg_2f",
+      "isFloor": true,
+      "count": 17,
+      "file": "/assets/maps/data/ops-10_s_2F.json"
+    },
+    {
+      "id": "ops-10_ldz_1F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_ldz_1f",
+      "isFloor": true,
+      "count": 8,
+      "file": "/assets/maps/data/ops-10_ldz_1F.json"
+    },
+    {
+      "id": "ops-10_ldz_2F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_ldz_2f",
+      "isFloor": true,
+      "count": 7,
+      "file": "/assets/maps/data/ops-10_ldz_2F.json"
+    },
+    {
+      "id": "ops-10_ldz_3F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_ldz_3f",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-10_ldz_3F.json"
+    },
+    {
+      "id": "ops-10_ldz_4F",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_ldz_4f",
+      "isFloor": true,
+      "count": 17,
+      "file": "/assets/maps/data/ops-10_ldz_4F.json"
+    },
+    {
+      "id": "ops-10_ldz_B1",
+      "name": "Thung lũng Layali",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "cgxg_ldz_b1",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-10_ldz_B1.json"
+    },
+    {
+      "id": "ops-11_1F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_1f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-11_1F.json"
+    },
+    {
+      "id": "ops-11_2F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_2f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-11_2F.json"
+    },
+    {
+      "id": "ops-11_s",
+      "name": "Thung lũng Layali",
+      "level": "Bí mật｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "map_yc2",
+      "isFloor": false,
+      "count": 478,
+      "file": "/assets/maps/data/ops-11_s.json"
+    },
+    {
+      "id": "ops-11_s_1F",
+      "name": "Thung lũng Layali",
+      "level": "Bí mật｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "cgxg_1f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-11_s_1F.json"
+    },
+    {
+      "id": "ops-11_s_2F",
+      "name": "Thung lũng Layali",
+      "level": "Bí mật｜Tai nạn máy bay",
+      "mode": "ops",
+      "layer": "cgxg_2f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-11_s_2F.json"
+    },
+    {
+      "id": "ops-11_ldz_1F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_ldz_1f",
+      "isFloor": true,
+      "count": 10,
+      "file": "/assets/maps/data/ops-11_ldz_1F.json"
+    },
+    {
+      "id": "ops-11_ldz_2F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_ldz_2f",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-11_ldz_2F.json"
+    },
+    {
+      "id": "ops-11_ldz_3F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_ldz_3f",
+      "isFloor": true,
+      "count": 7,
+      "file": "/assets/maps/data/ops-11_ldz_3F.json"
+    },
+    {
+      "id": "ops-11_ldz_4F",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_ldz_4f",
+      "isFloor": true,
+      "count": 17,
+      "file": "/assets/maps/data/ops-11_ldz_4F.json"
+    },
+    {
+      "id": "ops-11_ldz_B1",
+      "name": "Thung lũng Layali",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "cgxg_ldz_b1",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-11_ldz_B1.json"
+    },
+    {
+      "id": "ops-21_s",
+      "name": "Căn cứ Không gian",
+      "level": "Bí mật|Sự cố cầu gãy",
+      "mode": "ops",
+      "layer": "map_htjd2",
+      "isFloor": false,
+      "count": 292,
+      "file": "/assets/maps/data/ops-21_s.json"
+    },
+    {
+      "id": "ops-22_s",
+      "name": "Căn cứ Không gian",
+      "level": "Bí mật hàng đầu|Sự cố cầu gãy",
+      "mode": "ops",
+      "layer": "map_htjd2",
+      "isFloor": false,
+      "count": 378,
+      "file": "/assets/maps/data/ops-22_s.json"
+    },
+    {
+      "id": "ops-31_B1",
+      "name": "Brakkesh",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "bks_1f",
+      "isFloor": true,
+      "count": 21,
+      "file": "/assets/maps/data/ops-31_B1.json"
+    },
+    {
+      "id": "ops-31_1F",
+      "name": "Brakkesh",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "bks_2f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-31_1F.json"
+    },
+    {
+      "id": "ops-31_2F",
+      "name": "Brakkesh",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "bks_3f",
+      "isFloor": true,
+      "count": 30,
+      "file": "/assets/maps/data/ops-31_2F.json"
+    },
+    {
+      "id": "ops-32_B1",
+      "name": "Brakkesh",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "bks_1f",
+      "isFloor": true,
+      "count": 21,
+      "file": "/assets/maps/data/ops-32_B1.json"
+    },
+    {
+      "id": "ops-32_1F",
+      "name": "Brakkesh",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "bks_2f",
+      "isFloor": true,
+      "count": 18,
+      "file": "/assets/maps/data/ops-32_1F.json"
+    },
+    {
+      "id": "ops-32_2F",
+      "name": "Brakkesh",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "bks_3f",
+      "isFloor": true,
+      "count": 30,
+      "file": "/assets/maps/data/ops-32_2F.json"
+    },
+    {
+      "id": "ops-42_1F",
+      "name": "Nhà tù Thủy Triều",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "cxjy_1f",
+      "isFloor": true,
+      "count": 372,
+      "file": "/assets/maps/data/ops-42_1F.json"
+    },
+    {
+      "id": "ops-42_2F",
+      "name": "Nhà tù Thủy Triều",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "cxjy_2f",
+      "isFloor": true,
+      "count": 60,
+      "file": "/assets/maps/data/ops-42_2F.json"
+    },
+    {
+      "id": "ops-42_3F",
+      "name": "Nhà tù Thủy Triều",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "cxjy_3f",
+      "isFloor": true,
+      "count": 11,
+      "file": "/assets/maps/data/ops-42_3F.json"
+    },
+    {
+      "id": "ops-42_4F",
+      "name": "Nhà tù Thủy Triều",
+      "level": "Tối mật",
+      "mode": "ops",
+      "layer": "cxjy_4f",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-42_4F.json"
+    },
+    {
+      "id": "ops-50_1_1F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_1_1f",
+      "isFloor": true,
+      "count": 108,
+      "file": "/assets/maps/data/ops-50_1_1F.json"
+    },
+    {
+      "id": "ops-50_1_2F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_1_2f",
+      "isFloor": true,
+      "count": 29,
+      "file": "/assets/maps/data/ops-50_1_2F.json"
+    },
+    {
+      "id": "ops-50_2_1F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_2_1f",
+      "isFloor": true,
+      "count": 71,
+      "file": "/assets/maps/data/ops-50_2_1F.json"
+    },
+    {
+      "id": "ops-50_2_2F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_2_2f",
+      "isFloor": true,
+      "count": 11,
+      "file": "/assets/maps/data/ops-50_2_2F.json"
+    },
+    {
+      "id": "ops-50_3_1F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_3_1f",
+      "isFloor": true,
+      "count": 45,
+      "file": "/assets/maps/data/ops-50_3_1F.json"
+    },
+    {
+      "id": "ops-50_3_2F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_3_2f",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-50_3_2F.json"
+    },
+    {
+      "id": "ops-50_1_3F",
+      "name": "lò phản ứng RBMK",
+      "level": "Thường",
+      "mode": "ops",
+      "layer": "az3_1_3f",
+      "isFloor": true,
+      "count": 8,
+      "file": "/assets/maps/data/ops-50_1_3F.json"
+    },
+    {
+      "id": "ops-51_1_1F",
+      "name": "lò phản ứng RBMK",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_1_1f",
+      "isFloor": true,
+      "count": 108,
+      "file": "/assets/maps/data/ops-51_1_1F.json"
+    },
+    {
+      "id": "ops-51_1_2F",
+      "name": "lò phản ứng RBMK",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_1_2f",
+      "isFloor": true,
+      "count": 29,
+      "file": "/assets/maps/data/ops-51_1_2F.json"
+    },
+    {
+      "id": "ops-51_2_1F",
+      "name": "viện khoa học cũ",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_2_1f",
+      "isFloor": true,
+      "count": 74,
+      "file": "/assets/maps/data/ops-51_2_1F.json"
+    },
+    {
+      "id": "ops-51_2_2F",
+      "name": "viện khoa học cũ",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_2_2f",
+      "isFloor": true,
+      "count": 11,
+      "file": "/assets/maps/data/ops-51_2_2F.json"
+    },
+    {
+      "id": "ops-51_1_3F",
+      "name": "lò phản ứng nước áp lực",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_1_3f",
+      "isFloor": true,
+      "count": 8,
+      "file": "/assets/maps/data/ops-51_1_3F.json"
+    },
+    {
+      "id": "ops-51_3_2F",
+      "name": "lò phản ứng nước áp lực",
+      "level": "Mật",
+      "mode": "ops",
+      "layer": "az3_3_2f",
+      "isFloor": true,
+      "count": 0,
+      "file": "/assets/maps/data/ops-51_3_2F.json"
+    },
+    {
+      "id": "war-dc_pc",
+      "name": "Đứt Gãy",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_dc",
+      "isFloor": false,
+      "count": 165,
+      "file": "/assets/maps/data/war-dc_pc.json"
+    },
+    {
+      "id": "war-dc_mobile",
+      "name": "Đứt Gãy",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_dc",
+      "isFloor": false,
+      "count": 165,
+      "file": "/assets/maps/data/war-dc_mobile.json"
+    },
+    {
+      "id": "war-dc_pc_s",
+      "name": "Đứt Gãy",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dc",
+      "isFloor": false,
+      "count": 70,
+      "file": "/assets/maps/data/war-dc_pc_s.json"
+    },
+    {
+      "id": "war-dc_mobile_s",
+      "name": "Đứt Gãy",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dc",
+      "isFloor": false,
+      "count": 66,
+      "file": "/assets/maps/data/war-dc_mobile_s.json"
+    },
+    {
+      "id": "war-df_pc",
+      "name": "Lưỡi Dao",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_df",
+      "isFloor": false,
+      "count": 100,
+      "file": "/assets/maps/data/war-df_pc.json"
+    },
+    {
+      "id": "war-df_mobile",
+      "name": "Lưỡi Dao",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_df",
+      "isFloor": false,
+      "count": 100,
+      "file": "/assets/maps/data/war-df_mobile.json"
+    },
+    {
+      "id": "war-df_pc_s",
+      "name": "Lưỡi Dao",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_df_zl",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-df_pc_s.json"
+    },
+    {
+      "id": "war-df_mobile_s",
+      "name": "Lưỡi Dao",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_df_zl",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-df_mobile_s.json"
+    },
+    {
+      "id": "war-dg_pc",
+      "name": "Đường Ray Đứt",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_dg",
+      "isFloor": false,
+      "count": 237,
+      "file": "/assets/maps/data/war-dg_pc.json"
+    },
+    {
+      "id": "war-dg_mobile",
+      "name": "Đường Ray Đứt",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_dg",
+      "isFloor": false,
+      "count": 237,
+      "file": "/assets/maps/data/war-dg_mobile.json"
+    },
+    {
+      "id": "war-dg_pc_s",
+      "name": "Đường Ray Đứt",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dg",
+      "isFloor": false,
+      "count": 75,
+      "file": "/assets/maps/data/war-dg_pc_s.json"
+    },
+    {
+      "id": "war-dg_mobile_s",
+      "name": "Đường Ray Đứt",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dg",
+      "isFloor": false,
+      "count": 65,
+      "file": "/assets/maps/data/war-dg_mobile_s.json"
+    },
+    {
+      "id": "war-dsc_pc",
+      "name": "Đấu Trường Claudius",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 210,
+      "file": "/assets/maps/data/war-dsc_pc.json"
+    },
+    {
+      "id": "war-dsc_mobile",
+      "name": "Đấu Trường Claudius",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 210,
+      "file": "/assets/maps/data/war-dsc_mobile.json"
+    },
+    {
+      "id": "war-dsc_pc_s",
+      "name": "Đấu Trường Claudius",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-dsc_pc_s.json"
+    },
+    {
+      "id": "war-dsc_mobile_s",
+      "name": "Đấu Trường Claudius",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-dsc_mobile_s.json"
+    },
+    {
+      "id": "war-dsc2_pc",
+      "name": "Đấu Trường II",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 210,
+      "file": "/assets/maps/data/war-dsc2_pc.json"
+    },
+    {
+      "id": "war-dsc2_mobile",
+      "name": "Đấu Trường II",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 210,
+      "file": "/assets/maps/data/war-dsc2_mobile.json"
+    },
+    {
+      "id": "war-dsc2_pc_s",
+      "name": "Đấu Trường II",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-dsc2_pc_s.json"
+    },
+    {
+      "id": "war-dsc2_mobile_s",
+      "name": "Đấu Trường II",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_dsc",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-dsc2_mobile_s.json"
+    },
+    {
+      "id": "war-gc_pc",
+      "name": "Xuyên Phá",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_gc",
+      "isFloor": false,
+      "count": 68,
+      "file": "/assets/maps/data/war-gc_pc.json"
+    },
+    {
+      "id": "war-gc_mobile",
+      "name": "Xuyên Phá",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_gc",
+      "isFloor": false,
+      "count": 68,
+      "file": "/assets/maps/data/war-gc_mobile.json"
+    },
+    {
+      "id": "war-gc_pc_s",
+      "name": "Xuyên Phá",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_gc_zl",
+      "isFloor": false,
+      "count": 19,
+      "file": "/assets/maps/data/war-gc_pc_s.json"
+    },
+    {
+      "id": "war-gc_mobile_s",
+      "name": "Xuyên Phá",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_gc_zl",
+      "isFloor": false,
+      "count": 19,
+      "file": "/assets/maps/data/war-gc_mobile_s.json"
+    },
+    {
+      "id": "war-hdz_pc",
+      "name": "Mắt Bão",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_hdz",
+      "isFloor": false,
+      "count": 151,
+      "file": "/assets/maps/data/war-hdz_pc.json"
+    },
+    {
+      "id": "war-hdz_mobile",
+      "name": "Mắt Bão",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_hdz",
+      "isFloor": false,
+      "count": 151,
+      "file": "/assets/maps/data/war-hdz_mobile.json"
+    },
+    {
+      "id": "war-hdz_pc_s",
+      "name": "Mắt Bão",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_hdz",
+      "isFloor": false,
+      "count": 38,
+      "file": "/assets/maps/data/war-hdz_pc_s.json"
+    },
+    {
+      "id": "war-hdz_mobile_s",
+      "name": "Mắt Bão",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_hdz",
+      "isFloor": false,
+      "count": 38,
+      "file": "/assets/maps/data/war-hdz_mobile_s.json"
+    },
+    {
+      "id": "war-jq_pc",
+      "name": "Vùng Tro Tàn",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_jq",
+      "isFloor": false,
+      "count": 70,
+      "file": "/assets/maps/data/war-jq_pc.json"
+    },
+    {
+      "id": "war-jq_mobile",
+      "name": "Vùng Tro Tàn",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_jq",
+      "isFloor": false,
+      "count": 70,
+      "file": "/assets/maps/data/war-jq_mobile.json"
+    },
+    {
+      "id": "war-jq_pc_s",
+      "name": "Vùng Tro Tàn",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_jq_zl",
+      "isFloor": false,
+      "count": 49,
+      "file": "/assets/maps/data/war-jq_pc_s.json"
+    },
+    {
+      "id": "war-jq_mobile_s",
+      "name": "Vùng Tro Tàn",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_jq_mobile_zl",
+      "isFloor": false,
+      "count": 44,
+      "file": "/assets/maps/data/war-jq_mobile_s.json"
+    },
+    {
+      "id": "war-jzt_pc",
+      "name": "Kim Tự Tháp",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_jzt",
+      "isFloor": false,
+      "count": 141,
+      "file": "/assets/maps/data/war-jzt_pc.json"
+    },
+    {
+      "id": "war-jzt_mobile",
+      "name": "Kim Tự Tháp",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_jzt",
+      "isFloor": false,
+      "count": 141,
+      "file": "/assets/maps/data/war-jzt_mobile.json"
+    },
+    {
+      "id": "war-jzt_pc_s",
+      "name": "Kim Tự Tháp",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_jzt",
+      "isFloor": false,
+      "count": 36,
+      "file": "/assets/maps/data/war-jzt_pc_s.json"
+    },
+    {
+      "id": "war-jzt_mobile_s",
+      "name": "Kim Tự Tháp",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_jzt",
+      "isFloor": false,
+      "count": 33,
+      "file": "/assets/maps/data/war-jzt_mobile_s.json"
+    },
+    {
+      "id": "war-ljd_pc",
+      "name": "Điểm Tới Hạn",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_ljd_pc",
+      "isFloor": false,
+      "count": 55,
+      "file": "/assets/maps/data/war-ljd_pc.json"
+    },
+    {
+      "id": "war-ljd_mobile",
+      "name": "Điểm Tới Hạn",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_ljd_pc",
+      "isFloor": false,
+      "count": 55,
+      "file": "/assets/maps/data/war-ljd_mobile.json"
+    },
+    {
+      "id": "war-ljd_pc_s",
+      "name": "Điểm Tới Hạn",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_ljd_zl",
+      "isFloor": false,
+      "count": 33,
+      "file": "/assets/maps/data/war-ljd_pc_s.json"
+    },
+    {
+      "id": "war-ljd_mobile_s",
+      "name": "Điểm Tới Hạn",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_ljd_zl",
+      "isFloor": false,
+      "count": 33,
+      "file": "/assets/maps/data/war-ljd_mobile_s.json"
+    },
+    {
+      "id": "war-mgjcq_pc",
+      "name": "Phố Cổ Mog",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_mgjcq",
+      "isFloor": false,
+      "count": 93,
+      "file": "/assets/maps/data/war-mgjcq_pc.json"
+    },
+    {
+      "id": "war-mgjcq_mobile",
+      "name": "Phố Cổ Mog",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_mgjcq",
+      "isFloor": false,
+      "count": 93,
+      "file": "/assets/maps/data/war-mgjcq_mobile.json"
+    },
+    {
+      "id": "war-mgjcq_pc_s",
+      "name": "Phố Cổ Mog",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_mgjcq",
+      "isFloor": false,
+      "count": 37,
+      "file": "/assets/maps/data/war-mgjcq_pc_s.json"
+    },
+    {
+      "id": "war-mgjcq_mobile_s",
+      "name": "Phố Cổ Mog",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_mgjcq",
+      "isFloor": false,
+      "count": 37,
+      "file": "/assets/maps/data/war-mgjcq_mobile_s.json"
+    },
+    {
+      "id": "war-pc_pc",
+      "name": "Đỉnh Cao",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_pc",
+      "isFloor": false,
+      "count": 230,
+      "file": "/assets/maps/data/war-pc_pc.json"
+    },
+    {
+      "id": "war-pc_mobile",
+      "name": "Đỉnh Cao",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_pc",
+      "isFloor": false,
+      "count": 227,
+      "file": "/assets/maps/data/war-pc_mobile.json"
+    },
+    {
+      "id": "war-pc_pc_s",
+      "name": "Đỉnh Cao",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_pc_zl",
+      "isFloor": false,
+      "count": 59,
+      "file": "/assets/maps/data/war-pc_pc_s.json"
+    },
+    {
+      "id": "war-pc_mobile_s",
+      "name": "Đỉnh Cao",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_pc_mobile_zl",
+      "isFloor": false,
+      "count": 47,
+      "file": "/assets/maps/data/war-pc_mobile_s.json"
+    },
+    {
+      "id": "war-qhz_pc",
+      "name": "Chiến Hào",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_qhz",
+      "isFloor": false,
+      "count": 151,
+      "file": "/assets/maps/data/war-qhz_pc.json"
+    },
+    {
+      "id": "war-qhz_mobile",
+      "name": "Chiến Hào",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_qhz",
+      "isFloor": false,
+      "count": 126,
+      "file": "/assets/maps/data/war-qhz_mobile.json"
+    },
+    {
+      "id": "war-qhz_pc_s",
+      "name": "Chiến Hào",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_qhz_zl",
+      "isFloor": false,
+      "count": 45,
+      "file": "/assets/maps/data/war-qhz_pc_s.json"
+    },
+    {
+      "id": "war-qhz_mobile_s",
+      "name": "Chiến Hào",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_qhz_mobile_zl",
+      "isFloor": false,
+      "count": 36,
+      "file": "/assets/maps/data/war-qhz_mobile_s.json"
+    },
+    {
+      "id": "war-wmsyh_pc",
+      "name": "Kênh Umm",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_wmsyh",
+      "isFloor": false,
+      "count": 133,
+      "file": "/assets/maps/data/war-wmsyh_pc.json"
+    },
+    {
+      "id": "war-wmsyh_mobile",
+      "name": "Kênh Umm",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_wmsyh",
+      "isFloor": false,
+      "count": 135,
+      "file": "/assets/maps/data/war-wmsyh_mobile.json"
+    },
+    {
+      "id": "war-wmsyh_pc_s",
+      "name": "Kênh Umm",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_wmsyh",
+      "isFloor": false,
+      "count": 46,
+      "file": "/assets/maps/data/war-wmsyh_pc_s.json"
+    },
+    {
+      "id": "war-wmsyh_mobile_s",
+      "name": "Kênh Umm",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_wmsyh",
+      "isFloor": false,
+      "count": 46,
+      "file": "/assets/maps/data/war-wmsyh_mobile_s.json"
+    },
+    {
+      "id": "war-yz_pc",
+      "name": "Dư Chấn",
+      "level": "PC / Công thủ",
+      "mode": "war",
+      "layer": "map_yz",
+      "isFloor": false,
+      "count": 79,
+      "file": "/assets/maps/data/war-yz_pc.json"
+    },
+    {
+      "id": "war-yz_mobile",
+      "name": "Dư Chấn",
+      "level": "Di động / Công thủ",
+      "mode": "war",
+      "layer": "map_yz",
+      "isFloor": false,
+      "count": 79,
+      "file": "/assets/maps/data/war-yz_mobile.json"
+    },
+    {
+      "id": "war-yz_pc_s",
+      "name": "Dư Chấn",
+      "level": "PC / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_yz",
+      "isFloor": false,
+      "count": 29,
+      "file": "/assets/maps/data/war-yz_pc_s.json"
+    },
+    {
+      "id": "war-yz_mobile_s",
+      "name": "Dư Chấn",
+      "level": "Di động / Chiếm đóng",
+      "mode": "war",
+      "layer": "map_yz",
+      "isFloor": false,
+      "count": 29,
+      "file": "/assets/maps/data/war-yz_mobile_s.json"
+    },
+    {
+      "id": "bp-htzz",
+      "name": "Trạm trung chuyển Hàng không",
+      "level": "Phá hủy",
+      "mode": "bp",
+      "layer": "map_htzz",
+      "isFloor": false,
+      "count": 23,
+      "file": "/assets/maps/data/bp-htzz.json"
+    },
+    {
+      "id": "bp-lswdz",
+      "name": "Nhà máy điện Lam Thủy",
+      "level": "Phá hủy",
+      "mode": "bp",
+      "layer": "map_lswdz",
+      "isFloor": false,
+      "count": 24,
+      "file": "/assets/maps/data/bp-lswdz.json"
+    },
+    {
+      "id": "bp-smezy",
+      "name": "Biệt thự Samir",
+      "level": "Phá hủy",
+      "mode": "bp",
+      "layer": "map_smezy",
+      "isFloor": false,
+      "count": 20,
+      "file": "/assets/maps/data/bp-smezy.json"
+    }
+  ],
+  "tileBounds": {
+    "az3_1_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "az3_1_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -56,
+      "minNativeZoom": 3,
+      "maxNativeZoom": 5
+    },
+    "az3_1_3f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "az3_2_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -80,
+      "minNativeZoom": 3,
+      "maxNativeZoom": 5
+    },
+    "az3_2_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 3,
+      "maxNativeZoom": 5
+    },
+    "az3_3_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -96,
+      "minNativeZoom": 3,
+      "maxNativeZoom": 5
+    },
+    "az3_3_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 3,
+      "maxNativeZoom": 5
+    },
+    "bks_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "bks_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "bks_3f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "cgxg_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_ldz_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_ldz_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_ldz_3f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_ldz_4f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cgxg_ldz_b1": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 5,
+      "maxNativeZoom": 5
+    },
+    "cxjy_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "cxjy_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "cxjy_3f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "cxjy_4f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "daba_0f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "daba_1f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "daba_2f": {
+      "west": 0,
+      "east": 128,
+      "north": 0,
+      "south": -128,
+      "minNativeZoom": 4,
+      "maxNativeZoom": 5
+    },
+    "map_az3": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 4
+    },
+    "map_bks2": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_cxjy": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 4
+    },
+    "map_db": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_dc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_df": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_df_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_dg": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 4
+    },
+    "map_dsc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 4
+    },
+    "map_gc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_gc_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_hdz": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 4
+    },
+    "map_htjd": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_htjd2": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_htzz": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 3
+    },
+    "map_jq": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_jq_mobile_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_jq_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_jzt": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_ljd_pc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_ljd_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_lswdz": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 3
+    },
+    "map_mgjcq": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_pc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_pc_mobile_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_pc_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_qhz": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 0,
+      "maxNativeZoom": 5
+    },
+    "map_qhz_mobile_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_qhz_zl": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_smezy": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 1,
+      "maxNativeZoom": 3
+    },
+    "map_wmsyh": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    },
+    "map_yc": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_yc2": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 5
+    },
+    "map_yz": {
+      "west": 0,
+      "east": 256,
+      "north": 0,
+      "south": -256,
+      "minNativeZoom": 2,
+      "maxNativeZoom": 4
+    }
+  }
+}

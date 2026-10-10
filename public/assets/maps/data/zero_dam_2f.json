@@ -1,0 +1,143 @@
+{
+  "id": "ops-00_2F",
+  "name": "Đập Zero",
+  "mode": "ops",
+  "level": "Văn phòng Điều hành · Tầng 2F",
+  "layer": "cgxg_ldz_2f",
+  "isFloor": true,
+  "info": {
+    "width": 2048,
+    "height": 2048,
+    "bj": 64,
+    "centerX": 0,
+    "centerY": 0,
+    "initX": -64,
+    "initY": 64,
+    "initZoom": 2.5,
+    "rotate": 0
+  },
+  "regions": [
+    {
+      "name": "Phòng Giám Đốc Điều Hành",
+      "x": -40,
+      "y": 40
+    },
+    {
+      "name": "Phòng Hội Thảo VIP",
+      "x": 40,
+      "y": 40
+    },
+    {
+      "name": "Ban Quản Trị Hệ Thống",
+      "x": 0,
+      "y": -30
+    }
+  ],
+  "navigation": [
+    {
+      "typeList": [
+        {
+          "name": "Két sắt điện tử",
+          "icon": "bxx",
+          "idType": 1
+        },
+        {
+          "name": "Phòng thẻ vàng",
+          "icon": "door_gold",
+          "idType": 2
+        },
+        {
+          "name": "Phòng thẻ tím",
+          "icon": "door_purple",
+          "idType": 3
+        },
+        {
+          "name": "Phòng thẻ đỏ",
+          "icon": "door_red",
+          "idType": 4
+        },
+        {
+          "name": "Hòm vũ khí cao cấp",
+          "icon": "wqx",
+          "idType": 5
+        },
+        {
+          "name": "Hòm đạn quân sự",
+          "icon": "dyx",
+          "idType": 6
+        },
+        {
+          "name": "Trạm cứu thương",
+          "icon": "ylb",
+          "idType": 7
+        },
+        {
+          "name": "Máy tính dữ liệu",
+          "icon": "dn",
+          "idType": 8
+        },
+        {
+          "name": "Boss khu vực",
+          "icon": "boss",
+          "idType": 20
+        },
+        {
+          "name": "Điểm xuất phát",
+          "icon": "csd",
+          "idType": 26
+        },
+        {
+          "name": "Điểm rút lui",
+          "icon": "exfil",
+          "idType": 27
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "id": "zd_2f_1",
+      "name": "Phòng Thẻ Vàng Giám Đốc 2F",
+      "nameZh": "2F厂长金卡房",
+      "x": -50,
+      "y": 45,
+      "icon": "door_gold",
+      "area": "Phòng Giám Đốc",
+      "pickup": "Thẻ vàng Giám Đốc",
+      "random": "Két sắt bí mật, vàng thỏi & chip tối mật"
+    },
+    {
+      "id": "zd_2f_2",
+      "name": "Két Sắt Điện Tử VIP 2F",
+      "nameZh": "2F贵宾电子保险箱",
+      "x": -40,
+      "y": 55,
+      "icon": "bxx",
+      "area": "Phòng Giám Đốc",
+      "spawn": "100%",
+      "random": "Chứa tối đa 500k xu & nhẫn kim cương"
+    },
+    {
+      "id": "zd_2f_3",
+      "name": "Phòng Thẻ Tím Lưu Trữ Dữ Liệu",
+      "nameZh": "2F机密档案紫卡房",
+      "x": 50,
+      "y": 40,
+      "icon": "door_purple",
+      "area": "Phòng Hội Thảo",
+      "pickup": "Thẻ tím Hồ Sơ",
+      "random": "USB hồ sơ tuyệt mật, tài liệu mật mã"
+    },
+    {
+      "id": "zd_2f_4",
+      "name": "Hòm Quân Dụng Cấp 5",
+      "nameZh": "五级军需箱",
+      "x": 0,
+      "y": -40,
+      "icon": "wqx",
+      "area": "Hành Lang Trung Tâm",
+      "spawn": "100%",
+      "random": "Mũ giáp titan cấp 5"
+    }
+  ]
+}
