@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Bản đồ tương tác chiến thuật Delta Force: Tra cứu vị trí két sắt, phòng thẻ khóa, điểm rút quân, hòm vũ khí, boss và vật tư các map Đập Zero, Thung lũng Layali, Căn cứ Không gian, Brakkesh, Nhà tù Thủy Triều, Khu AZ3. Dữ liệu và giao diện chuẩn Shushu.fan.">
+  <title>Bản đồ chiến thuật Delta Force</title>
+  <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005">
+  <link rel="stylesheet" href="leaflet.css">
+  <link rel="stylesheet" href="shushu-map.css?v=20261009-tiles-v4">
+  <link rel="stylesheet" href="brand-theme.css?v=20261009-autoredeem-2">
+  <style>
+    /* Scope adjustments for bottom dock */
+    body {
+      padding-bottom: 64px !important;
+      overflow: hidden;
+      background: #0a0e14;
+    }
+    .bottom-dock {
+      z-index: 9999 !important;
+    }
+  </style>
+  <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+</head>
+<body>
+  <div class="shushu-viewport">
+    <!-- Main Leaflet Stage -->
+    <div id="shushuMapCanvas" role="application" aria-label="Bản đồ chiến thuật Delta Force"></div>
+
+    <!-- Loading Overlay -->
+    <div class="shushu-loader-overlay" id="shushuLoader">
+      <div class="shushu-spinner"></div>
+      <span style="font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:0.5px;">ĐANG TẢI DỮ LIỆU BẢN ĐỒ ...</span>
+    </div>
+
+    <!-- Top Left HUD: Brand, Map Switcher, Difficulty, Quick Locate, Marker Filter -->
+    <div class="shushu-hud-topleft">
+      <!-- Brand Bar -->
+      <div class="shushu-brand-bar">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#fbbf24;fill:none;stroke-width:2;"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg>
+        <div class="shushu-brand-title">
+          <b>DELTA FORCE</b>
+          <span>BẢN ĐỒ</span>
+        </div>
+        <span class="shushu-badge-ver">v1.2.0</span>
+      </div>
+
+      <!-- Map Switcher Strip -->
+      <div class="shushu-maps-strip" id="shushuMapsStrip">
+        <!-- Rendered by shushu-map.js -->
+      </div>
+
+      <!-- Sub Bar: Difficulty & Quick Locate & Event -->
+      <div class="shushu-sub-bar">
+        <select class="shushu-select" id="shushuSelectDiff" aria-label="Chọn độ khó">
+          <!-- Rendered by shushu-map.js -->
+        </select>
+        <div class="shushu-divider"></div>
+        <select class="shushu-select" id="shushuSelectLocate" aria-label="Định vị nhanh khu vực">
+          <option value="">Định vị nhanh</option>
+        </select>
+        <button type="button" class="shushu-event-btn" id="shushuBtnEvent" style="display:none;"></button>
+      </div>
+
+      <!-- Category Filter Drawer (Accordion) -->
+      <div class="shushu-filter-card" id="shushuFilterCard">
+        <button type="button" class="shushu-filter-header" id="shushuFilterHeader">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+            Bộ lọc đánh dấu
+          </span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="shushu-filter-body" id="shushuFilterBody">
+          <div class="shushu-filter-actions">
+            <button type="button" class="shushu-action-btn" id="shushuSelectAll">Chọn tất cả</button>
+            <button type="button" class="shushu-action-btn" id="shushuClearAll">Bỏ chọn</button>
+          </div>
+          <div id="shushuFilterGroups">
+            <!-- Rendered by shushu-map.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Right HUD: Zoom, Reset, Crosshair, Floor Switcher -->
+    <div class="shushu-hud-topright">
+      <div class="shushu-btn-group">
+        <button type="button" class="shushu-hud-btn" id="shushuZoomIn" title="Phóng to">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div style="height:1px;background:var(--border);"></div>
+        <button type="button" class="shushu-hud-btn" id="shushuZoomOut" title="Thu nhỏ">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+      </div>
+
+      <button type="button" class="shushu-hud-btn shushu-hud-btn-single" id="shushuResetView" title="Đặt lại góc nhìn">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line></svg>
+      </button>
+
+      <button type="button" class="shushu-hud-btn shushu-hud-btn-single" id="shushuCrosshairBtn" title="Định vị tọa độ">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+      </button>
+
+      <!-- Multi-floor Switcher Panel -->
+      <div class="shushu-floors-panel" id="shushuFloorsPanel" style="display:none;">
+        <div class="shushu-floor-title" id="shushuBuildingTitle">TẦNG</div>
+        <div id="shushuFloorsList">
+          <!-- Rendered by shushu-map.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Left Scale Bar -->
+    <div class="shushu-scale-box">
+      <span class="shushu-scale-label" id="shushuScaleLabel">100m</span>
+      <div class="shushu-scale-bar" id="shushuScaleBar" style="width:60px;"></div>
+    </div>
+
+    <!-- Crosshair HUD Overlay -->
+    <div class="shushu-crosshair-hud" id="shushuCrosshairHud" style="display:none;">
+      <div class="shushu-crosshair-line-v" id="shushuCrosshairLineV" style="display:none;"></div>
+      <div class="shushu-crosshair-line-h" id="shushuCrosshairLineH" style="display:none;"></div>
+      <div class="shushu-crosshair-label" id="shushuCrosshairLabel" style="display:none;">X: 0, Y: 0</div>
+    </div>
+  </div>
+
+  <!-- Standardized 5-item Bottom Navigation Dock -->
+  <nav class="bottom-dock" aria-label="Thanh tác vụ cố định">
+    <a class="dock-item" href="index.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></span>
+      <span>Trang chủ</span>
+    </a>
+    <a class="dock-item" href="tools.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22,8.5 12,15.5 2,8.5"/></svg></span>
+      <span>Auto Redeem</span>
+    </a>
+    <a class="dock-item active" href="map.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg></span>
+      <span>Bản đồ</span>
+    </a>
+    <a class="dock-item" href="weapons.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+      <span>Vũ khí</span>
+    </a>
+    <a class="dock-item" href="news.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span>
+      <span>Tin tức</span>
+    </a>
+    <a class="dock-item" href="music.html"><span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span><span>Nhạc chuột</span></a>
+  </nav>
+
+  <!-- Local Leaflet and Shushu Map Engine -->
+  <script src="leaflet.js"></script>
+  <script src="map-i18n.js?v=20261009-diffs-v8"></script>
+  <script src="shushu-map.js?v=20261009-diffs-v8"></script>
+  <script src="music-player.js?v=20261010-v1" defer></script>
+</body>
+</html>

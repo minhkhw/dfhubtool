@@ -1,0 +1,1 @@
+This directory must be writable by PHP. Cache and error logs are generated here.

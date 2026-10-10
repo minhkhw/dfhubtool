@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+:root{color-scheme:dark;font-family:'Chakra Petch',sans-serif;background:#04111c;color:#e9f5fa}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{background:radial-gradient(circle at 50% -15%,#113952 0,transparent 40%),linear-gradient(180deg,#061a2a,#03101a 70%);font-weight:500}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:linear-gradient(#4ab6d622 1px,transparent 1px),linear-gradient(90deg,#4ab6d622 1px,transparent 1px);background-size:34px 34px}
+a{color:inherit;text-decoration:none}.map-header,.map-main{position:relative}.map-header{height:78px;padding:0 clamp(18px,4vw,72px);display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #3a789452;background:#051725da;backdrop-filter:blur(16px)}
+.map-brand{display:flex;align-items:center;gap:12px;min-width:max-content}.map-brand img{width:48px;height:48px;object-fit:contain}.map-brand span{display:grid;gap:1px}.map-brand strong{font-size:21px;line-height:1}.map-brand small{font-size:10px;letter-spacing:.16em;color:#95b7c6}
+.map-header nav{display:flex;align-items:center;gap:clamp(18px,3vw,44px);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.map-header nav a{color:#a5bac5;transition:color .2s}.map-header nav a:hover,.map-header nav a[aria-current]{color:#9cecff}.map-header-home{display:none}
+.map-main{width:min(1800px,calc(100% - 48px));margin:0 auto;padding:32px 0 40px}.map-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:25px}.map-eyebrow{display:flex;align-items:center;gap:10px;color:#6fdded;font-size:11px;font-weight:700;letter-spacing:.2em;margin:0 0 10px}.map-eyebrow span{width:24px;height:1px;background:#54d6e5;box-shadow:0 0 12px #54d6e5}.map-heading h1{font-size:clamp(28px,4vw,53px);line-height:1.08;letter-spacing:.015em;margin:0}.map-heading h1 em{color:#92eaff;font-style:normal}.map-description{color:#a2bbc8;margin:11px 0 0;font-size:14px}.map-source-link{border:1px solid #5798ad75;background:linear-gradient(110deg,#0b2b3d,#0b2236);padding:12px 16px;font-size:12px;font-weight:700;text-transform:uppercase;white-space:nowrap;letter-spacing:.04em}.map-source-link:hover{border-color:#7be6f1;color:#bbf8ff}.map-source-link span{font-size:18px;margin-left:12px}
+.map-frame-shell{border:1px solid #5687a383;background:#061a2a;box-shadow:0 26px 70px #0007;overflow:hidden}.map-frame-top{height:40px;padding:0 16px;display:flex;align-items:center;gap:9px;background:#092235;border-bottom:1px solid #44718e73;color:#b5dce5;font-size:11px;font-weight:700;letter-spacing:.14em}.map-live-dot{height:7px;width:7px;border-radius:50%;background:#53e5c4;box-shadow:0 0 10px #53e5c4}.map-frame-credit{margin-left:auto;color:#83a2b3;font-size:10px;letter-spacing:.05em}.map-frame-shell iframe{display:block;width:100%;height:max(650px,calc(100vh - 240px));border:0;background:#091c2b}.map-help{font-size:12px;text-align:center;color:#8ba9b6;margin:16px 0 0}.map-help a{color:#95e7f7;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.map-header{height:64px;padding:0 14px}.map-brand img{height:38px;width:38px}.map-brand strong{font-size:17px}.map-brand small{font-size:8px}.map-header nav{display:none}.map-header-home{display:block;font-size:11px;text-transform:uppercase;color:#a9d6e2;font-weight:700}.map-main{width:100%;padding:23px 0 0}.map-heading{align-items:start;flex-direction:column;gap:18px;padding:0 16px;margin-bottom:20px}.map-heading h1{font-size:clamp(25px,7vw,38px)}.map-description{font-size:12px;line-height:1.5}.map-source-link{padding:10px 12px}.map-frame-shell{border-left:0;border-right:0}.map-frame-shell iframe{height:calc(100dvh - 154px);min-height:520px}.map-frame-credit{font-size:9px}.map-help{padding:0 16px 25px}}
+
+/* DFVN map application */
+.map-data-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid #55a6b45c;background:#0924339c;color:#a7e6eb;font-size:10px;font-weight:700;letter-spacing:.07em;white-space:nowrap}
+.map-data-badge i{width:7px;height:7px;border-radius:50%;background:#65e9b9;box-shadow:0 0 10px #65e9b9}
+.map-app{position:relative;display:grid;grid-template-columns:320px minmax(0,1fr);min-height:730px;height:calc(100dvh - 212px);max-height:1050px;border:1px solid #467d946f;box-shadow:0 24px 65px #0008;background:#061b2b;overflow:hidden}
+.map-sidebar{min-height:0;display:flex;flex-direction:column;background:linear-gradient(180deg,#0b2433,#071a27);border-right:1px solid #46819a66;z-index:500}
+.map-sidebar-top{padding:18px 16px 14px;display:grid;gap:12px;background:linear-gradient(155deg,#0d3043,#0a2130 62%,#102437);border-bottom:1px solid #49788b55}
+.map-mode-switch{display:grid;grid-template-columns:1fr 1fr;border:1px solid #5690a465;padding:3px;background:#061926}.map-mode-switch button{appearance:none;border:0;background:transparent;color:#91b4c2;min-height:38px;font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.08em;cursor:pointer}.map-mode-switch button.active{color:#05202a;background:linear-gradient(105deg,#84e2e8,#74badb);box-shadow:0 2px 12px #3cd4db40}
+.map-field{display:grid;gap:5px}.map-field span{color:#85adbd;font-size:10px;font-weight:700;letter-spacing:.14em}.map-field select{width:100%;height:42px;padding:0 35px 0 12px;border:1px solid #4e80936e;border-radius:0;background:#071b29;color:#e9f6fa;font:600 13px 'Chakra Petch',sans-serif;outline:0;cursor:pointer}.map-field select:focus,.map-search:focus-within{border-color:#79e3ee}
+.map-search{display:flex;align-items:center;height:43px;padding:0 11px;border:1px solid #4e80936e;background:#071b29;color:#81bfd0}.map-search svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8}.map-search input{width:100%;min-width:0;padding:0 0 0 9px;border:0;outline:0;background:transparent;color:#e9f6fa;font:500 12px 'Chakra Petch',sans-serif}.map-search input::placeholder{color:#7796a5}
+.map-results-head{padding:15px 16px 10px;display:flex;justify-content:space-between;align-items:center;color:#a1d7e0;font-size:11px;font-weight:700;letter-spacing:.12em}.map-results-head strong{color:#eaf8fb;font-size:13px}
+.map-categories{display:flex;gap:6px;overflow-x:auto;min-height:39px;padding:0 16px 10px;scrollbar-width:thin}.map-categories button{flex:none;border:1px solid #47768a79;padding:6px 9px;background:#0a2433;color:#aac3cf;font:600 11px 'Chakra Petch',sans-serif;cursor:pointer}.map-categories button.active{border-color:#8cdeea;color:#d9f8fb;background:#154152}
+.map-point-list{min-height:0;overflow:auto;scrollbar-color:#38667c transparent}.map-point-row{width:100%;padding:10px 15px;display:flex;align-items:center;gap:11px;border:0;border-bottom:1px solid #4b788537;background:transparent;color:#e5f2f5;text-align:left;cursor:pointer;font:inherit}.map-point-row:hover,.map-point-row.active{background:#18435a80}.map-point-row img{width:27px;height:27px;object-fit:contain;flex:none}.map-point-row .map-generic-pin{display:grid;place-items:center;width:27px;height:27px;border:1px solid #8fe3eb;border-radius:50%;color:#8fe3eb;flex:none}.map-point-row span{display:grid;gap:2px;min-width:0}.map-point-row b{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.map-point-row small{color:#87aabb;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.map-point-row:after{content:'›';margin-left:auto;color:#7eabb9;font-size:20px}.map-empty{padding:24px 16px;color:#8eafbc;font-size:12px;line-height:1.6}
+.map-point-detail{position:absolute;z-index:800;left:340px;bottom:20px;width:min(360px,calc(100% - 380px));max-height:58%;overflow:auto;padding:20px;border:1px solid #85d7e5a8;background:linear-gradient(155deg,#0b2a3b,#071b29);box-shadow:0 20px 45px #0009}.map-point-detail h2{margin:0 20px 10px 0;font-size:18px;color:#effbfc}.map-point-detail p{margin:0 0 8px;color:#bbd0d8;font-size:12px;line-height:1.5}.map-point-detail dt{color:#75c8d7;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.map-point-detail dd{margin:3px 0 12px;font-size:12px;color:#e0f0f2}.map-point-detail .detail-close{position:absolute;top:10px;right:12px;border:0;background:transparent;color:#9ccbd5;font-size:24px;cursor:pointer}.map-point-detail .detail-coordinate{font-size:10px;color:#7798a7}
+.map-stage{position:relative;min-width:0;background:#061a2a}.map-stage #mapCanvas{height:100%;width:100%;background:radial-gradient(circle at 50% 50%,#193b4c,#071925 75%)}.map-stage .leaflet-container{font-family:'Chakra Petch',sans-serif;background:transparent}.map-stage .leaflet-tile{image-rendering:auto}.map-stage-top{position:absolute;left:16px;top:16px;z-index:500;display:flex;align-items:center;gap:9px;max-width:calc(100% - 32px);padding:9px 11px;background:#071b29d9;border:1px solid #64a6b385;backdrop-filter:blur(10px);color:#d3f1f4;font-size:10px;font-weight:700;letter-spacing:.09em}.map-stage-top #mapStageTitle{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.map-stage-top #mapStageCount{color:#8db7c5;white-space:nowrap}.map-live-dot{flex:none}.map-zoom-controls{position:absolute;right:16px;bottom:45px;z-index:500;display:grid;gap:4px}.map-zoom-controls button{width:38px;height:38px;border:1px solid #78bac896;background:#071d2bdf;color:#dbf8fb;font:700 23px 'Chakra Petch',sans-serif;cursor:pointer}.map-zoom-controls button:hover{background:#194b5c}.map-attribution{position:absolute;bottom:8px;right:16px;z-index:500;padding:3px 6px;background:#061925bf;color:#a4bdc8;font-size:9px}.map-mobile-filters{display:none}.map-marker-icon{background:none;border:0}.map-marker-icon img{width:31px;height:31px;object-fit:contain;filter:drop-shadow(0 2px 3px #000a)}.map-marker-icon.active img{width:37px;height:37px;filter:drop-shadow(0 0 8px #8af4fc)}.map-marker-fallback{display:grid;place-items:center;width:24px;height:24px;border:2px solid #a3edf3;border-radius:50%;background:#10394e;color:#c6f8fb;font-size:10px;box-shadow:0 2px 8px #0009}.map-help{margin:11px 0 0}
+@media(max-width:900px){.map-app{grid-template-columns:270px minmax(0,1fr)}.map-point-detail{left:290px;width:min(340px,calc(100% - 320px))}.map-data-badge{display:none}}
+@media(max-width:700px){.map-main{padding-top:20px}.map-heading{margin-bottom:17px}.map-app{display:block;height:calc(100dvh - 190px);min-height:560px;max-height:none;border-left:0;border-right:0;position:relative}.map-stage{height:100%}.map-sidebar{position:absolute;top:0;bottom:0;left:0;width:min(330px,87vw);transform:translateX(-105%);transition:transform .24s ease;box-shadow:15px 0 40px #0009}.map-sidebar.open{transform:translateX(0)}.map-sidebar-top{padding:16px}.map-point-detail{left:12px;right:12px;bottom:60px;width:auto;max-height:42%;padding:16px}.map-stage-top{left:12px;top:12px;max-width:calc(100% - 24px);font-size:9px}.map-zoom-controls{right:12px;bottom:58px}.map-mobile-filters{position:absolute;left:12px;bottom:53px;z-index:700;display:flex;align-items:center;gap:15px;padding:0 13px;height:42px;border:1px solid #98e8ec;background:#0d3548;color:#e8f9fa;font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.09em}.map-mobile-filters span{font-size:17px}.map-attribution{right:9px;bottom:8px;font-size:8px}.map-help{padding:0 16px 24px;margin-top:14px}}
+
+/* Sidebar based on the tactical map reference: mode cards, item grid, compact rail. */
+.map-app{grid-template-columns:385px minmax(0,1fr);transition:grid-template-columns .25s ease}
+.map-app.is-collapsed{grid-template-columns:60px minmax(0,1fr)}
+.map-sidebar{position:relative;min-width:0;overflow:visible;background:linear-gradient(180deg,#09161bdc,#10232bdc),url('/assets/maps/ui/nav_bg2.png') left center/cover no-repeat;border-right:1px solid #5d889257}
+.map-sidebar-expanded{display:flex;flex-direction:column;height:100%;min-height:0}
+.map-sidebar-rail{display:none;height:100%;flex-direction:column;align-items:center;background:linear-gradient(180deg,#0b1b22b0,#10262bbd),url('/assets/maps/ui/nav_bg2.png') left center/auto 100% no-repeat}
+.map-app.is-collapsed .map-sidebar-expanded{display:none}
+.map-app.is-collapsed .map-sidebar-rail{display:flex}
+.map-sidebar-brand{height:78px;padding:17px 15px 10px 21px;display:flex;align-items:center;gap:10px;flex:none}
+.map-sidebar-brand svg{width:35px;height:35px;fill:#69efce;filter:drop-shadow(0 0 9px #42d8b33e);flex:none}
+.map-sidebar-brand>div{display:flex;align-items:baseline;gap:5px;white-space:nowrap;min-width:0}.map-sidebar-brand strong{color:#61ebc6;font-size:17px;font-weight:700;letter-spacing:-.07em}.map-sidebar-brand span{color:#edf7f7;font-size:16px;font-weight:700;letter-spacing:-.055em}
+.map-sidebar-brand button{margin-left:auto;width:32px;height:32px;border:1px solid #6a8b925f;background:#0a1b21b3;color:#d7ebec;font-size:19px;cursor:pointer}
+.map-mode-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 20px 16px;flex:none;border-bottom:1px solid #69929b4f}
+.map-mode-cards button{height:79px;position:relative;overflow:hidden;border:1px solid #5e7c826b;padding:0;background-position:center;background-size:cover;filter:saturate(.8) brightness(.83);cursor:pointer}
+.map-mode-cards button:nth-child(1){background-image:url('/assets/maps/ui/map_type_fhdd_act.png')}.map-mode-cards button:nth-child(2){background-image:url('/assets/maps/ui/map_type_qmzc.png')}.map-mode-cards button:nth-child(3){background-image:url('/assets/maps/ui/map_type_bp.png')}
+.map-mode-cards button:after{content:"";position:absolute;inset:auto 0 0;height:27px;background:linear-gradient(180deg,#071316f0,#071316)}
+.map-mode-cards button span{position:absolute;z-index:1;left:1px;right:1px;bottom:7px;color:#e5eeec;font:700 10px 'Chakra Petch',sans-serif;letter-spacing:.015em;text-shadow:0 1px 3px #000}
+.map-mode-cards button.active{filter:none;border-color:#89ecd1;box-shadow:inset 0 0 0 1px #aaf6da88}.map-mode-cards button.active span{color:#b9ffe8}
+.map-sidebar-top{padding:0 20px 11px;gap:9px;background:none;flex:none;border-bottom:0}
+.map-current-row{box-sizing:border-box;min-width:0;min-height:59px;margin:0 -20px 2px;padding:9px 20px;display:flex;align-items:center;justify-content:space-between;gap:7px;background:#122b32a6;border-bottom:1px solid #50737a5e}
+.map-current-row strong{display:-webkit-box;flex:1;min-width:0;max-height:2.5em;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;color:#eef7f5;font-size:18px;line-height:1.25;white-space:normal;overflow-wrap:anywhere}.map-current-row small{font-size:10px;font-weight:500;color:#a4bfc2}
+.map-current-row button{flex:none;min-height:29px;padding:0 8px;border:1px solid #6d91987d;background:#0c2026;color:#bfd2d1;font:600 10px 'Chakra Petch',sans-serif;cursor:pointer}.map-current-row button:hover{color:#caffed;border-color:#80eac8}
+.map-selectors{padding:8px;background:#091b23b8;border:1px solid #5b858a59}.map-selectors .map-field select{height:35px}
+.map-search{height:36px;background:#0e2026bf;border-color:#61808771}.map-search input{font-size:11px}.map-search svg{width:16px;height:16px}
+.map-quick-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.map-field-inline{height:34px;display:flex;align-items:center;gap:3px;border:1px solid #61808771;background:#0c2026bb;padding:0 6px;color:#8fbab9}.map-field-inline>span{font-size:19px;line-height:1;color:#89acae;letter-spacing:0}.map-field-inline select{height:30px;padding:0 17px 0 2px;border:0;background:transparent;color:#c7d8d7;font-size:10px;text-overflow:ellipsis;min-width:0}
+.map-quick-controls-event{align-items:center}.map-event-label{color:#91b9b5;font-size:10px;white-space:nowrap;letter-spacing:.02em}.map-quick-controls-event .map-field-inline{width:100%}
+.map-select-all{display:flex;align-items:center;justify-content:flex-end;gap:7px;color:#c7d8d7;font-size:10px}.map-select-all input{appearance:none;width:15px;height:12px;margin:0;border:1px solid #779691;background:#08191c;cursor:pointer}.map-select-all input:checked{background:linear-gradient(90deg,#73ddb9,#4aa996);box-shadow:inset 0 0 0 3px #10262a}
+.map-sidebar-scroll{flex:1;min-height:0;overflow:auto;padding:0 20px 10px;scrollbar-color:#668983 #13282c;scrollbar-width:thin}
+.map-results-head{padding:8px 0 10px;border-top:1px solid #577d7b69;color:#d7e7e2;font-size:11px}.map-results-head strong{font-size:11px;color:#8ce3c6}
+.map-categories{display:block;overflow:visible;min-height:0;padding:0}
+.map-category-section{margin:0 0 16px}.map-category-heading{width:100%;display:flex;align-items:center;justify-content:space-between;padding:4px 0 8px;border:0;border-bottom:1px solid #62817977;background:none;color:#d4e4dd;text-align:left;font:600 12px 'Chakra Petch',sans-serif;cursor:pointer}.map-category-heading span{font-size:15px;color:#80b4a9}.map-category-section.is-folded .map-category-grid{display:none}
+.map-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 8px;padding-top:11px}
+.map-category-tile{min-width:0;padding:0;border:0;background:none;color:#a8bfba;text-align:center;cursor:pointer}.map-category-tile .tile-art{position:relative;display:grid;place-items:center;width:48px;height:44px;margin:0 auto;border:0;background:none}.map-category-tile .tile-art img{width:42px;height:42px;object-fit:contain}.map-category-tile .tile-art b{position:absolute;right:0;bottom:0;color:#e7f7ef;font-size:9px;text-shadow:0 1px 3px #000}.map-category-tile>span:last-child{display:block;overflow:visible;height:auto;padding-top:4px;font-size:10px;line-height:1.25;overflow-wrap:anywhere;word-break:normal}.map-category-tile:hover .tile-art img,.map-category-tile.active .tile-art img{filter:drop-shadow(0 0 7px #72e7be88)}.map-category-tile.active>span:last-child{color:#b8ffe7}
+.map-point-list[hidden]{display:none}.map-point-list{max-height:220px;overflow:auto;border-top:1px solid #668b8268}.map-point-row{padding:7px 4px}.map-point-row img{width:24px;height:24px}
+.map-sidebar-footer{flex:none;padding:13px 20px 58px;border-top:1px solid #4f777459;background:#0b2025ae;text-align:center}.map-sidebar-footer button{width:140px;height:30px;border:1px solid #59ae9c;background:#0d2b2c;color:#82edc9;font:700 11px 'Chakra Petch',sans-serif;cursor:pointer}.map-sidebar-footer button:hover{background:#18423b}
+.map-sidebar-rail>button{width:42px;height:37px;margin-top:34px;border:1px solid #668a877e;background:#12302e9c;color:#d5eae3;font-size:20px;cursor:pointer}.map-rail-tools{display:grid;gap:8px;margin-top:58px}.map-rail-tools button{display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid #668a877e;background:#0b2228ad;color:#bcd5d1;cursor:pointer}.map-rail-tools button:hover,.map-sidebar-rail>button:hover{border-color:#92ecd0;color:#adf4dd}.map-rail-tools svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8}
+.map-point-detail{left:405px}.map-app.is-collapsed .map-point-detail{left:80px;width:min(360px,calc(100% - 110px))}
+.map-mobile-filters{display:none!important}
+@media(max-width:1100px) and (min-width:701px){.map-app{grid-template-columns:355px minmax(0,1fr)}.map-app.is-collapsed{grid-template-columns:60px minmax(0,1fr)}.map-sidebar-brand{padding-left:15px}.map-sidebar-brand strong{font-size:15px}.map-sidebar-brand span{font-size:14px}.map-sidebar-top{padding-left:15px;padding-right:15px}.map-current-row{margin-left:-15px;margin-right:-15px;padding-left:15px;padding-right:15px}.map-mode-cards{padding-left:15px;padding-right:15px}.map-sidebar-scroll{padding-left:15px;padding-right:15px}.map-point-detail{left:375px}}
+@media(max-width:700px){.map-app,.map-app.is-collapsed{display:block}.map-sidebar{position:absolute;top:0;bottom:0;left:0;width:min(385px,94vw);transform:none;transition:width .25s ease;box-shadow:12px 0 30px #0009}.map-app.is-collapsed .map-sidebar{width:60px}.map-stage{height:100%}.map-point-detail,.map-app.is-collapsed .map-point-detail{left:12px;right:12px;width:auto;bottom:55px;max-height:44%}.map-sidebar-brand{padding-left:12px;padding-right:10px}.map-sidebar-brand strong{font-size:14px}.map-sidebar-brand span{font-size:13px}.map-mode-cards{padding-left:12px;padding-right:12px}.map-sidebar-top{padding-left:12px;padding-right:12px}.map-current-row{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px}.map-sidebar-scroll{padding-left:12px;padding-right:12px}.map-sidebar-footer{padding-left:12px;padding-right:12px}.map-stage-top{left:72px;max-width:calc(100% - 84px)}.map-app:not(.is-collapsed) .map-stage-top{display:none}}
+
+/* The map is a full-window tool; controls stay inside the viewport. */
+html,body{width:100%;height:100%;overflow:hidden}
+body:before{display:none}
+.map-main{width:100%;height:100vh;height:100dvh;min-height:0;margin:0;padding:0}
+.map-app{width:100%;height:100%;min-height:0;max-height:none;border:0;box-shadow:none}
+.map-stage{height:100%}
+.map-home-link{position:absolute;z-index:500;top:16px;right:16px;display:flex;align-items:center;gap:7px;min-height:35px;padding:0 11px;border:1px solid #6c9fa592;background:#091e26db;color:#d7efea;font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.04em;backdrop-filter:blur(8px)}
+.map-home-link:hover{border-color:#90ebcf;color:#b8ffe5;background:#12362f}
+.map-home-link:first-letter{font-size:20px}
+.map-zoom-controls button:disabled{opacity:.45;cursor:default;background:#071d2bdf}
+.map-region-label{border:0;background:none;pointer-events:none}
+.map-region-label span{position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:max-content;max-width:160px;color:#d7e6e1;font:700 12px 'Chakra Petch',sans-serif;line-height:1.25;text-align:center;white-space:normal;text-shadow:0 1px 3px #000,0 0 9px #000;opacity:.88}
+.map-app.is-map-overview .map-region-label{display:none}
+@media(max-width:700px){.map-home-link{top:auto;right:12px;bottom:14px;min-height:36px}.map-home-link span{display:none}.map-home-link{font-size:22px;padding:0 10px}.map-stage-top{right:12px;max-width:calc(100% - 84px)}.map-app:not(.is-collapsed) .map-stage-top{display:none}.map-attribution{left:66px;right:auto;bottom:8px;max-width:calc(100% - 125px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+
+/* War sectors and the dedicated breach mode. */
+.map-war-controls[hidden],.map-bp-controls[hidden],.map-war-sectors[hidden]{display:none!important}
+.map-war-controls,.map-bp-controls{display:grid;gap:8px;color:#96c9bd;font-size:10px;font-weight:700;letter-spacing:.07em}
+.map-mode-subtabs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.map-mode-subtabs button{min-height:32px;padding:5px 7px;border:1px solid #62818a84;background:#0a1d25c4;color:#a7c5c8;font:700 10px 'Chakra Petch',sans-serif;cursor:pointer}
+.map-mode-subtabs button.active{border-color:#6de5bd;color:#bffff0;background:#124039a6}
+.map-app[data-mode=war] .map-quick-controls,.map-app[data-mode=bp] .map-quick-controls,.map-app[data-mode=bp] .map-select-all{display:none}
+.map-app[data-mode=bp] .map-category-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px 5px}
+.map-app[data-mode=bp] .map-category-tile .tile-art img{width:45px;height:45px}
+.map-app[data-mode=bp] .map-category-tile>span:last-child{font-size:9px}
+.map-war-sectors{position:absolute;top:20px;left:50%;z-index:500;transform:translateX(-50%);display:grid;justify-items:center;gap:7px;pointer-events:auto}
+.map-war-sector-tabs{display:flex;gap:10px;padding:4px 9px;background:#081d25d9;border:1px solid #648a8d75;backdrop-filter:blur(8px)}
+.map-war-sector-tabs button{width:31px;height:31px;border:1px solid #a2b8b6;background:#0d2025;color:#e4f0e9;font:700 16px 'Chakra Petch',sans-serif;cursor:pointer}
+.map-war-sector-tabs button.active{border-color:#5ce7b3;background:#12533d;color:#afffda}
+.map-war-sector-step{display:flex;align-items:center;justify-content:space-between;gap:18px;min-width:195px;height:35px;padding:0 7px;border:1px solid #73999c85;background:#0c2028df;color:#e3d290;font-size:12px;font-weight:700;backdrop-filter:blur(8px)}
+.map-war-sector-step button{width:27px;height:26px;border:1px solid #668b90;background:#0e2730;color:#e5f5ed;font:700 20px 'Chakra Petch',sans-serif;line-height:20px;cursor:pointer}
+.map-war-sector-step button:disabled{opacity:.35;cursor:default}
+.map-app[data-mode=war] .map-stage-top{top:100px}
+.map-app[data-mode=war] .map-marker-icon img{width:34px;height:34px}
+.map-app[data-mode=bp] .map-marker-icon img{width:40px;height:40px}
+@media(max-width:700px){.map-war-sectors{top:50px;left:calc(50% + 28px)}.map-app:not(.is-collapsed) .map-war-sectors{display:none}.map-app[data-mode=war] .map-stage-top{top:10px}.map-war-sector-tabs{gap:5px}.map-war-sector-tabs button{width:26px;height:26px;font-size:13px}.map-war-sector-step{min-width:160px;height:30px;font-size:10px}}
+
+/* The room action follows the sidebar reset button and stays accessible in the compact rail. */
+.map-stage-top[hidden],.map-room-backdrop[hidden],.map-room-join[hidden],.map-room-workspace[hidden],.map-room-edit[hidden]{display:none!important}
+.map-sidebar-footer{padding-top:54px;padding-bottom:13px}
+.map-sidebar-footer #mapSidebarReset{border-color:#d96e70;background:#5a2028;color:#ffe1de}
+.map-sidebar-footer #mapSidebarReset:hover{background:#7b2c32;border-color:#ff9d96}
+.map-room-dock{position:absolute;left:20px;right:20px;bottom:52px;z-index:600;display:flex;justify-content:center;font-family:'Chakra Petch',sans-serif}
+.map-room-toggle{display:flex;align-items:center;justify-content:center;gap:7px;width:140px;height:30px;padding:0 8px;border:1px solid #59ae9c;background:#0d2b2c;color:#82edc9;font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.02em;cursor:pointer}
+.map-room-toggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.map-room-toggle:hover,.map-room-toggle.is-in-room{border-color:#53e5c4;background:#12443f}
+.map-room-toggle span{display:block;max-width:125px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.map-app.is-collapsed .map-room-dock{left:10px;right:10px;bottom:15px}.map-app.is-collapsed .map-room-toggle{width:40px;height:40px;padding:0}.map-app.is-collapsed .map-room-toggle span{display:none}
+.map-room-backdrop{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:16px;background:#031018ba;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-family:'Chakra Petch',sans-serif}
+.map-room-panel{position:relative;width:min(420px,100%);max-height:calc(100dvh - 32px);overflow:auto;padding:20px;border:1px solid #66c7b6;background:linear-gradient(145deg,#0c2a33,#071b29);box-shadow:0 20px 65px #000c;color:#e8f8f5}
+.map-room-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid #72aba752}.map-room-head strong{font-size:18px;overflow-wrap:anywhere}.map-room-head button{border:0;background:transparent;color:#a9e3d8;font-size:24px;line-height:20px;cursor:pointer}
+.map-room-join{display:flex;gap:8px;padding-top:15px}.map-room-join input{flex:1;width:100%;min-width:0;height:42px;padding:0 10px;border:1px solid #548b8e;background:#061a26;color:white;font:700 12px 'Chakra Petch',sans-serif;letter-spacing:.08em;text-transform:uppercase;outline:0}.map-room-join input:focus{border-color:#6cebc8}.map-room-join button,.map-room-edit button{padding:0 12px;border:1px solid #59d8b6;background:#12463c;color:#b9ffe3;font:700 10px 'Chakra Petch',sans-serif;white-space:nowrap;cursor:pointer}
+.map-room-workspace{position:absolute;left:16px;bottom:18px;z-index:480;display:grid;gap:9px;width:min(450px,calc(100% - 190px));padding:11px 12px;border:1px solid #66c7b6;background:linear-gradient(145deg,#0c2a33ec,#071b29f2);box-shadow:0 12px 32px #000a;color:#e8f8f5;backdrop-filter:blur(12px);font-family:'Chakra Petch',sans-serif}.map-room-presence{display:flex;align-items:center;gap:8px;margin:0;color:#acd1ce;font-size:10px}.map-room-presence button{margin-left:auto;border:0;background:transparent;color:#a9ddd0;font:700 10px 'Chakra Petch',sans-serif;text-decoration:underline;cursor:pointer}
+.map-room-tools{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px}.map-room-tools button,.map-room-color-tool{display:grid;place-items:center;min-width:0;min-height:38px;padding:4px;border:1px solid #5b878b;background:#0b2730;color:#b8d9d8;cursor:pointer}.map-room-tools button.active{border-color:#65e8c2;background:#165a4d;color:#e1fff5}.map-room-tools button:hover,.map-room-color-tool:hover{border-color:#65e8c2}.map-room-tools svg,.map-room-style svg,.map-room-edit svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.map-room-color-tool{position:relative;--room-color:#51f0c4}.map-room-color-swatch{width:19px;height:19px;border-radius:50%;border:2px solid #d8fff7;background:var(--room-color);box-shadow:0 0 0 1px #0a292b,0 0 8px var(--room-color)}.map-room-color-tool input[type=color]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.map-room-style{display:flex;align-items:center;gap:8px}.map-room-style label{display:flex;align-items:center;gap:8px;color:#a9ccca}.map-room-style input[type=range]{width:100px;accent-color:#5ce3b8}
+.map-room-edit{display:flex;align-items:center;gap:7px;padding:7px;border:1px solid #638f9070;background:#08242c;color:#e7f8f3;font-size:10px}.map-room-edit span{margin-right:auto}.map-room-edit button{display:grid;place-items:center;width:30px;height:30px;padding:3px}.map-room-edit #mapRoomDelete{border-color:#aa7474;background:#4b282b;color:#ffd4d4}.map-room-pin{border:0!important;background:none!important}.map-room-pin svg{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 5px #000c)}
+.map-room-hint,.map-room-message{margin:0;color:#8eb7b7;font-size:10px;line-height:1.45}.map-room-message:empty{display:none}.map-room-message.error{color:#ffb9ae}.map-room-drawing{cursor:crosshair!important;touch-action:none}
+@media(min-width:701px) and (max-width:1000px){.map-room-workspace{bottom:180px;width:min(450px,calc(100% - 32px))}}
+@media(max-width:700px){.map-room-dock{left:12px;right:12px}.map-app.is-collapsed .map-room-dock{left:10px;right:10px}.map-room-panel{padding:16px}.map-room-workspace{left:66px;right:58px;bottom:108px;width:auto;padding:9px;gap:7px}.map-room-tools{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.map-room-tools button,.map-room-color-tool{min-height:34px;padding:2px}.map-room-style input[type=range]{width:85px}.map-room-hint{display:none}}
+.map-marker-icon{display:grid!important;place-items:center;border:1px solid #73d9bfaa!important;background:linear-gradient(145deg,#1c6554d9,#0b3438df)!important;box-shadow:0 2px 10px #000b,inset 0 0 0 1px #9dffe42b}
+.map-marker-icon.active{border-color:#9dffe4!important;background:linear-gradient(145deg,#257d64,#124b4a)!important;box-shadow:0 0 12px #63e8ba9a,inset 0 0 0 1px #b8ffe65c}
+.map-marker-icon img,.map-app[data-mode=war] .map-marker-icon img,.map-app[data-mode=bp] .map-marker-icon img{max-width:calc(100% - 3px);max-height:calc(100% - 3px)}
+.map-stage #mapCanvas{position:relative;z-index:0;isolation:isolate}
+.map-room-draw-surface{display:none;position:absolute;inset:0;z-index:460;cursor:crosshair;touch-action:none}
+.map-stage.map-room-drawing .map-room-draw-surface{display:block}
+
+.map-rotate-overlay{display:none}
+@media (max-width:700px) and (orientation:portrait) and (pointer:coarse){
+  .map-rotate-overlay{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:22px;background:linear-gradient(155deg,#061923f5,#092c34f7);color:#e9faf5;font-family:'Chakra Petch',sans-serif;text-align:center;backdrop-filter:blur(12px)}
+  .map-rotate-card{width:min(340px,100%);padding:26px 22px;border:1px solid #63cbb6;background:#0a2831;box-shadow:0 18px 50px #0009}
+  .map-rotate-card svg{width:76px;height:76px;fill:none;stroke:#76ead0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .map-rotate-card h1{margin:14px 0 8px;font-size:21px;line-height:1.2}
+  .map-rotate-card p{margin:0;color:#b9d9d4;font-size:13px;line-height:1.55}
+  .map-rotate-card a{display:inline-block;margin-top:20px;padding:10px 18px;border:1px solid #58cfb2;color:#bbffe7;font-size:11px;font-weight:700;text-decoration:none}
+}
+@media (orientation:landscape) and (max-width:1000px) and (max-height:700px){
+  .map-app{grid-template-columns:min(300px,42vw) minmax(0,1fr)}
+  .map-app.is-collapsed{grid-template-columns:52px minmax(0,1fr)}
+  .map-sidebar-brand{height:55px;padding:8px 10px}
+  .map-sidebar-brand svg{width:27px;height:27px}
+  .map-mode-cards{padding-top:4px;padding-bottom:5px}
+  .map-sidebar-top{gap:5px}
+  .map-sidebar-footer{padding-top:10px;padding-bottom:8px}
+  .map-sidebar-rail>button{margin-top:12px;width:38px;height:35px}
+  .map-rail-tools{margin-top:30px;gap:6px}
+  .map-rail-tools button{width:38px;height:38px}
+  .map-app.is-collapsed .map-room-dock{left:6px;right:6px;bottom:8px}
+  .map-app.is-collapsed .map-room-toggle{width:38px;height:38px}
+  .map-room-workspace{left:8px;bottom:8px;width:min(490px,calc(100% - 126px));max-height:calc(100% - 16px);overflow-y:auto;padding:7px 9px;gap:5px}
+  .map-room-tools{grid-template-columns:repeat(8,minmax(0,1fr));gap:4px}
+  .map-room-tools button,.map-room-color-tool{min-height:40px;padding:3px}
+  .map-room-tools svg{width:22px;height:22px}
+  .map-room-presence{font-size:9px}
+  .map-room-hint{display:block;font-size:9px;line-height:1.3}
+  .map-room-style input[type=range]{width:100px}
+  .map-zoom-controls{right:8px;bottom:48px;gap:3px}
+  .map-zoom-controls button{width:40px;height:40px;font-size:21px}
+  .map-home-link{top:8px;right:8px;bottom:auto;min-height:32px;font-size:10px}
+  .map-home-link span{display:inline}
+  .map-stage-top{top:8px;left:8px;max-width:calc(100% - 115px);padding:6px 8px;font-size:9px}
+  .map-point-detail,.map-app.is-collapsed .map-point-detail{left:62px;right:48px;bottom:8px;width:auto;max-height:75%}
+}
+@media (orientation:landscape) and (max-width:700px) and (max-height:700px){
+  .map-app,.map-app.is-collapsed{display:block}
+  .map-sidebar{width:min(300px,58vw)}
+  .map-app.is-collapsed .map-sidebar{width:52px}
+  .map-room-workspace{left:62px;right:92px;width:auto}
+  .map-stage-top{left:62px;max-width:calc(100% - 170px)}
+}
+
+/* The tactical controls use the same cool cyan and glass surfaces as the main site. */
+.map-sidebar-brand img{width:35px;height:35px;object-fit:contain;flex:none;filter:drop-shadow(0 0 8px #74dce58c)}
+.map-sidebar-brand strong{color:#79dce9}
+.map-sidebar-brand span{color:#f1fbff}
+.map-sidebar,.map-sidebar-rail{border-color:#78cedc69}
+.map-sidebar-brand button,.map-sidebar-rail>button,.map-rail-tools button,.map-current-row button,.map-zoom-controls button,.map-home-link{border-color:#79cddd88;background:#092333dc;color:#dff8fb}
+.map-sidebar-rail>button:hover,.map-rail-tools button:hover,.map-zoom-controls button:hover,.map-home-link:hover{border-color:#9deef4;color:#f2ffff;background:#145066e8}
+.map-mode-cards button.active{border-color:#79deeb;box-shadow:inset 0 0 0 1px #8ee8f57d}
+.map-mode-cards button.active span,.map-results-head strong,.map-category-tile.active>span:last-child{color:#a1f0f6}
+.map-search,.map-field-inline,.map-selectors,.map-mode-subtabs button{border-color:#71bfd080;background:#0b2a3ad6;color:#d5eef2}
+.map-search:focus-within,.map-field select:focus,.map-room-join input:focus{border-color:#8de8ef}
+.map-mode-subtabs button.active,.map-war-sector-tabs button.active{border-color:#83e5ed;background:#175264;color:#efffff}
+.map-category-heading{border-color:#6bb7c16e;color:#dbeef2}
+.map-category-heading span{color:#89d6e0}
+.map-category-tile.active .tile-art img{filter:drop-shadow(0 0 7px #73deeb99)}
+.map-room-toggle{border-color:#79dce9;background:#103b4b;color:#c6f7fa}
+.map-room-toggle:hover,.map-room-toggle.is-in-room{border-color:#9cf1f5;background:#15566b;color:#efffff}
+.map-room-workspace{width:min(410px,calc(100% - 125px));padding:10px;border-color:#83dce9a8;background:linear-gradient(145deg,#092a3be8,#061a2aec);color:#eefbff;box-shadow:0 12px 34px #000a,inset 0 1px #a8ecf023;backdrop-filter:blur(16px)}
+.map-room-presence{display:grid;grid-template-columns:28px 7px minmax(0,1fr) auto;align-items:center;gap:8px;color:#b7dce5;min-width:0}
+.map-room-presence #mapRoomOnline{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.map-room-online-short{display:none}
+.map-room-presence button#mapRoomLeave{margin-left:0;color:#a2deea;white-space:nowrap}
+.map-room-tools-toggle{display:grid;place-items:center;width:27px;height:27px;flex:none;margin-left:0!important;padding:0;border:1px solid #7bc8d6!important;background:#123b4a!important;color:#c7f5fa!important;cursor:pointer;text-decoration:none!important}
+.map-room-tools-toggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.map-room-tools-body{display:grid;gap:7px;min-width:0}
+.map-room-workspace.is-tools-collapsed{width:min(220px,calc(100% - 125px));gap:0}
+.map-room-workspace.is-tools-collapsed .map-room-tools-body{display:none}
+.map-room-workspace.is-tools-collapsed .map-room-message:not(.error){display:none}
+.map-room-workspace.is-tools-collapsed .map-room-presence{min-width:0}
+.map-room-workspace.is-tools-collapsed #mapRoomOnline{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.map-room-color-tool{--room-color:#70dce8}
+.map-room-tools button,.map-room-color-tool{min-height:34px;border-color:#71aebb91;background:#0c2939;color:#c0e2e9}
+.map-room-tools button.active{border-color:#83e4ed;background:#16566a;color:#f0ffff}
+.map-room-tools button:hover,.map-room-color-tool:hover{border-color:#91edf2}
+.map-room-tools svg,.map-room-style svg,.map-room-edit svg{width:18px;height:18px}
+.map-room-tools{gap:5px}
+.map-room-tools button,.map-room-color-tool{min-height:40px}
+.map-room-style{padding-top:7px;border-top:1px solid #75b9c33d}
+.map-room-width-control{display:grid!important;grid-template-columns:32px minmax(0,1fr) 40px;gap:10px!important;width:100%;color:#b6d8e2}
+.map-room-width-control span{font-size:10px;font-weight:700;letter-spacing:.08em}
+.map-room-width-control input[type=range]{width:100%;min-width:0;cursor:pointer}
+.map-room-width-control output{font-size:10px;text-align:right;color:#c8edf3;white-space:nowrap}
+.map-room-style input[type=range]{accent-color:#70dce8}
+.map-room-panel,.map-rotate-card{border-color:#83dce9;background:linear-gradient(145deg,#0b3042,#071c2b);color:#effbff}
+.map-room-join button,.map-room-edit button{border-color:#79dce9;background:#155368;color:#e5fbff}
+.map-marker-icon{border-color:#78d7e6bb!important;background:linear-gradient(145deg,#1d6d84d9,#0b374edc)!important}
+.map-marker-icon.active{border-color:#a2f3f7!important;background:linear-gradient(145deg,#268ba5,#12566e)!important}
+
+@media (max-width:1000px) and (orientation:landscape) and (max-height:700px){
+  .map-app.is-collapsed{grid-template-columns:52px minmax(0,1fr)}
+  .map-sidebar-brand img{width:27px;height:27px}
+  .map-sidebar-brand>div{display:grid;gap:0;align-items:center;white-space:normal}
+  .map-sidebar-brand strong{font-size:12px;line-height:1.05;letter-spacing:0}
+  .map-sidebar-brand span{font-size:10px;line-height:1.1;letter-spacing:0}
+  .map-sidebar-brand button{width:29px;height:29px;flex:none}
+  .map-app:not(.is-collapsed) .map-room-dock{bottom:51px;left:7px;right:7px;padding:5px;background:#081e2bdc;border-top:1px solid #68bdcc66}
+}
+
+@media (max-width:700px) and (orientation:landscape) and (max-height:700px){
+  .map-sidebar{width:min(290px,66vw);box-shadow:12px 0 32px #0009}
+  .map-app.is-collapsed .map-sidebar{width:52px}
+  .map-sidebar-expanded{overflow:hidden}
+  .map-sidebar-brand{gap:6px;padding:5px 7px}
+  .map-sidebar-top{overflow-y:auto;min-height:0;flex:0 1 auto}
+  .map-sidebar-scroll{padding-bottom:52px}
+  .map-stage-top{left:58px;max-width:calc(100% - 156px)}
+}
+
+/* Keep the room tools and map navigation in separate lanes on small screens. */
+@media (max-width:700px), (max-width:1000px) and (orientation:landscape) and (max-height:700px){
+  .map-stage{--map-control-bottom:max(8px,env(safe-area-inset-bottom));--map-control-right:max(8px,env(safe-area-inset-right));--map-tool-left:8px}
+  .map-room-workspace{left:var(--map-tool-left);right:auto;bottom:var(--map-control-bottom);width:min(400px,calc(100% - var(--map-tool-left) - var(--map-control-right) - 56px));max-height:calc(100% - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto;padding:8px;gap:6px;scrollbar-width:thin;scrollbar-color:#5f9bab transparent;container:room-tools / inline-size}
+  .map-room-workspace.is-tools-collapsed{width:min(236px,calc(100% - var(--map-tool-left) - var(--map-control-right) - 56px));gap:0}
+  .map-room-presence{grid-template-columns:44px 7px minmax(0,1fr) auto;gap:5px;font-size:11px}
+  .map-room-tools-toggle{width:44px;height:44px}
+  .map-room-presence #mapRoomOnline{font-size:11px;text-overflow:clip;color:#d5eef2}
+  .map-room-online-full{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .map-room-online-short{display:inline}
+  .map-room-presence button#mapRoomLeave{min-height:44px;padding:0 3px;font-size:11px;text-underline-offset:3px}
+  .map-room-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .map-room-tools button,.map-room-color-tool{min-height:44px;padding:4px}
+  .map-room-tools svg{width:20px;height:20px}
+  .map-room-color-swatch{width:20px;height:20px}
+  .map-room-style{padding-top:6px}
+  .map-room-width-control{grid-template-columns:26px minmax(0,1fr) 32px;gap:6px!important;min-height:28px}
+  .map-room-width-control span,.map-room-width-control output{font-size:11px}
+  .map-room-style input[type=range]{width:100%}
+  .map-room-hint{display:none}
+  .map-room-message{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+  .map-home-link{top:auto;bottom:var(--map-control-bottom);right:var(--map-control-right);width:44px;min-height:44px;justify-content:center;padding:0;font-size:23px}
+  .map-home-link span{display:none}
+  .map-zoom-controls{right:var(--map-control-right);bottom:calc(var(--map-control-bottom) + 52px);gap:4px}
+  .map-zoom-controls button{width:44px;height:44px;font-size:23px}
+  .map-attribution{display:none}
+}
+@container room-tools (min-width:188px){
+  .map-room-tools{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@container room-tools (min-width:380px){
+  .map-room-tools{grid-template-columns:repeat(8,minmax(0,1fr))}
+}
+@media (max-width:700px){
+  .map-stage{--map-tool-left:calc(68px + env(safe-area-inset-left))}
+  .map-sidebar{padding-left:env(safe-area-inset-left)}
+  .map-app.is-collapsed .map-sidebar{width:calc(60px + env(safe-area-inset-left))}
+}
+@media (max-width:700px) and (orientation:landscape) and (max-height:700px){
+  .map-stage{--map-tool-left:calc(60px + env(safe-area-inset-left))}
+  .map-app.is-collapsed .map-sidebar{width:calc(52px + env(safe-area-inset-left))}
+}
+
+@media (max-width:700px) and (orientation:portrait) and (pointer:coarse){
+  .map-rotate-overlay{background:linear-gradient(155deg,#061b2aef,#0d3b53f4);color:#effbff}
+  .map-rotate-card{width:min(330px,100%);padding:26px 22px;box-shadow:0 20px 54px #0009}
+  .map-rotate-icon{position:relative;width:78px;height:78px;margin:0 auto;color:#83e7f0}
+  .map-phone-shape{position:absolute;top:5px;left:24px;width:31px;height:51px;border:3px solid currentColor;border-radius:6px;transform:rotate(90deg)}
+  .map-phone-shape:after{content:"";position:absolute;left:50%;bottom:3px;width:7px;height:2px;transform:translateX(-50%);background:currentColor;border-radius:2px}
+  .map-rotate-card .map-rotate-arrow{position:absolute;right:-2px;bottom:-2px;width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .map-rotate-card p{color:#bedee7}
+  .map-rotate-card a{border-color:#83dce9;color:#dbfaff}
+}
+
+/* Consistent selectors across browsers; keep their native values for map logic. */
+.map-field select option{background:#0b2636;color:#e5f5fa}
+.map-select-native{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0);white-space:nowrap;border:0!important}
+.map-select-trigger{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-width:0;min-height:38px;padding:0 10px;border:1px solid #71bfd080;border-radius:0;background:#0b2a3a;color:#e3f2f7;font:600 12px 'Chakra Petch',sans-serif;text-align:left;cursor:pointer}
+.map-select-trigger span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;font:inherit;letter-spacing:0}
+.map-select-trigger svg,.map-war-options summary svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.map-select-trigger:hover,.map-select-trigger[aria-expanded=true]{background:#153f52;border-color:#8de8ef}
+.map-select-trigger:focus-visible,.map-select-menu button:focus-visible,.map-war-options summary:focus-visible,.map-war-options button:focus-visible{outline:2px solid #8de8ef;outline-offset:2px}
+.map-select-trigger:disabled{opacity:.55;cursor:default}
+.map-field-inline{position:relative;height:38px;min-width:0}
+.map-field-inline .map-select-trigger{border:0;background:transparent;min-height:36px;padding:0 2px;font-size:12px}
+.map-select-menu{position:fixed;z-index:9000;margin:0;padding:4px;border:1px solid #7dc6d6;background:#0a2535;color:#e3f2f7;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#5b93a6 #0a2535}
+.map-select-menu[hidden]{display:none}
+.map-select-menu button{position:relative;display:block;width:100%;min-height:38px;padding:9px 30px 9px 11px;border:0;background:transparent;color:inherit;font:500 12px 'Chakra Petch',sans-serif;text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.map-select-menu button:hover,.map-select-menu button:focus{background:#174658;outline-offset:-2px}
+.map-select-menu button[aria-selected=true]{background:#1a5267;color:#f3ffff;font-weight:700}
+.map-select-menu button[aria-selected=true]:after{content:"";position:absolute;right:12px;top:13px;width:5px;height:10px;border:solid #97eef3;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.map-select-menu button:disabled{opacity:.45;cursor:default}
+.map-war-controls{gap:0;letter-spacing:0}
+.map-war-options{min-width:0;border:1px solid #71bfd080;background:#0b2a3ad6}
+.map-war-options summary{display:flex;align-items:center;gap:8px;min-height:38px;padding:7px 10px;list-style:none;color:#d6eef5;cursor:pointer;user-select:none}
+.map-war-options summary::-webkit-details-marker{display:none}
+.map-war-options summary>span:first-child{flex:none;font-size:11px;font-weight:700}
+.map-war-options summary #mapWarOptionsValue{min-width:0;margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;font-weight:500;color:#bcdce6}
+.map-war-options[open] summary{border-bottom:1px solid #71bfd044}
+.map-war-options[open] summary svg{transform:rotate(180deg)}
+.map-war-options-body{display:grid;gap:8px;padding:10px}
+.map-war-option-row{display:grid;grid-template-columns:60px minmax(0,1fr);gap:8px;align-items:center}
+.map-war-option-row>span{font-size:12px;font-weight:500;color:#bfdae3}
+.map-war-option-row .map-mode-subtabs{gap:5px}
+.map-war-option-row .map-mode-subtabs button{min-height:34px;font-size:11px;letter-spacing:0}
+@media (pointer:coarse){
+  .map-field-inline{height:44px}
+  .map-select-trigger,.map-field-inline .map-select-trigger,.map-select-menu button,.map-war-options summary,.map-war-option-row .map-mode-subtabs button{min-height:44px}
+  .map-select-menu button[aria-selected=true]:after{top:16px}
+}
+@media (max-width:700px){
+  .map-war-option-row{grid-template-columns:54px minmax(0,1fr);gap:5px}
+}
+.map-sidebar-body{display:flex;flex-direction:column;flex:1;min-height:0}
+@media (max-width:1000px) and (orientation:landscape) and (max-height:700px){
+  .map-sidebar-body{display:block;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#5b93a6 transparent}
+  .map-sidebar-top{overflow:visible}
+  .map-sidebar-scroll{overflow:visible;padding-bottom:10px}
+  .map-sidebar-footer{padding-top:54px;padding-bottom:8px}
+}

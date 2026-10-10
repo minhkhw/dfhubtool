@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005" />
+    <link rel="stylesheet" href="styles.css?v=20261007-category-sync-1" />
+    <link rel="stylesheet" href="brand-theme.css?v=20261008-facebook-community-1" />
+    <style>
+      .admin-layout {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        min-height: 100vh;
+        background: #060e15;
+      }
+      @media (max-width: 900px) {
+        .admin-layout { grid-template-columns: 1fr; }
+        .admin-sidebar { display: none; }
+      }
+      .admin-sidebar {
+        background: #091522;
+        border-right: 1px solid rgba(102, 228, 173, 0.2);
+        padding: 24px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .admin-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .admin-brand img { width: 36px; height: 36px; }
+      .admin-brand b { font-size: 1.15rem; color: #fff; display: block; }
+      .admin-brand small { color: var(--accent, #66e4ad); font-size: 0.72rem; letter-spacing: 0.08em; }
+      .admin-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .admin-nav-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        color: #8fa0b5;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.92rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      .admin-nav-item:hover, .admin-nav-item.active {
+        background: rgba(102, 228, 173, 0.12);
+        color: #fff;
+        border-color: rgba(102, 228, 173, 0.3);
+      }
+      .admin-nav-item svg { width: 18px; height: 18px; fill: currentColor; }
+      .admin-content {
+        padding: 32px 32px 60px;
+        overflow-y: auto;
+      }
+      .admin-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .admin-topbar h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .admin-topbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .admin-badge {
+        background: rgba(102, 228, 173, 0.15);
+        color: var(--accent, #66e4ad);
+        border: 1px solid rgba(102, 228, 173, 0.3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+      .admin-panel-card {
+        background: rgba(12, 24, 36, 0.85);
+        border: 1px solid rgba(102, 228, 173, 0.2);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      }
+      .card-header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+      .card-header-row h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: #fff;
+      }
+      .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+      .admin-table th {
+        text-align: left;
+        padding: 12px 14px;
+        color: #8fa0b5;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .admin-table td {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: #d0e0f0;
+      }
+      .admin-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .table-action-btn {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .table-action-btn:hover {
+        background: rgba(255, 50, 70, 0.2);
+        border-color: #ff3344;
+        color: #ff5566;
+      }
+      .table-action-btn.edit:hover {
+        background: rgba(102, 228, 173, 0.2);
+        border-color: var(--accent, #66e4ad);
+        color: var(--accent, #66e4ad);
+      }
+      .admin-form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .admin-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .admin-form-group label {
+        font-size: 0.8rem;
+        color: #8fa0b5;
+        font-weight: 600;
+      }
+      .admin-form-group input, .admin-form-group select, .admin-form-group textarea {
+        background: #08121a;
+        border: 1px solid rgba(102, 228, 173, 0.3);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+      .btn-primary-admin {
+        background: var(--accent, #66e4ad);
+        color: #041018;
+        font-weight: 800;
+        border: none;
+        padding: 10px 22px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-primary-admin:hover {
+        background: #8cf0c3;
+        box-shadow: 0 0 16px rgba(102, 228, 173, 0.4);
+      }
+    </style>
+    <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+</head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="index.html">
+          <img src="assets/dfvn-cloud-cat.png?v=20261005" alt="Logo">
+          <div>
+            <b>DELTA FORCE</b>
+            <small>ADMINISTRATOR</small>
+          </div>
+        </a>
+
+        <nav class="admin-nav">
+          <button class="admin-nav-item active" data-tab="overview">
+            <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10Zm0 8h8v-6H3v6Zm10 0h8V11h-8v10Zm0-18v6h8V3h-8Z"/></svg>
+            <span>Tổng quan</span>
+          </button>
+          <button class="admin-nav-item" data-tab="weapon-codes">
+            <svg viewBox="0 0 24 24"><path d="M3 8h11l2-2h5v5h-4l-2 2h-4v2H8v-2H5z"/><path d="M8 13v5m7-7v5m2-9 1-3"/></svg>
+            <span>Quản lý mã súng</span>
+          </button>
+          <button class="admin-nav-item" data-tab="weapon-posts">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>
+            <span>Bài viết Creator</span>
+          </button>
+          <button class="admin-nav-item" data-tab="users">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Tài khoản & Phân quyền</span>
+          </button>
+          <button class="admin-nav-item" data-tab="tools-codes">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4V7Z"/><path d="M12 7v12"/></svg>
+            <span>Giftcode VYAGE Tool</span>
+          </button>
+          <a href="sql-manager.html" class="admin-nav-item" style="color:#66e4ad;background:rgba(102,228,173,0.1);border-color:rgba(102,228,173,0.3);">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 2c4.42 0 8 1.48 8 2.5S16.42 9 12 9s-8-1.48-8-2.5S7.58 4 12 4zm0 16c-4.42 0-8-1.48-8-2.5v-2.12c1.94 1.34 4.8 2.12 8 2.12s6.06-.78 8-2.12v2.12c0 1.02-3.58 2.5-8 2.5zm0-5c-4.42 0-8-1.48-8-2.5v-2.12c1.94 1.34 4.8 2.12 8 2.12s6.06-.78 8-2.12v2.12c0 1.02-3.58 2.5-8 2.5z"/></svg>
+            <span>🗄️ Quản lý SQL Web</span>
+          </a>
+        </nav>
+
+        <div style="margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+          <a href="index.html" class="admin-nav-item" style="color:#66e4ad;">
+            <svg viewBox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            <span>Quay về trang chủ</span>
+          </a>
+          <button class="admin-nav-item" id="adminLogoutBtn" style="color:#ff6677;width:100%;text-align:left;background:none;border:none;">
+            <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+            <span>Đăng xuất</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="admin-content">
+        <header class="admin-topbar">
+          <div>
+            <span class="subpage-kicker">DFVN CONTROL PANEL</span>
+            <h1 id="adminPageHeading">BẢNG ĐIỀU KHIỂN HỆ THỐNG</h1>
+          </div>
+          <div class="admin-topbar-actions">
+            <span class="admin-badge" id="adminUserTag">Quản Trị Viên: admin</span>
+            <button class="btn-primary-admin" id="btnQuickRefresh">Làm mới dữ liệu</button>
+          </div>
+        </header>
+
+        <!-- Tab 1: Tổng quan (Overview) -->
+        <section id="tabOverview" class="admin-tab-pane">
+          <div class="admin-metrics-grid" style="margin-bottom:28px;">
+            <article class="metric-box accent">
+              <span>CỘNG ĐỒNG DISCORD</span>
+              <strong id="statMembers">1,161</strong>
+              <small>Thành viên đã tham gia</small>
+            </article>
+            <article class="metric-box light">
+              <span>TRỰC TUYẾN</span>
+              <strong id="statOnline">270</strong>
+              <small>Đang hoạt động lúc này</small>
+            </article>
+            <article class="metric-box">
+              <span>MÃ SÚNG 5V5 / OP</span>
+              <strong id="statCodes">10</strong>
+              <small>Mã phương án vũ khí</small>
+            </article>
+            <article class="metric-box accent">
+              <span>BÀI VIẾT CREATOR</span>
+              <strong id="statPosts">3</strong>
+              <small>Chia sẻ kinh nghiệm vũ khí</small>
+            </article>
+          </div>
+
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Cập nhật số liệu cộng đồng Discord</h2>
+            </div>
+            <form id="discordStatForm" class="admin-form-grid">
+              <div class="admin-form-group">
+                <label>Tổng số thành viên</label>
+                <input type="number" id="inputDiscordCount" value="1161" required>
+              </div>
+              <div class="admin-form-group">
+                <label>Số người online</label>
+                <input type="number" id="inputDiscordOnline" value="270" required>
+              </div>
+              <div class="admin-form-group">
+                <label>Tên Server</label>
+                <input type="text" id="inputDiscordName" value="VYAGE MEDIA TEAM" required>
+              </div>
+              <div class="admin-form-group" style="justify-content:flex-end;">
+                <button type="submit" class="btn-primary-admin">Lưu số liệu</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tab 2: Quản lý mã vũ khí (Weapon Codes) -->
+        <section id="tabWeaponCodes" class="admin-tab-pane" hidden>
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Thêm mã phương án súng mới</h2>
+            </div>
+            <form id="addWeaponCodeForm">
+              <div class="admin-form-grid">
+                <div class="admin-form-group">
+                  <label>Loại súng</label>
+                  <select id="codeWeaponSelect" required>
+                    <option value="M4A1">M4A1</option>
+                    <option value="M7">M7</option>
+                    <option value="AKM">AKM</option>
+                    <option value="Vector">Vector</option>
+                    <option value="AWM">AWM</option>
+                    <option value="CAR-15">CAR-15</option>
+                    <option value="UZI">UZI</option>
+                    <option value="AKS-74">AKS-74</option>
+                    <option value="AUG">AUG</option>
+                    <option value="M870">M870</option>
+                    <option value="PKM">PKM</option>
+                    <option value="SR-25">SR-25</option>
+                  </select>
+                </div>
+                <div class="admin-form-group">
+                  <label>Chế độ</label>
+                  <select id="codeModeSelect" required>
+                    <option value="5v5">5v5 · Đấu Đội</option>
+                    <option value="OP">OP · Chiến Dịch (Hazard)</option>
+                  </select>
+                </div>
+                <div class="admin-form-group">
+                  <label>Mã code phương án (21 ký tự)</label>
+                  <input type="text" id="codeStringInput" placeholder="Ví dụ: 6GVM4A1090NFS04935K4V" required>
+                </div>
+                <div class="admin-form-group">
+                  <label>Tiêu đề phương án</label>
+                  <input type="text" id="codeTitleInput" placeholder="M4A1 · Sấy Không Giật" required>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary-admin">+ Thêm mã súng</button>
+            </form>
+          </div>
+
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Danh sách mã vũ khí hiện tại</h2>
+              <span id="weaponCodesCountBadge" class="admin-badge">10 mã</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Vũ khí</th>
+                  <th>Chế độ</th>
+                  <th>Tiêu đề</th>
+                  <th>Mã Code</th>
+                  <th>Nguồn</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="weaponCodesTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Tab 3: Bài viết chia sẻ Creator (Weapon Posts) -->
+        <section id="tabWeaponPosts" class="admin-tab-pane" hidden>
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Bài viết hướng dẫn vũ khí từ Content Creator</h2>
+              <span id="weaponPostsCountBadge" class="admin-badge">3 bài</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Vũ khí</th>
+                  <th>Tác giả</th>
+                  <th>Tiêu đề bài viết</th>
+                  <th>Ngày đăng</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="weaponPostsTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Tab 4: Tài khoản & Phân quyền (Users & Roles) -->
+        <section id="tabUsers" class="admin-tab-pane" hidden>
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Quản lý tài khoản & phân quyền hệ thống</h2>
+              <span id="usersCountBadge" class="admin-badge">4 tài khoản</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Tên tài khoản</th>
+                  <th>Tên hiển thị</th>
+                  <th>Email</th>
+                  <th>Vai trò hiện tại</th>
+                  <th>Đổi vai trò</th>
+                </tr>
+              </thead>
+              <tbody id="usersTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Tab 5: Giftcode VYAGE Tool -->
+        <section id="tabToolsCodes" class="admin-tab-pane" hidden>
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Thêm Giftcode mới cho VYAGE Tool</h2>
+            </div>
+            <form id="addGiftcodeForm" class="admin-form-grid">
+              <div class="admin-form-group">
+                <label>Mã Giftcode</label>
+                <input type="text" id="giftcodeInput" placeholder="DFVIP2026" required>
+              </div>
+              <div class="admin-form-group">
+                <label>Phần thưởng</label>
+                <input type="text" id="giftcodeRewardInput" placeholder="100,000 Coin + Hòm Đặc Nhiệm" required>
+              </div>
+              <div class="admin-form-group" style="justify-content:flex-end;">
+                <button type="submit" class="btn-primary-admin">+ Thêm mã</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="admin-panel-card">
+            <div class="card-header-row">
+              <h2>Kho Giftcode đang kích hoạt</h2>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Mã Giftcode</th>
+                  <th>Phần thưởng</th>
+                  <th>Trạng thái</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="giftcodesTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Admin Panel Controller
+      let currentTab = 'overview';
+      let db = { users: [], weaponCodes: [], weaponPosts: [], giftcodes: [], community: { discord: { count: 1161, online: 270, name: 'VYAGE MEDIA TEAM' } } };
+
+      async function loadData() {
+        try {
+          const resp = await fetch('/api/admin/data');
+          if (resp.ok) {
+            db = await resp.json();
+            renderAll();
+          }
+        } catch (e) {
+          console.warn('Using local fallback state:', e);
+          renderAll();
+        }
+      }
+
+      function renderAll() {
+        // Metrics
+        document.getElementById('statMembers').textContent = (db.community?.discord?.count || 1161).toLocaleString('vi-VN');
+        document.getElementById('statOnline').textContent = (db.community?.discord?.online || 270).toLocaleString('vi-VN');
+        document.getElementById('statCodes').textContent = (db.weaponCodes?.length || 0).toLocaleString('vi-VN');
+        document.getElementById('statPosts').textContent = (db.weaponPosts?.length || 0).toLocaleString('vi-VN');
+
+        document.getElementById('inputDiscordCount').value = db.community?.discord?.count || 1161;
+        document.getElementById('inputDiscordOnline').value = db.community?.discord?.online || 270;
+        document.getElementById('inputDiscordName').value = db.community?.discord?.name || 'VYAGE MEDIA TEAM';
+
+        // Weapon Codes Table
+        const codesBody = document.getElementById('weaponCodesTableBody');
+        codesBody.innerHTML = (db.weaponCodes || []).map((c, i) => `
+          <tr>
+            <td><b>${c.weapon}</b></td>
+            <td><span class="admin-badge" style="padding:2px 8px;font-size:0.75rem;">${c.mode}</span></td>
+            <td>${c.title}</td>
+            <td><code style="background:rgba(255,255,255,0.08);padding:3px 6px;border-radius:4px;color:#66e4ad;">${c.code}</code></td>
+            <td>${(c.source || 'ADMIN').toUpperCase()}</td>
+            <td>
+              <button class="table-action-btn edit" onclick="navigator.clipboard.writeText('${c.code}');alert('Đã sao chép mã!');">Copy</button>
+              <button class="table-action-btn" onclick="deleteWeaponCode('${c.id || i}')">Xóa</button>
+            </td>
+          </tr>
+        `).join('') || '<tr><td colspan="6" style="text-align:center;color:#8fa0b5;">Chưa có mã nào</td></tr>';
+        document.getElementById('weaponCodesCountBadge').textContent = `${db.weaponCodes?.length || 0} mã`;
+
+        // Weapon Posts Table
+        const postsBody = document.getElementById('weaponPostsTableBody');
+        postsBody.innerHTML = (db.weaponPosts || []).map((p, i) => `
+          <tr>
+            <td><b>${p.weapon}</b></td>
+            <td>${p.author?.name || 'Creator'}</td>
+            <td>${p.title}</td>
+            <td>${new Date(p.createdAt || Date.now()).toLocaleDateString('vi-VN')}</td>
+            <td>
+              <button class="table-action-btn" onclick="deleteWeaponPost('${p.id || i}')">Xóa bài</button>
+            </td>
+          </tr>
+        `).join('') || '<tr><td colspan="5" style="text-align:center;color:#8fa0b5;">Chưa có bài viết nào</td></tr>';
+        document.getElementById('weaponPostsCountBadge').textContent = `${db.weaponPosts?.length || 0} bài`;
+
+        // Users Table
+        const usersBody = document.getElementById('usersTableBody');
+        usersBody.innerHTML = (db.users || []).map(u => `
+          <tr>
+            <td><b>@${u.username || u.accountId}</b></td>
+            <td>${u.name || u.displayName || u.username}</td>
+            <td>${u.email || '—'}</td>
+            <td><span class="admin-badge" style="background:${u.role==='admin'?'rgba(255,50,70,0.15)':u.role==='creator'?'rgba(102,228,173,0.15)':'rgba(255,255,255,0.08)'};color:${u.role==='admin'?'#ff5566':u.role==='creator'?'#66e4ad':'#d0e0f0'}">${(u.role||'member').toUpperCase()}</span></td>
+            <td>
+              <select onchange="updateUserRole('${u.id || u.username}', this.value)" style="background:#091522;color:#fff;border:1px solid rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">
+                <option value="member" ${u.role==='member'?'selected':''}>Member</option>
+                <option value="creator" ${u.role==='creator'?'selected':''}>Creator</option>
+                <option value="staff" ${u.role==='staff'?'selected':''}>Staff</option>
+                <option value="admin" ${u.role==='admin'?'selected':''}>Admin</option>
+              </select>
+            </td>
+          </tr>
+        `).join('');
+        document.getElementById('usersCountBadge').textContent = `${db.users?.length || 0} tài khoản`;
+
+        // Giftcodes Table
+        const gcBody = document.getElementById('giftcodesTableBody');
+        gcBody.innerHTML = (db.giftcodes || []).map((g, i) => `
+          <tr>
+            <td><code style="color:#66e4ad;font-weight:bold;">${g.code}</code></td>
+            <td>${g.reward}</td>
+            <td><span class="admin-badge" style="background:rgba(102,228,173,0.15);color:#66e4ad;">HOẠT ĐỘNG</span></td>
+            <td>
+              <button class="table-action-btn" onclick="deleteGiftcode(${i})">Xóa</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // Tab Switcher
+      document.querySelectorAll('.admin-nav-item[data-tab]').forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll('.admin-nav-item').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const tab = btn.dataset.tab;
+          document.querySelectorAll('.admin-tab-pane').forEach(p => p.hidden = true);
+          if (tab === 'overview') document.getElementById('tabOverview').hidden = false;
+          else if (tab === 'weapon-codes') document.getElementById('tabWeaponCodes').hidden = false;
+          else if (tab === 'weapon-posts') document.getElementById('tabWeaponPosts').hidden = false;
+          else if (tab === 'users') document.getElementById('tabUsers').hidden = false;
+          else if (tab === 'tools-codes') document.getElementById('tabToolsCodes').hidden = false;
+        };
+      });
+
+      // Actions
+      async function saveDb() {
+        try {
+          await fetch('/api/admin/data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(db)
+          });
+        } catch (e) {
+          console.error(e);
+        }
+        renderAll();
+      }
+
+      document.getElementById('discordStatForm').onsubmit = (e) => {
+        e.preventDefault();
+        db.community.discord.count = parseInt(document.getElementById('inputDiscordCount').value);
+        db.community.discord.online = parseInt(document.getElementById('inputDiscordOnline').value);
+        db.community.discord.name = document.getElementById('inputDiscordName').value;
+        saveDb();
+        alert('Đã cập nhật số liệu Discord thành công!');
+      };
+
+      document.getElementById('addWeaponCodeForm').onsubmit = (e) => {
+        e.preventDefault();
+        const newCode = {
+          id: 'wc_' + Date.now(),
+          weapon: document.getElementById('codeWeaponSelect').value,
+          mode: document.getElementById('codeModeSelect').value,
+          code: document.getElementById('codeStringInput').value.trim(),
+          title: document.getElementById('codeTitleInput').value.trim(),
+          source: 'admin',
+          createdAt: new Date().toISOString()
+        };
+        db.weaponCodes.unshift(newCode);
+        saveDb();
+        document.getElementById('addWeaponCodeForm').reset();
+        alert('Đã thêm mã súng mới thành công!');
+      };
+
+      window.deleteWeaponCode = function(id) {
+        if (!confirm('Bạn có chắc chắn muốn xóa mã này?')) return;
+        db.weaponCodes = db.weaponCodes.filter(c => c.id !== id && c !== id);
+        saveDb();
+      };
+
+      window.deleteWeaponPost = function(id) {
+        if (!confirm('Bạn có chắc chắn muốn xóa bài viết này?')) return;
+        db.weaponPosts = db.weaponPosts.filter(p => p.id !== id && p !== id);
+        saveDb();
+      };
+
+      window.updateUserRole = function(userId, newRole) {
+        const u = db.users.find(x => x.id === userId || x.username === userId);
+        if (u) {
+          u.role = newRole;
+          saveDb();
+          alert(`Đã đổi quyền của @${u.username} thành ${newRole.toUpperCase()}`);
+        }
+      };
+
+      document.getElementById('addGiftcodeForm').onsubmit = (e) => {
+        e.preventDefault();
+        const code = document.getElementById('giftcodeInput').value.trim().toUpperCase();
+        const reward = document.getElementById('giftcodeRewardInput').value.trim();
+        db.giftcodes.push({ code, reward, status: 'active' });
+        saveDb();
+        document.getElementById('addGiftcodeForm').reset();
+        alert('Đã thêm Giftcode mới!');
+      };
+
+      window.deleteGiftcode = function(index) {
+        db.giftcodes.splice(index, 1);
+        saveDb();
+      };
+
+      document.getElementById('btnQuickRefresh').onclick = loadData;
+
+      document.getElementById('adminLogoutBtn').onclick = async () => {
+        localStorage.removeItem('pieNoirUser');
+        localStorage.removeItem('pieNoirRole');
+        localStorage.removeItem('pieNoirOAuthUser');
+        await fetch('/api/auth/logout', { method: 'POST' }).catch(() => {});
+        location.href = 'index.html';
+      };
+
+      // Set admin session in localStorage
+      localStorage.setItem('pieNoirUser', 'admin');
+      localStorage.setItem('pieNoirRole', 'admin');
+
+      // Initialize
+      loadData();
+    </script>
+    <script src="music-player.js?v=20261010-v1" defer></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delta Force Việt Nam</title>
+    <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005" />
+    <meta
+      name="description"
+      content="điểm hẹn Delta Force tại Việt Nam: cập nhật cộng đồng, sự kiện, Content Creator và tin tức game."
+    />
+    <link rel="stylesheet" href="styles.css?v=20261010-minigame-v3" />
+    <link rel="stylesheet" href="brand-theme.css?v=20261010-minigame-v3" />
+    <link rel="stylesheet" href="news-weapons.css?v=20261010-minigame-v3">
+  <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+  <link rel="stylesheet" href="daily-codes.css?v=20261010-v1">
+  <link rel="stylesheet" href="/market-exchange.css?v=20261010-v5">
+</head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand-wrap">
+          <button class="menu-trigger category-toggle" aria-label="Mở danh mục">
+            <span class="menu-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="menu-label" data-i18n="menu">Danh mục</span>
+          </button>
+          <div class="brand-main">
+            <div class="brand-name">DELTA FORCE</div>
+            <small data-i18n="headerTagline">DELTA FORCE VIỆT NAM</small>
+          </div>
+        </div>
+
+                <div class="header-actions">
+          <a class="header-ready-badge" href="tools.html" title="Delta Force Auto Redeem v1.4.3">
+            <span class="df-badge-dot"></span>
+            <span>AUTO REDEEM</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="category-panel" id="categoryPanel" aria-hidden="true">
+      <div class="category-header">
+        <div>
+          <div class="tiny-label">DELTA FORCE</div>
+          <h2>DANH MỤC</h2>
+        </div>
+        <button class="close-category" aria-label="Đóng danh mục">×</button>
+      </div>
+
+            <div class="category-list">
+        <a href="index.html" class="category-item active"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-6v-6h-4v6H4Z"/></svg></span> <span class="text">Trang chủ</span> <span class="arrow">›</span></a>
+        <a href="tools.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="currentColor" stroke="none"/></svg></span> <span class="text">Auto Redeem</span> <span class="arrow">›</span></a>
+        <a href="map.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16"/></svg></span> <span class="text">Bản đồ chiến thuật</span> <span class="arrow">›</span></a>
+        <a href="weapons.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11l2-2h5v5h-4l-2 2h-4v2H8v-2H5zM8 13v5m7-7v5"/></svg></span> <span class="text">Kho vũ khí</span> <span class="arrow">›</span></a>
+        <a href="news.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span> <span class="text">Tin tức</span> <span class="arrow">›</span></a>
+        <a href="/wiki" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c3-1.3 5.5-1.3 8 .2 2.5-1.5 5-1.5 8-.2v14c-3-1.2-5.5-1.2-8 .3-2.5-1.5-5-1.5-8-.3v-14ZM12 5.7v14.1"/></svg></span> <span class="text">Wiki</span> <span class="arrow">›</span></a>
+        <a href="music.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span> <span class="text">Nhạc chuột</span> <span class="arrow">›</span></a>
+        <div class="category-item-group">
+          <button type="button" class="category-item category-item--parent expanded active" id="miniGameMenuBtn" aria-expanded="true" aria-controls="miniGameSubmenu">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15.5" cy="10.5" r="1" fill="currentColor"/><circle cx="17.5" cy="13.5" r="1" fill="currentColor"/></svg></span>
+            <span class="text">Mini Game</span>
+            <span class="badge-count" style="margin-left:auto;margin-right:8px;font-size:11px;background:rgba(0,255,200,0.15);color:#00ffc8;padding:2px 8px;border-radius:10px;font-weight:700;">4 Game</span>
+            <span class="chevron-arrow">›</span>
+          </button>
+          <div class="category-submenu open" id="miniGameSubmenu">
+            <a href="minigame.html?game=crate" class="category-subitem" data-game="crate">
+              <span class="sub-icon"><img src="fun/crate/CrateCover/minisafe.webp" alt="" width="20" height="20"></span>
+              <span class="text">Mở hộp chuột</span>
+            </a>
+            <a href="minigame.html?game=morse" class="category-subitem" data-game="morse">
+              <span class="sub-icon"><img src="assets/minigame-icons/morse.png" alt="" width="20" height="20"></span>
+              <span class="text">Cổng mã Morse</span>
+            </a>
+            <a href="minigame.html?game=hacker" class="category-subitem" data-game="hacker">
+              <span class="sub-icon"><img src="fun/HACER.png" alt="" width="20" height="20"></span>
+              <span class="text">Giải mã Morse</span>
+            </a>
+            <a href="minigame.html?game=equipment" class="category-subitem" data-game="equipment">
+              <span class="sub-icon"><img src="assets/minigame-icons/equipment.png" alt="" width="20" height="20"></span>
+              <span class="text">Trang bị ngẫu nhiên</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="home" class="page-shell">
+      <!-- DAILY CODES WIDGET (deltaforcetools.gg) -->
+      <section class="container daily-codes-shell" id="dailyCodesSection" aria-label="Daily Codes">
+        <div class="home-panel-frame">
+          <div class="home-panel-header">
+            <div>
+              <div class="home-panel-kicker">
+                <span class="df-badge-dot"></span>
+                <span>MÃ CỬA AN NINH CHIẾN TRƯỜNG · CẬP NHẬT TỰ ĐỘNG</span>
+              </div>
+              <h2 class="home-panel-title">MÃ CỬA HÀNG NGÀY <em>DAILY CODES</em></h2>
+            </div>
+            <div class="home-panel-badge-pill">
+              <span class="df-badge-dot" style="background:#00ffc8;box-shadow:0 0 8px #00ffc8;"></span>
+              <span>LIVE SCRAPED</span>
+            </div>
+          </div>
+
+          <div class="daily-codes-grid">
+          <!-- Card 1: Dam -->
+          <div class="daily-code-card" data-code="0629" data-name="Dam" title="Sao chép mã Dam: 0629">
+            <div class="daily-card-bg" style="background-image: url('images/lhdb-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">Dam</div>
+              <div class="daily-card-digits">0629</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+
+          <!-- Card 2: Layali Grove -->
+          <div class="daily-code-card" data-code="0685" data-name="Layali Grove" title="Sao chép mã Layali Grove: 0685">
+            <div class="daily-card-bg" style="background-image: url('images/cgxg-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">Layali Grove</div>
+              <div class="daily-card-digits">0685</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+
+          <!-- Card 3: Brakkesh -->
+          <div class="daily-code-card" data-code="0914" data-name="Brakkesh" title="Sao chép mã Brakkesh: 0914">
+            <div class="daily-card-bg" style="background-image: url('images/bks-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">Brakkesh</div>
+              <div class="daily-card-digits">0914</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+
+          <!-- Card 4: Space City -->
+          <div class="daily-code-card" data-code="0177" data-name="Space City" title="Sao chép mã Space City: 0177">
+            <div class="daily-card-bg" style="background-image: url('images/htjd-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">Space City</div>
+              <div class="daily-card-digits">0177</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+
+          <!-- Card 5: Tide Prison -->
+          <div class="daily-code-card" data-code="0975" data-name="Tide Prison" title="Sao chép mã Tide Prison: 0975">
+            <div class="daily-card-bg" style="background-image: url('images/cxjy-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">Tide Prison</div>
+              <div class="daily-card-digits">0975</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+
+          <!-- Card 6: AZ3 -->
+          <div class="daily-code-card" data-code="0530" data-name="AZ3" title="Sao chép mã AZ3: 0530">
+            <div class="daily-card-bg" style="background-image: url('images/az3-bg.png');"></div>
+            <div class="daily-card-fade"></div>
+            <div class="daily-card-body">
+              <div class="daily-card-title">AZ3</div>
+              <div class="daily-card-digits">0530</div>
+              <div class="daily-card-timestamp">
+                <span class="daily-card-date">2026/10/10</span>
+                <span class="daily-card-time">08:00</span>
+              </div>
+            </div>
+            <div class="daily-card-copied-pill">ĐÃ CHÉP</div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- MARKET EXCHANGE SPOTLIGHT (Chợ trời trong tuần này) -->
+      <section class="container" id="marketExchangeHomeSection" aria-label="Trao đổi hàng hoá Chợ trời">
+        <div class="market-exchange-section shushu-theme" style="margin-top: 24px;">
+          <div class="me-shushu-header" style="margin-bottom: 18px;">
+            <div class="me-shushu-title-row" style="margin-bottom: 12px;">
+              <h2 class="me-shushu-title" style="font-size: 19px;">
+                <span>Chợ trời trong tuần này</span>
+                <span class="me-shushu-date-tag">Từ 9/10 đến 16/10</span>
+              </h2>
+              <a href="/wiki?section=exchange&tab=next" class="me-preview-next-cta" style="padding: 7px 14px; font-size: 12.5px;">
+                <span>🔮 Xem trước tuần tới (Shushu)</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+            <!-- In-game Route Breadcrumbs đồng nhất -->
+            <div class="me-shushu-route">
+              <span class="me-route-label">Mục nhập sự kiện :</span>
+              <div class="me-route-badges">
+                <span class="me-route-pill">Phòng ban</span>
+                <span class="me-route-arrow">›</span>
+                <span class="me-route-pill">Trạm tiếp tế</span>
+                <span class="me-route-arrow">›</span>
+                <span class="me-route-pill">Phòng nghiên cứu</span>
+                <span class="me-route-arrow">›</span>
+                <span class="me-route-pill highlight">Chợ trời</span>
+              </div>
+            </div>
+          </div>
+          <div class="me-req-grid">
+            <div class="me-req-card" title="Chất lượng: Cấp 2 · Giá: 2.272 Xu Tekniq">
+              <div class="me-req-avatar-wrap">
+                <div class="me-diamond-badge" style="background-color: #08A173;" title="Cấp 2"></div>
+                <img src="https://playerhub.df.qq.com/playerhub/60004/object/15030010002.png" alt="pin điện thoại di động" class="me-req-img" loading="lazy">
+              </div>
+              <div class="me-req-info">
+                <h3 class="me-req-name">pin điện thoại di động</h3>
+                <div class="me-req-bottom">
+                  <span class="me-req-category">Đồ điện tử</span>
+                  <div class="me-req-price">
+                    <img src="/assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq">
+                    <span>2.272</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="me-req-card" title="Chất lượng: Cấp 3 · Giá: 9.622 Xu Tekniq">
+              <div class="me-req-avatar-wrap">
+                <div class="me-diamond-badge" style="background-color: #3E80B3;" title="Cấp 3"></div>
+                <img src="https://playerhub.df.qq.com/playerhub/60004/object/15080050026.png" alt="Delta Force: Black Hawk Down - Đội Blade" class="me-req-img" loading="lazy">
+              </div>
+              <div class="me-req-info">
+                <h3 class="me-req-name">Delta Force: Black Hawk Down - Đội Blade</h3>
+                <div class="me-req-bottom">
+                  <span class="me-req-category">Đồ nội thất gia đình</span>
+                  <div class="me-req-price">
+                    <img src="/assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq">
+                    <span>9.622</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container home-autoredeem-spotlight" aria-labelledby="homeAutoRedeemTitle">
+        <div class="autoredeem-spotlight-card">
+          <div class="autoredeem-spotlight-copy">
+            <div class="autoredeem-spotlight-kicker">
+              <span class="df-badge-dot"></span>
+              <span>EXTENSION TỰ ĐỘNG ĐỔI CODE DELTA FORCE</span>
+            </div>
+            <h2 id="homeAutoRedeemTitle">DELTA FORCE <em>AUTO REDEEM v1.4.3</em></h2>
+            <p>Công cụ tiện ích mở rộng tự động đổi gift code hàng loạt trực tiếp trên trang <b>redeem.df.garena.sg</b> dành cho Máy tính và Điện thoại Android (Kiwi Browser). Tự động lọc trùng, ước lượng thời gian ETA và chống rate-limit thông minh.</p>
+            <div class="autoredeem-tags">
+              <span class="autoredeem-tag">⚡ Đổi code hàng loạt</span>
+              <span class="autoredeem-tag">📊 Thống kê 4 ô real-time</span>
+              <span class="autoredeem-tag">⏳ Đồng hồ ETA chính xác</span>
+              <span class="autoredeem-tag">🛡 Chống rate-limit tự động</span>
+            </div>
+            <div class="autoredeem-actions">
+              <a class="primary-btn" href="tools.html">
+                <span>TRẢI NGHIỆM AUTO REDEEM NGAY</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="secondary-btn" href="https://github.com/minhkhw/AutoRedeemDF/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">
+                <span>TẢI ZIP v1.4.3</span>
+              </a>
+              <a class="ghost-btn" href="https://github.com/minhkhw/AutoRedeemDF" target="_blank" rel="noopener noreferrer">
+                <span>SOURCE GITHUB</span>
+              </a>
+            </div>
+          </div>
+          <div class="autoredeem-spotlight-visual">
+            <div class="spotlight-stat-box">
+              <div class="spotlight-stat-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00ffc8" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <b>TRẠNG THÁI HỆ THỐNG</b>
+                <span class="spotlight-live-dot"></span>
+              </div>
+              <div class="spotlight-stat-grid">
+                <div class="spotlight-stat st-ok">
+                  <strong>100%</strong>
+                  <small>THÀNH CÔNG</small>
+                </div>
+                <div class="spotlight-stat st-warn">
+                  <strong>±20%</strong>
+                  <small>DELAY AN TOÀN</small>
+                </div>
+                <div class="spotlight-stat st-purple">
+                  <strong>00:00</strong>
+                  <small>ETA CHUẨN XÁC</small>
+                </div>
+                <div class="spotlight-stat st-blue">
+                  <strong>v1.4.3</strong>
+                  <small>PHIÊN BẢN</small>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Mini Game Spotlight Showcase -->
+      <section class="container" style="margin-top: 36px; margin-bottom: 36px;" aria-labelledby="homeMiniGameTitle">
+        <div class="home-panel-frame">
+          <div class="home-panel-header">
+            <div>
+              <div class="home-panel-kicker">
+                <span class="df-badge-dot"></span>
+                <span>MINI GAME GIẢI TRÍ & TRA CỨU TƯƠNG TÁC</span>
+              </div>
+              <h2 id="homeMiniGameTitle" class="home-panel-title">
+                TRUNG TÂM <em>MINI GAME DELTA FORCE</em>
+              </h2>
+            </div>
+            <a href="minigame.html" class="primary-btn" style="text-decoration: none; padding: 10px 20px; font-size: 13px;">
+              <span>VÀO CHƠI NGAY</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <a href="minigame.html?game=crate" class="mg-spotlight-card">
+              <div class="mg-spotlight-thumb">
+                <img src="fun/crate/CrateCover/minisafe.webp" alt="Mở hộp chuột">
+              </div>
+              <div>
+                <b style="display: block; color: #fff; font-size: 14px;">Mở hộp chuột</b>
+                <small style="color: #8da4be; font-size: 12px;">Mô phỏng hòm đồ Shushu</small>
+              </div>
+            </a>
+            <a href="minigame.html?game=morse" class="mg-spotlight-card">
+              <div class="mg-spotlight-thumb">
+                <img src="assets/minigame-icons/morse.png" alt="Cổng mã Morse">
+              </div>
+              <div>
+                <b style="display: block; color: #fff; font-size: 14px;">Cổng mã Morse</b>
+                <small style="color: #8da4be; font-size: 12px;">Bấm phím giải mật mã phòng thẻ</small>
+              </div>
+            </a>
+            <a href="minigame.html?game=hacker" class="mg-spotlight-card">
+              <div class="mg-spotlight-thumb">
+                <img src="fun/HACER.png" alt="Giải mã Morse">
+              </div>
+              <div>
+                <b style="display: block; color: #fff; font-size: 14px;">Giải mã Morse</b>
+                <small style="color: #8da4be; font-size: 12px;">Máy tính Hacker & gõ mã bí mật</small>
+              </div>
+            </a>
+            <a href="minigame.html?game=equipment" class="mg-spotlight-card">
+              <div class="mg-spotlight-thumb">
+                <img src="assets/minigame-icons/equipment.png" alt="Trang bị ngẫu nhiên">
+              </div>
+              <div>
+                <b style="display: block; color: #fff; font-size: 14px;">Trang bị ngẫu nhiên</b>
+                <small style="color: #8da4be; font-size: 12px;">Tạo combo vũ khí thử thách</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tin tức Delta Force -->
+      <section class="container home-news-block" style="margin-top: 36px; margin-bottom: 48px;" id="latest-news" aria-labelledby="homeNewsTitle">
+        <div class="home-panel-frame">
+          <div class="home-panel-header">
+            <div>
+              <div class="home-panel-kicker">
+                <span class="df-badge-dot"></span>
+                <span>BẢN TIN CHIẾN TRƯỜNG & SỰ KIỆN GARENA</span>
+              </div>
+              <h2 id="homeNewsTitle" class="home-panel-title">TIN TỨC <em>DELTA FORCE</em></h2>
+            </div>
+            <a class="news-all-link" href="news.html">Tất cả tin tức <span aria-hidden="true"><svg class="ui-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-5-5 5 5-5 5"/></svg></span></a>
+          </div>
+          <div class="home-news-grid" id="homeNewsGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+    </main>
+
+              <footer class="site-footer company-footer" id="site-footer">
+    <div class="container company-footer-wrap">
+      <div class="company-footer-bottom"><span>© 2026 · Phát triển bởi Minh Khương.</span></div>
+    </div>
+  </footer>
+
+          <nav class="bottom-dock" aria-label="Thanh tác vụ cố định">
+    <a class="dock-item" href="index.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></span>
+      <span>Trang chủ</span>
+    </a>
+    <a class="dock-item" href="tools.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22,8.5 12,15.5 2,8.5"/></svg></span>
+      <span>Auto Redeem</span>
+    </a>
+    <a class="dock-item" href="map.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg></span>
+      <span>Bản đồ</span>
+    </a>
+    <a class="dock-item" href="weapons.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+      <span>Vũ khí</span>
+    </a>
+    <a class="dock-item" href="news.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span>
+      <span>Tin tức</span>
+    </a>
+  </nav>
+
+    <script src="script.js?v=20261010-minigame-v3"></script>
+    <script src="news-data.js?v=20261008-post-generic-9"></script>
+    <script src="news.js?v=20261008-news-detail-sections-15"></script>
+    <script src="daily-codes.js?v=20261010-v1"></script>
+  
+  <script src="music-player.js?v=20261010-v1" defer></script>
+</body>
+</html>
+

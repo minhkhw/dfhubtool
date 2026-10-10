@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Nhạc Chuột - Delta Force Việt Nam</title>
+  <meta name="description" content="Nhạc Chuột Delta Force - Tuyển tập âm nhạc, chiến ca và parody hài hước độc quyền Delta Force chuẩn phong cách Shushu.fan. Nghe nhạc trực tuyến chất lượng cao.">
+  <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005">
+  <link rel="stylesheet" href="styles.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="brand-theme.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="music.css?v=20261010-v1">
+  <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+</head>
+<body class="vym-page">
+  <div class="page-bg"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand-wrap">
+        <button class="menu-trigger category-toggle" aria-label="Mở danh mục">
+          <span class="menu-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-label">Danh mục</span>
+        </button>
+        <a class="brand-main" href="index.html">
+          <div class="brand-name">DELTA FORCE</div>
+          <small>NHẠC CHUỘT · SHUSHU MUSIC</small>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a class="header-ready-badge" href="tools.html" title="Delta Force Auto Redeem v1.4.3">
+          <span class="df-badge-dot"></span>
+          <span>AUTO REDEEM</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Panel -->
+  <div class="category-panel" id="categoryPanel" aria-hidden="true">
+    <div class="category-header">
+      <div>
+        <div class="tiny-label">DELTA FORCE</div>
+        <h2>DANH MỤC</h2>
+      </div>
+      <button class="close-category" aria-label="Đóng danh mục">×</button>
+    </div>
+
+    <div class="category-list">
+      <a href="index.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-6v-6h-4v6H4Z"/></svg></span> <span class="text">Trang chủ</span> <span class="arrow">›</span></a>
+      <a href="tools.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="currentColor" stroke="none"/></svg></span> <span class="text">Auto Redeem</span> <span class="arrow">›</span></a>
+      <a href="map.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16"/></svg></span> <span class="text">Bản đồ chiến thuật</span> <span class="arrow">›</span></a>
+      <a href="weapons.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11l2-2h5v5h-4l-2 2h-4v2H8v-2H5zM8 13v5m7-7v5"/></svg></span> <span class="text">Kho vũ khí</span> <span class="arrow">›</span></a>
+      <a href="news.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span> <span class="text">Tin tức</span> <span class="arrow">›</span></a>
+      <a href="/wiki" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c3-1.3 5.5-1.3 8 .2 2.5-1.5 5-1.5 8-.2v14c-3-1.2-5.5-1.2-8 .3-2.5-1.5-5-1.5-8-.3v-14ZM12 5.7v14.1"/></svg></span> <span class="text">Wiki</span> <span class="arrow">›</span></a>
+      <a href="music.html" class="category-item active"><span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span> <span class="text">Nhạc chuột</span> <span class="arrow">›</span></a>
+      <div class="category-item-group">
+        <button type="button" class="category-item category-item--parent expanded active" id="miniGameMenuBtn" aria-expanded="true" aria-controls="miniGameSubmenu">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15.5" cy="10.5" r="1" fill="currentColor"/><circle cx="17.5" cy="13.5" r="1" fill="currentColor"/></svg></span>
+          <span class="text">Mini Game</span>
+          <span class="badge-count" style="margin-left:auto;margin-right:8px;font-size:11px;background:rgba(0,255,200,0.15);color:#00ffc8;padding:2px 8px;border-radius:10px;font-weight:700;">4 Game</span>
+          <span class="chevron-arrow">›</span>
+        </button>
+        <div class="category-submenu open" id="miniGameSubmenu">
+          <a href="minigame.html?game=crate" class="category-subitem" data-game="crate">
+            <span class="sub-icon"><img src="fun/crate/CrateCover/minisafe.webp" alt="" width="20" height="20"></span>
+            <span class="text">Mở hộp chuột</span>
+          </a>
+          <a href="minigame.html?game=morse" class="category-subitem" data-game="morse">
+            <span class="sub-icon"><img src="assets/minigame-icons/morse.png" alt="" width="20" height="20"></span>
+            <span class="text">Cổng mã Morse</span>
+          </a>
+          <a href="minigame.html?game=hacker" class="category-subitem" data-game="hacker">
+            <span class="sub-icon"><img src="fun/HACER.png" alt="" width="20" height="20"></span>
+            <span class="text">Giải mã Morse</span>
+          </a>
+          <a href="minigame.html?game=equipment" class="category-subitem" data-game="equipment">
+            <span class="sub-icon"><img src="assets/minigame-icons/equipment.png" alt="" width="20" height="20"></span>
+            <span class="text">Trang bị ngẫu nhiên</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="music-page-shell">
+    <!-- Hero Turntable Player Stage -->
+    <section class="music-hero-stage is-paused" id="pageHeroStage">
+      <!-- Turntable Disc (Left) -->
+      <div class="music-turntable-box">
+        <div class="music-vinyl-disc" id="pageVinylDisc">
+          <div class="music-vinyl-center-hole"></div>
+          <div class="music-vinyl-label">
+            <img id="pageVinylCover" src="https://s3.oss.hengj.cn/one/autoup/e0abf1b2-75ac-4e49-baa2-58778be5c656/20251027/Fv9Vsu/%E6%97%A0%E5%9F%BA%E8%BD%AC%E7%94%9F%EF%BC%9Aspiral.webp" alt="Cover Disc">
+          </div>
+        </div>
+        <svg class="music-tone-arm" viewBox="0 0 70 140" fill="none">
+          <circle cx="20" cy="20" r="14" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+          <circle cx="20" cy="20" r="6" fill="#00ffc8"/>
+          <line x1="20" y1="20" x2="42" y2="105" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+          <line x1="42" y1="105" x2="32" y2="130" stroke="#00ffc8" stroke-width="4" stroke-linecap="round"/>
+          <rect x="24" y="125" width="16" height="10" rx="2" fill="#0f172a" stroke="#00ffc8" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <!-- Track Details & Master Controls (Right) -->
+      <div class="music-stage-info">
+        <div class="music-badge-kicker">
+          <span>♫</span>
+          <span id="pagePlaylistBadge">BẢN HIT CHUỘT MAMBO</span>
+        </div>
+
+        <div>
+          <h1 class="music-track-title" id="pageTrackTitle">Luân hồi không cơ sở: linh hồn 🐱</h1>
+          <p class="music-track-artist">
+            <span id="pageTrackArtist">Tôi tên là Xiaobai Li</span>
+            <span style="opacity:0.4;">·</span>
+            <span style="font-size:0.875rem;color:#00ffc8;" id="pageTrackAlbum">Delta Force Music</span>
+          </p>
+        </div>
+
+        <div class="music-track-actions">
+          <a class="music-bili-btn" id="pageBiliBtn" href="https://www.bilibili.com/video/BV1xrHKzNEeE" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773z"/></svg>
+            <span>Video Bilibili Gốc ↗</span>
+          </a>
+        </div>
+
+        <!-- Progress Scrubber -->
+        <div class="music-scrubber-box">
+          <div class="music-scrubber-bar" id="pageScrubberBar" role="slider" aria-label="Tiến độ bài hát" tabindex="0">
+            <div class="music-scrubber-progress" id="pageScrubberProgress"></div>
+          </div>
+          <div class="music-scrubber-times">
+            <span id="pageCurrentTime">00:00</span>
+            <span id="pageTotalDuration">00:00</span>
+          </div>
+        </div>
+
+        <!-- Master Controls Bar -->
+        <div class="music-master-controls">
+          <button class="music-ctrl-btn" id="pageBtnShuffle" title="Ngẫu nhiên" aria-label="Phát ngẫu nhiên">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20l17-17M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+          </button>
+          <button class="music-ctrl-btn" id="pageBtnPrev" title="Bài trước" aria-label="Bài trước">
+            <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor"><path d="M170.7 256L448 448V64L170.7 256zM64 64h64v384H64z"/></svg>
+          </button>
+          <button class="music-play-big-btn" id="pageBtnPlay" title="Phát / Dừng" aria-label="Phát hoặc dừng">
+            <svg id="pagePlayIcon" width="28" height="28" viewBox="0 0 512 512" fill="currentColor">
+              <path d="M96 52v408l320-204L96 52z"/>
+            </svg>
+          </button>
+          <button class="music-ctrl-btn" id="pageBtnNext" title="Bài kế tiếp" aria-label="Bài kế tiếp">
+            <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor"><path d="M64 64v384l277.3-192L64 64zM384 64h64v384h-64z"/></svg>
+          </button>
+          <button class="music-ctrl-btn" id="pageBtnRepeat" title="Lặp lại" aria-label="Lặp lại bài hát">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+          </button>
+
+          <!-- Volume Slider -->
+          <div class="music-volume-box" style="margin-left:auto;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+            <input type="range" class="music-volume-slider" id="pageVolumeSlider" min="0" max="1" step="0.01" value="0.8" aria-label="Âm lượng">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playlist & Song Grid Section -->
+    <section class="music-playlist-section">
+      <div class="music-section-header">
+        <div class="music-tabs-bar" id="pagePlaylistTabs">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="music-search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="pageSearchInput" placeholder="Tìm tên bài hát hoặc nghệ sĩ...">
+        </div>
+      </div>
+
+      <div style="margin-bottom:1rem;color:#94a3b8;font-size:0.8125rem;display:flex;align-items:center;justify-content:space-between;">
+        <span id="pageSongCountLabel">Đang tải danh sách bài hát...</span>
+        <span style="font-size:0.75rem;color:#00ffc8;">Bấm vào bài hát bất kỳ để phát ngay</span>
+      </div>
+
+      <div class="music-songs-grid" id="pageSongsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized 6-item Bottom Navigation Dock -->
+  <nav class="bottom-dock" aria-label="Thanh tác vụ cố định">
+    <a class="dock-item" href="index.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></span>
+      <span>Trang chủ</span>
+    </a>
+    <a class="dock-item" href="tools.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22,8.5 12,15.5 2,8.5"/></svg></span>
+      <span>Auto Redeem</span>
+    </a>
+    <a class="dock-item" href="map.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg></span>
+      <span>Bản đồ</span>
+    </a>
+    <a class="dock-item" href="weapons.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+      <span>Vũ khí</span>
+    </a>
+    <a class="dock-item" href="news.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span>
+      <span>Tin tức</span>
+    </a>
+    <a class="dock-item active" href="music.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span>
+      <span>Nhạc chuột</span>
+    </a>
+  </nav>
+
+  <!-- Global Scripts -->
+  <script src="script.js?v=20261010-minigame-v3"></script>
+  <script src="music-player.js?v=20261010-v1"></script>
+
+  <!-- Page Controller Script (Syncs page controls with DFMusic engine) -->
+  <script>
+    (function() {
+      let isShuffle = false;
+      let isRepeat = false;
+      let searchQuery = '';
+
+      function formatTime(secs) {
+        if (!secs || isNaN(secs)) return '00:00';
+        const m = Math.floor(secs / 60);
+        const s = Math.floor(secs % 60);
+        return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+      }
+
+      function updatePageUI() {
+        if (!window.DFMusic) return;
+        const song = window.DFMusic.getCurrentSong();
+        if (!song) return;
+
+        const isPlaying = window.DFMusic.isPlaying();
+        const stage = document.getElementById('pageHeroStage');
+        const playIcon = document.getElementById('pagePlayIcon');
+
+        if (isPlaying) {
+          stage.classList.add('is-playing');
+          stage.classList.remove('is-paused');
+          playIcon.innerHTML = '<path d="M96 64h96v384H96zM320 64h96v384h-96z"/>';
+        } else {
+          stage.classList.remove('is-playing');
+          stage.classList.add('is-paused');
+          playIcon.innerHTML = '<path d="M96 52v408l320-204L96 52z"/>';
+        }
+
+        const title = song.title_vi || song.title;
+        const artist = song.artist_vi || song.artist;
+        const cover = song.cover || 'assets/dfvn-cloud-cat.png';
+
+        document.getElementById('pageTrackTitle').textContent = title;
+        document.getElementById('pageTrackArtist').textContent = artist;
+        document.getElementById('pageVinylCover').src = cover;
+
+        const playlists = window.DFMusic.getPlaylists();
+        const pIdx = window.DFMusic.getCurrentPlaylistIndex();
+        if (playlists[pIdx]) {
+          document.getElementById('pagePlaylistBadge').textContent = (playlists[pIdx].name_vi || playlists[pIdx].name).toUpperCase();
+        }
+
+        const biliBtn = document.getElementById('pageBiliBtn');
+        if (song.source_url) {
+          biliBtn.href = song.source_url;
+          biliBtn.style.display = 'inline-flex';
+        } else {
+          biliBtn.style.display = 'none';
+        }
+
+        // Active class on grid cards
+        const sIdx = window.DFMusic.getCurrentSongIndex();
+        document.querySelectorAll('.music-song-card').forEach((card) => {
+          const cIdx = parseInt(card.getAttribute('data-sidx'), 10);
+          if (cIdx === sIdx) {
+            card.classList.add('is-active');
+          } else {
+            card.classList.remove('is-active');
+          }
+        });
+      }
+
+      function renderPageTabs() {
+        if (!window.DFMusic) return;
+        const playlists = window.DFMusic.getPlaylists();
+        const currentPIdx = window.DFMusic.getCurrentPlaylistIndex();
+        const tabsBox = document.getElementById('pagePlaylistTabs');
+        if (!tabsBox) return;
+
+        tabsBox.innerHTML = playlists.map((p, idx) => {
+          const activeClass = idx === currentPIdx ? ' is-active' : '';
+          const name = p.name_vi || p.name;
+          const count = p.songs ? p.songs.length : 0;
+          return `<button class="music-tab-pill${activeClass}" data-pidx="${idx}">${name} (${count})</button>`;
+        }).join('');
+
+        tabsBox.querySelectorAll('.music-tab-pill').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const idx = parseInt(e.currentTarget.getAttribute('data-pidx'), 10);
+            if (!isNaN(idx)) {
+              window.DFMusic.playSong(idx, 0, true);
+              renderPageTabs();
+              renderPageSongsGrid();
+            }
+          });
+        });
+      }
+
+      function renderPageSongsGrid() {
+        if (!window.DFMusic) return;
+        const playlists = window.DFMusic.getPlaylists();
+        const currentPIdx = window.DFMusic.getCurrentPlaylistIndex();
+        const curSongIdx = window.DFMusic.getCurrentSongIndex();
+        const grid = document.getElementById('pageSongsGrid');
+        if (!grid) return;
+
+        const p = playlists[currentPIdx];
+        if (!p || !p.songs) return;
+
+        let songs = p.songs.map((s, originalIdx) => ({ ...s, originalIdx }));
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          songs = songs.filter(s =>
+            (s.title_vi && s.title_vi.toLowerCase().includes(q)) ||
+            (s.title && s.title.toLowerCase().includes(q)) ||
+            (s.artist_vi && s.artist_vi.toLowerCase().includes(q)) ||
+            (s.artist && s.artist.toLowerCase().includes(q))
+          );
+        }
+
+        document.getElementById('pageSongCountLabel').textContent = `Hiển thị ${songs.length} / ${p.songs.length} bài hát`;
+
+        grid.innerHTML = songs.map((s) => {
+          const isActive = s.originalIdx === curSongIdx;
+          const title = s.title_vi || s.title;
+          const artist = s.artist_vi || s.artist;
+          const dur = s.duration ? formatTime(s.duration) : '--:--';
+          return `
+            <div class="music-song-card${isActive ? ' is-active' : ''}" data-sidx="${s.originalIdx}">
+              <div class="music-song-card-idx">${s.originalIdx + 1}</div>
+              <div class="music-song-card-thumb">
+                <img src="${s.cover || 'assets/dfvn-cloud-cat.png'}" alt="" loading="lazy">
+                <div class="music-song-card-playicon">▶</div>
+              </div>
+              <div class="music-song-card-info">
+                <div class="music-song-card-title">${title}</div>
+                <div class="music-song-card-artist">${artist}</div>
+              </div>
+              <div class="music-song-card-time">${dur}</div>
+            </div>
+          `;
+        }).join('');
+
+        grid.querySelectorAll('.music-song-card').forEach(card => {
+          card.addEventListener('click', (e) => {
+            const sidx = parseInt(e.currentTarget.getAttribute('data-sidx'), 10);
+            if (!isNaN(sidx)) {
+              window.DFMusic.playSong(currentPIdx, sidx, true);
+            }
+          });
+        });
+      }
+
+      function setupPageEvents() {
+        document.getElementById('pageBtnPlay').addEventListener('click', () => {
+          window.DFMusic.togglePlay();
+        });
+        document.getElementById('pageBtnNext').addEventListener('click', () => {
+          window.DFMusic.playNext();
+        });
+        document.getElementById('pageBtnPrev').addEventListener('click', () => {
+          window.DFMusic.playPrev();
+        });
+
+        const volumeSlider = document.getElementById('pageVolumeSlider');
+        volumeSlider.addEventListener('input', (e) => {
+          const audio = window.DFMusic.getAudio();
+          if (audio) audio.volume = parseFloat(e.target.value);
+        });
+
+        // Scrubber bar seeking
+        const scrubber = document.getElementById('pageScrubberBar');
+        scrubber.addEventListener('click', (e) => {
+          const rect = scrubber.getBoundingClientRect();
+          const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          const audio = window.DFMusic.getAudio();
+          if (audio && audio.duration) {
+            audio.currentTime = percent * audio.duration;
+          }
+        });
+
+        // Search
+        const searchInput = document.getElementById('pageSearchInput');
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          renderPageSongsGrid();
+        });
+
+        // Shuffle & Repeat toggles
+        const btnShuffle = document.getElementById('pageBtnShuffle');
+        btnShuffle.addEventListener('click', () => {
+          isShuffle = !isShuffle;
+          btnShuffle.classList.toggle('is-active', isShuffle);
+        });
+
+        const btnRepeat = document.getElementById('pageBtnRepeat');
+        btnRepeat.addEventListener('click', () => {
+          isRepeat = !isRepeat;
+          btnRepeat.classList.toggle('is-active', isRepeat);
+          const audio = window.DFMusic.getAudio();
+          if (audio) audio.loop = isRepeat;
+        });
+
+        // Listen for global engine updates
+        window.addEventListener('df-music-loaded', () => {
+          renderPageTabs();
+          renderPageSongsGrid();
+          updatePageUI();
+        });
+
+        window.addEventListener('df-music-change', () => {
+          renderPageTabs();
+          renderPageSongsGrid();
+          updatePageUI();
+        });
+
+        window.addEventListener('df-music-play', updatePageUI);
+        window.addEventListener('df-music-pause', updatePageUI);
+
+        window.addEventListener('df-music-timeupdate', (e) => {
+          const cur = e.detail.currentTime;
+          const dur = e.detail.duration;
+          document.getElementById('pageCurrentTime').textContent = formatTime(cur);
+          document.getElementById('pageTotalDuration').textContent = formatTime(dur);
+          if (dur > 0) {
+            const pct = (cur / dur) * 100;
+            document.getElementById('pageScrubberProgress').style.width = `${pct}%`;
+          }
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        setupPageEvents();
+        setTimeout(() => {
+          renderPageTabs();
+          renderPageSongsGrid();
+          updatePageUI();
+        }, 200);
+      });
+    })();
+  </script>
+</body>
+</html>

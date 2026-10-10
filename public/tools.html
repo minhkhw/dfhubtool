@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Delta Force Auto Redeem</title>
+  <meta name="description" content="Giao diện tự động đổi gift code Delta Force trên trang đổi code Garena (PC & Điện thoại). Hỗ trợ đổi hàng loạt, ETA, thống kê real-time.">
+  <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005">
+  <link rel="stylesheet" href="styles.css?v=20261009-autoredeem-1">
+  <link rel="stylesheet" href="brand-theme.css?v=20261009-autoredeem-1">
+  <link rel="stylesheet" href="tools-redesign.css?v=20261009-autoredeem-1">
+  <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+</head>
+<body class="vym-page">
+  <header class="vym-header">
+    <a class="vym-back" href="/">← TRANG CHỦ</a>
+    <a class="vym-brand" href="/tools">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ffc8" stroke-width="2" stroke-linejoin="miter"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="#00ffc8" stroke="none"/></svg>
+      <span>
+        <b>AUTO REDEEM</b>
+        <small>DELTA FORCE · GARENA</small>
+      </span>
+    </a>
+    <span class="vym-version">BẢN v1.4.3 · PC + MOBILE</span>
+  </header>
+
+  <main class="vym-main">
+    <!-- Hero Intro -->
+    <section class="tools-intro">
+      <div class="tools-intro-copy">
+        <p>🎯 EXTENSION CHÍNH THỨC CHO TRÌNH DUYỆT</p>
+        <h1>DELTA FORCE <em>AUTO REDEEM</em></h1>
+        <span>Extension chèn panel điều khiển ngay trên trang <b>redeem.df.garena.sg</b> — dán danh sách code vào, bấm <b>BẮT ĐẦU</b> và mọi thứ tự chạy: nhập code, đổi quà, thống kê tỉ lệ và xuất kết quả. Hỗ trợ cả máy tính và điện thoại (Kiwi Browser).</span>
+        <div class="tools-hero-ctas">
+          <a class="primary-btn" href="https://github.com/minhkhw/AutoRedeemDF/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m-4-4 4 4 4-4M4 18v3h16v-3"/></svg>
+            <span>TẢI ZIP MỚI NHẤT (v1.4.3)</span>
+          </a>
+          <a class="tools-cta-github" href="https://github.com/minhkhw/AutoRedeemDF" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+            <span>XEM TRÊN GITHUB</span>
+          </a>
+          <a class="tools-cta-garena" href="https://redeem.df.garena.sg/" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+            <span>MỞ TRANG ĐỔI CODE</span>
+          </a>
+        </div>
+      </div>
+      <svg width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="#00ffc8" stroke-width="1.2" opacity="0.85" aria-hidden="true"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="rgba(0, 255, 200, 0.15)" stroke="#00ffc8"/></svg>
+    </section>
+
+    <!-- Interactive Live Section: Live Panel on Left, Instructions on Right -->
+    <section class="tools-live-section">
+      <!-- Replicating the AutoRedeemDF Panel in real interactive preview -->
+      <div class="live-redeem-panel" id="redeemDemoPanel">
+        <div class="live-redeem-header">
+          <div class="live-title-wrap">
+            <div class="live-logo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div class="live-ttl">
+              <span class="live-ttl-sub">DELTA FORCE</span>
+              <span class="live-ttl-main">AUTO REDEEM</span>
+            </div>
+          </div>
+          <div class="live-badge">
+            <span class="live-badge-dot"></span>
+            <span>SẴN SÀNG</span>
+          </div>
+          <div class="live-header-actions">
+            <button class="live-icon-btn" title="Cài đặt tốc độ">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+            </button>
+            <button class="live-icon-btn" title="Thu gọn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="live-upd-banner">
+          <span>🆕</span>
+          <span>Có bản mới <b>v1.4.3</b> — tối ưu Kiwi Browser trên điện thoại</span>
+        </div>
+
+        <div class="live-progress-row">
+          <span class="live-progress-lbl">TIẾN ĐỘ</span>
+          <span class="live-progress-txt" id="demoProgressTxt">0/5 · 0%</span>
+          <div class="live-progress-bar">
+            <i class="live-progress-fill" id="demoProgressFill" style="width: 0%;"></i>
+          </div>
+        </div>
+
+        <div class="live-body">
+          <div class="live-field-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7.5" cy="16.5" r="3.5"/><path d="M10 14 20 4M15.5 8.5 18 11M12.2 11.8l2 2"/></svg>
+            <span>MÃ GIFT CODE</span>
+            <button class="live-mini-btn" id="demoSampleBtn" title="Dán mã mẫu">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a6 6 0 0 0-5.8 4.6A4.5 4.5 0 0 0 5.5 15H7m10 0h1.5A4.5 4.5 0 0 0 18 6.6 6 6 0 0 0 12 2Z"/><path d="M12 12v8m-3.5-3.5L12 20l3.5-3.5"/></svg>
+            </button>
+          </div>
+          <textarea class="live-textarea" id="demoCodeInput">DFGLOBALVIP
+MANDELBRICK2026
+DELTAHAWK88
+OPERATORVYAGE
+GIFTCODE2026</textarea>
+
+          <div class="live-btn-row">
+            <button class="live-start-btn" id="demoStartBtn">
+              <svg id="demoStartIco" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8.5v-3A1.5 1.5 0 0 1 5.5 4h3M15.5 4h3A1.5 1.5 0 0 1 20 5.5v3M20 15.5v3a1.5 1.5 0 0 1-1.5 1.5h-3M8.5 20h-3A1.5 1.5 0 0 1 4 18.5v-3"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+              <span id="demoStartTxt">BẮT ĐẦU CHẠY THỬ</span>
+            </button>
+            <button class="live-retry-btn" id="demoRetryBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.5 4.5V10H17"/><path d="M19.99 14.5a8.5 8.5 0 1 1-2-8.94l4.51 4.44"/></svg>
+              <span>CHẠY LẠI</span>
+            </button>
+            <button class="live-summary-btn" id="demoSummaryBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5"/><path d="M3.5 9.5h17M9.5 9.5v10"/></svg>
+              <span>TỔNG KẾT</span>
+            </button>
+          </div>
+
+          <div class="live-cur-card" id="demoCurCard">
+            <div class="live-cur-row1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00ffc8" stroke-width="2"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 2"/></svg>
+              <span class="live-cur-code" id="demoCurCode">DFGLOBALVIP</span>
+              <span class="live-cur-timer" id="demoCurTimer">ETA: 00:08</span>
+            </div>
+            <div class="live-cur-sub" id="demoCurSub">Đang sẵn sàng...</div>
+          </div>
+
+          <div class="live-stats-box">
+            <div class="live-stat-row">
+              <div class="live-stat live-st-ok">
+                <div class="live-stat-top"><span class="df-stat-led"></span><span class="live-stat-num" id="demoStatOk">0</span></div>
+                <span class="live-stat-lbl">THÀNH CÔNG</span>
+              </div>
+              <div class="live-stat live-st-used">
+                <div class="live-stat-top"><span class="df-stat-led"></span><span class="live-stat-num" id="demoStatUsed">0</span></div>
+                <span class="live-stat-lbl">ĐÃ DÙNG</span>
+              </div>
+              <div class="live-stat live-st-fail">
+                <div class="live-stat-top"><span class="df-stat-led"></span><span class="live-stat-num" id="demoStatFail">0</span></div>
+                <span class="live-stat-lbl">LỖI</span>
+              </div>
+              <div class="live-stat live-st-remain">
+                <div class="live-stat-top"><span class="df-stat-led"></span><span class="live-stat-num" id="demoStatRemain">5</span></div>
+                <span class="live-stat-lbl">CÒN LẠI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="live-log-container">
+            <div class="live-field-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4.5" width="18" height="15" rx="1.5"/><path d="m7 9.5 3 2.5-3 2.5M12.5 14.5H17"/></svg>
+              <span>Nhật ký hoạt động</span>
+            </div>
+            <div class="live-log-box" id="demoLogBox">
+              <div class="live-log-entry live-log-info"><span>[17:00:00]</span> <span>Panel AutoRedeemDF khởi động sẵn sàng.</span></div>
+              <div class="live-log-entry"><span>[17:00:02]</span> <span>Đã nạp 5 mã quà tặng vào hàng đợi.</span></div>
+            </div>
+          </div>
+
+          <div class="live-credit">
+            Được phát triển bởi <a href="https://github.com/minhkhw/AutoRedeemDF" target="_blank" rel="noopener noreferrer">Minh Khương</a> <span class="heart">❤</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Installation Steps and Platform Switcher -->
+      <div class="tools-details-col">
+        <nav class="tools-platforms" role="tablist">
+          <button id="toolsPcTab" type="button" class="is-active" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M8 21h8M12 18v3"/></svg>
+            <span>
+              <b>MÁY TÍNH / CHROME · EDGE</b>
+              <small>Cài đặt dạng Load Unpacked từ file ZIP</small>
+            </span>
+          </button>
+          <button id="toolsMobileTab" type="button" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            <span>
+              <b>ĐIỆN THOẠI ANDROID</b>
+              <small>Kiwi Browser, Lemur, Mises, Edge Canary</small>
+            </span>
+          </button>
+        </nav>
+
+        <!-- PC Panel -->
+        <div id="toolsPcPanel" class="tools-guide-panel" style="margin-top: 16px;">
+          <div class="tools-steps-list">
+            <div class="tools-step-item">
+              <span class="tools-step-num">01</span>
+              <div class="tools-step-txt">
+                <b>Tải mã nguồn về máy tính</b>
+                <span>Bấm nút <b>TẢI ZIP</b> ở trên hoặc sao chép kho mã: <code>git clone https://github.com/minhkhw/AutoRedeemDF.git</code>. Sau đó giải nén ra một thư mục cố định (ví dụ: <code>D:\AutoRedeemDF</code>).</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">02</span>
+              <div class="tools-step-txt">
+                <b>Bật Developer mode trên Chrome / Edge</b>
+                <span>Mở tab mới, truy cập <code>chrome://extensions</code> (hoặc <code>edge://extensions</code>, <code>brave://extensions</code>) rồi gạt bật công tắc <b>Developer mode (Chế độ nhà phát triển)</b> ở góc trên bên phải.</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">03</span>
+              <div class="tools-step-txt">
+                <b>Nạp tiện ích (Load unpacked)</b>
+                <span>Bấm nút <b>Load unpacked (Tải tiện ích đã giải nén)</b> → Chọn đúng thư mục vừa giải nén. Extension sẽ lập tức xuất hiện trong danh sách.</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">04</span>
+              <div class="tools-step-txt">
+                <b>Mở redeem.df.garena.sg và đổi code</b>
+                <span>Truy cập <b>redeem.df.garena.sg</b> và đăng nhập tài khoản Garena. Panel <b>DELTA FORCE AUTO REDEEM</b> sẽ tự động xuất hiện ở góc dưới bên phải màn hình!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Panel -->
+        <div id="toolsMobilePanel" class="tools-guide-panel" hidden style="margin-top: 16px;">
+          <div class="tools-steps-list">
+            <div class="tools-step-item">
+              <span class="tools-step-num">01</span>
+              <div class="tools-step-txt">
+                <b>Cài trình duyệt hỗ trợ Extension</b>
+                <span>Cài đặt <b>Kiwi Browser</b> (khuyên dùng), <b>Lemur Browser</b> hoặc <b>Edge Canary</b> từ Google Play trên điện thoại Android của bạn.</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">02</span>
+              <div class="tools-step-txt">
+                <b>Tải file ZIP và giải nén trên điện thoại</b>
+                <span>Bấm <b>TẢI ZIP</b> về điện thoại, dùng ứng dụng quản lý tệp giải nén ra một thư mục trong bộ nhớ máy.</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">03</span>
+              <div class="tools-step-txt">
+                <b>Nạp vào Kiwi Browser</b>
+                <span>Mở Kiwi Browser → Bấm biểu tượng 3 chấm (⋮) → Chọn <b>Extensions (Tiện ích mở rộng)</b> → Bật <b>Developer mode</b> → Bấm <b>+(from .zip/crx/user.js)</b> hoặc <b>Load unpacked</b> và trỏ tới thư mục giải nén.</span>
+              </div>
+            </div>
+
+            <div class="tools-step-item">
+              <span class="tools-step-num">04</span>
+              <div class="tools-step-txt">
+                <b>Trải nghiệm giao diện cảm ứng tối ưu</b>
+                <span>Panel từ v1.4 tự động co giãn theo màn hình điện thoại, kéo thả mượt mà bằng cảm ứng và phông chữ cỡ lớn để thao tác dễ dàng trên di động.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section>
+      <div class="home-news-heading" style="margin-bottom: 16px;">
+        <h2>TÍNH NĂNG <em>NỔI BẬT</em></h2>
+      </div>
+      <div class="tools-features-grid">
+        <div class="tools-feature-card">
+          <h3>⚡ Đổi code hàng loạt</h3>
+          <p>Dán danh sách mã không giới hạn, tự động loại bỏ mã trùng lặp và khoảng trắng thừa trước khi xử lý.</p>
+        </div>
+        <div class="tools-feature-card">
+          <h3>📊 Thống kê trực tiếp</h3>
+          <p>4 ô trạng thái thời gian thực: Thành công, Đã dùng/đạt giới hạn, Lỗi/hết hạn, và Còn lại cùng thanh tỉ lệ trực quan.</p>
+        </div>
+        <div class="tools-feature-card">
+          <h3>⏳ Đồng hồ ETA chính xác</h3>
+          <p>Ước lượng thời gian còn lại của đợt chạy đếm giảm mượt theo tốc độ thực tế, tính cả thời gian nghỉ và backoff.</p>
+        </div>
+        <div class="tools-feature-card">
+          <h3>📋 Tổng kết COPY & Xuất CSV</h3>
+          <p>Modal bảng tổng kết chi tiết từng mã quà, hỗ trợ sao chép vào clipboard hoặc xuất file CSV mở được bằng Excel.</p>
+        </div>
+        <div class="tools-feature-card">
+          <h3>⚙️ 3 Chế độ tốc độ</h3>
+          <p>Tùy chọn linh hoạt: 🛡 An toàn, ⚖ Cân bằng, ⚡ Thần tốc, hoặc tự tinh chỉnh chi tiết độ trễ theo mili-giây.</p>
+        </div>
+        <div class="tools-feature-card">
+          <h3>🛡 Chống Rate-Limit & Tab nền</h3>
+          <p>Độ trễ ngẫu nhiên ±20% và tự động backoff khi gặp giới hạn tốc độ. Giữ nguyên tốc độ chạy khi bạn chuyển sang tab khác.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+      <footer class="site-footer company-footer" id="site-footer">
+    <div class="container company-footer-wrap">
+      <div class="company-footer-bottom"><span>© 2026 · Phát triển bởi Minh Khương.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Switcher between PC and Mobile
+    const pcTab = document.getElementById('toolsPcTab');
+    const mobileTab = document.getElementById('toolsMobileTab');
+    const pcPanel = document.getElementById('toolsPcPanel');
+    const mobilePanel = document.getElementById('toolsMobilePanel');
+
+    function switchTab(isPc) {
+      pcTab.classList.toggle('is-active', isPc);
+      mobileTab.classList.toggle('is-active', !isPc);
+      pcTab.setAttribute('aria-selected', String(isPc));
+      mobileTab.setAttribute('aria-selected', String(!isPc));
+      pcPanel.hidden = !isPc;
+      mobilePanel.hidden = isPc;
+    }
+
+    pcTab.addEventListener('click', () => switchTab(true));
+    mobileTab.addEventListener('click', () => switchTab(false));
+
+    // Interactive Demo Panel Simulation
+    const startBtn = document.getElementById('demoStartBtn');
+    const startTxt = document.getElementById('demoStartTxt');
+    const startIco = document.getElementById('demoStartIco');
+    const curCode = document.getElementById('demoCurCode');
+    const curSub = document.getElementById('demoCurSub');
+    const curTimer = document.getElementById('demoCurTimer');
+    const curCard = document.getElementById('demoCurCard');
+    const progressTxt = document.getElementById('demoProgressTxt');
+    const progressFill = document.getElementById('demoProgressFill');
+    const logBox = document.getElementById('demoLogBox');
+    const statOk = document.getElementById('demoStatOk');
+    const statUsed = document.getElementById('demoStatUsed');
+    const statFail = document.getElementById('demoStatFail');
+    const statRemain = document.getElementById('demoStatRemain');
+    const codeInput = document.getElementById('demoCodeInput');
+    const sampleBtn = document.getElementById('demoSampleBtn');
+
+    let isRunning = false;
+    let simTimer = null;
+
+    function addLog(text, type = 'info') {
+      const now = new Date();
+      const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
+      const div = document.createElement('div');
+      div.className = `live-log-entry live-log-${type}`;
+      div.innerHTML = `<span>${timeStr}</span> <span>${text}</span>`;
+      logBox.appendChild(div);
+      logBox.scrollTop = logBox.scrollHeight;
+    }
+
+    sampleBtn.addEventListener('click', () => {
+      codeInput.value = "DFGLOBALVIP\nMANDELBRICK2026\nDELTAHAWK88\nOPERATORVYAGE\nGIFTCODE2026";
+      addLog("Đã nạp lại 5 mã quà tặng mẫu vào danh sách.", "info");
+    });
+
+    startBtn.addEventListener('click', () => {
+      if (isRunning) {
+        clearInterval(simTimer);
+        isRunning = false;
+        startBtn.style.background = 'linear-gradient(135deg, #19ffbf, #00c8e8)';
+        startTxt.textContent = 'BẮT ĐẦU CHẠY THỬ';
+        curSub.textContent = 'Đã dừng.';
+        addLog("Đã tạm dừng quá trình đổi mã.", "warn");
+        return;
+      }
+
+      const codes = codeInput.value.split('\n').map(s => s.trim()).filter(Boolean);
+      if (!codes.length) {
+        alert("Vui lòng nhập ít nhất 1 mã gift code!");
+        return;
+      }
+
+      isRunning = true;
+      startBtn.style.background = 'linear-gradient(135deg, #ff6b78, #ff4757)';
+      startTxt.textContent = 'DỪNG LẠI';
+      let idx = 0;
+      let okCount = 0;
+      let usedCount = 0;
+      let failCount = 0;
+
+      statOk.textContent = '0';
+      statUsed.textContent = '0';
+      statFail.textContent = '0';
+      statRemain.textContent = String(codes.length);
+      progressFill.style.width = '0%';
+      progressTxt.textContent = `0/${codes.length} · 0%`;
+
+      addLog(`Bắt đầu chạy danh sách ${codes.length} mã gift code...`, "info");
+
+      function processNext() {
+        if (idx >= codes.length || !isRunning) {
+          isRunning = false;
+          startBtn.style.background = 'linear-gradient(135deg, #19ffbf, #00c8e8)';
+          startTxt.textContent = 'CHẠY LẠI THỬ';
+          curCode.textContent = 'HOÀN TẤT';
+          curSub.textContent = `Đã đổi xong ${codes.length} mã!`;
+          curTimer.textContent = '00:00';
+          addLog(`✅ Hoàn thành đợt chạy: ${okCount} thành công, ${usedCount} đã dùng, ${failCount} lỗi.`, "ok");
+          return;
+        }
+
+        const c = codes[idx];
+        curCode.textContent = c;
+        curSub.textContent = `Đang gửi yêu cầu đổi mã...`;
+        curTimer.textContent = `ETA: 00:0${(codes.length - idx) * 2}`;
+
+        // simulate outcome
+        setTimeout(() => {
+          if (!isRunning) return;
+          idx++;
+          const percent = Math.round((idx / codes.length) * 100);
+          progressFill.style.width = `${percent}%`;
+          progressTxt.textContent = `${idx}/${codes.length} · ${percent}%`;
+          statRemain.textContent = String(codes.length - idx);
+
+          if (idx === 1 || idx === 4) {
+            okCount++;
+            statOk.textContent = String(okCount);
+            curSub.textContent = `Thành công! Nhận quà hòm vũ khí.`;
+            addLog(`Mã [${c}]: Đổi thành công! Quà đã gửi vào hòm thư.`, "ok");
+          } else if (idx === 2) {
+            usedCount++;
+            statUsed.textContent = String(usedCount);
+            curSub.textContent = `Đã đạt giới hạn nhập mã này.`;
+            addLog(`Mã [${c}]: Tài khoản đã sử dụng mã này rồi.`, "warn");
+          } else {
+            failCount++;
+            statFail.textContent = String(failCount);
+            curSub.textContent = `Mã không hợp lệ hoặc hết hạn.`;
+            addLog(`Mã [${c}]: Mã hết hạn sử dụng.`, "warn");
+          }
+
+          if (isRunning && idx < codes.length) {
+            setTimeout(processNext, 1200);
+          } else {
+            processNext();
+          }
+        }, 900);
+      }
+
+      processNext();
+    });
+  </script>
+  <nav class="bottom-dock" aria-label="Thanh tác vụ cố định">
+    <a class="dock-item" href="index.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></span>
+      <span>Trang chủ</span>
+    </a>
+    <a class="dock-item" href="tools.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22,8.5 12,15.5 2,8.5"/></svg></span>
+      <span>Auto Redeem</span>
+    </a>
+    <a class="dock-item" href="map.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg></span>
+      <span>Bản đồ</span>
+    </a>
+    <a class="dock-item" href="weapons.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+      <span>Vũ khí</span>
+    </a>
+    <a class="dock-item" href="news.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span>
+      <span>Tin tức</span>
+    </a>
+    <a class="dock-item" href="music.html"><span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span><span>Nhạc chuột</span></a>
+  </nav>
+  <script src="music-player.js?v=20261010-v1" defer></script>
+</body>
+</html>

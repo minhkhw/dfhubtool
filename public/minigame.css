@@ -1,0 +1,1843 @@
+/* ==========================================================================
+   DELTA FORCE VIỆT NAM - MINI GAME HUB CSS
+   Aesthetic: Cyber Tactical, Dark Navy/Teal, Neon Accents, Micro-interactions
+   ========================================================================== */
+
+:root {
+  --mg-primary: #00ffc8;
+  --mg-primary-glow: rgba(0, 255, 200, 0.35);
+  --mg-bg: #0a111a;
+  --mg-card-bg: #101a26;
+  --mg-card-border: #1e3044;
+  --mg-card-hover: #152436;
+  --mg-text-main: #f0f6fc;
+  --mg-text-muted: #859bb2;
+  --mg-danger: #ff4757;
+  --mg-warning: #ffa502;
+  --mg-purple: #9b59b6;
+  --mg-gold: #f1c40f;
+}
+
+.minigame-page {
+  min-height: calc(100vh - 70px);
+  padding-bottom: 60px;
+}
+
+/* Hero Section */
+.mg-hero {
+  padding: 36px 0 24px;
+  text-align: center;
+}
+
+.mg-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(0, 255, 200, 0.08);
+  border: 1px solid rgba(0, 255, 200, 0.25);
+  color: var(--mg-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mg-hero h1 {
+  font-size: clamp(26px, 4.5vw, 40px);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.mg-hero h1 em {
+  font-style: normal;
+  color: var(--mg-primary);
+  text-shadow: 0 0 24px var(--mg-primary-glow);
+}
+
+.mg-hero p {
+  color: var(--mg-text-muted);
+  font-size: 14px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Tabs Navigation Bar */
+.mg-tabs-wrapper {
+  margin-bottom: 28px;
+}
+
+.mg-tabs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 14px;
+  background: #0d1521;
+  border: 1px solid #1e3044;
+  overflow-x: auto;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.mg-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--mg-text-muted);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.22s ease;
+}
+
+.mg-tab-btn:hover {
+  background: #142233;
+  color: #ffffff;
+  border-color: rgba(0, 255, 200, 0.2);
+}
+
+.mg-tab-btn.active {
+  background: linear-gradient(135deg, rgba(0, 232, 189, 0.18), rgba(0, 164, 210, 0.1));
+  color: var(--mg-primary);
+  border-color: var(--mg-primary);
+  box-shadow: 0 0 18px -4px var(--mg-primary-glow);
+}
+
+.mg-tab-btn .tab-icon {
+  font-size: 16px;
+}
+
+/* Game Containers */
+.mg-game-view {
+  display: none;
+  animation: mgFadeIn 0.25s ease-out;
+}
+
+.mg-game-view.active {
+  display: block;
+}
+
+@keyframes mgFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   GAME 1: CRATE OPENING (MỞ HỘP CHUỘT)
+   ========================================================================== */
+.crate-hub-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.crate-hub-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.crate-stat-pill {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #121c29;
+  border: 1px solid #1f3347;
+  font-size: 12.5px;
+  color: var(--mg-text-muted);
+}
+
+.crate-stat-pill b {
+  color: var(--mg-primary);
+  margin-left: 4px;
+}
+
+.crate-grid-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.crate-card {
+  position: relative;
+  background: linear-gradient(180deg, #121d2b 0%, #0d1521 100%);
+  border: 1px solid #1f3347;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.crate-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 200, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.crate-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 200, 0.45);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 16px -4px var(--mg-primary-glow);
+}
+
+.crate-card:hover::before {
+  opacity: 1;
+}
+
+.crate-thumb-wrap {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.crate-thumb-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+  transition: transform 0.25s ease;
+}
+
+.crate-card:hover .crate-thumb-wrap img {
+  transform: scale(1.08);
+}
+
+.crate-info {
+  width: 100%;
+  text-align: center;
+}
+
+.crate-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.crate-dims {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #7995ae;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.crate-open-btn {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  background: rgba(0, 255, 200, 0.12);
+  border: 1px solid rgba(0, 255, 200, 0.35);
+  color: var(--mg-primary);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.crate-card:hover .crate-open-btn {
+  background: var(--mg-primary);
+  color: #001e18;
+  box-shadow: 0 0 12px var(--mg-primary-glow);
+}
+
+/* Modal Crate Opening Overlay */
+.crate-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 10, 16, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.crate-modal-overlay.open {
+  display: flex;
+}
+
+.crate-modal-window {
+  background: #0d1520;
+  border: 1px solid #263c54;
+  border-radius: 16px;
+  width: min(840px, 96vw);
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 255, 200, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.crate-modal-header {
+  background: linear-gradient(135deg, #400000 0%, #1f0b0b 60%, #131d2a 100%);
+  padding: 18px 24px;
+  border-bottom: 2px solid #ff3333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.crate-modal-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(255, 50, 50, 0.12) 8px,
+    rgba(255, 50, 50, 0.12) 12px
+  );
+  pointer-events: none;
+}
+
+.crate-modal-title-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.crate-modal-title-wrap small {
+  color: #ff6b6b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.crate-modal-title-wrap h2 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.crate-total-value {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+}
+
+.crate-total-value span {
+  font-size: 11px;
+  color: #ffb8b8;
+  display: block;
+}
+
+.crate-total-value strong {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffd32a;
+  text-shadow: 0 0 12px rgba(255, 211, 42, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.crate-modal-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 16px;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 3;
+}
+
+.crate-modal-close:hover {
+  background: #ff4757;
+  border-color: #ff4757;
+}
+
+.crate-modal-body {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tactical Container Grid */
+.crate-inventory-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  background: #06090e;
+  padding: 14px;
+  border: 2px solid #23374d;
+  border-radius: 12px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.85);
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.crate-grid-board {
+  display: grid;
+  gap: 0;
+  position: relative;
+  background: #090e15;
+  border: 1px solid #1a2736;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  user-select: none;
+}
+
+.crate-grid-cell {
+  background: #0c121b;
+  border: 1px solid #15202c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.crate-grid-cell::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   AUTHENTIC SEARCHING & CRATE SCANNER SYSTEM (SHUSHU / DELTA FORCE)
+   ========================================================================== */
+.crate-search-banner-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 14px;
+}
+
+.crate-tech-corners span {
+  position: absolute;
+  background: rgba(255, 53, 53, 0.85);
+  pointer-events: none;
+  z-index: 3;
+}
+.corner-tl-h { top: -2px; left: -2px; width: 12px; height: 2px; }
+.corner-tl-v { top: -2px; left: -2px; width: 2px; height: 16px; }
+.corner-tr-h { top: -2px; right: -2px; width: 12px; height: 2px; }
+.corner-tr-v { top: -2px; right: -2px; width: 2px; height: 16px; }
+.corner-bl-h { bottom: -2px; left: -2px; width: 12px; height: 2px; }
+.corner-bl-v { bottom: -2px; left: -2px; width: 2px; height: 16px; }
+.corner-br-h { bottom: -2px; right: -2px; width: 12px; height: 2px; }
+.corner-br-v { bottom: -2px; right: -2px; width: 2px; height: 16px; }
+
+.crate-search-banner {
+  position: relative;
+  background: #3e0707;
+  border: 1px solid #751515;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.crate-search-banner.completed {
+  background: #0f1c2b;
+  border-color: #00ffc8;
+}
+
+.crate-search-stripes-mask {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(140, 26, 26, 0.7) 8px,
+    rgba(140, 26, 26, 0.7) 12px
+  );
+  mask-image: linear-gradient(to right, black 25%, transparent 75%);
+  -webkit-mask-image: linear-gradient(to right, black 25%, transparent 75%);
+  pointer-events: none;
+}
+
+.crate-search-banner.completed .crate-search-stripes-mask {
+  opacity: 0.15;
+}
+
+.crate-search-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+}
+
+.crate-search-spin-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: titleOrbitSpin 2s linear infinite;
+}
+
+.crate-search-banner.completed .crate-search-spin-wrap {
+  display: none;
+}
+
+@keyframes titleOrbitSpin {
+  0% { transform: rotate(0deg) translateX(3px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(3px) rotate(-360deg); }
+}
+
+.crate-search-title-text {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.crate-search-banner.completed .crate-search-title-text {
+  color: #00ffc8;
+}
+
+.crate-search-deco-img {
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+  height: 46px;
+  opacity: 0.75;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* UNREVEALED / SEARCHING LOOT ITEM STATES */
+.crate-loot-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+.crate-loot-item:hover {
+  transform: scale(1.03);
+  z-index: 10;
+}
+
+.crate-loot-item.is-unrevealed {
+  background: #0C0E10 !important;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #0C0E10,
+    #0C0E10 5px,
+    #272727 5px,
+    #272727 9px
+  ) !important;
+  border: 1px solid #333333 !important;
+  box-shadow: none !important;
+}
+
+.crate-loot-item.is-unrevealed .crate-loot-inner {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.crate-loot-item .crate-search-indicator {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.crate-loot-item.is-searching .crate-search-indicator {
+  display: flex;
+}
+
+.crate-loot-item.is-searching .crate-search-glass-orbit {
+  animation: orbitSpin 1.5s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes orbitSpin {
+  0% { transform: rotate(0deg) translateX(6px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(6px) rotate(-360deg); }
+}
+
+.crate-loot-item.is-revealed {
+  animation: itemReveal 0.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+@keyframes itemReveal {
+  0% { opacity: 0; transform: scale(1.3); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.crate-loot-item.is-revealed.high-grade {
+  animation: itemReveal 0.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards, borderBurst 0.35s ease-out;
+}
+
+@keyframes borderBurst {
+  0% { box-shadow: 0 0 25px currentColor; }
+  100% { box-shadow: 0 0 12px currentColor; }
+}
+
+.crate-loot-item.is-revealed.high-grade img {
+  animation: imgFlash 0.25s ease-out;
+}
+
+@keyframes imgFlash {
+  0% { filter: brightness(2.4); }
+  100% { filter: brightness(1); }
+}
+
+.crate-loot-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+/* Loot Grades - Chuẩn Delta Force & Shushu/Orzice */
+.grade-1 { /* Gray / White */
+  background: linear-gradient(135deg, #4b5563 0%, #2f3742 100%);
+  border: 1.5px solid #94a3b8;
+  box-shadow: inset 0 0 8px rgba(148, 163, 184, 0.15);
+}
+.grade-2 { /* Green - #217158 */
+  background: linear-gradient(135deg, #217158 0%, #134435 100%);
+  border: 1.5px solid #34d399;
+  box-shadow: inset 0 0 12px rgba(52, 211, 153, 0.25);
+}
+.grade-3 { /* Blue - #385b7b */
+  background: linear-gradient(135deg, #385b7b 0%, #1e3347 100%);
+  border: 1.5px solid #60a5fa;
+  box-shadow: inset 0 0 14px rgba(96, 165, 250, 0.3);
+}
+.grade-4 { /* Purple - #59447b */
+  background: linear-gradient(135deg, #59447b 0%, #35264c 100%);
+  border: 1.5px solid #c084fc;
+  box-shadow: inset 0 0 16px rgba(192, 132, 252, 0.35);
+}
+.grade-5 { /* Gold / Mythic - #975f3d */
+  background: linear-gradient(135deg, #975f3d 0%, #5c3821 100%);
+  border: 1.5px solid #fbbf24;
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.45), inset 0 0 16px rgba(251, 191, 36, 0.3);
+}
+.grade-6 { /* Red / Exotic - #973739 */
+  background: linear-gradient(135deg, #973739 0%, #5a1e20 100%);
+  border: 1.5px solid #f87171;
+  box-shadow: 0 0 18px rgba(248, 113, 113, 0.55), inset 0 0 18px rgba(248, 113, 113, 0.35);
+}
+
+.crate-loot-item img.crate-loot-img,
+.crate-loot-inner > img.crate-loot-img,
+.crate-loot-img {
+  max-width: 88%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.75));
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.crate-loot-header {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  right: 4px;
+  display: flex;
+  justify-content: flex-start;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.crate-loot-name {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 3px #000;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.crate-loot-bottom {
+  position: absolute;
+  bottom: 3px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.crate-loot-price {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #fde047;
+  background: rgba(10, 15, 22, 0.75);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  font-family: 'Consolas', monospace;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.crate-loot-item img.tekniq-coin-icon,
+.crate-loot-price img.tekniq-coin-icon,
+.tekniq-coin-icon {
+  display: inline-block !important;
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  max-width: 12px !important;
+  max-height: 12px !important;
+  vertical-align: middle !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6)) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  position: static !important;
+}
+
+.crate-total-value img.tekniq-coin-icon,
+.crate-total-value .tekniq-coin-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  margin-left: 4px !important;
+}
+
+.crate-modal-footer {
+  padding: 16px 24px;
+  background: #0a111a;
+  border-top: 1px solid #1e3044;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.mg-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mg-btn-primary {
+  background: var(--mg-primary);
+  border: 1px solid var(--mg-primary);
+  color: #00221c;
+}
+
+.mg-btn-primary:hover {
+  background: #2affd4;
+  box-shadow: 0 0 16px var(--mg-primary-glow);
+  transform: translateY(-1px);
+}
+
+.mg-btn-secondary {
+  background: #162436;
+  border: 1px solid #263d54;
+  color: var(--mg-text-main);
+}
+
+.mg-btn-secondary:hover {
+  background: #1c2e44;
+  border-color: rgba(0, 255, 200, 0.3);
+}
+
+/* ==========================================================================
+   GAME 2: MORSE CODE DOOR (CỔNG MÃ MORSE)
+   ========================================================================== */
+.morse-door-stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3/4;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #0d2928;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 255, 200, 0.15);
+  user-select: none;
+}
+
+.morse-door-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+
+.morse-door-card-img {
+  position: absolute;
+  height: 100%;
+  width: 110%;
+  object-fit: contain;
+  object-position: center;
+  left: 50%;
+  transform: translate(calc(-50% + 0.8%), 0);
+  pointer-events: none;
+}
+
+.morse-door-status-bar {
+  position: absolute;
+  top: 20.3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85.2%;
+  height: 5.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(12px, 2.8cqw, 16px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #000b14;
+  background: #d1e0e1;
+  transition: all 0.25s ease;
+}
+
+.morse-door-status-bar.success {
+  background: #2bfaaa;
+  color: #002e1c;
+  box-shadow: 0 0 16px rgba(43, 250, 170, 0.6);
+}
+
+.morse-door-status-bar.fail {
+  background: #d84f51;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(216, 79, 81, 0.6);
+}
+
+.morse-door-inputs {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+
+.morse-digit-box {
+  position: relative;
+  width: 21%;
+  aspect-ratio: 1;
+  background: rgba(4, 36, 35, 0.85);
+  border: 1px solid #255552;
+  color: #97bebe;
+  font-size: clamp(20px, 5cqw, 32px);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.morse-digit-box.active-cursor {
+  border: 2px solid #d4e0df;
+  box-shadow: 0 0 14px rgba(212, 224, 223, 0.5);
+  color: #ffffff;
+}
+
+.morse-digit-box.active-cursor::before,
+.morse-digit-box.active-cursor::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  background: #d4e0df;
+  box-shadow: 0 0 8px rgba(212, 224, 223, 0.8);
+}
+.morse-digit-box.active-cursor::before { top: -2px; left: -2px; }
+.morse-digit-box.active-cursor::after { bottom: -2px; right: -2px; }
+
+.morse-keypad {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.morse-keypad-row {
+  display: flex;
+  gap: 3%;
+  width: 100%;
+}
+
+.morse-key-btn {
+  flex: 1;
+  aspect-ratio: 1.7;
+  background: rgba(13, 63, 61, 0.85);
+  border: 1px solid #255552;
+  color: #97bebe;
+  font-size: clamp(16px, 4cqw, 24px);
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.morse-key-btn:hover {
+  background: #1e5050;
+  border-color: #689692;
+  color: #ffffff;
+}
+
+.morse-key-btn:active,
+.morse-key-btn.pressed {
+  background: #2b706c;
+  color: #00ffc8;
+  transform: scale(0.96);
+}
+
+.morse-controls-bar {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #0d3f3d;
+  border: 1px solid #255552;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.morse-controls-bar span {
+  color: #97bebe;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.morse-btn-opt {
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: #042423;
+  border: 1px solid #255552;
+  color: #97bebe;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.morse-btn-opt.active {
+  background: #1e5050;
+  border-color: #689692;
+  color: #ffffff;
+}
+
+.morse-btn-start {
+  padding: 8px 26px;
+  border-radius: 6px;
+  background: #1a5a4a;
+  border: 1px solid #689692;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.morse-btn-start.running {
+  background: #5a3030;
+  border-color: #8a5555;
+  color: #ff9999;
+}
+
+/* ==========================================================================
+   GAME 3: HACKER COMPUTER (GIẢI MÃ MORSE)
+   ========================================================================== */
+.hacker-stage {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  aspect-ratio: 16/10.5;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
+  font-family: 'HarmonyOS Sans SC', monospace, sans-serif;
+  user-select: none;
+}
+
+.hacker-stage-inner {
+  position: absolute;
+  inset: 0;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hacker-top-bar {
+  height: 64px;
+  background: rgba(44, 59, 65, 0.65);
+  border: 1px solid #3c4f57;
+  color: #97a8b3;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.hacker-main-grid {
+  display: flex;
+  gap: 18px;
+  flex: 1;
+  min-height: 0;
+}
+
+.hacker-col-left {
+  flex: 2.2;
+  border: 2px solid rgba(40, 51, 57, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hacker-received-box {
+  background: #242f35;
+  padding: 12px 20px;
+  box-shadow: inset 0 3px 0 0 #6e797f;
+}
+
+.hacker-box-lbl {
+  color: #7b8488;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hacker-morse-display {
+  display: flex;
+  gap: 12px;
+  min-height: 48px;
+  align-items: center;
+}
+
+.hacker-morse-code-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px;
+  background: rgba(140, 180, 180, 0.08);
+  border: 1px solid #4a5c64;
+  border-radius: 4px;
+}
+
+.hacker-morse-code-cell.active {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.hacker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-block;
+}
+
+.hacker-dash {
+  width: 18px;
+  height: 4px;
+  background: #ffffff;
+  display: inline-block;
+}
+
+.hacker-clues-box {
+  flex: 1;
+  padding: 10px 20px;
+  overflow-y: auto;
+}
+
+.hacker-clues-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+
+.hacker-clue-item {
+  display: flex;
+  height: 42px;
+  background: rgba(72, 89, 98, 0.4);
+  border: 1px solid #37474f;
+  align-items: center;
+}
+
+.hacker-clue-item.glow {
+  border-color: #00ffc8;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
+}
+
+.hacker-clue-morse {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 8px;
+}
+
+.hacker-clue-num {
+  width: 44px;
+  height: 100%;
+  background: rgba(72, 89, 98, 0.6);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hacker-col-right {
+  flex: 1.2;
+  border: 2px solid rgba(79, 90, 96, 0.8);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.hacker-status-banner {
+  background: #979c9d;
+  color: #000b14;
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hacker-inputs-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.hacker-input-box {
+  width: 64px;
+  height: 64px;
+  background: rgba(18, 24, 29, 0.8);
+  border: 2px solid #4f5a60;
+  color: #10e5a9;
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hacker-input-box.focus {
+  border-color: #c0dada;
+  box-shadow: 0 0 16px rgba(192, 218, 218, 0.6);
+}
+
+.hacker-input-box.error {
+  border-color: #d84f51;
+  color: #d84f51;
+  animation: hackErrorShake 0.3s;
+}
+
+@keyframes hackErrorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.hacker-numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+.hacker-pad-btn {
+  height: 52px;
+  background: #263135;
+  border: 2px solid #4f5a60;
+  color: #8ab4b4;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.hacker-pad-btn:hover {
+  background: #3a4a50;
+  border-color: #6e797f;
+  color: #ffffff;
+}
+
+.hacker-bottom-sync {
+  margin-top: 10px;
+}
+
+.hacker-sync-header {
+  display: flex;
+  justify-content: space-between;
+  color: #7b8488;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.hacker-sync-bar {
+  height: 12px;
+  border: 1px solid #7b8488;
+  background: #151d21;
+  position: relative;
+  overflow: hidden;
+}
+
+.hacker-sync-fill {
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #fff 0, #fff 8px, transparent 8px, transparent 12px);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ==========================================================================
+   GAME 4: RANDOM EQUIPMENT (TRANG BỊ NGẪU NHIÊN)
+   ========================================================================== */
+.equip-controls-card {
+  background: #101a26;
+  border: 1px solid #1e3044;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+}
+
+.equip-options-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.equip-select-map {
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #162436;
+  border: 1px solid #283e56;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.equip-diff-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.equip-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #131f2d;
+  border: 1px solid #1f3245;
+  color: var(--mg-text-muted);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+  font-family: inherit;
+  outline: none;
+}
+
+.equip-toggle-pill * {
+  pointer-events: none;
+}
+
+.equip-toggle-pill:hover:not(.is-disabled) {
+  border-color: #2b4561;
+  color: #ffffff;
+}
+
+.equip-toggle-pill input {
+  display: none;
+}
+
+.equip-toggle-pill .toggle-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3c5267;
+  transition: all 0.2s;
+}
+
+.equip-toggle-pill.checked {
+  background: rgba(0, 255, 200, 0.1);
+  border-color: rgba(0, 255, 200, 0.4);
+  color: var(--mg-primary);
+}
+
+.equip-toggle-pill.checked .toggle-dot {
+  background: var(--mg-primary);
+  box-shadow: 0 0 6px var(--mg-primary);
+}
+
+.equip-diff-pill.checked[data-diff="常规"] {
+  background: rgba(46, 204, 113, 0.16);
+  border-color: rgba(46, 204, 113, 0.55);
+  color: #2ecc71;
+}
+.equip-diff-pill.checked[data-diff="常规"] .toggle-dot {
+  background: #2ecc71;
+  box-shadow: 0 0 8px #2ecc71;
+}
+
+.equip-diff-pill.checked[data-diff="机密"] {
+  background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(245, 158, 11, 0.55);
+  color: #f59e0b;
+}
+.equip-diff-pill.checked[data-diff="机密"] .toggle-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+.equip-diff-pill.checked[data-diff="绝密"] {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #ef4444;
+}
+.equip-diff-pill.checked[data-diff="绝密"] .toggle-dot {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.equip-display-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Banner Card (Map + Operator) */
+.equip-hero-card {
+  position: relative;
+  aspect-ratio: 21/9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #243a4e;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  background: #0d1520;
+}
+
+.equip-map-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equip-operator-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% top;
+  mask-image: linear-gradient(to right, transparent, black 45%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 45%);
+  transform: scale(1.08);
+}
+
+.equip-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 60%);
+}
+
+.equip-hero-info-left {
+  position: absolute;
+  bottom: 18px;
+  left: 24px;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.equip-hero-info-left h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.equip-diff-badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.diff-jimi { /* 机密 / Confidential */
+  background: rgba(255, 165, 2, 0.2);
+  border-color: rgba(255, 165, 2, 0.5);
+  color: #ffa502;
+}
+
+.diff-juemi { /* 绝密 / Top Secret */
+  background: rgba(255, 71, 87, 0.2);
+  border-color: rgba(255, 71, 87, 0.5);
+  color: #ff4757;
+}
+
+.diff-changqui { /* 常规 / Normal */
+  background: rgba(46, 204, 113, 0.2);
+  border-color: rgba(46, 204, 113, 0.5);
+  color: #2ecc71;
+}
+
+.equip-hero-operator-badge {
+  position: absolute;
+  bottom: 18px;
+  right: 24px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 18, 28, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 18px 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.equip-hero-operator-badge img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--mg-primary);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.35);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.equip-hero-operator-badge span#equipOperatorName {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+  letter-spacing: 0.3px;
+}
+
+/* Gear Row Cards */
+.equip-subcards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.equip-gear-card {
+  background: #101a26;
+  border: 1px solid #1e3044;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.equip-card-main-weapon {
+  grid-column: 1 / -1;
+}
+
+.equip-gear-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--mg-text-muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.equip-gear-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.equip-gear-thumb {
+  width: 80px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.equip-gear-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.equip-gear-info h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.equip-gear-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.equip-tag {
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #182839;
+  color: #9cb2c9;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.equip-level-badge {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.lvl-1 { color: #859bb2; }
+.lvl-2 { color: #2ecc71; }
+.lvl-3 { color: #3498db; }
+.lvl-4 { color: #a855f7; }
+.lvl-5 { color: #f59e0b; }
+.lvl-6 { color: #ef4444; }
+
+/* Dynamic Card Borders & Background Tint according to item level */
+.equip-gear-card.lvl-border-1 { border-color: rgba(133, 155, 178, 0.35); background: #101a26; }
+.equip-gear-card.lvl-border-2 { border-color: rgba(46, 204, 113, 0.45); background: linear-gradient(145deg, #101a26, rgba(46, 204, 113, 0.05)); }
+.equip-gear-card.lvl-border-3 { border-color: rgba(52, 152, 219, 0.45); background: linear-gradient(145deg, #101a26, rgba(52, 152, 219, 0.05)); }
+.equip-gear-card.lvl-border-4 { border-color: rgba(168, 85, 247, 0.5); background: linear-gradient(145deg, #101a26, rgba(168, 85, 247, 0.06)); box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08); }
+.equip-gear-card.lvl-border-5 { border-color: rgba(245, 158, 11, 0.55); background: linear-gradient(145deg, #101a26, rgba(245, 158, 11, 0.08)); box-shadow: 0 4px 24px rgba(245, 158, 11, 0.12); }
+.equip-gear-card.lvl-border-6 { border-color: rgba(239, 68, 68, 0.6); background: linear-gradient(145deg, #101a26, rgba(239, 68, 68, 0.09)); box-shadow: 0 4px 28px rgba(239, 68, 68, 0.15); }
+
+/* Difficulty badge variations */
+.diff-changqui { background: rgba(46, 204, 113, 0.18); border-color: rgba(46, 204, 113, 0.5); color: #2ecc71; }
+.diff-jimi { background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.5); color: #f59e0b; }
+.diff-juemi { background: rgba(239, 68, 68, 0.22); border-color: rgba(239, 68, 68, 0.6); color: #ef4444; }
+.diff-yongye { background: rgba(239, 68, 68, 0.22); border-color: rgba(239, 68, 68, 0.6); color: #ef4444; }
+.diff-qianye { background: rgba(99, 102, 241, 0.22); border-color: rgba(99, 102, 241, 0.5); color: #818cf8; }
+.diff-zhongye { background: rgba(217, 70, 239, 0.22); border-color: rgba(217, 70, 239, 0.5); color: #e879f9; }
+.diff-shiying { background: rgba(6, 182, 212, 0.22); border-color: rgba(6, 182, 212, 0.5); color: #22d3ee; }
+
+/* Accessory Quality Colors */
+.equip-quality-tag {
+  font-weight: 700;
+  display: inline-block;
+}
+.qual-green { color: #2ecc71; }
+.qual-blue { color: #3498db; }
+.qual-purple { color: #a855f7; }
+.qual-orange { color: #f97316; }
+.qual-gold { color: #eab308; }
+.qual-red { color: #ef4444; }
+
+/* Disabled pill */
+.equip-toggle-pill.is-disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Radar Orbit Scanning Overlay */
+.equip-radar-overlay {
+  position: absolute;
+  inset: 0;
+  background: #0c0e10;
+  background-image: repeating-linear-gradient(-45deg, #0c0e10, #0c0e10 5px, #18222d 5px, #18222d 9px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.35s ease;
+}
+
+.equip-orbit-spinner {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: equipOrbitSpin 1.4s linear infinite;
+  margin-bottom: 8px;
+}
+
+@keyframes equipOrbitSpin {
+  0% { transform: rotate(0deg) translateX(7px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(7px) rotate(-360deg); }
+}
+
+.equip-radar-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mg-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* History Modal */
+.mg-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 62vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.mg-history-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #101a26;
+  border: 1px solid #1e334a;
+  overflow: hidden;
+  gap: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.mg-history-item:hover {
+  border-color: rgba(0, 255, 200, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.mg-hist-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  mask-image: linear-gradient(to right, black, transparent 90%);
+  -webkit-mask-image: linear-gradient(to right, black, transparent 90%);
+  pointer-events: none;
+}
+
+.mg-hist-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mg-hist-body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mg-hist-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mg-hist-btn {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #28445e;
+  background: #162638;
+  color: #c0d4ea;
+  transition: all 0.2s;
+}
+
+.mg-hist-btn:hover {
+  background: var(--mg-primary);
+  border-color: var(--mg-primary);
+  color: #06131d;
+}
+
+@media (max-width: 768px) {
+  .equip-subcards-grid {
+    grid-template-columns: 1fr;
+  }
+  .mg-hist-body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .morse-door-stage {
+    aspect-ratio: auto;
+    height: 520px;
+  }
+  .hacker-stage {
+    aspect-ratio: auto;
+    height: 620px;
+  }
+  .hacker-main-grid {
+    flex-direction: column;
+  }
+}

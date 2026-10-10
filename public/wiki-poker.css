@@ -1,0 +1,37 @@
+.wiki-directory{grid-template-rows:repeat(5,minmax(0,1fr))}
+.wiki-poker{padding-bottom:24px}
+.poker-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 24px}
+.poker-summary>div{display:flex;flex-direction:column;gap:6px;padding:15px;border:1px solid #77c4cf55;background:#0c3446}
+.poker-summary small{color:#95c4cc;font-size:10px;font-weight:700;text-transform:uppercase}
+.poker-summary strong{color:#ecffff;font-size:24px;line-height:1}
+.poker-progress{height:9px;margin:14px 24px 0;border:1px solid #73bcc861;background:#071b2a;overflow:hidden}
+.poker-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,#3ebfdb,#77f1da);transition:width .25s}
+.poker-intro{margin:10px 24px 20px;color:#a9cbd2;font-size:12px}
+.poker-controls{display:flex;align-items:center;gap:12px;padding:0 24px}
+.poker-controls .wiki-search{flex:1;min-width:0}
+.poker-actions{display:flex;gap:8px;flex:none}
+.poker-actions button,.poker-filters button{min-height:37px;padding:8px 13px;border:1px solid #72bdca70;background:#0c3447;color:#c7e9ed;font:700 11px 'Chakra Petch','Segoe UI',sans-serif;cursor:pointer}
+.poker-actions button:hover,.poker-filters button:hover,.poker-filters button.is-active{border-color:#92eeee;background:#185a6c;color:#fff}
+.poker-actions button:focus-visible,.poker-filters button:focus-visible,.poker-card:focus-visible{outline:2px solid #9ef2ed;outline-offset:2px}
+.poker-filters{display:flex;flex-wrap:wrap;gap:7px;padding:14px 24px 20px}
+.poker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px;padding:0 24px}
+.poker-card{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0;padding:10px;border:1px solid #75c0cb55;background:linear-gradient(145deg,#10394b,#092636);color:#d2e9ed;text-align:center;font:700 12px 'Chakra Petch','Segoe UI',sans-serif;cursor:pointer;transition:border-color .16s,background .16s}
+.poker-card:hover{border-color:#8be9ea;background:#12465a}
+.poker-card.is-owned{border-color:#71e5ce;background:linear-gradient(145deg,#12585b,#0b353e)}
+.poker-card-image{display:grid;place-items:center;width:100%;aspect-ratio:1;background:#061d2b;border:1px solid #5b9dab50}
+.poker-card-image img{display:block;width:100%;height:100%;object-fit:contain}
+.poker-card b{min-height:30px;line-height:1.25}
+.poker-card small{color:#8eced3;font-size:10px}
+.poker-card-status{width:100%;padding:5px;border:1px solid #6eb7c569;color:#b1d6dc;font-size:10px}
+.poker-card.is-owned .poker-card-status{border-color:#66e4c3;color:#9af7d9}
+@media(max-width:760px){
+ .wiki-directory{grid-template-rows:auto auto auto}
+ .wiki-directory a:last-child{grid-column:1/-1}
+ .poker-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:0 14px}
+ .poker-summary>div{padding:10px}.poker-summary strong{font-size:20px}
+ .poker-progress{margin:12px 14px 0}.poker-intro{margin:9px 14px 16px}
+ .poker-controls{flex-direction:column;align-items:stretch;padding:0 14px}.poker-actions{display:grid;grid-template-columns:1fr 1fr}
+ .poker-filters{padding:13px 14px 16px}.poker-filters button{padding:7px 10px;font-size:10px}
+ .poker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 14px}.poker-card{padding:6px;gap:5px;font-size:10px}.poker-card b{min-height:25px}.poker-card small,.poker-card-status{font-size:9px}
+}
+@media(max-width:390px){.poker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

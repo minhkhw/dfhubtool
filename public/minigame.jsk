@@ -1,0 +1,1885 @@
+/**
+ * DELTA FORCE VIỆT NAM - MINI GAME CENTER
+ * Full Implementation of 4 Games:
+ * 1. Mở Hộp Chuột (Crate Opening)
+ * 2. Cổng Mã Morse (Morse Code Keypad Door)
+ * 3. Giải Mã Morse (Hacker Computer)
+ * 4. Trang Bị Ngẫu Nhiên (Random Equipment Generator)
+ */
+
+(function () {
+  'use strict';
+
+  // ==========================================================================
+  // TAB SWITCHING & URL ROUTING
+  // ==========================================================================
+  const TABS = ['crate', 'morse', 'hacker', 'equipment'];
+  let currentTab = 'crate';
+
+  function initTabs() {
+    const params = new URLSearchParams(window.location.search);
+    const requestedGame = params.get('game') || window.location.hash.replace('#', '');
+    if (TABS.includes(requestedGame)) {
+      currentTab = requestedGame;
+    } else {
+      const path = window.location.pathname.toLowerCase();
+      if (path.includes('crate')) currentTab = 'crate';
+      else if (path.includes('morse')) currentTab = 'morse';
+      else if (path.includes('hacker')) currentTab = 'hacker';
+      else if (path.includes('equipment') || path.includes('random')) currentTab = 'equipment';
+    }
+
+    switchTab(currentTab, false);
+
+    document.querySelectorAll('.mg-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const game = btn.getAttribute('data-tab');
+        switchTab(game, true);
+      });
+    });
+  }
+
+  function switchTab(game, updateUrl = true) {
+    if (!TABS.includes(game)) return;
+    currentTab = game;
+
+    document.querySelectorAll('.mg-tab-btn').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-tab') === game);
+    });
+
+    document.querySelectorAll('.mg-game-view').forEach(v => {
+      v.classList.toggle('active', v.getAttribute('data-view') === game);
+    });
+
+    // Update Category Menu active subitem
+    document.querySelectorAll('.category-subitem').forEach(sub => {
+      sub.classList.toggle('active', sub.getAttribute('data-game') === game);
+    });
+
+    if (updateUrl) {
+      const url = new URL(window.location);
+      url.searchParams.set('game', game);
+      window.history.replaceState(null, '', url.toString());
+    }
+
+    // Trigger tab-specific initialization or pauses
+    if (game !== 'morse' && window.morseGame) window.morseGame.stop();
+    if (game !== 'hacker' && window.hackerGame) window.hackerGame.stop();
+  }
+
+  // ==========================================================================
+  // GAME 1: CRATE OPENING (MỞ HỘP CHUỘT)
+  // ==========================================================================
+  const CRATES = [
+    { id: "safe", name: "Két sắt", originalName: "保险箱", cols: 4, rows: 4, cover: "fun/crate/CrateCover/safe.webp" },
+    { id: "minisafe", name: "Két sắt nhỏ", originalName: "小保险箱", cols: 3, rows: 2, cover: "fun/crate/CrateCover/minisafe.webp" },
+    { id: "ULD", name: "Thùng hàng không", originalName: "航空储物箱", cols: 5, rows: 6, cover: "fun/crate/CrateCover/ULD.webp" },
+    { id: "serverCrate", name: "Máy chủ", originalName: "服务器", cols: 4, rows: 4, cover: "fun/crate/CrateCover/serverCrate.webp" },
+    { id: "mcomputerCase", name: "Case máy tính", originalName: "电脑机箱", cols: 3, rows: 3, cover: "fun/crate/CrateCover/mcomputerCase.webp" },
+    { id: "backpack", name: "Balo dã ngoại", originalName: "登山包", cols: 4, rows: 6, cover: "fun/crate/CrateCover/backpack.webp" },
+    { id: "medicalCrate", name: "Đống vật tư y tế", originalName: "医疗物资堆", cols: 4, rows: 4, cover: "fun/crate/CrateCover/medicalCrate.webp" },
+    { id: "advancedStorageCrate", name: "Hộp lưu trữ cao cấp", originalName: "高级储物箱", cols: 5, rows: 5, cover: "fun/crate/CrateCover/advancedStorageCrate.webp" },
+    { id: "ammoCrate", name: "Hòm đạn", originalName: "弹药箱", cols: 3, rows: 3, cover: "fun/crate/CrateCover/ammoCrate.webp" },
+    { id: "medicalBag", name: "Túi sơ cứu", originalName: "医疗包", cols: 3, rows: 2, cover: "fun/crate/CrateCover/medicalBag.png" },
+    { id: "weaponCrate", name: "Hòm vũ khí lớn", originalName: "大武器箱", cols: 6, rows: 4, cover: "fun/crate/CrateCover/weaponCrate.webp" },
+    { id: "experimentCrate", name: "Áo thí nghiệm", originalName: "实验服", cols: 3, rows: 2, cover: "fun/crate/CrateCover/xperimentCrate.webp" },
+    { id: "birdCrate", name: "Tổ chim", originalName: "鸟窝", cols: 2, rows: 2, cover: "fun/crate/CrateCover/birdCrate.webp" },
+    { id: "travelBag", name: "Túi du lịch", originalName: "旅行袋", cols: 4, rows: 3, cover: "fun/crate/CrateCover/travelBag.webp" },
+    { id: "hiddenCrate", name: "Vật phẩm cất giấu", originalName: "藏匿物", cols: 4, rows: 4, cover: "fun/crate/CrateCover/hiddenCrate.webp" }
+  ];
+
+  class CrateGame {
+    constructor() {
+      this.gridContainer = document.getElementById('crateGridSelect');
+      this.modal = document.getElementById('crateModal');
+      this.modalTitle = document.getElementById('crateModalTitle');
+      this.modalDims = document.getElementById('crateModalDims');
+      this.modalTotalVal = document.getElementById('crateTotalValue');
+      this.inventoryGrid = document.getElementById('crateInventoryGrid');
+      this.currentCrate = null;
+      this.audioNormal = new Audio('fun/crate/audio/loot_normal.ogg');
+      this.audioEpic = new Audio('fun/crate/audio/loot_epic.ogg');
+      this.audioMythic = new Audio('fun/crate/audio/loot_mythic.ogg');
+
+      this.init();
+    }
+
+    init() {
+      if (!this.gridContainer) return;
+      this.renderCrateList();
+
+      document.getElementById('crateModalClose')?.addEventListener('click', () => this.closeModal());
+      document.getElementById('crateReopenBtn')?.addEventListener('click', () => {
+        if (this.currentCrate) this.openCrate(this.currentCrate);
+      });
+      document.getElementById('crateModalCloseBtn')?.addEventListener('click', () => this.closeModal());
+
+      this.modal?.addEventListener('click', (e) => {
+        if (e.target === this.modal) this.closeModal();
+      });
+    }
+
+    renderCrateList() {
+      this.gridContainer.innerHTML = CRATES.map(c => `
+        <div class="crate-card" data-id="${c.id}">
+          <div class="crate-thumb-wrap">
+            <img src="${c.cover}" alt="${c.name}" loading="lazy">
+          </div>
+          <div class="crate-info">
+            <div class="crate-name">${c.name}</div>
+            <span class="crate-dims">${c.cols} × ${c.rows} Ô</span>
+            <button class="crate-open-btn" type="button">MỞ HÒM</button>
+          </div>
+        </div>
+      `).join('');
+
+      this.gridContainer.querySelectorAll('.crate-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.getAttribute('data-id');
+          const crate = CRATES.find(c => c.id === id);
+          if (crate) this.openCrate(crate);
+        });
+      });
+    }
+
+    formatPrice(val) {
+      const icon = '<img src="assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq">';
+      if (!val) return '0 ' + icon;
+      return Number(val).toLocaleString('vi-VN') + ' ' + icon;
+    }
+
+    formatPriceText(val) {
+      if (!val) return '0 Xu Tekniq';
+      return Number(val).toLocaleString('vi-VN') + ' Xu Tekniq';
+    }
+
+    formatItemPrice(val, w, h) {
+      const icon = '<img src="assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq">';
+      if (!val) return '0 ' + icon;
+      const num = Number(val);
+      if (w * h >= 2) {
+        return num.toLocaleString('vi-VN') + ' ' + icon;
+      }
+      if (num >= 1000000000) return (num / 1000000000).toFixed(2).replace(/\.00$/, '') + 'B ' + icon;
+      if (num >= 1000000) return (num / 1000000).toFixed(2).replace(/\.00$/, '') + 'M ' + icon;
+      if (num >= 100000) return Math.round(num / 1000) + 'k ' + icon;
+      return num.toLocaleString('vi-VN') + ' ' + icon;
+    }
+
+    async openCrate(crate) {
+      this.currentCrate = crate;
+      if (this.searchTimer) clearTimeout(this.searchTimer);
+
+      this.modal.classList.add('open');
+      this.modalTitle.textContent = crate.name;
+      this.modalDims.textContent = `${crate.cols} × ${crate.rows} Ô LƯU TRỮ`;
+      this.modalTotalVal.innerHTML = '0 <img src="assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq">';
+
+      const reopenBtn = document.getElementById('crateReopenBtn');
+      if (reopenBtn) reopenBtn.disabled = true;
+
+      // Reset tactical search banner
+      const banner = document.getElementById('crateSearchBanner');
+      const bannerTitle = document.getElementById('crateSearchTitleText');
+      if (banner) banner.classList.remove('completed');
+      if (bannerTitle) bannerTitle.textContent = 'ĐANG TÌM KIẾM VẬT TƯ...';
+
+      // Adaptive cell size based on crate grid dimensions
+      let cellSize = 82;
+      if (crate.cols <= 2) cellSize = 110;
+      else if (crate.cols <= 3) cellSize = 96;
+      else if (crate.cols === 4) cellSize = 84;
+      else if (crate.cols === 5) cellSize = 78;
+      else if (crate.cols >= 6) cellSize = 72;
+
+      this.inventoryGrid.innerHTML = `
+        <div class="crate-grid-board" id="crateGridBoard" style="
+          display: grid;
+          grid-template-columns: repeat(${crate.cols}, ${cellSize}px);
+          grid-template-rows: repeat(${crate.rows}, ${cellSize}px);
+          position: relative;
+        "></div>
+      `;
+      const board = this.inventoryGrid.querySelector('#crateGridBoard');
+
+      // 1. Render all empty background cells (z-index: 1)
+      for (let r = 1; r <= crate.rows; r++) {
+        for (let c = 1; c <= crate.cols; c++) {
+          const cell = document.createElement('div');
+          cell.className = 'crate-grid-cell';
+          cell.style.gridRow = `${r}`;
+          cell.style.gridColumn = `${c}`;
+          board.appendChild(cell);
+        }
+      }
+
+      // Fetch items from API with Delta Force Tools auction house data
+      let items = [];
+      try {
+        const res = await fetch('/api/crate/open', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ crateId: crate.id })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.success && Array.isArray(data.items) && data.items.length > 0) {
+            items = data.items;
+          }
+        }
+      } catch (err) {
+        console.warn('API error, using Delta Force Tools generator:', err);
+      }
+
+      // Fallback: Use DeltaForceLootEngine directly
+      if (!items || items.length === 0) {
+        if (window.DeltaForceLootEngine && typeof window.DeltaForceLootEngine.generateLootForCrate === 'function') {
+          items = window.DeltaForceLootEngine.generateLootForCrate(crate);
+        } else {
+          items = this.generateFallbackLoot(crate);
+        }
+      }
+
+      this.startProgressiveSearch(items, crate);
+    }
+
+    generateFallbackLoot(crate) {
+      if (window.DeltaForceLootEngine && typeof window.DeltaForceLootEngine.generateLootForCrate === 'function') {
+        return window.DeltaForceLootEngine.generateLootForCrate(crate);
+      }
+      return [];
+    }
+
+    startProgressiveSearch(items, crate) {
+      const board = this.inventoryGrid.querySelector('#crateGridBoard');
+      if (!board) return;
+
+      const sorted = [...items].sort((a, b) => a.gridRow - b.gridRow || a.gridCol - b.gridCol);
+      const itemElements = [];
+
+      sorted.forEach((item) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = `crate-loot-item is-unrevealed grade-${item.grade || 1}`;
+
+        const col = Math.max(1, Math.min(item.gridCol || 1, crate.cols));
+        const row = Math.max(1, Math.min(item.gridRow || 1, crate.rows));
+        const w = Math.max(1, Math.min(item.itemWidth || 1, crate.cols - col + 1));
+        const h = Math.max(1, Math.min(item.itemHeight || 1, crate.rows - row + 1));
+
+        itemEl.style.gridColumn = `${col} / span ${w}`;
+        itemEl.style.gridRow = `${row} / span ${h}`;
+        itemEl.style.zIndex = '2';
+
+        const title = item.nameVi || 'Vật phẩm';
+        const rawPrice = item.avgPrice || item.price || item.itemValue || 0;
+        const formattedFullPrice = this.formatPriceText(rawPrice);
+        const displayPrice = this.formatItemPrice(rawPrice, w, h);
+
+        itemEl.title = `${title} \nKích thước: ${w}×${h} ô\nGiá thị trường: ${formattedFullPrice}\nCấp độ: Cấp ${item.grade || 1}`;
+
+        itemEl.innerHTML = `
+          <div class="crate-search-indicator">
+            <div class="crate-search-glass-orbit">
+              <svg viewBox="0 0 24 24" width="34" height="34">
+                <circle cx="10" cy="10" r="6.5" fill="none" stroke="#ffffff" stroke-width="2.5" />
+                <line x1="15" y1="15" x2="21" y2="21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="crate-loot-inner">
+            <img src="${item.pic || item.image}" alt="${title}" class="crate-loot-img" loading="lazy" onerror="this.onerror=null;this.src='assets/wiki/coin.png'">
+            <div class="crate-loot-header">
+              <span class="crate-loot-name" title="${title}">${title}</span>
+            </div>
+            <div class="crate-loot-bottom">
+              <span class="crate-loot-price">${displayPrice}</span>
+            </div>
+          </div>
+        `;
+
+        board.appendChild(itemEl);
+        itemElements.push(itemEl);
+      });
+
+      // Grade search durations based on Shushu / Delta Force engine
+      const GRADE_SEARCH_TIMES = {
+        1: 800,
+        2: 800,
+        3: 1000,
+        4: 1400,
+        5: 1800,
+        6: 2200
+      };
+
+      let currentIndex = 0;
+      let currentTotalVal = 0;
+
+      const searchNext = () => {
+        if (currentIndex >= sorted.length) {
+          // Finished examining all items!
+          const banner = document.getElementById('crateSearchBanner');
+          const bannerTitle = document.getElementById('crateSearchTitleText');
+          if (banner) banner.classList.add('completed');
+          if (bannerTitle) bannerTitle.textContent = `${crate.name.toUpperCase()} - HOÀN TẤT TRÍCH XUẤT`;
+
+          const reopenBtn = document.getElementById('crateReopenBtn');
+          if (reopenBtn) reopenBtn.disabled = false;
+          return;
+        }
+
+        const currentItem = sorted[currentIndex];
+        const currentEl = itemElements[currentIndex];
+
+        // Mark current item as actively being searched (triggers spinning magnifying glass)
+        currentEl.classList.add('is-searching');
+
+        let searchTime = GRADE_SEARCH_TIMES[currentItem.grade] || 800;
+        if (currentItem.type === 'KEYCARDS') {
+          searchTime = Math.round(searchTime * 1.25);
+        }
+
+        this.searchTimer = setTimeout(() => {
+          // Reveal this item!
+          currentEl.classList.remove('is-searching', 'is-unrevealed');
+          currentEl.classList.add('is-revealed');
+          if (currentItem.grade >= 4) {
+            currentEl.classList.add('high-grade');
+          }
+
+          // Sound cue
+          this.playLootSound(currentItem.grade);
+
+          // Update total counter
+          currentTotalVal += (currentItem.avgPrice || currentItem.price || currentItem.itemValue || 0);
+          this.modalTotalVal.innerHTML = this.formatPrice(currentTotalVal);
+
+          currentIndex++;
+          searchNext();
+        }, searchTime);
+      };
+
+      // Start sequential search chain
+      searchNext();
+    }
+
+    playLootSound(grade) {
+      try {
+        let sound = this.audioNormal;
+        if (grade >= 5) sound = this.audioMythic;
+        else if (grade >= 3) sound = this.audioEpic;
+
+        sound.currentTime = 0;
+        sound.volume = 0.55;
+        sound.play().catch(() => {});
+      } catch (e) {}
+    }
+
+    closeModal() {
+      if (this.searchTimer) clearTimeout(this.searchTimer);
+      this.modal.classList.remove('open');
+      this.inventoryGrid.innerHTML = '';
+      const banner = document.getElementById('crateSearchBanner');
+      if (banner) banner.classList.remove('completed');
+    }
+  }
+
+  // ==========================================================================
+  // GAME 2: MORSE CODE DOOR (CỔNG MÃ MORSE)
+  // ==========================================================================
+  const MORSE_TABLE = {
+    "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+    "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----."
+  };
+
+  class MorseGame {
+    constructor() {
+      this.digitCount = 4;
+      this.secretCode = "";
+      this.currentInput = [];
+      this.isPlaying = false;
+      this.audioCtx = null;
+      this.bgmAudio = new Audio('/fun/morse/DecryptionBGM.ogg');
+      this.bgmAudio.loop = true;
+      this.bgmAudio.volume = 0.25;
+      this.morseLoopTimer = null;
+      this.isMorseAudioActive = false;
+
+      this.statusBar = document.getElementById('morseStatusBar');
+      this.inputsWrap = document.getElementById('morseInputsWrap');
+      this.startBtn = document.getElementById('morseStartBtn');
+
+      this.init();
+    }
+
+    init() {
+      if (!this.statusBar) return;
+
+      document.querySelectorAll('.morse-opt-len').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (this.isPlaying) return;
+          this.digitCount = parseInt(btn.getAttribute('data-len'), 10);
+          document.querySelectorAll('.morse-opt-len').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          this.resetInputs();
+        });
+      });
+
+      this.startBtn?.addEventListener('click', () => {
+        if (this.isPlaying) this.stop();
+        else this.start();
+      });
+
+      document.querySelectorAll('.morse-key-btn').forEach(key => {
+        key.addEventListener('click', () => {
+          const val = key.getAttribute('data-num');
+          if (val !== null && val !== undefined) this.inputDigit(val);
+        });
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (currentTab !== 'morse' || !this.isPlaying) return;
+        if (e.key >= '0' && e.key <= '9') {
+          e.preventDefault();
+          this.inputDigit(e.key);
+        } else if (e.key === 'Backspace') {
+          e.preventDefault();
+          this.backspace();
+        }
+      });
+
+      this.resetInputs();
+    }
+
+    resetInputs() {
+      this.currentInput = Array(this.digitCount).fill('');
+      this.renderBoxes();
+      this.setStatus('idle', 'VUI LÒNG NHẬP MẬT MÃ');
+    }
+
+    renderBoxes() {
+      this.inputsWrap.innerHTML = this.currentInput.map((val, idx) => {
+        const isCursor = this.isPlaying && (val === '' && (idx === 0 || this.currentInput[idx - 1] !== ''));
+        return `<div class="morse-digit-box ${isCursor ? 'active-cursor' : ''}">${val}</div>`;
+      }).join('');
+    }
+
+    setStatus(state, text) {
+      this.statusBar.className = `morse-door-status-bar ${state}`;
+      this.statusBar.textContent = text;
+    }
+
+    start() {
+      this.isPlaying = true;
+      this.startBtn.classList.add('running');
+      this.startBtn.textContent = 'KẾT THÚC';
+
+      // Generate random digits
+      let code = '';
+      for (let i = 0; i < this.digitCount; i++) {
+        code += Math.floor(Math.random() * 10);
+      }
+      this.secretCode = code;
+      this.resetInputs();
+
+      // Start BGM
+      try {
+        this.bgmAudio.currentTime = 0;
+        this.bgmAudio.play().catch(() => {});
+      } catch (e) {}
+
+      // Start Morse loop
+      this.startMorseLoop();
+    }
+
+    stop() {
+      this.isPlaying = false;
+      this.startBtn?.classList.remove('running');
+      if (this.startBtn) this.startBtn.textContent = 'BẮT ĐẦU';
+      this.stopMorseLoop();
+      this.bgmAudio.pause();
+      this.resetInputs();
+    }
+
+    getAudioContext() {
+      if (!this.audioCtx || this.audioCtx.state === 'closed') {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        this.audioCtx = new AudioCtx();
+      }
+      return this.audioCtx;
+    }
+
+    playTone(durationMs) {
+      return new Promise(resolve => {
+        if (!this.isMorseAudioActive) return resolve();
+        try {
+          const ctx = this.getAudioContext();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.value = 4000;
+
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + 0.005);
+          gain.gain.setValueAtTime(0.12, ctx.currentTime + (durationMs / 1000) - 0.005);
+          gain.gain.linearRampToValueAtTime(0, ctx.currentTime + (durationMs / 1000));
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(ctx.currentTime);
+          osc.stop(ctx.currentTime + (durationMs / 1000));
+          osc.onended = () => resolve();
+        } catch (e) {
+          setTimeout(resolve, durationMs);
+        }
+      });
+    }
+
+    async playMorseSequence(codeStr) {
+      for (let i = 0; i < codeStr.length; i++) {
+        if (!this.isMorseAudioActive) return;
+        const morseChar = MORSE_TABLE[codeStr[i]];
+        if (morseChar) {
+          for (let j = 0; j < morseChar.length; j++) {
+            if (!this.isMorseAudioActive) return;
+            const dur = morseChar[j] === '.' ? 100 : 300;
+            await this.playTone(dur);
+            if (j < morseChar.length - 1 && this.isMorseAudioActive) {
+              await new Promise(r => setTimeout(r, 150));
+            }
+          }
+        }
+        if (i < codeStr.length - 1 && this.isMorseAudioActive) {
+          await new Promise(r => setTimeout(r, 600));
+        }
+      }
+    }
+
+    startMorseLoop() {
+      this.isMorseAudioActive = true;
+      const run = async () => {
+        while (this.isMorseAudioActive) {
+          await this.playMorseSequence(this.secretCode);
+          if (this.isMorseAudioActive) {
+            await new Promise(r => setTimeout(r, 2000));
+          }
+        }
+      };
+      run();
+    }
+
+    stopMorseLoop() {
+      this.isMorseAudioActive = false;
+    }
+
+    inputDigit(digit) {
+      if (!this.isPlaying) return;
+      const emptyIdx = this.currentInput.findIndex(v => v === '');
+      if (emptyIdx === -1) return;
+
+      this.currentInput[emptyIdx] = digit;
+      this.renderBoxes();
+
+      // Check if complete
+      if (this.currentInput.every(v => v !== '')) {
+        const userCode = this.currentInput.join('');
+        if (userCode === this.secretCode) {
+          this.setStatus('success', 'MẬT MÃ CHÍNH XÁC!');
+          this.stopMorseLoop();
+          setTimeout(() => this.stop(), 2000);
+        } else {
+          this.setStatus('fail', 'MẬT MÃ SAI! VUI LÒNG THỬ LẠI');
+          setTimeout(() => {
+            if (this.isPlaying) this.resetInputs();
+          }, 1200);
+        }
+      }
+    }
+
+    backspace() {
+      if (!this.isPlaying) return;
+      const filledIdx = this.currentInput.findLastIndex(v => v !== '');
+      if (filledIdx !== -1) {
+        this.currentInput[filledIdx] = '';
+        this.renderBoxes();
+        this.setStatus('idle', 'VUI LÒNG NHẬP MẬT MÃ');
+      }
+    }
+  }
+
+  // ==========================================================================
+  // GAME 3: HACKER COMPUTER (GIẢI MÃ MORSE)
+  // ==========================================================================
+  class HackerGame {
+    constructor() {
+      this.secretDigits = [];
+      this.userInput = ['', '', ''];
+      this.status = 'idle'; // idle | playing | success
+      this.startTime = 0;
+      this.timerInterval = null;
+      this.syncInterval = null;
+      this.currentFocus = 0;
+
+      this.audioCorrect = new Audio('/fun/HackerComputer/Password correct.wav');
+      this.audioIncorrect = new Audio('/fun/HackerComputer/Incorrect password.wav');
+      this.audioSuccess = new Audio('/fun/HackerComputer/Deciphered successfully.wav');
+      this.loopAudios = [1, 2, 3, 4].map(n => new Audio(`/fun/HackerComputer/Decoding_${n}.ogg`));
+
+      this.startBtn = document.getElementById('hackerStartBtn');
+      this.statusBanner = document.getElementById('hackerStatusBanner');
+      this.morseDisplay = document.getElementById('hackerMorseDisplay');
+      this.cluesGrid = document.getElementById('hackerCluesGrid');
+      this.inputBoxes = document.querySelectorAll('.hacker-input-box');
+      this.syncFill = document.getElementById('hackerSyncFill');
+      this.syncPct = document.getElementById('hackerSyncPct');
+
+      this.init();
+    }
+
+    init() {
+      if (!this.startBtn) return;
+
+      this.renderCluesTable();
+
+      this.startBtn.addEventListener('click', () => {
+        if (this.status === 'playing') this.stop();
+        else this.start();
+      });
+
+      document.querySelectorAll('.hacker-pad-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-num');
+          if (val !== null && val !== undefined) this.inputNumber(val);
+        });
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (currentTab !== 'hacker') return;
+        if (e.key === ' ' && this.status === 'success') {
+          e.preventDefault();
+          this.start();
+        } else if (this.status === 'playing') {
+          if (e.key >= '0' && e.key <= '9') {
+            e.preventDefault();
+            this.inputNumber(e.key);
+          } else if (e.key === 'Backspace') {
+            e.preventDefault();
+            this.backspace();
+          }
+        }
+      });
+    }
+
+    renderCluesTable() {
+      if (!this.cluesGrid) return;
+      const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+      this.cluesGrid.innerHTML = digits.map(d => {
+        const morse = MORSE_TABLE[d];
+        const dotsHtml = morse.split('').map(c => c === '.' ? '<span class="hacker-dot"></span>' : '<span class="hacker-dash"></span>').join('');
+        return `
+          <div class="hacker-clue-item" id="hackerClue_${d}">
+            <div class="hacker-clue-morse">${dotsHtml}</div>
+            <div class="hacker-clue-num">${d}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    start() {
+      this.status = 'playing';
+      this.userInput = ['', '', ''];
+      this.currentFocus = 0;
+      this.startBtn.textContent = 'DỪNG LẠI';
+      this.statusBanner.textContent = 'Vui lòng nhập mật mã _ _ _';
+
+      // 3 Random digits
+      this.secretDigits = [
+        String(Math.floor(Math.random() * 10)),
+        String(Math.floor(Math.random() * 10)),
+        String(Math.floor(Math.random() * 10))
+      ];
+
+      // Render top Morse code targets
+      this.renderMorseTarget();
+      this.updateInputBoxes();
+
+      // Start elapsed timer & sync bar
+      this.startTime = Date.now();
+      clearInterval(this.syncInterval);
+      this.syncInterval = setInterval(() => {
+        const elapsed = (Date.now() - this.startTime) / 1000;
+        const pct = Math.min(100, Math.floor((elapsed / 60) * 100));
+        if (this.syncFill) this.syncFill.style.width = `${pct}%`;
+        if (this.syncPct) this.syncPct.textContent = `${pct}%`;
+      }, 100);
+
+      this.playRandomLoop();
+    }
+
+    stop() {
+      this.status = 'idle';
+      this.startBtn.textContent = 'BẮT ĐẦU PHÁ MÃ';
+      this.statusBanner.textContent = '>> Đang chờ khởi động _ _ _';
+      clearInterval(this.syncInterval);
+      if (this.syncFill) this.syncFill.style.width = '0%';
+      if (this.syncPct) this.syncPct.textContent = '0%';
+      this.stopLoops();
+      this.morseDisplay.innerHTML = '<span style="color:#626a6f;font-size:14px;">Chưa lấy được mã...</span>';
+      this.userInput = ['', '', ''];
+      this.updateInputBoxes();
+    }
+
+    renderMorseTarget() {
+      this.morseDisplay.innerHTML = this.secretDigits.map((d, idx) => {
+        const morse = MORSE_TABLE[d];
+        const elements = morse.split('').map(c => c === '.' ? '<span class="hacker-dot"></span>' : '<span class="hacker-dash"></span>').join('');
+        return `<div class="hacker-morse-code-cell ${idx === this.currentFocus ? 'active' : ''}">${elements}</div>`;
+      }).join('');
+    }
+
+    updateInputBoxes() {
+      this.inputBoxes.forEach((box, i) => {
+        box.textContent = this.userInput[i];
+        box.classList.toggle('focus', this.status === 'playing' && i === this.currentFocus);
+        box.classList.remove('error');
+      });
+      this.renderMorseTarget();
+    }
+
+    playRandomLoop() {
+      if (this.status !== 'playing') return;
+      const snd = this.loopAudios[Math.floor(Math.random() * this.loopAudios.length)];
+      snd.volume = 0.3;
+      snd.currentTime = 0;
+      snd.play().catch(() => {});
+      snd.onended = () => {
+        if (this.status === 'playing') setTimeout(() => this.playRandomLoop(), 400);
+      };
+    }
+
+    stopLoops() {
+      this.loopAudios.forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+        a.onended = null;
+      });
+    }
+
+    inputNumber(num) {
+      if (this.status !== 'playing' || this.currentFocus >= 3) return;
+
+      const idx = this.currentFocus;
+      this.userInput[idx] = num;
+
+      // Glow clue item
+      const clue = document.getElementById(`hackerClue_${num}`);
+      if (clue) {
+        clue.classList.add('glow');
+        setTimeout(() => clue.classList.remove('glow'), 600);
+      }
+
+      if (num === this.secretDigits[idx]) {
+        // Correct digit
+        this.currentFocus++;
+        this.updateInputBoxes();
+
+        if (this.currentFocus === 3) {
+          // Solved successfully!
+          this.status = 'success';
+          clearInterval(this.syncInterval);
+          this.stopLoops();
+          this.audioSuccess.currentTime = 0;
+          this.audioSuccess.play().catch(() => {});
+
+          const elapsedSec = ((Date.now() - this.startTime) / 1000).toFixed(3);
+          this.statusBanner.textContent = `GIẢI MÃ THÀNH CÔNG! (${elapsedSec}s) - Bấm [Space] hoặc nút dưới để chơi tiếp`;
+          this.startBtn.textContent = 'CHƠI LẠI (SPACE)';
+        } else {
+          this.audioCorrect.currentTime = 0;
+          this.audioCorrect.play().catch(() => {});
+        }
+      } else {
+        // Wrong digit
+        this.audioIncorrect.currentTime = 0;
+        this.audioIncorrect.play().catch(() => {});
+        this.statusBanner.textContent = 'Mật mã sai! Vui lòng thử lại';
+        this.inputBoxes[idx].classList.add('error');
+
+        setTimeout(() => {
+          if (this.status === 'playing') {
+            this.userInput[idx] = '';
+            this.updateInputBoxes();
+            this.statusBanner.textContent = 'Vui lòng nhập mật mã _ _ _';
+          }
+        }, 800);
+      }
+    }
+
+    backspace() {
+      if (this.status !== 'playing') return;
+      if (this.currentFocus > 0) {
+        this.currentFocus--;
+        this.userInput[this.currentFocus] = '';
+        this.updateInputBoxes();
+      }
+    }
+  }
+
+  // ==========================================================================
+  // GAME 4: RANDOM EQUIPMENT (TRANG BỊ NGẪU NHIÊN)
+  // ==========================================================================
+  const OPERATOR_DATA = {
+    // Toxic (蛊 / 佐娅 / Zoya Pomchenkova)
+    "蛊": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    "佐娅": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    "Toxic": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    "Toxik": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    "Zoya": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    "Zoya Pomchenkova": { nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+
+    // D-Wolf (红狼 / Kai Silva)
+    "红狼": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    "D-Wolf": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    "Kai Silva": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    "Kai": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    "Direwolf": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    "Sói Đỏ": { nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+
+    // Vyron (威龙 / Wang Yuhao)
+    "威龙": { nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+    "Vyron": { nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+    "Wang Yuhao": { nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+    "Veyron": { nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+    "Vy Long": { nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+
+    // Nox (诺克斯 / Hélie de Montbel)
+    "诺克斯": { nameVi: "Nox", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Elio_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Nox": { nameVi: "Nox", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Elio_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Helie de Montbel": { nameVi: "Nox", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Elio_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Helie": { nameVi: "Nox", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Elio_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+
+    // Tempest (疾风 / Claire Ann Beyers)
+    "疾风": { nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+    "Tempest": { nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+    "Claire Ann Beyers": { nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+    "Claire": { nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+    "Tật Phong": { nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+
+    // Stinger (蜂医 / Roy Smee)
+    "蜂医": { nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+    "Stinger": { nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+    "Roy Smee": { nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+    "Smee": { nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+    "Bác Sĩ Ong": { nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+
+    // Vlinder (蝶)
+    "蝶": { nameVi: "Vlinder", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C103_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img14.jpg", pos: "40%" },
+    "Vlinder": { nameVi: "Vlinder", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C103_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img14.jpg", pos: "40%" },
+    "Butterfly": { nameVi: "Vlinder", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C103_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img14.jpg", pos: "40%" },
+
+    // Shepherd (牧羊人 / Terry Mursa)
+    "牧羊人": { nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+    "Shepherd": { nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+    "Terry Mursa": { nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+    "Terry": { nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+    "Mục Dương Nhân": { nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+
+    // Uluru (乌鲁鲁 / David Feller)
+    "乌鲁鲁": { nameVi: "Uluru", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_David_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img3.jpg", pos: "70%" },
+    "Uluru": { nameVi: "Uluru", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_David_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img3.jpg", pos: "70%" },
+    "David Feller": { nameVi: "Uluru", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_David_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img3.jpg", pos: "70%" },
+    "David": { nameVi: "Uluru", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_David_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img3.jpg", pos: "70%" },
+
+    // Sineva (深蓝 / Alexei Petrov)
+    "深蓝": { nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+    "Sineva": { nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+    "Alexei Petrov": { nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+    "Alexei": { nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+    "Abyssal": { nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+
+    // Rover (旅人 / Rowan Walsh)
+    "旅人": { nameVi: "Rover", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C104_g_01.png", pic: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/HeroPic/Rover_Portraits_01.webp", pos: "65%" },
+    "Rover": { nameVi: "Rover", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C104_g_01.png", pic: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/HeroPic/Rover_Portraits_01.webp", pos: "65%" },
+    "Rowan": { nameVi: "Rover", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C104_g_01.png", pic: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/HeroPic/Rover_Portraits_01.webp", pos: "65%" },
+    "Rowan Walsh": { nameVi: "Rover", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C104_g_01.png", pic: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/HeroPic/Rover_Portraits_01.webp", pos: "65%" },
+
+    // Morse (无名)
+    "Morse": { nameVi: "Morse", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Morse_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img15.jpg", pos: "45%" },
+    "Morse": { nameVi: "Morse", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Morse_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img15.jpg", pos: "45%" },
+    "Morse": { nameVi: "Morse", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Morse_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img15.jpg", pos: "45%" },
+
+    // Luna (露娜 / Luna Kim)
+    "露娜": { nameVi: "Luna", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AF_Luna_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img4.jpg", pos: "70%" },
+    "Luna": { nameVi: "Luna", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AF_Luna_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img4.jpg", pos: "70%" },
+    "Luna Kim": { nameVi: "Luna", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AF_Luna_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img4.jpg", pos: "70%" },
+
+    // Hackclaw (骇爪 / Mai Xiaowen)
+    "骇爪": { nameVi: "Hackclaw", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Yukine_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img1.jpg", pos: "65%" },
+    "Hackclaw": { nameVi: "Hackclaw", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Yukine_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img1.jpg", pos: "65%" },
+    "Mai Xiaowen": { nameVi: "Hackclaw", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Yukine_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img1.jpg", pos: "65%" },
+    "Yukine": { nameVi: "Hackclaw", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Yukine_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img1.jpg", pos: "65%" },
+
+    // Raptor (银翼)
+    "银翼": { nameVi: "Raptor", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Landon_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img12.jpg", pos: "70%" },
+    "Raptor": { nameVi: "Raptor", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Landon_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img12.jpg", pos: "70%" },
+    "Silver Wing": { nameVi: "Raptor", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Landon_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img12.jpg", pos: "70%" },
+    "Landon": { nameVi: "Raptor", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Landon_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img12.jpg", pos: "70%" },
+
+    // Gizmo (比特 / Rashid Rahal)
+    "比特": { nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+    "Gizmo": { nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+    "吉兹莫": { nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+    "Rashid": { nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+    "Rashid Rahal": { nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+
+    // N-Two (液氮 / Gabriel Murrill)
+    "液氮": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "N-Two": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "NTwo": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "N2": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "恩图": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Gabriel": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Gabriel Murrill": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    "Gabriel Murray": { nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" }
+  };
+
+  const MAP_DATA = {
+    "1": { nameVi: "Zero Dam", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/db-jimi.jpg" },
+    "2": { nameVi: "Thung lũng Layali", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/yc-jimi.jpg" },
+    "3": { nameVi: "Barkesh", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/bks-jimi.jpg" },
+    "4": { nameVi: "Trạm không gian", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/htjd-jimi.jpg" },
+    "5": { nameVi: "Ngục giam thuỷ triều", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/cxjy-jimi.jpg" },
+    "6": { nameVi: "AZ3", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/AZ3-jimi.jpg" },
+    "零号大坝": { nameVi: "Zero Dam", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/db-jimi.jpg" },
+    "长弓溪谷": { nameVi: "Thung lũng Layali", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/yc-jimi.jpg" },
+    "巴克什": { nameVi: "Barkesh", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/bks-jimi.jpg" },
+    "航天基地": { nameVi: "Trạm không gian", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/htjd-jimi.jpg" },
+    "潮汐监狱": { nameVi: "Ngục giam thuỷ triều", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/cxjy-jimi.jpg" },
+    "AZ3": { nameVi: "AZ3", pic: "https://eo.oss.hengj.cn/one/DfGame/MapImages/AZ3-jimi.jpg" }
+  };
+
+  const DIFFICULTY_DATA = {
+    "常规": { nameVi: "Dễ", css: "diff-changqui" },
+    "Normal": { nameVi: "Dễ", css: "diff-changqui" },
+    "Dễ": { nameVi: "Dễ", css: "diff-changqui" },
+    "机密": { nameVi: "Thường", css: "diff-jimi" },
+    "Confidential": { nameVi: "Thường", css: "diff-jimi" },
+    "Thường": { nameVi: "Thường", css: "diff-jimi" },
+    "绝密": { nameVi: "Khó", css: "diff-juemi" },
+    "Top Secret": { nameVi: "Khó", css: "diff-juemi" },
+    "Tuyệt Mật": { nameVi: "Khó", css: "diff-juemi" },
+    "Tuyệt mật": { nameVi: "Khó", css: "diff-juemi" },
+    "Khó": { nameVi: "Khó", css: "diff-juemi" },
+    "永夜": { nameVi: "Khó", css: "diff-yongye" },
+    "前夜": { nameVi: "Thường", css: "diff-qianye" },
+    "终夜": { nameVi: "Khó", css: "diff-zhongye" },
+    "适应": { nameVi: "Dễ", css: "diff-shiying" }
+  };
+
+  const WEAPON_CLASS_MAP = {
+    "突击步枪": "Súng trường tấn công",
+    "步枪": "Súng trường tấn công",
+    "战斗步枪": "Súng trường chiến đấu",
+    "冲锋枪": "Súng tiểu liên",
+    "狙击步枪": "Súng bắn tỉa",
+    "栓动狙击步枪": "Súng bắn tỉa lên đạn",
+    "射手步枪": "Súng trường thiện xạ (DMR)",
+    "轻机枪": "Súng máy hạng nhẹ (LMG)",
+    "霰弹枪": "Súng Shotgun",
+    "手枪": "Súng lục"
+  };
+
+  const FIRE_MODE_MAP = {
+    "全自动": "Tự động",
+    "半自动": "Bán tự động",
+    "三连发": "3 viên",
+    "单发": "Từng viên"
+  };
+
+  const QUALITY_MAP = {
+    "绿色": { nameVi: "Xanh lục", css: "qual-green" },
+    "蓝色": { nameVi: "Xanh lam", css: "qual-blue" },
+    "紫色": { nameVi: "Tím", css: "qual-purple" },
+    "橙色": { nameVi: "Cam", css: "qual-orange" },
+    "金色": { nameVi: "Vàng", css: "qual-gold" },
+    "红色": { nameVi: "Đỏ", css: "qual-red" }
+  };
+
+  // Comprehensive fallback pool for offline/static operations (18 operators)
+  const FALLBACK_OPERATORS = [
+    { name: "Toxic", nameVi: "Toxic", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Zoya_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img8.jpg", pos: "85%" },
+    { name: "D-Wolf", nameVi: "D-Wolf", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kai_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img6.jpg", pos: "70%" },
+    { name: "Vyron", nameVi: "Vyron", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Kuno_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img2.jpg", pos: "70%" },
+    { name: "Nox", nameVi: "Nox", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Elio_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" },
+    { name: "Tempest", nameVi: "Tempest", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Claire_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img11.jpg", pos: "70%" },
+    { name: "Stinger", nameVi: "Stinger", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Smee_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img5.jpg", pos: "70%" },
+    { name: "Vlinder", nameVi: "Vlinder", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C103_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img14.jpg", pos: "40%" },
+    { name: "Shepherd", nameVi: "Shepherd", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Terry_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img7.jpg", pos: "65%" },
+    { name: "Uluru", nameVi: "Uluru", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_David_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img3.jpg", pos: "70%" },
+    { name: "Sineva", nameVi: "Sineva", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Alexei_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img9.jpg", pos: "65%" },
+    { name: "Rover", nameVi: "Rover", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C104_g_01.png", pic: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/HeroPic/Rover_Portraits_01.webp", pos: "65%" },
+    { name: "Pulse", nameVi: "Pulse", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Morse_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img15.jpg", pos: "45%" },
+    { name: "Luna", nameVi: "Luna", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AF_Luna_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img4.jpg", pos: "70%" },
+    { name: "Hackclaw", nameVi: "Hackclaw", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Yukine_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img1.jpg", pos: "65%" },
+    { name: "Raptor", nameVi: "Raptor", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Landon_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img12.jpg", pos: "70%" },
+    { name: "Morse", nameVi: "Morse", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Morse_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img10.jpg", pos: "75%" },
+    { name: "Gizmo", nameVi: "Gizmo", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_Rashid_v5_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img13.jpg", pos: "60%" },
+    { name: "N-Two", nameVi: "N-Two", avatar: "https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AM_C405_g_01.png", pic: "https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img16.jpg", pos: "70%" }
+  ];
+
+  const FALLBACK_WEAPONS = [
+    { objectName: "K416", pic: "https://eo.oss.hengj.cn/one/object/18020000009.png", secondClassCN: "Súng trường tấn công", type: "ar", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 4, caliber: "5.56x45", maxAccessoryCount: 9, minAccessoryQuality: "Tím", maxAccessoryQuality: "Vàng", highQualityAccessoryCount: 3, unlimited: false } },
+    { objectName: "M4A1", pic: "https://eo.oss.hengj.cn/one/object/18010000001.png", secondClassCN: "Súng trường tấn công", type: "ar", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 4, caliber: "5.56x45", maxAccessoryCount: 10, minAccessoryQuality: "Tím", maxAccessoryQuality: "Vàng", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "SCAR-H", pic: "https://eo.oss.hengj.cn/one/object/18010000021.png", secondClassCN: "Súng trường chiến đấu", type: "ar", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 5, caliber: "7.62x51", maxAccessoryCount: 11, minAccessoryQuality: "Xanh lục", maxAccessoryQuality: "Tím", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "AK-12", pic: "https://eo.oss.hengj.cn/one/object/18010000008.png", secondClassCN: "Súng trường tấn công", type: "ar", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 4, caliber: "5.45x39", maxAccessoryCount: 8, minAccessoryQuality: "Xanh lam", maxAccessoryQuality: "Tím", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "MP5", pic: "https://eo.oss.hengj.cn/one/object/18010000015.png", secondClassCN: "Súng tiểu liên", type: "smg", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 3, caliber: "9x19", maxAccessoryCount: 7, minAccessoryQuality: "Xanh lục", maxAccessoryQuality: "Xanh lam", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "Vector", pic: "https://eo.oss.hengj.cn/one/object/18010000016.png", secondClassCN: "Súng tiểu liên", type: "smg", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 4, caliber: "9x19", maxAccessoryCount: 8, minAccessoryQuality: "Tím", maxAccessoryQuality: "Cam", highQualityAccessoryCount: 3, unlimited: false } },
+    { objectName: "P90", pic: "https://eo.oss.hengj.cn/one/object/18010000018.png", secondClassCN: "Súng tiểu liên", type: "smg", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 5, caliber: "5.7x28", maxAccessoryCount: 6, minAccessoryQuality: "Tím", maxAccessoryQuality: "Vàng", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "SV-98", pic: "https://eo.oss.hengj.cn/one/object/18010000025.png", secondClassCN: "Súng bắn tỉa lên đạn", type: "sniper", gunDetail: { fireMode: "Từng viên", selectedAmmoGrade: 5, caliber: "7.62x54R", maxAccessoryCount: 6, minAccessoryQuality: "Tím", maxAccessoryQuality: "Cam", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "AWM", pic: "https://eo.oss.hengj.cn/one/object/18010000026.png", secondClassCN: "Súng bắn tỉa lên đạn", type: "sniper", gunDetail: { fireMode: "Từng viên", selectedAmmoGrade: 6, caliber: ".338 Lapua", maxAccessoryCount: 7, minAccessoryQuality: "Vàng", maxAccessoryQuality: "Đỏ", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "VSS Vintorez", pic: "https://eo.oss.hengj.cn/one/object/18010000022.png", secondClassCN: "Súng trường thiện xạ", type: "dmr", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 5, caliber: "9x39", maxAccessoryCount: 7, minAccessoryQuality: "Tím", maxAccessoryQuality: "Vàng", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "PKM", pic: "https://eo.oss.hengj.cn/one/object/18010000028.png", secondClassCN: "Súng máy hạng nhẹ", type: "lmg", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 4, caliber: "7.62x54R", maxAccessoryCount: 8, minAccessoryQuality: "Xanh lam", maxAccessoryQuality: "Tím", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "Saiga-12", pic: "https://eo.oss.hengj.cn/one/object/18010000020.png", secondClassCN: "Súng Shotgun", type: "shotgun", gunDetail: { fireMode: "Bán tự động", selectedAmmoGrade: 4, caliber: "12 Gauge", maxAccessoryCount: 8, minAccessoryQuality: "Xanh lam", maxAccessoryQuality: "Tím", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "Desert Eagle", pic: "https://eo.oss.hengj.cn/one/object/18010000030.png", secondClassCN: "Súng lục", type: "pistol", gunDetail: { fireMode: "Bán tự động", selectedAmmoGrade: 4, caliber: ".50 AE", maxAccessoryCount: 5, minAccessoryQuality: "Xanh lam", maxAccessoryQuality: "Tím", highQualityAccessoryCount: 2, unlimited: false } },
+    { objectName: "Glock 18C", pic: "https://eo.oss.hengj.cn/one/object/18010000031.png", secondClassCN: "Súng lục", type: "pistol", gunDetail: { fireMode: "Tự động", selectedAmmoGrade: 3, caliber: "9x19", maxAccessoryCount: 6, minAccessoryQuality: "Xanh lục", maxAccessoryQuality: "Xanh lam", highQualityAccessoryCount: 1, unlimited: false } }
+  ];
+
+  const FALLBACK_HELMETS = [
+    { objectName: "Mũ bảo hộ chống mảnh 6B47", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11010002001.png", protectLevel: 2 },
+    { objectName: "Mũ bảo hiểm chiến thuật PASGT", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11010003001.png", protectLevel: 3 },
+    { objectName: "Mũ bảo hiểm chiến thuật MHS", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11010004002.png", protectLevel: 4 },
+    { objectName: "Mũ nhìn đêm hạng nặng GN", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11010005010.png", protectLevel: 5 },
+    { objectName: "Mũ thiết giáp Altyn Spetsnaz", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11010006001.png", protectLevel: 6 }
+  ];
+
+  const FALLBACK_ARMORS = [
+    { objectName: "Áo giáp chiến thuật HT", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11050002002.png", protectLevel: 2 },
+    { objectName: "Áo giáp bảo vệ cơ bản 6B23", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11050003001.png", protectLevel: 3 },
+    { objectName: "Áo giáp chống đạn TG-H", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11050003003.png", protectLevel: 4 },
+    { objectName: "Áo giáp hạng nặng DEFENDER-2", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11050005001.png", protectLevel: 5 },
+    { objectName: "Áo giáp pháo đài Fort Redut", pic: "https://playerhub.df.qq.com/playerhub/60004/object/11050006001.png", protectLevel: 6 }
+  ];
+
+  class EquipmentGame {
+    constructor() {
+      this.generateBtn = document.getElementById('equipGenerateBtn');
+      this.historyBtn = document.getElementById('equipHistoryBtn');
+      this.historyModal = document.getElementById('equipHistoryModal');
+      this.historyList = document.getElementById('equipHistoryList');
+      this.historyClose = document.getElementById('equipHistoryClose');
+      this.historyClear = document.getElementById('equipHistoryClear');
+      this.copyBtn = document.getElementById('equipCopyBtn');
+      this.mapSelect = document.getElementById('equipMapSelect');
+      this.diffSelect = document.getElementById('equipDiffSelect');
+
+      this.currentDifficulty = ''; // '', '常规', '机密', '绝密'
+      this.currentResult = null;
+      this.isGenerating = false;
+      this.audioNormal = new Audio('/fun/crate/audio/loot_normal.ogg');
+      this.audioEpic = new Audio('/fun/crate/audio/loot_epic.ogg');
+      this.audioMythic = new Audio('/fun/crate/audio/loot_mythic.ogg');
+
+      this.init();
+    }
+
+    init() {
+      if (!this.generateBtn) return;
+
+      this.loadSavedOptions();
+
+      this.generateBtn.addEventListener('click', () => this.generate());
+      this.historyBtn?.addEventListener('click', () => this.openHistory());
+      this.historyClose?.addEventListener('click', () => this.closeHistory());
+      this.historyClear?.addEventListener('click', () => this.clearHistory());
+      this.copyBtn?.addEventListener('click', () => this.copyCurrentLoadout());
+
+      this.historyModal?.addEventListener('click', (e) => {
+        if (e.target === this.historyModal) this.closeHistory();
+      });
+
+      // Map selection changes: maps 2 (Longbow) and 6 (AZ3) disable Khó (Tuyệt mật)
+      this.mapSelect?.addEventListener('change', () => {
+        this.updateDifficultyAvailability();
+        this.saveCurrentOptions();
+      });
+
+      // Difficulty dropdown selection changes
+      this.diffSelect?.addEventListener('change', () => {
+        this.setDifficulty(this.diffSelect.value);
+        this.saveCurrentOptions();
+      });
+
+      // Difficulty pills (Dễ, Thường, Khó) 1-click selection & deselect
+      document.querySelectorAll('.equip-diff-pill').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (btn.classList.contains('is-disabled')) return;
+          const diff = btn.getAttribute('data-diff') || '';
+          // Click active one again -> reset to random ('')
+          if (this.currentDifficulty === diff) {
+            this.setDifficulty('');
+          } else {
+            this.setDifficulty(diff);
+          }
+          this.saveCurrentOptions();
+        });
+      });
+
+      // Toggle pills 1-CLICK INSTANT TOGGLE (prevents browser label double-toggle bug)
+      document.querySelectorAll('.equip-toggle-pill:not(.equip-diff-pill)').forEach(pill => {
+        const input = pill.querySelector('input');
+        if (!input) return;
+
+        pill.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (pill.classList.contains('is-disabled')) return;
+          input.checked = !input.checked;
+          input.dispatchEvent(new Event('change'));
+        });
+
+        input.addEventListener('change', () => {
+          pill.classList.toggle('checked', input.checked);
+
+          // Handle mutually exclusive options (lucky vs unlucky)
+          if (input.id === 'optLucky' && input.checked) {
+            const unlucky = document.getElementById('optUnlucky');
+            if (unlucky) {
+              unlucky.checked = false;
+              document.getElementById('pillUnlucky')?.classList.remove('checked');
+            }
+          } else if (input.id === 'optUnlucky' && input.checked) {
+            const lucky = document.getElementById('optLucky');
+            if (lucky) {
+              lucky.checked = false;
+              document.getElementById('pillLucky')?.classList.remove('checked');
+            }
+          }
+
+          this.saveCurrentOptions();
+        });
+      });
+
+      // Restore last history entry if available, otherwise show initial loadout
+      const hist = this.getHistory();
+      if (hist.length > 0 && hist[0].result) {
+        this.displayLoadoutDirect(hist[0].result);
+      } else {
+        const initial = this.generateFallbackLoadout({});
+        this.displayLoadoutDirect(initial);
+      }
+    }
+
+    setDifficulty(diff) {
+      this.currentDifficulty = diff || '';
+      if (this.diffSelect) this.diffSelect.value = this.currentDifficulty;
+
+      document.querySelectorAll('.equip-diff-pill').forEach(btn => {
+        const bDiff = btn.getAttribute('data-diff');
+        btn.classList.toggle('checked', bDiff === this.currentDifficulty);
+      });
+    }
+
+    updateDifficultyAvailability() {
+      const mapVal = this.mapSelect?.value;
+      const isRestricted = mapVal === '2' || mapVal === '6';
+      const pillHard = document.getElementById('pillDiffHard');
+      const optHard = this.diffSelect?.querySelector('option[value="绝密"]');
+
+      if (pillHard) {
+        if (isRestricted) {
+          pillHard.classList.add('is-disabled');
+          if (optHard) optHard.disabled = true;
+          if (this.currentDifficulty === '绝密') {
+            this.setDifficulty('机密'); // Fallback to Thường (Cơ mật)
+          }
+        } else {
+          pillHard.classList.remove('is-disabled');
+          if (optHard) optHard.disabled = false;
+        }
+      }
+    }
+
+    loadSavedOptions() {
+      try {
+        const raw = localStorage.getItem('random-equipment-options');
+        if (!raw) return;
+        const opts = JSON.parse(raw);
+
+        if (this.mapSelect && opts.mapId !== undefined) {
+          this.mapSelect.value = opts.mapId || '';
+        }
+
+        if (opts.difficulty !== undefined) {
+          this.setDifficulty(opts.difficulty);
+        }
+
+        const toggles = [
+          { id: 'optLucky', pill: 'pillLucky' },
+          { id: 'optUnlucky', pill: 'pillUnlucky' },
+          { id: 'optNoPistol', pill: 'pillNoPistol' },
+          { id: 'optNoShotgun', pill: 'pillNoShotgun' },
+          { id: 'optNoSniper', pill: 'pillNoSniper' },
+          { id: 'optFast', pill: 'pillFast' }
+        ];
+
+        toggles.forEach(t => {
+          const el = document.getElementById(t.id);
+          const p = document.getElementById(t.pill);
+          if (el && opts[t.id] !== undefined) {
+            el.checked = !!opts[t.id];
+            p?.classList.toggle('checked', el.checked);
+          }
+        });
+
+        this.updateDifficultyAvailability();
+      } catch (e) {}
+    }
+
+    saveCurrentOptions() {
+      try {
+        const opts = {
+          mapId: this.mapSelect?.value || '',
+          difficulty: this.currentDifficulty || '',
+          optLucky: document.getElementById('optLucky')?.checked || false,
+          optUnlucky: document.getElementById('optUnlucky')?.checked || false,
+          optNoPistol: document.getElementById('optNoPistol')?.checked || false,
+          optNoShotgun: document.getElementById('optNoShotgun')?.checked || false,
+          optNoSniper: document.getElementById('optNoSniper')?.checked || false,
+          optFast: document.getElementById('optFast')?.checked || false
+        };
+        localStorage.setItem('random-equipment-options', JSON.stringify(opts));
+      } catch (e) {}
+    }
+
+    async generate() {
+      if (this.isGenerating) return;
+      this.isGenerating = true;
+      this.generateBtn.disabled = true;
+      this.generateBtn.innerHTML = '⚡ ĐANG DÒ QUÉT TRANG BỊ...';
+
+      // Show radar overlays on all 5 stages
+      const radarIds = ['radarHero', 'radarWeapon', 'radarHelmet', 'radarArmor', 'radarRules'];
+      radarIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'flex';
+      });
+
+      const payload = {
+        mapId: this.mapSelect?.value ? parseInt(this.mapSelect.value, 10) : null,
+        difficulty: this.currentDifficulty || null,
+        onlyClassified: this.currentDifficulty === '绝密',
+        luckyDraw: document.getElementById('optLucky')?.checked || false,
+        unluckyDraw: document.getElementById('optUnlucky')?.checked || false,
+        noPistol: document.getElementById('optNoPistol')?.checked || false,
+        noShotgun: document.getElementById('optNoShotgun')?.checked || false,
+        noSniper: document.getElementById('optNoSniper')?.checked || false,
+        fastReveal: document.getElementById('optFast')?.checked || false
+      };
+
+      let result = null;
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 6500);
+        const res = await fetch('/api/random-equipment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && json.data) {
+            result = this.normalizeApiData(json.data);
+          }
+        }
+      } catch (err) {
+        console.warn('API fetch warning, employing high-accuracy local generator:', err);
+      }
+
+      if (!result) {
+        result = this.generateFallbackLoadout(payload);
+      }
+
+      // Enforce user selected difficulty if specified
+      if (payload.difficulty) {
+        result.map.difficulty = payload.difficulty;
+        result.map.difficultyVi = DIFFICULTY_DATA[payload.difficulty]?.nameVi || payload.difficulty;
+      }
+
+      this.currentResult = result;
+      this.saveHistory(result);
+
+      // Preload images to eliminate rendering flicker
+      await this.preloadImages([
+        result.map?.pic,
+        result.operator?.pic,
+        result.operator?.avatar,
+        result.weapon?.pic,
+        result.helmet?.pic,
+        result.armor?.pic
+      ]);
+
+      // Staged reveal sequence (5 stages)
+      const stepDelay = payload.fastReveal ? 450 : 800;
+
+      // 1. Reveal Hero Card (Map & Operator)
+      setTimeout(() => {
+        this.renderHeroCard(result);
+        const rHero = document.getElementById('radarHero');
+        if (rHero) rHero.style.display = 'none';
+        this.playSound(2);
+      }, stepDelay);
+
+      // 2. Reveal Weapon Card
+      setTimeout(() => {
+        this.renderWeaponCard(result);
+        const rWep = document.getElementById('radarWeapon');
+        if (rWep) rWep.style.display = 'none';
+        this.playSound(3);
+      }, stepDelay * 2);
+
+      // 3. Reveal Helmet Card
+      setTimeout(() => {
+        this.renderHelmetCard(result);
+        const rHel = document.getElementById('radarHelmet');
+        if (rHel) rHel.style.display = 'none';
+        this.playSound(result.helmet?.protectLevel || 3);
+      }, stepDelay * 3);
+
+      // 4. Reveal Armor Card
+      setTimeout(() => {
+        this.renderArmorCard(result);
+        const rArm = document.getElementById('radarArmor');
+        if (rArm) rArm.style.display = 'none';
+        this.playSound(result.armor?.protectLevel || 3);
+      }, stepDelay * 4);
+
+      // 5. Reveal Gun Rules Card & Complete
+      setTimeout(() => {
+        this.renderRulesCard(result);
+        const rRul = document.getElementById('radarRules');
+        if (rRul) rRul.style.display = 'none';
+        this.playSound(result.weapon?.gunDetail?.unlimited ? 6 : 4);
+
+        this.isGenerating = false;
+        this.generateBtn.disabled = false;
+        this.generateBtn.innerHTML = '🎲 TẠO TRANG BỊ NGẪU NHIÊN';
+      }, stepDelay * 5);
+    }
+
+    displayLoadoutDirect(data) {
+      if (!data) return;
+      this.currentResult = data;
+      this.renderHeroCard(data);
+      this.renderWeaponCard(data);
+      this.renderHelmetCard(data);
+      this.renderArmorCard(data);
+      this.renderRulesCard(data);
+
+      ['radarHero', 'radarWeapon', 'radarHelmet', 'radarArmor', 'radarRules'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    }
+
+    renderHeroCard(data) {
+      if (!data.map || !data.operator) return;
+      const mapImg = document.getElementById('equipMapImg');
+      const opImg = document.getElementById('equipOperatorImg');
+      const mapName = document.getElementById('equipMapName');
+      const diffBadge = document.getElementById('equipDiffBadge');
+      const opAvatar = document.getElementById('equipOperatorAvatar');
+      const opName = document.getElementById('equipOperatorName');
+      const opClass = document.getElementById('equipOperatorClass');
+
+      if (mapImg) mapImg.src = data.map.pic || '';
+      if (opImg) {
+        opImg.src = data.map.pic && data.operator.pic ? data.operator.pic : '';
+        const opPos = data.operator.pos || OPERATOR_DATA[data.operator.name]?.pos || OPERATOR_DATA[data.operator.nameVi]?.pos || '65%';
+        opImg.style.objectPosition = `${opPos} top`;
+      }
+      if (mapName) mapName.textContent = data.map.nameVi || data.map.map || 'Bản đồ Delta Force';
+
+      if (diffBadge) {
+        const diffInfo = DIFFICULTY_DATA[data.map.difficulty] || { nameVi: data.map.difficulty, css: 'diff-jimi' };
+        diffBadge.textContent = diffInfo.nameVi;
+        diffBadge.className = `equip-diff-badge ${diffInfo.css}`;
+      }
+
+      if (opAvatar) opAvatar.src = data.operator.avatar || '';
+      if (opName) opName.textContent = data.operator.nameVi || data.operator.name || 'Đặc vụ';
+    }
+
+    renderWeaponCard(data) {
+      if (!data.weapon) return;
+      const wepImg = document.getElementById('equipWeaponImg');
+      const wepName = document.getElementById('equipWeaponName');
+      const wepClass = document.getElementById('equipWeaponClass');
+      const tagsContainer = document.getElementById('equipWeaponTags');
+
+      if (wepImg) wepImg.src = data.weapon.pic || '';
+      if (wepName) wepName.textContent = data.weapon.objectNameVi || data.weapon.objectName || 'Vũ khí';
+      if (wepClass) {
+        wepClass.textContent = (data.weapon.secondClassVi || data.weapon.secondClassCN || 'SÚNG TÁC CHIẾN').toUpperCase();
+      }
+
+      if (tagsContainer) {
+        const detail = data.weapon.gunDetail || {};
+        const tags = [];
+        if (detail.fireModeVi || detail.fireMode) tags.push(detail.fireModeVi || detail.fireMode);
+        if (detail.selectedAmmoGrade) tags.push(`Đạn cấp ${detail.selectedAmmoGrade}`);
+        if (detail.caliber) tags.push(detail.caliber);
+        if (detail.maxAccessoryCount) tags.push(`Tối đa ${detail.maxAccessoryCount} phụ kiện`);
+
+        tagsContainer.innerHTML = tags.map(t => `<span class="equip-tag">${t}</span>`).join('');
+      }
+    }
+
+    renderHelmetCard(data) {
+      if (!data.helmet) return;
+      const helImg = document.getElementById('equipHelmetImg');
+      const helName = document.getElementById('equipHelmetName');
+      const lvlEl = document.getElementById('equipHelmetLvl');
+      const descEl = document.getElementById('equipHelmetDesc');
+      const cardEl = document.getElementById('cardHelmet');
+
+      const lvl = data.helmet.protectLevel || 3;
+      if (helImg) helImg.src = data.helmet.pic || '';
+      if (helName) helName.textContent = data.helmet.objectNameVi || data.helmet.objectName || 'Mũ bảo hộ';
+      if (lvlEl) {
+        lvlEl.textContent = `LV ${lvl}`;
+        lvlEl.className = `equip-level-badge lvl-${lvl}`;
+      }
+      if (descEl) descEl.textContent = `Bảo vệ đầu cấp ${lvl}`;
+      if (cardEl) {
+        cardEl.className = `equip-gear-card lvl-border-${lvl}`;
+      }
+    }
+
+    renderArmorCard(data) {
+      if (!data.armor) return;
+      const armImg = document.getElementById('equipArmorImg');
+      const armName = document.getElementById('equipArmorName');
+      const lvlEl = document.getElementById('equipArmorLvl');
+      const descEl = document.getElementById('equipArmorDesc');
+      const cardEl = document.getElementById('cardArmor');
+
+      const lvl = data.armor.protectLevel || 3;
+      if (armImg) armImg.src = data.armor.pic || '';
+      if (armName) armName.textContent = data.armor.objectNameVi || data.armor.objectName || 'Áo giáp bảo vệ';
+      if (lvlEl) {
+        lvlEl.textContent = `LV ${lvl}`;
+        lvlEl.className = `equip-level-badge lvl-${lvl}`;
+      }
+      if (descEl) descEl.textContent = `Bảo vệ thân cấp ${lvl}`;
+      if (cardEl) {
+        cardEl.className = `equip-gear-card lvl-border-${lvl}`;
+      }
+    }
+
+    renderRulesCard(data) {
+      const detail = data.weapon?.gunDetail || {};
+      const statusBadge = document.getElementById('equipGunRuleStatus');
+      const ruleBody = document.getElementById('equipGunRuleBody');
+
+      if (!ruleBody) return;
+
+      if (detail.unlimited) {
+        if (statusBadge) {
+          statusBadge.textContent = 'TỰ DO';
+          statusBadge.style.color = 'var(--mg-primary)';
+        }
+        ruleBody.innerHTML = `
+          <div style="padding:4px 0;">
+            <p style="margin:0;font-size:13px;font-weight:700;color:#f59e0b;">🎯 Bản đồ không giới hạn phụ kiện</p>
+            <p style="margin:4px 0 0;font-size:12px;color:rgba(245, 158, 11, 0.75);">Tự do phối trang bị chiến thuật, G.T.I. chúc bạn may mắn!</p>
+          </div>
+        `;
+      } else {
+        if (statusBadge) {
+          statusBadge.textContent = 'CHIẾN THUẬT';
+          statusBadge.style.color = '#38bdf8';
+        }
+        const minQ = QUALITY_MAP[detail.minAccessoryQuality] || { nameVi: detail.minAccessoryQuality || 'Xanh lục', css: 'qual-green' };
+        const maxQ = QUALITY_MAP[detail.maxAccessoryQuality] || { nameVi: detail.maxAccessoryQuality || 'Tím', css: 'qual-purple' };
+
+        ruleBody.innerHTML = `
+          <p id="equipRuleLine1" style="margin:0;font-size:13px;line-height:1.5;color:#e1effa;">
+            Tối đa lắp <b style="color:#fff;">${detail.maxAccessoryCount || 8}</b> phụ kiện <span class="equip-quality-tag ${minQ.css}">${minQ.nameVi}</span>
+          </p>
+          <p id="equipRuleLine2" style="margin:4px 0 0;font-size:12px;color:var(--mg-text-muted);">
+            Trong đó <b style="color:#fff;">${detail.highQualityAccessoryCount || 2}</b> phụ kiện có thể nâng lên <span class="equip-quality-tag ${maxQ.css}">${maxQ.nameVi}</span>
+          </p>
+        `;
+      }
+    }
+
+    normalizeApiData(raw) {
+      const copy = JSON.parse(JSON.stringify(raw));
+
+      // Translate map
+      const mapRaw = copy.map?.map || '';
+      const mapObj = MAP_DATA[mapRaw] || {};
+      copy.map.nameVi = mapObj.nameVi || mapRaw;
+
+      // Translate difficulty
+      const diffRaw = copy.map?.difficulty || '';
+      const diffObj = DIFFICULTY_DATA[diffRaw] || {};
+      copy.map.difficultyVi = diffObj.nameVi || diffRaw;
+
+      // Translate operator
+      const opRaw = copy.operator?.name || '';
+      const opObj = OPERATOR_DATA[opRaw] || {};
+      copy.operator.nameVi = opObj.nameVi || opRaw;
+      if (opObj.avatar) {
+        copy.operator.avatar = opObj.avatar;
+      }
+      if (opObj.pic) {
+        copy.operator.pic = opObj.pic;
+      }
+      copy.operator.pos = opObj.pos || '65%';
+
+      // Translate weapon
+      if (copy.weapon) {
+        const wepRawClass = copy.weapon.secondClassCN || '';
+        copy.weapon.secondClassVi = WEAPON_CLASS_MAP[wepRawClass] || wepRawClass;
+        copy.weapon.objectNameVi = this.translateWeaponName(copy.weapon.objectName);
+
+        if (copy.weapon.gunDetail) {
+          const fm = copy.weapon.gunDetail.fireMode || '';
+          copy.weapon.gunDetail.fireModeVi = FIRE_MODE_MAP[fm] || fm;
+        }
+      }
+
+      // Translate helmet & armor
+      if (copy.helmet) {
+        copy.helmet.objectNameVi = this.translateGearName(copy.helmet.objectName, 'Mũ');
+      }
+      if (copy.armor) {
+        copy.armor.objectNameVi = this.translateGearName(copy.armor.objectName, 'Giáp');
+      }
+
+      return copy;
+    }
+
+    translateWeaponName(name) {
+      if (!name) return 'Vũ khí';
+      return name
+        .replace(/战斗步枪/g, ' - Battle Rifle')
+        .replace(/突击步枪/g, '')
+        .replace(/射手步枪/g, '')
+        .replace(/轻机枪/g, '')
+        .replace(/冲锋枪/g, '')
+        .replace(/狙击步枪/g, '')
+        .trim();
+    }
+
+    translateGearName(name, prefix) {
+      if (!name) return prefix;
+      let vi = name
+        .replace(/久战/g, 'Cựu Chiến ')
+        .replace(/重型/g, 'Hạng Nặng ')
+        .replace(/轻型/g, 'Hạng Nhẹ ')
+        .replace(/夜视/g, 'Nhìn Đêm ')
+        .replace(/战术/g, 'Chiến Thuật ')
+        .replace(/防弹/g, 'Chống Đạn ')
+        .replace(/头盔/g, 'Mũ ')
+        .replace(/背心/g, 'Giáp ')
+        .replace(/胸挂/g, 'Giáp Ngực ')
+        .replace(/护甲/g, 'Giáp ');
+      return vi.trim() || `${prefix} Chiến Thuật`;
+    }
+
+    generateFallbackLoadout(opts) {
+      const mapKeys = opts.mapId ? [opts.mapId.toString()] : ['1', '2', '3', '4', '5', '6'];
+      const chosenMapKey = mapKeys[Math.floor(Math.random() * mapKeys.length)];
+      const mapInfo = MAP_DATA[chosenMapKey] || MAP_DATA['4'];
+
+      let diff = '常规';
+      if (opts.difficulty) {
+        diff = opts.difficulty;
+      } else if (opts.onlyClassified) {
+        diff = '绝密';
+      } else if (opts.luckyDraw) {
+        diff = Math.random() > 0.4 ? '绝密' : '机密';
+      } else if (opts.unluckyDraw) {
+        diff = '常规';
+      } else {
+        const diffChoices = ['常规', '机密', '绝密'];
+        diff = diffChoices[Math.floor(Math.random() * diffChoices.length)];
+      }
+
+      const operator = FALLBACK_OPERATORS[Math.floor(Math.random() * FALLBACK_OPERATORS.length)];
+
+      let availableWeapons = FALLBACK_WEAPONS.filter(w => {
+        if (opts.noPistol && w.type === 'pistol') return false;
+        if (opts.noShotgun && w.type === 'shotgun') return false;
+        if (opts.noSniper && w.type === 'sniper') return false;
+        return true;
+      });
+
+      if (availableWeapons.length === 0) availableWeapons = FALLBACK_WEAPONS;
+      const weapon = JSON.parse(JSON.stringify(availableWeapons[Math.floor(Math.random() * availableWeapons.length)]));
+
+      let helmet, armor;
+      if (opts.luckyDraw) {
+        helmet = FALLBACK_HELMETS.slice(2)[Math.floor(Math.random() * (FALLBACK_HELMETS.length - 2))];
+        armor = FALLBACK_ARMORS.slice(2)[Math.floor(Math.random() * (FALLBACK_ARMORS.length - 2))];
+        if (Math.random() > 0.5) weapon.gunDetail.unlimited = true;
+      } else if (opts.unluckyDraw) {
+        helmet = FALLBACK_HELMETS.slice(0, 2)[Math.floor(Math.random() * 2)];
+        armor = FALLBACK_ARMORS.slice(0, 2)[Math.floor(Math.random() * 2)];
+        weapon.gunDetail.unlimited = false;
+        weapon.gunDetail.selectedAmmoGrade = 2;
+      } else {
+        helmet = FALLBACK_HELMETS[Math.floor(Math.random() * FALLBACK_HELMETS.length)];
+        armor = FALLBACK_ARMORS[Math.floor(Math.random() * FALLBACK_ARMORS.length)];
+      }
+
+      return {
+        map: {
+          map: mapInfo.nameVi,
+          nameVi: mapInfo.nameVi,
+          difficulty: diff,
+          difficultyVi: DIFFICULTY_DATA[diff]?.nameVi || diff,
+          pic: mapInfo.pic
+        },
+        operator: {
+          name: operator.name,
+          nameVi: operator.nameVi || operator.name,
+          classVi: operator.classVi || '',
+          avatar: operator.avatar,
+          pic: operator.pic,
+          pos: operator.pos || '65%'
+        },
+        weapon: {
+          objectName: weapon.objectName,
+          objectNameVi: weapon.objectName,
+          pic: weapon.pic,
+          secondClassCN: weapon.secondClassCN,
+          secondClassVi: weapon.secondClassCN,
+          gunDetail: weapon.gunDetail
+        },
+        helmet: {
+          objectName: helmet.objectName,
+          objectNameVi: helmet.objectName,
+          pic: helmet.pic,
+          protectLevel: helmet.protectLevel
+        },
+        armor: {
+          objectName: armor.objectName,
+          objectNameVi: armor.objectName,
+          pic: armor.pic,
+          protectLevel: armor.protectLevel
+        }
+      };
+    }
+
+    async preloadImages(urls) {
+      const validUrls = (urls || []).filter(Boolean);
+      await Promise.all(validUrls.map(u => new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = u;
+      })));
+    }
+
+    playSound(level) {
+      try {
+        let sound = this.audioNormal;
+        if (level >= 5) sound = this.audioMythic;
+        else if (level >= 3) sound = this.audioEpic;
+
+        sound.currentTime = 0;
+        sound.volume = 0.5;
+        sound.play().catch(() => {});
+      } catch (e) {}
+    }
+
+    copyCurrentLoadout() {
+      if (!this.currentResult) return;
+      const res = this.currentResult;
+      const detail = res.weapon?.gunDetail || {};
+
+      let ruleText = 'Chiến thuật tiêu chuẩn';
+      if (detail.unlimited) {
+        ruleText = 'Không giới hạn phụ kiện (Tự do)';
+      } else {
+        const minQ = QUALITY_MAP[detail.minAccessoryQuality]?.nameVi || detail.minAccessoryQuality || 'Xanh lục';
+        const maxQ = QUALITY_MAP[detail.maxAccessoryQuality]?.nameVi || detail.maxAccessoryQuality || 'Tím';
+        ruleText = `Tối đa ${detail.maxAccessoryCount || 8} phụ kiện ${minQ} (${detail.highQualityAccessoryCount || 2} có thể nâng lên ${maxQ})`;
+      }
+
+      const opName = res.operator?.nameVi || res.operator?.name || 'Đặc vụ';
+      const text = [
+        '🎯 [DFVN] BỘ TRANG BỊ TÁC CHIẾN DELTA FORCE',
+        `📍 Bản đồ: ${res.map?.nameVi || res.map?.map} (${res.map?.difficultyVi || res.map?.difficulty})`,
+        `👤 Đặc vụ: ${opName}`,
+        `🔫 Vũ khí chính: ${res.weapon?.objectNameVi || res.weapon?.objectName} [${res.weapon?.secondClassVi || res.weapon?.secondClassCN}] (Đạn cấp ${detail.selectedAmmoGrade || '?'}, ${detail.fireModeVi || detail.fireMode || 'Tự động'})`,
+        `🪖 Mũ bảo hiểm: ${res.helmet?.objectNameVi || res.helmet?.objectName} (LV ${res.helmet?.protectLevel})`,
+        `🛡️ Giáp chống đạn: ${res.armor?.objectNameVi || res.armor?.objectName} (LV ${res.armor?.protectLevel})`,
+        `⚙️ Quy tắc phối súng: ${ruleText}`
+      ].join('\n');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          if (this.copyBtn) {
+            const old = this.copyBtn.innerHTML;
+            this.copyBtn.innerHTML = '✅ Đã sao chép!';
+            setTimeout(() => { if (this.copyBtn) this.copyBtn.innerHTML = old; }, 2200);
+          }
+        });
+      }
+    }
+
+    getHistory() {
+      try {
+        return JSON.parse(localStorage.getItem('random-equipment-history') || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    saveHistory(entry) {
+      try {
+        const hist = this.getHistory();
+        hist.unshift({ result: entry, timestamp: Date.now() });
+        localStorage.setItem('random-equipment-history', JSON.stringify(hist.slice(0, 50)));
+      } catch (e) {}
+    }
+
+    openHistory() {
+      if (!this.historyModal) return;
+      this.historyModal.classList.add('open');
+      const hist = this.getHistory();
+
+      if (hist.length === 0) {
+        this.historyList.innerHTML = '<p style="text-align:center;color:#70889f;padding:36px;">Chưa có lịch sử tạo trang bị nào</p>';
+      } else {
+        this.historyList.innerHTML = hist.map((h, idx) => {
+          const d = new Date(h.timestamp);
+          const time = `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')} - ${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}`;
+          const res = h.result;
+          const mapDiff = DIFFICULTY_DATA[res.map?.difficulty] || { nameVi: res.map?.difficulty || 'Bình thường', css: 'diff-jimi' };
+          const detail = res.weapon?.gunDetail || {};
+
+          let ruleSnippet = 'Không giới hạn';
+          if (!detail.unlimited) {
+            const minQ = QUALITY_MAP[detail.minAccessoryQuality]?.nameVi || detail.minAccessoryQuality || 'Xanh';
+            ruleSnippet = `${detail.maxAccessoryCount || 8}× ${minQ}`;
+          }
+
+          return `
+            <div class="mg-history-item" data-index="${idx}">
+              <img class="mg-hist-bg" src="${res.map?.pic || ''}" alt="">
+              <div class="mg-hist-top">
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="font-weight:900;color:#fff;font-size:14px;">${res.map?.nameVi || res.map?.map}</span>
+                  <span class="equip-diff-badge ${mapDiff.css}">${mapDiff.nameVi}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <img src="${res.operator?.avatar || ''}" style="width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,0.4);object-fit:cover;" alt="">
+                  <span style="font-size:13px;font-weight:700;color:var(--mg-primary);">${res.operator?.nameVi || res.operator?.name}</span>
+                  <span style="color:#627991;font-size:11px;margin-left:8px;">${time}</span>
+                </div>
+              </div>
+
+              <div class="mg-hist-body">
+                <div style="display:flex;align-items:center;gap:8px;min-width:0;">
+                  <img src="${res.weapon?.pic || ''}" style="width:42px;height:28px;object-fit:contain;background:rgba(255,255,255,0.05);border-radius:4px;padding:2px;" alt="">
+                  <div style="min-width:0;">
+                    <div style="font-size:13px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${res.weapon?.objectNameVi || res.weapon?.objectName}</div>
+                    <small style="color:#859bb2;font-size:11px;">Đạn cấp ${detail.selectedAmmoGrade || '?'}</small>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="equip-level-badge lvl-${res.helmet?.protectLevel || 3}">LV ${res.helmet?.protectLevel || 3}</span>
+                  <div style="font-size:11px;color:#859bb2;">Mũ bảo vệ</div>
+                </div>
+
+                <div>
+                  <span class="equip-level-badge lvl-${res.armor?.protectLevel || 3}">LV ${res.armor?.protectLevel || 3}</span>
+                  <div style="font-size:11px;color:#859bb2;">Giáp chống đạn</div>
+                </div>
+
+                <div style="text-align:right;">
+                  <span class="equip-tag" style="background:#13263a;color:#7ee7ff;font-size:10.5px;">${ruleSnippet}</span>
+                </div>
+              </div>
+
+              <div class="mg-hist-actions">
+                <button class="mg-hist-btn" type="button" data-action="load" data-index="${idx}">👁️ Xem lại trên sàn</button>
+                <button class="mg-hist-btn" type="button" data-action="copy" data-index="${idx}">📋 Sao chép</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // Action handlers for history items
+        this.historyList.querySelectorAll('.mg-history-item').forEach(item => {
+          const idx = parseInt(item.getAttribute('data-index'), 10);
+          const entry = hist[idx]?.result;
+          if (!entry) return;
+
+          item.querySelector('[data-action="load"]')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.displayLoadoutDirect(entry);
+            this.closeHistory();
+          });
+
+          item.querySelector('[data-action="copy"]')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.currentResult = entry;
+            this.copyCurrentLoadout();
+          });
+
+          item.addEventListener('click', () => {
+            this.displayLoadoutDirect(entry);
+            this.closeHistory();
+          });
+        });
+      }
+    }
+
+    closeHistory() {
+      this.historyModal?.classList.remove('open');
+    }
+
+    clearHistory() {
+      if (confirm('Xác nhận xóa toàn bộ lịch sử tạo trang bị? Thao tác này không thể hoàn tác.')) {
+        localStorage.removeItem('random-equipment-history');
+        this.openHistory();
+      }
+    }
+  }
+
+  // ==========================================================================
+  // INITIALIZE ON DOM CONTENT LOADED
+  // ==========================================================================
+  document.addEventListener('DOMContentLoaded', () => {
+    initTabs();
+    window.crateGame = new CrateGame();
+    window.morseGame = new MorseGame();
+    window.hackerGame = new HackerGame();
+    window.equipGame = new EquipmentGame();
+
+    // Drawer subitem clicks on minigame page
+    document.querySelectorAll('.category-subitem').forEach(sub => {
+      sub.addEventListener('click', (e) => {
+        const game = sub.getAttribute('data-game');
+        if (game && TABS.includes(game)) {
+          e.preventDefault();
+          switchTab(game, true);
+          const closeBtn = document.querySelector('.close-category');
+          if (closeBtn) closeBtn.click();
+        }
+      });
+    });
+  });
+
+})();

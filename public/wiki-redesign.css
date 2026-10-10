@@ -1,0 +1,56 @@
+.wiki-page{display:flex;flex-direction:column;background-color:#041624}
+.wiki-shell{flex:1 0 auto;width:100%;max-width:1360px;margin:0 auto;padding:20px 28px 52px}
+.wiki-hero{min-height:152px;padding:23px 30px;background:radial-gradient(circle at 88% 35%,#1b6d8750,transparent 33%),linear-gradient(115deg,#081f32f2,#0a3147df);border-color:#77ccdc69}
+.wiki-hero h1{font-size:clamp(31px,3.2vw,46px);line-height:1.05}
+.wiki-hero-content>p:not(.wiki-kicker){margin:10px 0 13px;font-size:13px}
+.wiki-hero-mark{width:88px;height:88px;transform:none;border:1px solid #83e7eb80;box-shadow:0 0 0 7px #77e4ee0a}
+.wiki-hero-mark span{font-size:38px}.wiki-hero-mark b{font-size:8px;letter-spacing:.28em}
+.wiki-workspace{display:grid;grid-template-columns:246px minmax(0,1fr);align-items:start;gap:18px;margin-top:18px}
+.wiki-directory{display:grid;grid-template-columns:1fr;gap:9px;margin:0;align-content:start}
+.wiki-directory a{display:grid;grid-template-columns:34px minmax(0,1fr);grid-template-rows:auto auto auto;align-content:center;column-gap:11px;row-gap:2px;min-width:0;min-height:101px;padding:14px;border-color:#78c6d555;background:linear-gradient(145deg,#0e3345e8,#0a2639f2)}
+.wiki-directory a:hover,.wiki-directory a.is-active{transform:none;border-color:#94e9ec;background:linear-gradient(145deg,#155268,#0b3348)}
+.wiki-directory a svg{grid-column:1;grid-row:1/4;align-self:center;width:33px;height:33px;padding:6px;border:1px solid #75dce868;fill:none;stroke:#8be5e9;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wiki-directory a span{grid-column:2;grid-row:1;margin:0;color:#80dce6;font-size:9px;line-height:1.3;letter-spacing:.08em}
+.wiki-directory a b{grid-column:2;grid-row:2;display:block;margin:2px 0;color:#f3fdff;font-size:17px;line-height:1.2;overflow-wrap:anywhere}
+.wiki-directory a small{grid-column:2;grid-row:3;display:block;color:#a8cad3;font-size:10px;line-height:1.3;overflow-wrap:anywhere}
+.wiki-page .site-footer.company-footer{flex:none;width:100%;margin-top:0}
+.wiki-panel,.wiki-market{min-width:0;margin-top:0;border-color:#6fc6d058;background:#082536ee}
+.wiki-section-head{padding:22px 24px 16px}.wiki-section-head h2{font-size:23px}
+.wiki-filters{padding:0 24px}.wiki-categories{padding:13px 24px 16px}
+.wiki-categories button,.wiki-pages button{min-height:36px;padding:8px 13px;background:#0b2f42;border-color:#71b8c570;color:#bedce2;font-size:11px;font-weight:800;transition:background .15s,border-color .15s}
+.wiki-categories button.is-active,.wiki-categories button:hover,.wiki-pages button:hover:not(:disabled){background:#1a6070;border-color:#95f4ef;color:#f0ffff}
+.wiki-categories button:focus-visible,.wiki-pages button:focus-visible,.wiki-card-open:focus-visible,.wiki-item-link:focus-visible,.wiki-craft-open:focus-visible{outline:2px solid #a8f6f0;outline-offset:2px}
+.wiki-table th{background:#0c3648}.wiki-table td{background:#092b3b55}.wiki-table tr:hover td{background:#12485a80}
+.wiki-item-link,.wiki-item-source-mobile,.wiki-card-open,.wiki-craft-open{font:800 10px 'Chakra Petch','Segoe UI',sans-serif;letter-spacing:.04em;color:#9df2ee!important;background:#0c3547;border:1px solid #70c8d476;cursor:pointer;transition:background .15s,border-color .15s}
+.wiki-item-link{padding:7px 9px;white-space:nowrap}.wiki-item-link:hover,.wiki-card-open:hover,.wiki-craft-open:hover{background:#196174;border-color:#a5f5f1;text-decoration:none}
+.wiki-card-grid{gap:13px;padding:20px 24px}.wiki-info-card{background:linear-gradient(155deg,#103849e3,#09283aed);border-color:#75b8c45e;min-height:270px;transition:border-color .16s,transform .16s}.wiki-info-card:hover{border-color:#8ce5e8;transform:translateY(-2px)}
+.wiki-info-card>div.wiki-card-visual{background:radial-gradient(circle,#2560714d,#08233431 70%)}
+.wiki-card-open{width:100%;min-height:34px;margin-top:14px;padding:7px 10px;text-align:left}
+.wiki-craft-row{min-height:82px;border-color:#70b9c359;background:#0c3548a0}.wiki-craft-open{width:auto;height:auto;min-height:31px;padding:6px 9px;flex:none;white-space:nowrap}
+.wiki-article-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:18px 24px 24px}.wiki-article{grid-template-columns:114px minmax(0,1fr);gap:14px;padding:12px;border:1px solid #6fb7c456;background:#0c3344bb}.wiki-article-image{width:114px;height:78px}.wiki-article h3{font-size:14px}.wiki-article p{font-size:9px;font-weight:800;letter-spacing:.06em;color:#80cbd4}
+.wiki-detail{width:min(560px,calc(100% - 26px));max-height:min(80vh,700px);padding:0;border:1px solid #8be2e8;background:#082536;color:#effcff;box-shadow:0 30px 90px #000b;font-family:'Chakra Petch','Segoe UI',sans-serif}.wiki-detail::backdrop{background:#010c16cc;backdrop-filter:blur(5px)}
+.wiki-detail-close{position:absolute;top:11px;right:11px;z-index:1;width:34px;height:34px;border:1px solid #78c9d875;background:#0c3648;color:#e9ffff;font-size:25px;line-height:1;cursor:pointer}.wiki-detail-close:hover{background:#185c6e}
+.wiki-detail-top{display:flex;align-items:center;gap:20px;padding:26px 54px 22px 24px;border-bottom:1px solid #6bbed14a;background:linear-gradient(120deg,#104258,#092b3d)}.wiki-detail-art{display:grid;place-items:center;width:135px;height:100px;flex:none;border:1px solid #73b9c25b;background:#0b2b3a}.wiki-detail-image{display:block;width:100%;height:100%;object-fit:contain}.wiki-detail-top p{margin:0 0 5px;color:#82e3e8;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.wiki-detail-top h2{margin:0 0 7px;font-size:23px;line-height:1.2;overflow-wrap:anywhere}.wiki-detail-top span{color:#a8cbd3;font-size:11px}
+.wiki-detail-data{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:20px 24px}.wiki-detail-data>div{display:grid;gap:7px;min-height:67px;padding:12px;border:1px solid #74bdc357;background:#0c3143}.wiki-detail-data small{color:#98bfca;font-size:10px}.wiki-detail-data strong{color:#f4f7e6;font-size:15px}.wiki-detail-note{margin:0;padding:0 24px 22px;color:#8eb6c1;font-size:10px;line-height:1.5}
+@media(max-width:960px){
+ .wiki-workspace{grid-template-columns:1fr;gap:12px}
+ .wiki-directory{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .wiki-directory a{min-height:112px;grid-template-columns:29px minmax(0,1fr);column-gap:7px;padding:11px}
+ .wiki-directory a svg{width:28px;height:28px;padding:5px}
+ .wiki-directory a span{font-size:8px}.wiki-directory a b{font-size:14px}.wiki-directory a small{font-size:9px}
+}
+@media(max-width:760px){
+ .wiki-shell{padding:12px 12px 30px}.wiki-hero{min-height:154px;padding:20px 18px}.wiki-hero h1{font-size:33px}.wiki-hero-content>p:not(.wiki-kicker){font-size:11px}.wiki-hero-mark{display:none}
+ .wiki-workspace{gap:11px;margin-top:11px}.wiki-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.wiki-directory a{grid-template-columns:28px minmax(0,1fr);min-height:88px;padding:11px}.wiki-directory a svg{width:27px;height:27px;padding:5px}.wiki-directory a span{font-size:8px}.wiki-directory a b{font-size:15px}.wiki-directory a small{display:none}
+ .wiki-panel{margin-top:13px}.wiki-section-head{padding:18px 14px 12px}.wiki-section-head h2{font-size:19px}.wiki-filters{padding:0 14px}.wiki-categories{padding:12px 14px 14px}
+ .wiki-card-grid{gap:8px;padding:12px}.wiki-info-card{min-height:250px;padding:11px}.wiki-info-card h3{font-size:13px}.wiki-card-open{font-size:9px}
+ .wiki-item-source-mobile{display:inline-block;margin-top:6px;padding:4px 6px;font-size:8px}
+ .wiki-craft-row{grid-template-columns:54px minmax(0,1fr)}.wiki-craft-open{grid-column:2;grid-row:3;justify-self:start}
+ .wiki-article-list{grid-template-columns:1fr;gap:8px;padding:12px}.wiki-article{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:10px}.wiki-article-image{width:90px;height:70px;grid-row:auto}.wiki-article h3{font-size:12px}
+ .wiki-detail-top{gap:11px;padding:22px 47px 18px 14px}.wiki-detail-art{width:92px;height:83px}.wiki-detail-top h2{font-size:17px}.wiki-detail-data{gap:7px;padding:14px}.wiki-detail-data>div{padding:9px}.wiki-detail-data strong{font-size:13px}.wiki-detail-note{padding:0 14px 16px}
+}
+.wiki-reload-btn{display:inline-flex;align-items:center;gap:6px;margin-left:12px;padding:6px 14px;background:#0d394d;border:1px solid #75e2eb88;color:#9df2ee;border-radius:4px;font:800 11px 'Chakra Petch',sans-serif;cursor:pointer;transition:all .2s;vertical-align:middle}
+.wiki-reload-btn:hover{background:#185d75;border-color:#a2f6fa;color:#fff}
+.wiki-reload-btn.is-loading svg{animation:wikiSpin 1s linear infinite}
+@keyframes wikiSpin{to{transform:rotate(360deg)}}
+

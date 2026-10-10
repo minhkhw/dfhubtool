@@ -1,0 +1,1653 @@
+/* ==========================================================================
+   DELTA FORCE AUTO REDEEM DESIGN SYSTEM (AutoRedeemDF by Minh Khương)
+   Applied across DELTA FORCE / DFTool Platform
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&display=swap');
+
+:root {
+  /* AutoRedeemDF Tactical Core Palette */
+  --df-bg-base: #0c1420;
+  --df-bg-dark: #0a121d;
+  --df-bg-panel: #131f2e;
+  --df-bg-panel-alt: #101b29;
+  --df-bg-surface: #14212f;
+  --df-bg-card: #111c29;
+
+  /* AutoRedeemDF Borders & Outlines */
+  --df-border-dark: #1d2f44;
+  --df-border: #24374b;
+  --df-border-light: #273b4f;
+  --df-border-glow: rgba(0, 255, 200, 0.45);
+  --df-border-hover: rgba(0, 212, 170, 0.45);
+
+  /* AutoRedeemDF Delta Gradient & Neon Accents */
+  --df-mint: #00e8bd;
+  --df-teal: #00c4a1;
+  --df-cyan: #00a4d2;
+  --df-teal-bright: #00ffc8;
+  --df-mint-bright: #3dffb8;
+  --df-led-green: #54ffd5;
+  --df-contrast-text: #01241d;
+
+  /* Brand Signature Gradients */
+  --df-brand-gradient: linear-gradient(135deg, #00e8bd, #00c4a1 55%, #00a4d2);
+  --df-btn-primary: linear-gradient(135deg, #19ffbf, #00c8e8);
+  --df-btn-primary-hover: linear-gradient(135deg, #3dffc7, #24d6f0);
+  --df-accent-gradient: linear-gradient(180deg, #00ffc8, #00a8ff);
+  --df-card-surface: linear-gradient(180deg, #14212f, #111c29);
+  --df-hero-gradient: linear-gradient(135deg, #101b29, #0c1420 55%, #131f2e);
+
+  /* Status & Functional Tactical Accents */
+  --df-success: #00e676;
+  --df-warning: #ffc400;
+  --df-danger: #ff6b78;
+  --df-danger-deep: #ff4757;
+  --df-purple: #b388ff;
+  --df-blue: #00c8ff;
+
+  /* Text Colors */
+  --df-text-white: #ffffff;
+  --df-text-primary: #f2fffc;
+  --df-text-secondary: #b9c9da;
+  --df-text-sub: #9fb3c8;
+  --df-text-muted: #7d95ac;
+  --df-text-dim: #5c7389;
+
+  /* Tactical Shadows & Halos */
+  --df-shadow-panel: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 200, 0.06);
+  --df-shadow-glow: 0 6px 18px -6px rgba(0, 220, 180, 0.45);
+  --df-shadow-btn: 0 6px 16px -6px rgba(0, 230, 190, 0.5);
+  --df-shadow-hover: 0 9px 20px -6px rgba(0, 230, 190, 0.6);
+
+  /* Legacy variable mapping to keep existing scripts compatible */
+  --bg-1: #0c1420;
+  --bg-2: #101b29;
+  --panel: rgba(19, 31, 46, 0.96);
+  --panel-soft: rgba(20, 33, 47, 0.94);
+  --line: #1d2f44;
+  --text: #f2fffc;
+  --muted: #8fa8bf;
+  --cyan: #00ffc8;
+  --purple: #b388ff;
+  --orange: #ffc400;
+  --green: #00e676;
+  --red: #ff6b78;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* ==========================================================================
+   GLOBAL LAYOUT & BACKGROUND
+   ========================================================================== */
+html {
+  color-scheme: dark !important;
+  background-color: #0c1420 !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #f2fffc !important;
+  background-color: #0c1420 !important;
+  background-image:
+    radial-gradient(1000px 600px at 88% -12%, rgba(0, 255, 200, 0.09), transparent 60%),
+    radial-gradient(1100px 700px at -12% 112%, rgba(0, 150, 255, 0.07), transparent 60%),
+    radial-gradient(800px 500px at 50% 50%, rgba(0, 232, 189, 0.03), transparent 70%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-image: radial-gradient(rgba(0, 255, 200, 0.04) 1px, transparent 1px) !important;
+  background-size: 26px 26px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  mask-image: linear-gradient(to bottom, #000 65%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%) !important;
+}
+
+.page-bg {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS (From AutoRedeemDF)
+   ========================================================================== */
+@keyframes ng-pulse-g {
+  0% { box-shadow: 0 0 0 0 rgba(84, 255, 213, 0.55); }
+  70% { box-shadow: 0 0 0 5px rgba(84, 255, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(84, 255, 213, 0); }
+}
+
+@keyframes ng-pulse-r {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 120, 0.55); }
+  70% { box-shadow: 0 0 0 5px rgba(255, 107, 120, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 120, 0); }
+}
+
+@keyframes ng-pulse-y {
+  0% { box-shadow: 0 0 0 0 rgba(255, 196, 0, 0.55); }
+  70% { box-shadow: 0 0 0 5px rgba(255, 196, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 196, 0, 0); }
+}
+
+@keyframes ng-shine {
+  0% { left: -60%; }
+  55%, 100% { left: 135%; }
+}
+
+@keyframes ng-fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ng-stat-pop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+
+@keyframes beat {
+  0%, 40%, 80%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.22); }
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+  color: #f2fffc !important;
+  background: rgba(12, 20, 32, 0.94) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid #1d2f44 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 255, 200, 0.05) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.brand-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.brand-main {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.18 !important;
+  text-decoration: none !important;
+}
+
+.brand-name {
+  color: #ffffff !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: none !important;
+}
+
+.brand-wrap small {
+  color: #00ffc8 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2.2px !important;
+  text-transform: uppercase !important;
+  opacity: 0.88 !important;
+}
+
+.menu-trigger {
+  color: #00ffc8 !important;
+  border: 1px solid #24374b !important;
+  background: #131f2e !important;
+  border-radius: 11px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.menu-trigger:hover {
+  border-color: rgba(0, 212, 170, 0.55) !important;
+  background: #162638 !important;
+  color: #54ffd5 !important;
+  transform: translateY(-1px) !important;
+}
+
+.menu-lines span {
+  background: linear-gradient(90deg, #00e8bd, #00c4a1) !important;
+  box-shadow: 0 0 6px rgba(0, 232, 189, 0.4) !important;
+}
+
+.menu-label {
+  color: #b9c9da !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+}
+
+/* Tactical Ready Badge in Header (AutoRedeemDF style) */
+.header-ready-badge,
+.df-ready-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.4px !important;
+  padding: 4px 10px !important;
+  border-radius: 99px !important;
+  background: rgba(2, 28, 23, 0.45) !important;
+  border: 1px solid rgba(0, 255, 200, 0.3) !important;
+  color: #f2fffc !important;
+}
+
+.df-badge-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #54ffd5 !important;
+  animation: ng-pulse-g 1.5s infinite !important;
+  flex: none !important;
+}
+
+/* ==========================================================================
+   BUTTON SYSTEM (Exact AutoRedeemDF Rules)
+   ========================================================================== */
+/* Primary Vibrant Button: linear-gradient(135deg, #19ffbf, #00c8e8) with shine */
+.primary-btn,
+.auth-submit,
+.vym-button-main,
+.tools-store-button,
+.btn-primary {
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #19ffbf, #00c8e8) !important;
+  color: #01241d !important;
+  border: none !important;
+  padding: 10px 18px !important;
+  border-radius: 12px !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+  box-shadow: 0 6px 16px -6px rgba(0, 230, 190, 0.5) !important;
+  text-decoration: none !important;
+}
+
+.primary-btn::after,
+.auth-submit::after,
+.vym-button-main::after,
+.tools-store-button::after,
+.btn-primary::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -60% !important;
+  width: 40% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent) !important;
+  transform: skewX(-20deg) !important;
+  animation: ng-shine 3.2s infinite !important;
+  pointer-events: none !important;
+}
+
+.primary-btn:hover,
+.auth-submit:hover,
+.vym-button-main:hover,
+.tools-store-button:hover,
+.btn-primary:hover {
+  filter: brightness(1.06) !important;
+  box-shadow: 0 9px 20px -6px rgba(0, 230, 190, 0.6) !important;
+  transform: translateY(-1px) !important;
+  color: #01241d !important;
+}
+
+/* Secondary / Cyan Outline Button */
+.secondary-btn,
+.ghost-btn,
+.btn-outline,
+.vym-button:not(.vym-button-main) {
+  background: rgba(0, 255, 200, 0.05) !important;
+  color: #00ffc8 !important;
+  border: 1px solid rgba(0, 255, 200, 0.45) !important;
+  padding: 10px 16px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+}
+
+.secondary-btn:hover,
+.ghost-btn:hover,
+.btn-outline:hover,
+.vym-button:not(.vym-button-main):hover {
+  background: rgba(0, 255, 200, 0.13) !important;
+  border-color: #00ffc8 !important;
+  color: #54ffd5 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   CATEGORY PANEL / DRAWER (Fixed, Topmost Layer & Backdrop)
+   ========================================================================== */
+.category-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(4, 10, 16, 0.75) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 99990 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease !important;
+  pointer-events: none !important;
+}
+
+.category-backdrop.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.category-panel {
+  position: fixed !important;
+  inset: 0 auto 0 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: min(360px, 86vw) !important;
+  max-width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  z-index: 99999 !important;
+  transform: translateX(-105%) !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  color: #f2fffc !important;
+  background: #0c1420 !important;
+  border-right: 1px solid #24374b !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: 18px 0 50px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 255, 200, 0.08) !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.category-panel.open {
+  transform: translateX(0) !important;
+}
+
+.category-header {
+  border-bottom: 1px solid #1d2f44 !important;
+  background: linear-gradient(135deg, rgba(0, 232, 189, 0.12), rgba(0, 164, 210, 0.06)) !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-shrink: 0 !important;
+}
+
+.category-header h2 {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+}
+
+.category-header .tiny-label {
+  color: #00ffc8 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+}
+
+.close-category {
+  color: #7d95ac !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid #24374b !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.close-category:hover {
+  color: #ff6b78 !important;
+  border-color: rgba(255, 107, 120, 0.5) !important;
+  background: rgba(255, 107, 120, 0.1) !important;
+}
+
+.category-list {
+  padding: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.category-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  border-radius: 11px !important;
+  color: #b9c9da !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.category-item:hover {
+  border-color: rgba(0, 212, 170, 0.45) !important;
+  background: #162638 !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+}
+
+.category-item.active {
+  background: linear-gradient(135deg, rgba(0, 232, 189, 0.16), rgba(0, 164, 210, 0.08)) !important;
+  border-color: #00ffc8 !important;
+  color: #00ffc8 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px -4px rgba(0, 255, 200, 0.25) !important;
+}
+
+.category-item .icon svg {
+  stroke: currentColor !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.category-item .arrow {
+  margin-left: auto !important;
+  color: #5c7389 !important;
+  font-weight: bold !important;
+}
+
+.category-item:hover .arrow,
+.category-item.active .arrow {
+  color: #00ffc8 !important;
+}
+
+/* Category Submenu & Mini Game Accordion */
+.category-item-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.category-item--parent {
+  width: 100% !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  font-family: inherit !important;
+  border: 1px solid #24374b !important;
+}
+
+.category-item--parent .badge-count {
+  margin-left: auto !important;
+  margin-right: 8px !important;
+  font-size: 11px !important;
+  background: rgba(0, 255, 200, 0.15) !important;
+  color: #00ffc8 !important;
+  padding: 2px 8px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(0, 255, 200, 0.3) !important;
+  letter-spacing: 0.5px !important;
+}
+
+.category-item--parent .chevron-arrow {
+  margin-left: 0 !important;
+  color: #5c7389 !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.category-item--parent.expanded .chevron-arrow {
+  transform: rotate(90deg) !important;
+  color: #00ffc8 !important;
+}
+
+.category-item--parent.expanded {
+  border-color: rgba(0, 255, 200, 0.4) !important;
+  background: #142436 !important;
+  color: #ffffff !important;
+}
+
+.category-submenu {
+  display: none !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  padding: 4px 0 4px 18px !important;
+  position: relative !important;
+}
+
+.category-submenu::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 9px !important;
+  top: 8px !important;
+  bottom: 8px !important;
+  width: 2px !important;
+  background: linear-gradient(to bottom, rgba(0, 255, 200, 0.5), rgba(0, 164, 210, 0.15)) !important;
+  border-radius: 2px !important;
+}
+
+.category-submenu.open {
+  display: flex !important;
+  animation: dfSubmenuSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes dfSubmenuSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-subitem {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 12px !important;
+  background: #101a26 !important;
+  border: 1px solid #1e3044 !important;
+  border-radius: 9px !important;
+  color: #9cb1c5 !important;
+  text-decoration: none !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.category-subitem:hover {
+  background: #172637 !important;
+  color: #00ffc8 !important;
+  border-color: rgba(0, 255, 200, 0.4) !important;
+  transform: translateX(4px) !important;
+}
+
+.category-subitem.active {
+  background: linear-gradient(135deg, rgba(0, 232, 189, 0.16), rgba(0, 164, 210, 0.08)) !important;
+  border-color: #00ffc8 !important;
+  color: #00ffc8 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 12px -2px rgba(0, 255, 200, 0.2) !important;
+}
+
+.category-subitem .sub-icon {
+  font-size: 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 18px !important;
+}
+
+.category-subitem .sub-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #3b5066 !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.category-subitem:hover .sub-dot,
+.category-subitem.active .sub-dot {
+  background: #00ffc8 !important;
+  box-shadow: 0 0 8px #00ffc8 !important;
+}
+
+/* ==========================================================================
+   HERO / PROMO BANNER (Exact Tactical Cyber Look)
+   ========================================================================== */
+.promo-banner {
+  border: 1px solid #24374b !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #101b29, #0c1420 55%, #131f2e) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 200, 0.06) !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.promo-banner::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(0, 255, 200, 0.12), transparent 45%),
+    radial-gradient(ellipse at 85% 85%, rgba(0, 150, 255, 0.08), transparent 45%) !important;
+  pointer-events: none !important;
+}
+
+.promo-copy h1 {
+  color: #ffffff !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.promo-copy h1 em {
+  background: linear-gradient(135deg, #00ffc8, #00c8ff) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-style: normal !important;
+}
+
+/* Three Hero Actions: Discord, Facebook, Vyage / Tools */
+.promo-actions--three .promo-button,
+.promo-button--story {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 16px !important;
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  border-radius: 11px !important;
+  color: #edf8f7 !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.promo-actions--three .promo-button:hover,
+.promo-button--story:hover {
+  border-color: rgba(0, 212, 170, 0.55) !important;
+  background: #162638 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), 0 0 12px -3px rgba(0, 255, 200, 0.3) !important;
+}
+
+/* Discord Online Stats: Styled like AutoRedeemDF Stats Card */
+.hero-discord-dashboard {
+  margin-top: 14px !important;
+}
+
+.hero-discord-stats {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 12px !important;
+  padding: 8px 16px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+.hero-discord-stat {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.hero-discord-stat strong {
+  font-family: Consolas, "Courier New", monospace !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  color: #00ffc8 !important;
+}
+
+.hero-discord-stat span {
+  font-size: 9px !important;
+  font-weight: bold !important;
+  letter-spacing: 0.7px !important;
+  color: #7d95ac !important;
+  text-transform: uppercase !important;
+}
+
+.hero-online-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #54ffd5 !important;
+  box-shadow: 0 0 7px #54ffd5 !important;
+  animation: ng-pulse-g 1.5s infinite !important;
+  display: inline-block !important;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS (Creators, News, Weapons, Events, Wiki)
+   ========================================================================== */
+.home-creator,
+.creator-card,
+.news-card,
+.news-article,
+.event-item,
+.shop-game-card,
+.shop-service-card,
+.weapon-card,
+.tools-pc-panel,
+.vym-action,
+.vym-panel,
+.tools-intro,
+.prize-card,
+.digital-service,
+.service-flow article {
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  border-radius: 12px !important;
+  color: #f2fffc !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.22s ease !important;
+}
+
+.home-creator:hover,
+.creator-card:hover,
+.news-card:hover,
+.news-article:hover,
+.event-item:hover,
+.shop-game-card:hover,
+.weapon-card:hover,
+.prize-card:hover,
+.vym-action:hover {
+  border-color: rgba(0, 212, 170, 0.55) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 16px -4px rgba(0, 255, 200, 0.25) !important;
+}
+
+/* Creator Card Styling */
+.home-creator-copy strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.home-creator-copy small {
+  color: #00ffc8 !important;
+  font-family: Consolas, monospace !important;
+}
+
+.home-creator-arrow svg,
+.home-creators-heading a svg,
+.news-all-link svg {
+  stroke: #00ffc8 !important;
+}
+
+/* News Section Headings */
+.home-news-heading h2,
+.home-creators-heading h2,
+.section-heading h2,
+.section-title-row h2 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.home-news-heading h2 em,
+.home-creators-heading h2 em,
+.section-heading h2 span {
+  color: #00ffc8 !important;
+  font-style: normal !important;
+}
+
+.news-all-link,
+.home-creators-heading a,
+.text-link {
+  color: #00ffc8 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: color 0.2s !important;
+}
+
+.news-all-link:hover,
+.home-creators-heading a:hover,
+.text-link:hover {
+  color: #54ffd5 !important;
+}
+
+/* ==========================================================================
+   INPUTS, SEARCH & FORMS
+   ========================================================================== */
+input,
+select,
+textarea,
+.shop-search,
+.auth-input {
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.shop-search:focus-within,
+.auth-input:focus {
+  outline: none !important;
+  border-color: rgba(0, 255, 200, 0.55) !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.08) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #5c7389 !important;
+}
+
+/* ==========================================================================
+   STAT BOXES & PROGRESS (AutoRedeemDF style component)
+   ========================================================================== */
+.df-stats-box,
+.ng-stats-box-theme {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 12px !important;
+  padding: 8px 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+}
+
+.df-stat-row {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.df-stat {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 3px !important;
+  padding: 4px 0 !important;
+}
+
+.df-stat + .df-stat::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 18% !important;
+  bottom: 18% !important;
+  width: 1px !important;
+  background: #1d2f44 !important;
+}
+
+.df-stat-led {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: currentColor !important;
+  box-shadow: 0 0 7px currentColor !important;
+}
+
+.df-stat-num {
+  font-family: Consolas, "Courier New", monospace !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  color: inherit !important;
+}
+
+.df-stat-lbl {
+  font-size: 9px !important;
+  font-weight: bold !important;
+  letter-spacing: 0.7px !important;
+  color: #7d95ac !important;
+}
+
+.df-stat.st-ok { color: #00e676 !important; }
+.df-stat.st-warn { color: #ffc400 !important; }
+.df-stat.st-fail { color: #ff6b78 !important; }
+.df-stat.st-purple { color: #b388ff !important; }
+
+/* Progress bar fill */
+.df-progress-bar {
+  height: 6px !important;
+  border-radius: 99px !important;
+  background: #101b29 !important;
+  border: 1px solid #1d2f44 !important;
+  overflow: hidden !important;
+}
+
+.df-progress-fill {
+  display: block !important;
+  height: 100% !important;
+  border-radius: 99px !important;
+  background: linear-gradient(90deg, #00ffc8, #00c8ff) !important;
+}
+
+/* ==========================================================================
+   BOTTOM DOCK (Mobile & Fixed Navigation - Exact 5 Items Grid)
+   ========================================================================== */
+.bottom-dock {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  align-items: center !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+  padding: 0 4px !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+  margin: 0 !important;
+  background: rgba(11, 20, 32, 0.96) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-top: 1px solid #1d2f44 !important;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6) !important;
+  box-sizing: border-box !important;
+}
+
+body:has(.bottom-dock),
+body {
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+.dock-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  padding: 6px 2px !important;
+  color: #7d95ac !important;
+  text-decoration: none !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+  transition: color 0.18s ease, transform 0.18s ease !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.dock-item span:not(.dock-icon) {
+  font-size: 11px !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+}
+
+.dock-item:hover,
+.dock-item.active {
+  color: #00ffc8 !important;
+}
+
+.dock-item.active::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 25% !important;
+  right: 25% !important;
+  height: 3px !important;
+  background: #00ffc8 !important;
+  border-radius: 3px 3px 0 0 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.7) !important;
+}
+
+.dock-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  flex: 0 0 24px !important;
+}
+
+.dock-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  display: block !important;
+  transition: transform 0.18s ease, stroke 0.18s ease !important;
+}
+
+.dock-item:hover .dock-icon svg,
+.dock-item.active .dock-icon svg {
+  stroke: #00ffc8 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   AUTH PAGE & FORMS (Login / Register / Profile)
+   ========================================================================== */
+.auth-page,
+.profile-page {
+  background-color: #0c1420 !important;
+  color: #f2fffc !important;
+}
+
+.auth-form-wrap,
+.profile-card {
+  border: 1px solid #24374b !important;
+  background: linear-gradient(160deg, #131f2e, #0f1a28) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 200, 0.06) !important;
+}
+
+.auth-form-wrap:hover {
+  border-color: rgba(0, 212, 170, 0.45) !important;
+}
+
+/* ==========================================================================
+   COMPANY FOOTER (AutoRedeemDF Clean Copyright Footer)
+   ========================================================================== */
+.site-footer.company-footer,
+.company-footer {
+  color: #8fa8bf !important;
+  background: #081018 !important;
+  border-top: 1px solid #1d2f44 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3) !important;
+  padding: 26px 0 !important;
+  margin-top: auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+}
+
+.company-footer-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+
+.company-footer-bottom {
+  border-top: none !important;
+  padding-top: 0 !important;
+  color: #7d95ac !important;
+  font-size: 13px !important;
+  text-align: center !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* ==========================================================================
+   WIKI LOOKUP / TRA CUU (AutoRedeemDF Unified Theme)
+   ========================================================================== */
+.wiki-page {
+  background-color: #0c1420 !important;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 232, 189, 0.08), transparent 45%),
+                    radial-gradient(circle at 100% 30%, rgba(0, 164, 210, 0.06), transparent 35%) !important;
+  color: #f2fffc !important;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+}
+
+.wiki-page::before {
+  display: none !important;
+}
+
+.wiki-shell {
+  max-width: 1360px !important;
+  margin: 0 auto !important;
+  padding: 24px 20px 60px !important;
+}
+
+.wiki-feature {
+  background: #131f2e !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.wiki-banner img {
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+}
+
+.wiki-banner-meta {
+  color: #7d95ac !important;
+}
+
+.wiki-directory a {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+  color: #cde5e8 !important;
+  transition: all 0.2s ease !important;
+}
+
+.wiki-directory a:hover,
+.wiki-directory a.is-active {
+  background: linear-gradient(135deg, rgba(0, 232, 189, 0.16), rgba(0, 164, 210, 0.12)) !important;
+  border-color: #00ffc8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 14px -3px rgba(0, 255, 200, 0.3) !important;
+}
+
+.wiki-directory a svg {
+  border-color: rgba(0, 255, 200, 0.35) !important;
+  stroke: #00ffc8 !important;
+  background: rgba(0, 255, 200, 0.06) !important;
+  border-radius: 6px !important;
+}
+
+.wiki-panel,
+.wiki-market {
+  background: #131f2e !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.wiki-section-head p {
+  color: #00ffc8 !important;
+  letter-spacing: 0.15em !important;
+  font-weight: 800 !important;
+}
+
+.wiki-section-head h2 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.wiki-search,
+.wiki-sort {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+}
+
+.wiki-search input,
+.wiki-sort select {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+.wiki-search svg {
+  stroke: #00ffc8 !important;
+}
+
+.wiki-categories button {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 8px !important;
+  color: #8fa8bf !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease !important;
+}
+
+.wiki-categories button:hover,
+.wiki-categories button.is-active {
+  background: linear-gradient(135deg, #19ffbf, #00c8e8) !important;
+  color: #01241d !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px rgba(0, 230, 190, 0.4) !important;
+}
+
+.wiki-table th {
+  background: #0a121d !important;
+  color: #00ffc8 !important;
+  border-bottom: 1px solid #1d2f44 !important;
+  font-weight: 800 !important;
+}
+
+.wiki-table td {
+  background: #131f2e !important;
+  border-bottom: 1px solid #182738 !important;
+  color: #d9eeef !important;
+}
+
+.wiki-table tr:hover td {
+  background: #172738 !important;
+}
+
+.wiki-info-card {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 12px !important;
+  color: #f2fffc !important;
+  transition: all 0.2s ease !important;
+}
+
+.wiki-info-card:hover {
+  border-color: rgba(0, 212, 170, 0.6) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 16px -4px rgba(0, 255, 200, 0.25) !important;
+}
+
+.wiki-detail {
+  background: #0c1420 !important;
+  border: 1px solid #24374b !important;
+  border-radius: 16px !important;
+  color: #f2fffc !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8) !important;
+}
+
+.wiki-detail-top {
+  background: linear-gradient(160deg, #131f2e, #0f1a28) !important;
+  border-bottom: 1px solid #1d2f44 !important;
+}
+
+.wiki-detail-data > div {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+}
+
+.wiki-pages button {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 8px !important;
+  color: #00ffc8 !important;
+  transition: all 0.2s ease !important;
+}
+
+.wiki-pages button:hover:not(:disabled) {
+  border-color: #00ffc8 !important;
+  background: #132233 !important;
+}
+
+.wiki-craft-row {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+}
+
+.wiki-article {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+}
+
+.poker-summary {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 10px !important;
+}
+
+.poker-progress {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+}
+
+.poker-progress span {
+  background: linear-gradient(90deg, #19ffbf, #00c8e8) !important;
+}
+/* ==========================================================================
+   SCROLLBAR (Tactical Cyber Scrollbar)
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a121d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d2f44;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffc8;
+}
+
+/* ==========================================================================
+   WEAPONS, MAP & DATA TABLES (AutoRedeemDF Cohesive Styling)
+   ========================================================================== */
+.weapons-v2-title-button {
+  border: 1px solid #24374b !important;
+  background: linear-gradient(135deg, #101b29, #0c1420 55%, #131f2e) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 200, 0.08) !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+}
+
+.weapons-v2-title-button:hover {
+  border-color: rgba(0, 212, 170, 0.55) !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.6), 0 0 18px -4px rgba(0, 255, 200, 0.3) !important;
+}
+
+.weapons-v2-title-button h1 em {
+  color: #00ffc8 !important;
+}
+
+.weapons-v2 .weapon-card {
+  border: 1px solid #24374b !important;
+  background: #131f2e !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.weapons-v2 .weapon-card:hover {
+  border-color: rgba(0, 212, 170, 0.55) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 16px -4px rgba(0, 255, 200, 0.25) !important;
+}
+
+.weapon-card-code {
+  background: rgba(0, 255, 200, 0.08) !important;
+  border: 1px solid rgba(0, 255, 200, 0.45) !important;
+  color: #00ffc8 !important;
+  border-radius: 8px !important;
+  font-family: Consolas, monospace !important;
+}
+
+.weapon-card-code:hover {
+  background: linear-gradient(135deg, #19ffbf, #00c8e8) !important;
+  color: #01241d !important;
+  border-color: #00ffc8 !important;
+}
+
+.weapon-detail-code {
+  background: linear-gradient(135deg, #19ffbf, #00c8e8) !important;
+  color: #01241d !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 16px -6px rgba(0, 230, 190, 0.5) !important;
+}
+
+/* Tactical Map Navigation Bar */
+.map-top-bar {
+  background: rgba(12, 20, 32, 0.92) !important;
+  border: 1px solid #24374b !important;
+  border-radius: 12px !important;
+  padding: 6px 12px !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.map-nav-btn {
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  color: #00ffc8 !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+.map-nav-btn:hover {
+  background: rgba(0, 255, 200, 0.15) !important;
+  border-color: #00ffc8 !important;
+  color: #54ffd5 !important;
+}
+
+/* SQL Manager and Admin Tables */
+.sql-table-wrap table,
+.admin-table {
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.sql-table-wrap th,
+.admin-table th {
+  background: #131f2e !important;
+  color: #00ffc8 !important;
+  border-bottom: 1px solid #24374b !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.sql-table-wrap td,
+.admin-table td {
+  border-bottom: 1px solid #1d2f44 !important;
+  color: #b9c9da !important;
+}
+
+.sql-table-wrap tr:hover td,
+.admin-table tr:hover td {
+  background: rgba(0, 255, 200, 0.04) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   HOMEPAGE AUTO REDEEM SPOTLIGHT BANNER & BALANCED SECTIONS
+   ========================================================================== */
+.home-autoredeem-spotlight {
+  margin: 36px auto !important;
+}
+
+.autoredeem-spotlight-card {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr !important;
+  gap: 28px !important;
+  align-items: center !important;
+  padding: 30px 36px !important;
+  background: linear-gradient(135deg, #101b29, #0c1420 55%, #131f2e) !important;
+  border: 1px solid #24374b !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 200, 0.08) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.autoredeem-spotlight-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    radial-gradient(ellipse at 8% 25%, rgba(0, 255, 200, 0.12), transparent 45%),
+    radial-gradient(ellipse at 92% 75%, rgba(0, 164, 210, 0.1), transparent 45%) !important;
+  pointer-events: none !important;
+}
+
+.autoredeem-spotlight-copy {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.autoredeem-spotlight-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #00ffc8 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 8px !important;
+}
+
+.autoredeem-spotlight-copy h2 {
+  margin: 0 0 10px !important;
+  color: #ffffff !important;
+  font-size: clamp(24px, 3.5vw, 36px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.autoredeem-spotlight-copy h2 em {
+  background: linear-gradient(135deg, #00ffc8, #00c8ff) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-style: normal !important;
+}
+
+.autoredeem-spotlight-copy p {
+  margin: 0 0 16px !important;
+  color: #b9c9da !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+}
+
+.autoredeem-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.autoredeem-tag {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #00ffc8 !important;
+  background: rgba(0, 255, 200, 0.07) !important;
+  border: 1px solid rgba(0, 255, 200, 0.25) !important;
+  border-radius: 99px !important;
+  padding: 4px 12px !important;
+}
+
+.autoredeem-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.autoredeem-spotlight-visual {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.spotlight-stat-box {
+  width: 100% !important;
+  max-width: 380px !important;
+  background: #0a121d !important;
+  border: 1px solid #1d2f44 !important;
+  border-radius: 14px !important;
+  padding: 16px 18px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.spotlight-stat-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  color: #7d95ac !important;
+  margin-bottom: 14px !important;
+  border-bottom: 1px solid #1d2f44 !important;
+  padding-bottom: 10px !important;
+}
+
+.spotlight-stat-title b {
+  color: #00ffc8 !important;
+}
+
+.spotlight-live-dot {
+  margin-left: auto !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #54ffd5 !important;
+  box-shadow: 0 0 7px #54ffd5 !important;
+  animation: ng-pulse-g 1.5s infinite !important;
+}
+
+.spotlight-stat-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+}
+
+.spotlight-stat {
+  background: #131f2e !important;
+  border: 1px solid #24374b !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.spotlight-stat strong {
+  font-family: Consolas, "Courier New", monospace !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.spotlight-stat small {
+  font-size: 9px !important;
+  font-weight: bold !important;
+  letter-spacing: 0.7px !important;
+  color: #7d95ac !important;
+}
+
+.spotlight-stat.st-ok strong { color: #00e676 !important; }
+.spotlight-stat.st-warn strong { color: #ffc400 !important; }
+.spotlight-stat.st-purple strong { color: #b388ff !important; }
+.spotlight-stat.st-blue strong { color: #00c8ff !important; }
+
+/* Header Badge Style */
+.header-ready-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+  padding: 6px 12px !important;
+  border-radius: 99px !important;
+  background: rgba(2, 28, 23, 0.45) !important;
+  border: 1px solid rgba(0, 255, 200, 0.35) !important;
+  color: #f2fffc !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-ready-badge:hover {
+  background: rgba(0, 255, 200, 0.16) !important;
+  border-color: #00ffc8 !important;
+  color: #54ffd5 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 0 14px -3px rgba(0, 255, 200, 0.35) !important;
+}
+
+@media (max-width: 900px) {
+  .autoredeem-spotlight-card {
+    grid-template-columns: 1fr !important;
+    padding: 24px 20px !important;
+    gap: 20px !important;
+  }
+}

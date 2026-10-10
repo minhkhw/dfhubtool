@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Game - Delta Force Việt Nam</title>
+  <link rel="icon" type="image/png" href="assets/dfvn-cloud-cat.png?v=20261005" />
+  <meta name="description" content="Trải nghiệm bộ Mini Game Delta Force: Mở hộp chuột, Cổng mã Morse, Giải mã Morse, Trang bị ngẫu nhiên cào từ Shushu.fan" />
+  <link rel="stylesheet" href="styles.css?v=20261009-menu-v1" />
+  <link rel="stylesheet" href="brand-theme.css?v=20261009-menu-v1" />
+  <link rel="stylesheet" href="minigame.css?v=20261010-v16" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand-wrap">
+        <button class="menu-trigger category-toggle" aria-label="Mở danh mục">
+          <span class="menu-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-label">Danh mục</span>
+        </button>
+        <a class="brand-main" href="index.html" style="text-decoration:none;">
+          <div class="brand-name">DELTA FORCE</div>
+          <small>MINI GAME HUB</small>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a class="header-ready-badge" href="tools.html" title="Delta Force Auto Redeem v1.4.3">
+          <span class="df-badge-dot"></span>
+          <span>AUTO REDEEM</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category sliding drawer -->
+  <div class="category-panel" id="categoryPanel" aria-hidden="true">
+    <div class="category-header">
+      <div>
+        <div class="tiny-label">DELTA FORCE</div>
+        <h2>DANH MỤC</h2>
+      </div>
+      <button class="close-category" aria-label="Đóng danh mục">×</button>
+    </div>
+
+    <div class="category-list">
+      <a href="index.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-6v-6h-4v6H4Z"/></svg></span> <span class="text">Trang chủ</span> <span class="arrow">›</span></a>
+      <a href="tools.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5 20.5 20h-17Z"/><path d="m12 11.2 3.8 6.8H8.2Z" fill="currentColor" stroke="none"/></svg></span> <span class="text">Auto Redeem</span> <span class="arrow">›</span></a>
+      <a href="map.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16"/></svg></span> <span class="text">Bản đồ chiến thuật</span> <span class="arrow">›</span></a>
+      <a href="weapons.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11l2-2h5v5h-4l-2 2h-4v2H8v-2H5zM8 13v5m7-7v5"/></svg></span> <span class="text">Kho vũ khí</span> <span class="arrow">›</span></a>
+      <a href="news.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span> <span class="text">Tin tức</span> <span class="arrow">›</span></a>
+      <a href="/wiki" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c3-1.3 5.5-1.3 8 .2 2.5-1.5 5-1.5 8-.2v14c-3-1.2-5.5-1.2-8 .3-2.5-1.5-5-1.5-8-.3v-14ZM12 5.7v14.1"/></svg></span> <span class="text">Wiki</span> <span class="arrow">›</span></a>
+      <a href="music.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span> <span class="text">Nhạc chuột</span> <span class="arrow">›</span></a>
+      
+      <!-- Mini Game Group -->
+      <div class="category-item-group">
+        <button type="button" class="category-item category-item--parent expanded active" id="miniGameMenuBtn" aria-expanded="true" aria-controls="miniGameSubmenu">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15.5" cy="10.5" r="1" fill="currentColor"/><circle cx="17.5" cy="13.5" r="1" fill="currentColor"/></svg></span>
+          <span class="text">Mini Game</span>
+          <span class="badge-count" style="margin-left:auto;margin-right:8px;font-size:11px;background:rgba(0,255,200,0.15);color:#00ffc8;padding:2px 8px;border-radius:10px;font-weight:700;">4 Game</span>
+          <span class="chevron-arrow">›</span>
+        </button>
+        <div class="category-submenu open" id="miniGameSubmenu">
+          <a href="minigame.html?game=crate" class="category-subitem" data-game="crate">
+            <span class="sub-icon"><img src="fun/crate/CrateCover/minisafe.webp" alt="" width="20" height="20"></span>
+            <span class="text">Mở hộp chuột</span>
+          </a>
+          <a href="minigame.html?game=morse" class="category-subitem" data-game="morse">
+            <span class="sub-icon"><img src="assets/minigame-icons/morse.png" alt="" width="20" height="20"></span>
+            <span class="text">Cổng mã Morse</span>
+          </a>
+          <a href="minigame.html?game=hacker" class="category-subitem" data-game="hacker">
+            <span class="sub-icon"><img src="fun/HACER.png" alt="" width="20" height="20"></span>
+            <span class="text">Giải mã Morse</span>
+          </a>
+          <a href="minigame.html?game=equipment" class="category-subitem" data-game="equipment">
+            <span class="sub-icon"><img src="assets/minigame-icons/equipment.png" alt="" width="20" height="20"></span>
+            <span class="text">Trang bị ngẫu nhiên</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Shell -->
+  <main class="minigame-page container">
+    <!-- Hero Header -->
+    <section class="mg-hero">
+      <div class="mg-hero-badge">DELTA FORCE TACTICAL MINI-GAMES</div>
+      <h1>TRUNG TÂM <em>MINI GAME</em></h1>
+      <p>Thử thách kỹ năng mật mã, luyện phản xạ mở cửa an ninh, thử vận may hòm báu và tạo bộ trang bị tác chiến ngẫu nhiên.</p>
+    </section>
+
+    <!-- Top Tabs Switcher -->
+    <section class="mg-tabs-wrapper">
+      <div class="mg-tabs-bar">
+        <button class="mg-tab-btn active" data-tab="crate" type="button">
+          <span class="tab-icon"><img src="fun/crate/CrateCover/minisafe.webp" alt="" width="22" height="22"></span>
+          <span>Mở hộp chuột</span>
+        </button>
+        <button class="mg-tab-btn" data-tab="morse" type="button">
+          <span class="tab-icon"><img src="assets/minigame-icons/morse.png" alt="" width="22" height="22"></span>
+          <span>Cổng mã Morse</span>
+        </button>
+        <button class="mg-tab-btn" data-tab="hacker" type="button">
+          <span class="tab-icon"><img src="fun/HACER.png" alt="" width="22" height="22"></span>
+          <span>Giải mã Morse</span>
+        </button>
+        <button class="mg-tab-btn" data-tab="equipment" type="button">
+          <span class="tab-icon"><img src="assets/minigame-icons/equipment.png" alt="" width="22" height="22"></span>
+          <span>Trang bị ngẫu nhiên</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 1: MỞ HỘP CHUỘT (CRATE OPENING)
+         ==================================================================== -->
+    <section class="mg-game-view active" data-view="crate" id="viewCrate">
+      <div class="crate-hub-intro">
+        <div>
+          <h2 style="font-size:20px;font-weight:900;color:#fff;margin:0 0 4px;">CHỌN HÒM VẬT PHẨM</h2>
+          <span style="color:var(--mg-text-muted);font-size:13px;">Mô phỏng trải nghiệm mở hòm, két sắt và container Delta Force thực tế</span>
+        </div>
+        <div class="crate-hub-stats">
+          <span class="crate-stat-pill">Tổng số loại hòm: <b>15</b></span>
+          <span class="crate-stat-pill">Tỷ lệ rớt đồ vàng/đỏ: <b>Chuẩn game</b></span>
+        </div>
+      </div>
+
+      <div class="crate-grid-select" id="crateGridSelect">
+        <!-- Rendered dynamically via minigame.js -->
+      </div>
+    </section>
+
+    <!-- Crate Opening Modal -->
+    <div class="crate-modal-overlay" id="crateModal">
+      <div class="crate-modal-window">
+        <div class="crate-modal-header">
+          <div class="crate-modal-title-wrap">
+            <small id="crateModalDims">4 × 4 Ô LƯU TRỮ</small>
+            <h2 id="crateModalTitle">Két sắt</h2>
+            <div style="margin-top:4px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:10px;font-weight:700;color:#00ffc8;background:rgba(0,255,200,0.12);padding:2px 7px;border-radius:4px;border:1px solid rgba(0,255,200,0.25);">Nguồn giá & ảnh: deltaforcetools.gg</span>
+            </div>
+          </div>
+          <div class="crate-total-value">
+            <span>TỔNG GIÁ TRỊ (XU TEKNIQ)</span>
+            <strong id="crateTotalValue">0 <img src="assets/wiki/coin.png" class="tekniq-coin-icon" alt="Xu Tekniq"></strong>
+          </div>
+          <button class="crate-modal-close" id="crateModalClose" type="button" aria-label="Đóng">×</button>
+        </div>
+
+        <div class="crate-modal-body">
+          <!-- Tactical Search Banner (Authentic Shushu/Delta Force Search State) -->
+          <div class="crate-search-banner-wrap" id="crateSearchBannerWrap">
+            <div class="crate-tech-corners">
+              <span class="corner-tl-h"></span><span class="corner-tl-v"></span>
+              <span class="corner-tr-h"></span><span class="corner-tr-v"></span>
+              <span class="corner-bl-h"></span><span class="corner-bl-v"></span>
+              <span class="corner-br-h"></span><span class="corner-br-v"></span>
+            </div>
+            <div class="crate-search-banner" id="crateSearchBanner">
+              <div class="crate-search-stripes-mask"></div>
+              <div class="crate-search-content">
+                <div class="crate-search-spin-wrap" id="crateSearchSpinWrap">
+                  <svg class="crate-search-svg-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <circle cx="10" cy="10" r="6.5" fill="none" stroke="#ffffff" stroke-width="2.5" />
+                    <line x1="15" y1="15" x2="21" y2="21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="crate-search-title-text" id="crateSearchTitleText">Đang tìm kiếm vật tư...</div>
+              </div>
+              <img src="fun/crate/SafeRoom3D_Sp_De_03_01.png" alt="" class="crate-search-deco-img">
+            </div>
+          </div>
+
+          <div class="crate-inventory-grid" id="crateInventoryGrid">
+            <!-- Dynamic cell grid & loot items rendered here -->
+          </div>
+        </div>
+
+        <div class="crate-modal-footer">
+          <button class="mg-action-btn mg-btn-secondary" id="crateModalCloseBtn" type="button">ĐÓNG</button>
+          <button class="mg-action-btn mg-btn-primary" id="crateReopenBtn" type="button">MỞ LẠI</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 2: CỔNG MÃ MORSE (MORSE CODE DOOR)
+         ==================================================================== -->
+    <section class="mg-game-view" data-view="morse" id="viewMorse">
+      <div style="text-align:center;margin-bottom:20px;">
+        <h2 style="font-size:20px;font-weight:900;color:#fff;margin:0 0 4px;">CỔNG AN NINH MÃ MORSE</h2>
+        <span style="color:var(--mg-text-muted);font-size:13px;">Lắng nghe âm thanh mã Morse phát ra từ bộ khóa cửa và nhập mật mã chính xác để mở cổng</span>
+      </div>
+
+      <div class="morse-door-stage">
+        <div class="morse-door-bg" style="background-image: url('/fun/morse/BHD_Sp_BG_01_resized.webp');"></div>
+        <img class="morse-door-card-img" src="/fun/morse/Morse_Card.png" alt="Morse Card" draggable="false">
+
+        <div class="morse-door-status-bar" id="morseStatusBar">VUI LÒNG NHẬP MẬT MÃ</div>
+        <div class="morse-door-inputs" id="morseInputsWrap"></div>
+
+        <div class="morse-keypad">
+          <div class="morse-keypad-row">
+            <button class="morse-key-btn" data-num="7" type="button">7</button>
+            <button class="morse-key-btn" data-num="8" type="button">8</button>
+            <button class="morse-key-btn" data-num="9" type="button">9</button>
+          </div>
+          <div class="morse-keypad-row">
+            <button class="morse-key-btn" data-num="4" type="button">4</button>
+            <button class="morse-key-btn" data-num="5" type="button">5</button>
+            <button class="morse-key-btn" data-num="6" type="button">6</button>
+          </div>
+          <div class="morse-keypad-row">
+            <button class="morse-key-btn" data-num="1" type="button">1</button>
+            <button class="morse-key-btn" data-num="2" type="button">2</button>
+            <button class="morse-key-btn" data-num="3" type="button">3</button>
+          </div>
+          <div class="morse-keypad-row">
+            <div style="flex:1;"></div>
+            <button class="morse-key-btn" data-num="0" type="button">0</button>
+            <div style="flex:1;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="morse-controls-bar">
+        <span>SỐ CHỮ SỐ MẬT MÃ:</span>
+        <button class="morse-btn-opt morse-opt-len" data-len="3" type="button">3 SỐ</button>
+        <button class="morse-btn-opt morse-opt-len active" data-len="4" type="button">4 SỐ</button>
+        <button class="morse-btn-start" id="morseStartBtn" type="button">BẮT ĐẦU</button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: GIẢI MÃ MORSE (HACKER COMPUTER)
+         ==================================================================== -->
+    <section class="mg-game-view" data-view="hacker" id="viewHacker">
+      <div style="text-align:center;margin-bottom:20px;">
+        <h2 style="font-size:20px;font-weight:900;color:#fff;margin:0 0 4px;">MÁY TÍNH HACKER - PHÁ MÃ MORSE</h2>
+        <span style="color:var(--mg-text-muted);font-size:13px;">Đối chiếu chuỗi mã Morse mục tiêu với bảng manh mối và nhập 3 chữ số để giải mã thiết bị</span>
+      </div>
+
+      <div class="hacker-stage" style="background-image: url('/fun/HackGame_Sp_16.webp');">
+        <div class="hacker-stage-inner">
+          <div class="hacker-top-bar">
+            <span>TÌM CON SỐ TƯƠNG ỨNG VỚI MÃ MORSE</span>
+            <button class="mg-action-btn mg-btn-primary" id="hackerStartBtn" type="button" style="padding:6px 18px;font-size:13px;">BẮT ĐẦU PHÁ MÃ</button>
+          </div>
+
+          <div class="hacker-main-grid">
+            <div class="hacker-col-left">
+              <div class="hacker-received-box">
+                <div class="hacker-box-lbl">&gt;&gt; MÃ MORSE ĐÃ NHẬN: _ _ _</div>
+                <div class="hacker-morse-display" id="hackerMorseDisplay">
+                  <span style="color:#626a6f;font-size:14px;">Chưa lấy được mã...</span>
+                </div>
+              </div>
+
+              <div class="hacker-clues-box">
+                <div class="hacker-box-lbl">&gt;&gt; MANH MỐI GIẢI MÃ MORSE:</div>
+                <div class="hacker-clues-grid" id="hackerCluesGrid">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <div class="hacker-col-right">
+              <div class="hacker-status-banner" id="hackerStatusBanner">&gt;&gt; Đang chờ khởi động _ _ _</div>
+
+              <div class="hacker-inputs-row">
+                <div class="hacker-input-box"></div>
+                <div class="hacker-input-box"></div>
+                <div class="hacker-input-box"></div>
+              </div>
+
+              <div class="hacker-numpad">
+                <button class="hacker-pad-btn" data-num="7" type="button">7</button>
+                <button class="hacker-pad-btn" data-num="8" type="button">8</button>
+                <button class="hacker-pad-btn" data-num="9" type="button">9</button>
+                <button class="hacker-pad-btn" data-num="4" type="button">4</button>
+                <button class="hacker-pad-btn" data-num="5" type="button">5</button>
+                <button class="hacker-pad-btn" data-num="6" type="button">6</button>
+                <button class="hacker-pad-btn" data-num="1" type="button">1</button>
+                <button class="hacker-pad-btn" data-num="2" type="button">2</button>
+                <button class="hacker-pad-btn" data-num="3" type="button">3</button>
+                <div></div>
+                <button class="hacker-pad-btn" data-num="0" type="button">0</button>
+                <div></div>
+              </div>
+
+              <div class="hacker-bottom-sync">
+                <div class="hacker-sync-header">
+                  <span>TIẾN ĐỘ TỰ ĐỘNG PHÁ MÃ</span>
+                  <span id="hackerSyncPct">0%</span>
+                </div>
+                <div class="hacker-sync-bar">
+                  <div class="hacker-sync-fill" id="hackerSyncFill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 4: TRANG BỊ NGẪU NHIÊN (RANDOM EQUIPMENT)
+         ==================================================================== -->
+    <!-- ====================================================================
+         VIEW 4: TRANG BỊ NGẪU NHIÊN (RANDOM EQUIPMENT)
+         ==================================================================== -->
+    <section class="mg-game-view" data-view="equipment" id="viewEquipment">
+      <div class="equip-controls-card">
+        <div class="equip-options-row">
+          <button class="mg-action-btn mg-btn-primary" id="equipGenerateBtn" type="button">
+            🎲 TẠO TRANG BỊ NGẪU NHIÊN
+          </button>
+
+          <select class="equip-select-map" id="equipMapSelect" aria-label="Chọn bản đồ">
+            <option value="">Bản đồ: Ngẫu nhiên</option>
+            <option value="1">Đập số 0 (Zero Dam)</option>
+            <option value="2">Thung lũng Cung Tên (Longbow Creek)</option>
+            <option value="3">Barkesh</option>
+            <option value="4">Căn cứ Không gian (Space Base)</option>
+            <option value="5">Nhà tù Thủy triều (Tidal Prison)</option>
+            <option value="6">AZ3</option>
+          </select>
+
+          <select class="equip-select-map" id="equipDiffSelect" aria-label="Chọn mức độ khó">
+            <option value="">Độ khó: Ngẫu nhiên</option>
+            <option value="常规">Dễ</option>
+            <option value="机密">Thường</option>
+            <option value="绝密">Khó</option>
+          </select>
+
+          <!-- 3 Quick Difficulty Pills: Dễ, Thường, Khó -->
+          <div class="equip-diff-group" role="group" aria-label="Mức độ khó">
+            <button type="button" class="equip-toggle-pill equip-diff-pill" id="pillDiffEasy" data-diff="常规" title="Độ khó Dễ">
+              <span class="toggle-dot" style="background:#2ecc71;"></span>
+              <span>Dễ</span>
+            </button>
+            <button type="button" class="equip-toggle-pill equip-diff-pill" id="pillDiffNormal" data-diff="机密" title="Độ khó Thường">
+              <span class="toggle-dot" style="background:#f59e0b;"></span>
+              <span>Thường</span>
+            </button>
+            <button type="button" class="equip-toggle-pill equip-diff-pill" id="pillDiffHard" data-diff="绝密" title="Độ khó Khó">
+              <span class="toggle-dot" style="background:#ef4444;"></span>
+              <span>Khó</span>
+            </button>
+          </div>
+
+          <label class="equip-toggle-pill" id="pillLucky" title="Tăng tỷ lệ đồ cao cấp (Tương khắc với Hạ Hạ Quẻ)">
+            <input type="checkbox" id="optLucky">
+            <span class="toggle-dot"></span>
+            <span>Thượng Thượng Quẻ</span>
+          </label>
+
+          <label class="equip-toggle-pill" id="pillUnlucky" title="Tăng tỷ lệ đồ cơ bản / thử thách (Tương khắc với Thượng Thượng Quẻ)">
+            <input type="checkbox" id="optUnlucky">
+            <span class="toggle-dot"></span>
+            <span>Hạ Hạ Quẻ</span>
+          </label>
+
+          <label class="equip-toggle-pill" id="pillNoPistol" title="Loại trừ súng lục">
+            <input type="checkbox" id="optNoPistol">
+            <span class="toggle-dot"></span>
+            <span>Không súng lục</span>
+          </label>
+
+          <label class="equip-toggle-pill" id="pillNoShotgun" title="Loại trừ súng shotgun">
+            <input type="checkbox" id="optNoShotgun">
+            <span class="toggle-dot"></span>
+            <span>Không shotgun</span>
+          </label>
+
+          <label class="equip-toggle-pill" id="pillNoSniper" title="Loại trừ súng bắn tỉa lên đạn từng viên">
+            <input type="checkbox" id="optNoSniper">
+            <span class="toggle-dot"></span>
+            <span>Không sniper lên đạn</span>
+          </label>
+
+          <label class="equip-toggle-pill" id="pillFast" title="Rút ngắn thời gian quét radar giữa các thẻ">
+            <input type="checkbox" id="optFast">
+            <span class="toggle-dot"></span>
+            <span>Hiện nhanh</span>
+          </label>
+
+          <div style="margin-left:auto;display:flex;align-items:center;gap:8px;">
+            <button class="mg-action-btn mg-btn-secondary" id="equipCopyBtn" type="button" title="Sao chép toàn bộ bộ trang bị hiện tại vào clipboard">
+              📋 Sao chép
+            </button>
+            <button class="mg-action-btn mg-btn-secondary" id="equipHistoryBtn" type="button" title="Xem lịch sử các bộ trang bị đã tạo">
+              📜 Lịch sử
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equipment Visual Stage -->
+      <div class="equip-display-grid">
+        <!-- Hero Card (Map & Operator) -->
+        <div class="equip-hero-card" id="cardHero">
+          <div class="equip-radar-overlay" id="radarHero">
+            <div class="equip-orbit-spinner">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--mg-primary)" stroke-width="2.5">
+                <circle cx="10.5" cy="10.5" r="7"/>
+                <line x1="16" y1="16" x2="21.5" y2="21.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="equip-radar-text">Đang dò quét bản đồ & đặc vụ...</span>
+          </div>
+
+          <img class="equip-map-img" id="equipMapImg" src="https://eo.oss.hengj.cn/one/DfGame/MapImages/htjd-jimi.jpg" alt="Map">
+          <img class="equip-operator-img" id="equipOperatorImg" src="https://game.gtimg.cn/images/dfm/cp/a20240906main/p4_img4.jpg" alt="Operator">
+          <div class="equip-hero-shade"></div>
+
+          <div class="equip-hero-info-left">
+            <h3 id="equipMapName">Căn cứ Không gian</h3>
+            <span class="equip-diff-badge diff-juemi" id="equipDiffBadge">Khó</span>
+          </div>
+
+          <div class="equip-hero-operator-badge">
+            <img id="equipOperatorAvatar" src="https://eo.oss.hengj.cn/one/DfGame/System/Hero/AvatarIcon/AF_Luna_g_01.png" alt="Avatar">
+            <span id="equipOperatorName">Luna</span>
+          </div>
+        </div>
+
+        <!-- Subcards Grid (Weapon, Helmet, Armor, Gun Rules) -->
+        <div class="equip-subcards-grid">
+          <!-- Main Weapon Card (spans full width row 1) -->
+          <div class="equip-gear-card equip-card-main-weapon" id="cardWeapon">
+            <div class="equip-radar-overlay" id="radarWeapon">
+              <div class="equip-orbit-spinner">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--mg-primary)" stroke-width="2.5">
+                  <circle cx="10.5" cy="10.5" r="7"/>
+                  <line x1="16" y1="16" x2="21.5" y2="21.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="equip-radar-text">Đang phân tích vũ khí tác chiến...</span>
+            </div>
+
+            <div class="equip-gear-header">
+              <span style="display:flex;align-items:center;gap:6px;">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <circle cx="12" cy="12" r="9"/>
+                  <line x1="12" y1="3" x2="12" y2="7"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <line x1="3" y1="12" x2="7" y2="12"/>
+                  <line x1="17" y1="12" x2="21" y2="12"/>
+                </svg>
+                VŨ KHÍ CHÍNH
+              </span>
+              <span id="equipWeaponClass" style="color:var(--mg-primary);">SÚNG TRƯỜNG TẤN CÔNG</span>
+            </div>
+
+            <div class="equip-gear-body">
+              <div class="equip-gear-thumb">
+                <img id="equipWeaponImg" src="https://eo.oss.hengj.cn/one/object/18020000009.png" alt="Weapon" loading="lazy">
+              </div>
+              <div class="equip-gear-info">
+                <h4 id="equipWeaponName">K416</h4>
+                <div class="equip-gear-tags" id="equipWeaponTags">
+                  <span class="equip-tag">Tự động</span>
+                  <span class="equip-tag">Đạn cấp 4</span>
+                  <span class="equip-tag">5.56x45</span>
+                  <span class="equip-tag">Tối đa 9 phụ kiện</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Helmet Card (Col 1, row 2) -->
+          <div class="equip-gear-card lvl-border-4" id="cardHelmet">
+            <div class="equip-radar-overlay" id="radarHelmet">
+              <div class="equip-orbit-spinner">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--mg-primary)" stroke-width="2.5">
+                  <circle cx="10.5" cy="10.5" r="7"/>
+                  <line x1="16" y1="16" x2="21.5" y2="21.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="equip-radar-text">Đang quét mũ bảo hộ...</span>
+            </div>
+
+            <div class="equip-gear-header">
+              <span style="display:flex;align-items:center;gap:6px;">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                MŨ BẢO HIỂM
+              </span>
+              <span id="equipHelmetLvl" class="equip-level-badge lvl-4">LV 4</span>
+            </div>
+
+            <div class="equip-gear-body">
+              <div class="equip-gear-thumb">
+                <img id="equipHelmetImg" src="https://playerhub.df.qq.com/playerhub/60004/object/11010004002.png" alt="Helmet" loading="lazy">
+              </div>
+              <div class="equip-gear-info">
+                <h4 id="equipHelmetName">Mũ bảo hiểm chiến thuật MHS</h4>
+                <span class="equip-tag" id="equipHelmetDesc">Bảo vệ đầu cấp 4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Armor Card (Col 2, row 2) -->
+          <div class="equip-gear-card lvl-border-5" id="cardArmor">
+            <div class="equip-radar-overlay" id="radarArmor">
+              <div class="equip-orbit-spinner">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--mg-primary)" stroke-width="2.5">
+                  <circle cx="10.5" cy="10.5" r="7"/>
+                  <line x1="16" y1="16" x2="21.5" y2="21.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="equip-radar-text">Đang quét áo giáp...</span>
+            </div>
+
+            <div class="equip-gear-header">
+              <span style="display:flex;align-items:center;gap:6px;">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M12 8v8m-4-4h8"/>
+                </svg>
+                GIÁP CHỐNG ĐẠN
+              </span>
+              <span id="equipArmorLvl" class="equip-level-badge lvl-5">LV 5</span>
+            </div>
+
+            <div class="equip-gear-body">
+              <div class="equip-gear-thumb">
+                <img id="equipArmorImg" src="https://playerhub.df.qq.com/playerhub/60004/object/11050003003.png" alt="Armor" loading="lazy">
+              </div>
+              <div class="equip-gear-info">
+                <h4 id="equipArmorName">Áo giáp chống đạn TG-H</h4>
+                <span class="equip-tag" id="equipArmorDesc">Bảo vệ thân cấp 5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gun Rules Card (Col 3, row 2) -->
+          <div class="equip-gear-card" id="cardRules">
+            <div class="equip-radar-overlay" id="radarRules">
+              <div class="equip-orbit-spinner">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--mg-primary)" stroke-width="2.5">
+                  <circle cx="10.5" cy="10.5" r="7"/>
+                  <line x1="16" y1="16" x2="21.5" y2="21.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="equip-radar-text">Đang tính quy tắc phối súng...</span>
+            </div>
+
+            <div class="equip-gear-header">
+              <span style="display:flex;align-items:center;gap:6px;">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+                QUY TẮC PHỐI SÚNG
+              </span>
+              <span id="equipGunRuleStatus" class="equip-tag" style="color:var(--mg-primary);">CHIẾN THUẬT</span>
+            </div>
+
+            <div class="equip-gear-body">
+              <div class="equip-gear-info" id="equipGunRuleBody" style="width:100%;">
+                <p id="equipRuleLine1" style="margin:0;font-size:13px;line-height:1.5;color:#e1effa;">
+                  Tối đa lắp <b id="equipMaxAcc" style="color:#fff;">9</b> phụ kiện <span class="equip-quality-tag qual-purple" id="equipMinQual">Tím</span>
+                </p>
+                <p id="equipRuleLine2" style="margin:4px 0 0;font-size:12px;color:var(--mg-text-muted);">
+                  Trong đó <b id="equipHighAcc" style="color:#fff;">3</b> phụ kiện có thể nâng lên <span class="equip-quality-tag qual-gold" id="equipMaxQual">Vàng</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Modal for Random Equipment -->
+    <div class="crate-modal-overlay" id="equipHistoryModal">
+      <div class="crate-modal-window" style="max-width:880px;">
+        <div class="crate-modal-header" style="background:linear-gradient(135deg, #122133 0%, #0c1420 100%);border-bottom:1px solid #1e334a;">
+          <div class="crate-modal-title-wrap">
+            <small style="color:var(--mg-primary);">LƯU TRỮ CỤC TÁC CHIẾN G.T.I.</small>
+            <h2>LỊCH SỬ TẠO TRANG BỊ</h2>
+          </div>
+          <button class="crate-modal-close" id="equipHistoryClose" type="button">×</button>
+        </div>
+        <div class="crate-modal-body" style="padding:20px;width:100%;box-sizing:border-box;">
+          <div class="mg-history-list" id="equipHistoryList" style="width:100%;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+        <div class="crate-modal-footer" style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;color:var(--mg-text-muted);">Nhấn vào lượt tạo bất kỳ để nạp lại vào sàn đấu</span>
+          <button class="mg-action-btn mg-btn-secondary" id="equipHistoryClear" type="button">XÓA LỊCH SỬ</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer company-footer" id="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="df-logo-mark">DF</span>
+            <strong>DELTA FORCE <em>VIỆT NAM</em></strong>
+          </div>
+          <p class="footer-desc">Hệ thống công cụ chiến thuật, tin tức, wiki và trung tâm mini game tương tác cộng đồng người chơi Delta Force tại Việt Nam.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Delta Force Việt Nam Community Hub · Dữ liệu giá & hình ảnh vật phẩm từ Delta Force Tools (deltaforcetools.gg)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20261010-v15"></script>
+  <script src="fun/crate/deltaforce-crate-data.js?v=20261011-vi-translate"></script>
+  <script src="minigame.js?v=20261011-vi-translate"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "fetchedAt": "2026-10-10T18:39:53.491260+00:00",
+  "source": "https://deltaforcetools.gg/",
+  "codes": [
+    {
+      "id": "zero-dam",
+      "name": "Dam",
+      "code": "0629",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/lhdb-bg.png"
+    },
+    {
+      "id": "layali-grove",
+      "name": "Layali Grove",
+      "code": "0685",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/cgxg-bg.png"
+    },
+    {
+      "id": "brakkesh",
+      "name": "Brakkesh",
+      "code": "0914",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/bks-bg.png"
+    },
+    {
+      "id": "space-city",
+      "name": "Space City",
+      "code": "0177",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/htjd-bg.png"
+    },
+    {
+      "id": "tide-prison",
+      "name": "Tide Prison",
+      "code": "0975",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/cxjy-bg.png"
+    },
+    {
+      "id": "az3",
+      "name": "AZ3",
+      "code": "0530",
+      "date": "2026/10/10",
+      "time": "08:00",
+      "image": "images/az3-bg.png"
+    }
+  ]
+}

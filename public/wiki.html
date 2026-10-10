@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c1420">
+  <title>Wiki Delta Force</title>
+  <meta name="description" content="Wiki Delta Force: vật phẩm, Chợ đấu giá, chế tạo, bộ bài poker Asara và bài viết ">
+  <link rel="icon" type="image/png" href="/assets/dfvn-cloud-cat.png?v=20261005">
+  <link rel="stylesheet" href="/styles.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="/wiki.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="/wiki-banner-leftnav.css?v=20261011-v7">
+  <link rel="stylesheet" href="/wiki-poker.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="/market-exchange.css?v=20261010-v5">
+  <link rel="stylesheet" href="/brand-theme.css?v=20261009-menu-v1">
+  <link rel="stylesheet" href="music-player.css?v=20261010-v1">
+</head>
+<body class="wiki-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand-wrap">
+        <button class="menu-trigger category-toggle" aria-label="Mở danh mục"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Danh mục</span></button>
+        <a class="brand-main" href="index.html">
+          <div class="brand-name">DELTA FORCE</div><small>VIỆT NAM</small>
+        </a>
+      </div>
+      <div class="header-actions">
+        <a class="header-ready-badge" href="tools.html" title="Delta Force Auto Redeem v1.4.3">
+          <span class="df-badge-dot"></span>
+          <span>AUTO REDEEM</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category sliding drawer -->
+  <div class="category-panel" id="categoryPanel" aria-hidden="true">
+    <div class="category-header">
+      <div>
+        <div class="tiny-label">DELTA FORCE</div>
+        <h2>DANH MỤC</h2>
+      </div>
+      <button class="close-category" aria-label="Đóng danh mục">×</button>
+    </div>
+    <div class="category-list">
+      <a href="index.html" class="category-item"><span class="text">Trang chủ</span><span class="arrow">›</span></a>
+      <a href="tools.html" class="category-item"><span class="text">Auto Redeem</span><span class="arrow">›</span></a>
+      <a href="map.html" class="category-item"><span class="text">Bản đồ</span><span class="arrow">›</span></a>
+      <a href="weapons.html" class="category-item"><span class="text">Vũ khí</span><span class="arrow">›</span></a>
+      <a href="news.html" class="category-item"><span class="text">Tin tức</span><span class="arrow">›</span></a>
+      <a href="wiki.html" class="category-item active"><span class="text">Wiki</span><span class="arrow">›</span></a>
+      <a href="music.html" class="category-item"><span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span> <span class="text">Nhạc chuột</span> <span class="arrow">›</span></a>
+      <div class="category-item-group">
+        <button type="button" class="category-item category-item--parent expanded active" id="miniGameMenuBtn" aria-expanded="true" aria-controls="miniGameSubmenu">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15.5" cy="10.5" r="1" fill="currentColor"/><circle cx="17.5" cy="13.5" r="1" fill="currentColor"/></svg></span>
+          <span class="text">Mini Game</span>
+          <span class="badge-count" style="margin-left:auto;margin-right:8px;font-size:11px;background:rgba(0,255,200,0.15);color:#00ffc8;padding:2px 8px;border-radius:10px;font-weight:700;">4 Game</span>
+          <span class="chevron-arrow">›</span>
+        </button>
+        <div class="category-submenu open" id="miniGameSubmenu">
+          <a href="minigame.html?game=crate" class="category-subitem" data-game="crate">
+            <span class="sub-icon"><img src="fun/crate/CrateCover/minisafe.webp" alt="" width="20" height="20"></span>
+            <span class="text">Mở hộp chuột</span>
+          </a>
+          <a href="minigame.html?game=morse" class="category-subitem" data-game="morse">
+            <span class="sub-icon"><img src="assets/minigame-icons/morse.png" alt="" width="20" height="20"></span>
+            <span class="text">Cổng mã Morse</span>
+          </a>
+          <a href="minigame.html?game=hacker" class="category-subitem" data-game="hacker">
+            <span class="sub-icon"><img src="fun/HACER.png" alt="" width="20" height="20"></span>
+            <span class="text">Giải mã Morse</span>
+          </a>
+          <a href="minigame.html?game=equipment" class="category-subitem" data-game="equipment">
+            <span class="sub-icon"><img src="assets/minigame-icons/equipment.png" alt="" width="20" height="20"></span>
+            <span class="text">Trang bị ngẫu nhiên</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="wiki-shell">
+    <div class="wiki-feature">
+    <header class="wiki-topbar" aria-labelledby="wikiTitle">
+      <div class="wiki-topbar-left">
+        <div class="wiki-topbar-badge">WIKI</div>
+        <h1 id="wikiTitle" class="wiki-topbar-title">Delta Force</h1>
+      </div>
+      <div class="wiki-topbar-meta" aria-live="polite">
+        <span id="wikiTotal">Đang tải dữ liệu</span>
+        <span id="wikiUpdated">Đang cập nhật</span>
+      </div>
+    </header>
+
+    <nav class="wiki-directory" id="wikiDirectory" aria-label="Danh mục Wiki">
+      <a href="/wiki?section=catalog" data-section="catalog">Kho vật phẩm</a>
+      <a href="/wiki?section=market" data-section="market">Chợ đấu giá</a>
+      <a href="/wiki?section=exchange" data-section="exchange">Chợ trời</a>
+      <a href="/wiki?section=crafting" data-section="crafting">Chế tạo</a>
+      <a href="/wiki?section=poker" data-section="poker">Bài poker Asara</a>
+      <a href="/wiki?section=articles" data-section="articles">Tin &amp; hướng dẫn</a>
+    </nav>
+
+    <div class="wiki-workspace">
+    <!-- MỤC CHỢ TRỜI (TRAO ĐỔI HÀNG TUẦN THEO SHUSHU) -->
+    <section class="wiki-panel wiki-exchange" id="wikiExchange" aria-label="Chợ trời Delta Force" hidden>
+      <div id="marketExchangeApp"></div>
+    </section>
+
+    <!-- MỤC CHỢ ĐẤU GIÁ (THƯ VIỆN VẬT PHẨM & BẢNG GIÁ) -->
+    <section class="wiki-panel wiki-market" id="wikiMarket" aria-labelledby="marketTitle" hidden>
+      <div class="wiki-section-head"><div><p>THƯ VIỆN VẬT PHẨM</p><h2 id="marketTitle">Danh sách Chợ đấu giá</h2></div><span id="wikiResultCount" aria-live="polite"></span></div>
+      <div class="wiki-filters">
+        <label class="wiki-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="wikiSearch" type="search" placeholder="Tìm tên vật phẩm" autocomplete="off" aria-label="Tìm tên vật phẩm"></label>
+        <label class="wiki-sort">Sắp xếp <select id="wikiSort" aria-label="Sắp xếp vật phẩm"><option value="name">Tên A–Z</option><option value="price-desc">Giá cao nhất</option><option value="price-asc">Giá thấp nhất</option><option value="day-desc">Tăng trong ngày</option><option value="day-asc">Giảm trong ngày</option></select></label>
+      </div>
+      <div class="wiki-categories" id="wikiCategories" role="group" aria-label="Loại vật phẩm"></div>
+      <div class="wiki-table-wrap"><table class="wiki-table"><thead><tr><th>Vật phẩm</th><th>Loại</th><th>Giá hiện tại</th><th>1 ngày</th><th>7 ngày</th><th>30 ngày</th><th>Cấp</th><th>Chi tiết</th></tr></thead><tbody id="wikiRows"><tr><td colspan="8" class="wiki-message">Đang tải dữ liệu Chợ đấu giá…</td></tr></tbody></table></div>
+      <div class="wiki-pages"><button type="button" id="wikiPrev" disabled>← Trước</button><span id="wikiPageLabel"></span><button type="button" id="wikiNext" disabled>Tiếp →</button></div>
+    </section>
+
+    <section class="wiki-panel" id="wikiCatalog" aria-labelledby="catalogTitle" hidden>
+      <div class="wiki-section-head"><div><p>TỪ ĐIỂN DELTA FORCE</p><h2 id="catalogTitle">Kho vật phẩm</h2></div><span id="catalogCount"></span></div>
+      <div class="wiki-filters"><label class="wiki-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="catalogSearch" type="search" placeholder="Tìm vũ khí, trang bị hoặc vật phẩm" aria-label="Tìm trong kho vật phẩm"></label></div>
+      <div class="wiki-categories" id="catalogCategories" role="group" aria-label="Loại vật phẩm"></div>
+      <div class="wiki-card-grid" id="catalogGrid"></div>
+      <div class="wiki-pages"><button type="button" id="catalogPrev">← Trước</button><span id="catalogPageLabel"></span><button type="button" id="catalogNext">Tiếp →</button></div>
+    </section>
+
+    <section class="wiki-panel" id="wikiCrafting" aria-labelledby="craftingTitle" hidden>
+      <div class="wiki-section-head"><div><p>BLACK SITE</p><h2 id="craftingTitle">Chế tạo & lợi nhuận</h2></div><span id="craftingCount"></span></div>
+      <div class="wiki-crafting" id="craftingGrid"></div>
+    </section>
+
+    <section class="wiki-panel" id="wikiArticles" aria-labelledby="articlesTitle" hidden>
+      <div class="wiki-section-head"><div><p>HƯỚNG DẪN & CẬP NHẬT</p><h2 id="articlesTitle">Bài viết</h2></div><span id="articlesCount"></span></div>
+      <div class="wiki-filters"><label class="wiki-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="articlesSearch" type="search" placeholder="Tìm bài viết" aria-label="Tìm bài viết"></label></div>
+      <div class="wiki-article-list" id="articlesGrid"></div>
+      <div class="wiki-pages"><button type="button" id="articlesPrev">← Trước</button><span id="articlesPageLabel"></span><button type="button" id="articlesNext">Tiếp →</button></div>
+    </section>
+
+    <section class="wiki-panel wiki-poker" id="wikiPoker" aria-labelledby="pokerTitle" hidden>
+      <div class="wiki-section-head"><div><p>BỘ SƯU TẬP ASARA</p><h2 id="pokerTitle">Bài poker</h2></div><span id="pokerCount"></span></div>
+      <div class="poker-summary" aria-live="polite">
+        <div><small>Tổng số</small><strong id="pokerTotal">0</strong></div>
+        <div><small>Đã có</small><strong id="pokerOwned">0</strong></div>
+        <div><small>Còn thiếu</small><strong id="pokerMissing">0</strong></div>
+        <div><small>Hoàn thành</small><strong id="pokerPercent">0%</strong></div>
+      </div>
+      <div class="poker-progress" role="progressbar" aria-label="Tiến độ sưu tập" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="pokerProgress"><span></span></div>
+      <p class="poker-intro">Chọn lá bài để đánh dấu đã có. Tiến độ được lưu trên thiết bị này.</p>
+      <div class="poker-controls">
+        <label class="wiki-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="pokerSearch" type="search" placeholder="Tìm lá bài" autocomplete="off" aria-label="Tìm lá bài"></label>
+        <div class="poker-actions"><button type="button" id="pokerMarkAll">Đánh dấu tất cả</button><button type="button" id="pokerReset">Xóa tiến độ</button></div>
+      </div>
+      <div class="poker-filters" id="pokerFilters" role="group" aria-label="Lọc bộ bài"></div>
+      <div class="poker-grid" id="pokerGrid"><p class="wiki-empty">Đang tải bộ bài poker…</p></div>
+    </section>
+    </div>
+
+  </main>
+
+  <dialog class="wiki-detail" id="wikiDetail" aria-labelledby="wikiDetailTitle"><button type="button" class="wiki-detail-close" id="wikiDetailClose" aria-label="Đóng chi tiết">×</button><div id="wikiDetailContent"></div></dialog>
+
+      <footer class="site-footer company-footer" id="site-footer">
+    <div class="container company-footer-wrap">
+      <div class="company-footer-bottom"><span>© 2026 · Phát triển bởi Minh Khương.</span></div>
+    </div>
+  </footer>
+    <nav class="bottom-dock" aria-label="Thanh tác vụ cố định">
+    <a class="dock-item" href="index.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></span>
+      <span>Trang chủ</span>
+    </a>
+    <a class="dock-item" href="tools.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22,8.5 12,15.5 2,8.5"/></svg></span>
+      <span>Auto Redeem</span>
+    </a>
+    <a class="dock-item" href="map.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="3 5 9 3 15 5 21 3 21 19 15 21 9 19 3 21"/><line x1="9" y1="3" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="21"/></svg></span>
+      <span>Bản đồ</span>
+    </a>
+    <a class="dock-item" href="weapons.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+      <span>Vũ khí</span>
+    </a>
+    <a class="dock-item" href="news.html">
+      <span class="dock-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span>
+      <span>Tin tức</span>
+    </a>
+  </nav>
+
+  <script src="/script.js?v=20261010-minigame-v3"></script>
+  <script src="/wiki-poker.js?v=20261010-v5" defer></script>
+  <script src="/market-exchange.js?v=20261010-v6" defer></script>
+  <script src="music-player.js?v=20261010-v1" defer></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+{
+  "currentWeek": {
+    "title": "Chợ trời trong tuần này",
+    "titleZh": "本周一个亿 - 集市",
+    "dateRange": "Từ ngày 9 tháng 10 đến ngày 16 tháng 10",
+    "dateRangeZh": "10月09日 10:00 - 10月16日 10:00",
+    "description": "Vật phẩm thu mua / trao đổi tuần này tại Chợ trời trong Delta Force",
+    "countdownText": "Đang diễn ra",
+    "inGameRoute": [
+      {
+        "step": 1,
+        "name": "Phòng ban",
+        "nameZh": "部门"
+      },
+      {
+        "step": 2,
+        "name": "Trạm tiếp tế",
+        "nameZh": "军需处"
+      },
+      {
+        "step": 3,
+        "name": "Phòng nghiên cứu",
+        "nameZh": "研发部门"
+      },
+      {
+        "step": 4,
+        "name": "Chợ trời",
+        "nameZh": "集市"
+      }
+    ],
+    "requiredItems": [
+      {
+        "id": "15030010002",
+        "name": "pin điện thoại di động",
+        "nameZh": "手机电池",
+        "category": "Đồ điện tử",
+        "categoryZh": "电子物品",
+        "grade": 2,
+        "gradeColor": "#08A173",
+        "price": 2272,
+        "priceFormatted": "2.272",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/15030010002.png"
+      },
+      {
+        "id": "15080050026",
+        "name": "Delta Force: Black Hawk Down - Đội Blade",
+        "nameZh": "三角洲特种部队：黑鹰坠落-战队之刃",
+        "category": "Đồ nội thất gia đình",
+        "categoryZh": "家居物品",
+        "grade": 3,
+        "gradeColor": "#3E80B3",
+        "price": 9622,
+        "priceFormatted": "9.622",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/15080050026.png"
+      }
+    ],
+    "rewards": []
+  },
+  "nextWeek": {
+    "title": "Chợ trời - Dự báo tuần tới",
+    "titleZh": "本周一个亿 - 集市 (下周预告)",
+    "dateRange": "Từ ngày 16 tháng 10 đến ngày 23 tháng 10",
+    "dateRangeZh": "10月16日 10:00 - 10月23日 10:00",
+    "countdownText": "Đếm ngược đến sự kiện: 3 ngày và 19 giờ",
+    "description": "Dữ liệu tuần tới cào trực tiếp từ shushu.fan/chi/jishi",
+    "inGameRoute": [
+      {
+        "step": 1,
+        "name": "Phòng ban",
+        "nameZh": "部门"
+      },
+      {
+        "step": 2,
+        "name": "Trạm tiếp tế",
+        "nameZh": "军需处"
+      },
+      {
+        "step": 3,
+        "name": "Phòng nghiên cứu",
+        "nameZh": "研发部门"
+      },
+      {
+        "step": 4,
+        "name": "Chợ trời",
+        "nameZh": "集市"
+      }
+    ],
+    "requiredItems": [
+      {
+        "id": "blueprint_no5",
+        "name": "Bản vẽ kiến trúc số 5",
+        "nameZh": "建筑图纸5号",
+        "category": "Dữ liệu và trí tuệ",
+        "categoryZh": "资料情报",
+        "grade": 2,
+        "gradeColor": "#08A173",
+        "price": 3308,
+        "priceFormatted": "3.308",
+        "icon": "/assets/wiki/blueprint5.png"
+      },
+      {
+        "id": "powerbank_mil",
+        "name": "Sạc dự phòng di động quân sự",
+        "nameZh": "军用移动电源",
+        "category": "Đồ điện tử",
+        "categoryZh": "电子物品",
+        "grade": 3,
+        "gradeColor": "#3E80B3",
+        "price": 9016,
+        "priceFormatted": "9.016",
+        "icon": "/assets/wiki/powerbank.png"
+      }
+    ],
+    "rewards": [
+      {
+        "id": "11050004004",
+        "name": "Áo gi lê chiến thuật MK-2",
+        "nameZh": "MK-2战术背心",
+        "category": "Trang bị bảo hộ",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/11050004004.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5",
+          "powerbank_mil"
+        ]
+      },
+      {
+        "id": "11010004004",
+        "name": "Mũ bảo hiểm chiến thuật GT1",
+        "nameZh": "GT1 战术头盔",
+        "category": "Mũ bảo hiểm",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/11010004004.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5",
+          "powerbank_mil"
+        ]
+      },
+      {
+        "id": "32230000010",
+        "name": "Gói lựa chọn đạn cấp 4",
+        "nameZh": "4级子弹自选包",
+        "category": "Hộp đạn",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/32230000010.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5",
+          "powerbank_mil"
+        ]
+      },
+      {
+        "id": "32230000017",
+        "name": "Gói lựa chọn vũ khí nâng cao",
+        "nameZh": "进阶武器自选包",
+        "category": "Hộp vũ khí",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/32230000017.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5",
+          "powerbank_mil"
+        ]
+      },
+      {
+        "id": "13110000073",
+        "name": "Kính ngắm 3x Viewpoint",
+        "nameZh": "视点3倍瞄准镜",
+        "category": "Phụ kiện ngắm",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/13110000073.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5"
+        ]
+      },
+      {
+        "id": "13110000057",
+        "name": "Ống ngắm bắn tỉa điều chỉnh 3/7x",
+        "nameZh": "3/7可调倍率狙击镜",
+        "category": "Ống ngắm bắn tỉa",
+        "grade": 4,
+        "gradeColor": "#9c44dc",
+        "tierClass": "me-tier-4",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/13110000057.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "powerbank_mil"
+        ]
+      },
+      {
+        "id": "11050003004",
+        "name": "Áo giáp chiến thuật Xạ Thủ",
+        "nameZh": "射手战术背心",
+        "category": "Trang bị bảo hộ",
+        "grade": 3,
+        "gradeColor": "#3E80B3",
+        "tierClass": "me-tier-3",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/11050003004.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "blueprint_no5"
+        ]
+      },
+      {
+        "id": "11010003004",
+        "name": "Mũ bảo hiểm MC201",
+        "nameZh": "MC201 头盔",
+        "category": "Mũ bảo hiểm",
+        "grade": 3,
+        "gradeColor": "#3E80B3",
+        "tierClass": "me-tier-3",
+        "icon": "https://playerhub.df.qq.com/playerhub/60004/object/11010003004.png",
+        "description": "Đổi phần thưởng",
+        "requiredItemIds": [
+          "powerbank_mil"
+        ]
+      }
+    ]
+  },
+  "sourceUrl": "https://shushu.fan/chi/jishi",
+  "updatedAt": "2026-10-10T17:06:38.288584+00:00"
+}

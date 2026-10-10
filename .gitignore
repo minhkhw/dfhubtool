@@ -1,0 +1,17 @@
+# Bỏ qua toàn bộ file và thư mục ở root theo mặc định
+/*
+
+# CHỈ GIỮ LẠI CÁC THÀNH PHẦN CẦN THIẾT ĐỂ CHẠY WEB TRÊN GITHUB:
+!/.github/
+!/.gitignore
+!/README.md
+!/public/
+!/sync_daily_codes.py
+!/sync_wiki_deltaforcetools.py
+
+# Quy tắc phụ bên trong các thư mục được giữ
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
